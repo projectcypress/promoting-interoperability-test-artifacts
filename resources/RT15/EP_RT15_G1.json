@@ -6,7 +6,7 @@
     { 
       "program_name": "Merit-based Incentive Payment System (MIPS) Promoting Interoperability Performance Category Measure",
       "measure_objective": "Health Information Exchange",
-      "measure_name": "Support Electronic Referral Loops By Receiving and Incorporating Health Information",
+      "measure_name": "Support Electronic Referral Loops By Receiving and Incorporating/Reconciling Health Information",
       "measure_description": "Any MIPS eligible clinician who receives transitions of care or referrals or has patient encounters in which the MIPS eligible clinician has never before encountered the patient fewer than 100 times during the performance period."
     }
   ],

@@ -138,9 +138,14 @@
       "version_date": "11/4/2019"
     },
     {
-      "version_number": "3.0",
+      "version_number": "2.1",
       "version_description": "Based on the sunsetting of the 2014 Edition in the Cures Final rule measure descriptions have been updated to reflect 2020 Promoting Interoperability requirements. RT 14 was for 2019 only and has been removed",
-      "version_date": ""
+      "version_date": "6/15/2020"
+    },
+    {
+      "version_number": "2.2",
+      "version_description": "2021 Promoting Interoperability programs changed the name of the Support Electronic Referral Loops by Receiving and Incorporating Health Information measure by replacing incorporating with reconciling.",
+      "version_date": "12/17/2020"
     }
   ]
 }
