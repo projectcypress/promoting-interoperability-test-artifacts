@@ -1,0 +1,300 @@
+{
+  "test_deck": "G1 EH",
+  "test_number": "Required Test 4c - Health IT Modules Certified to (g)(8), (g)(9) or (g)(10)",
+  "test_short_name": "RT 4c VDT",
+  "program_info": [
+    { 
+      "program_name": "Medicaid Eligible Hospital/Critical Access Hospital (EH/CAH)",
+      "measure_objective": "Coordination of Care Through Patient Engagement",
+      "objective_number": "Objective 6 of 8",
+      "measure_name": "Measure 1",
+      "measure_description": "More than 10 percent of all unique patients (or their authorized representatives) discharged from the eligible hospital or critical access hospital (CAH) inpatient or emergency department (POS 21 or 23) actively engage with the electronic health record made accessible by the provider and either— 1. View, download or transmit (VDT) to a third party their health information; or 2. Access their health information using an Application Programming Interface (API) that can be used by applications chosen by the patient and configured to the API in the provider's CEHRT; or 3. A combination of (1) and (2)"
+    }
+  ],
+  "test_data_notes": [
+    "A patient seen during the reporting period with the numerator already populated and recorded will not increment and re-record the numerator.",
+    "The Promoting Interoperability measure scenarios require the patient to view, download or transmit their health information and/or access their health information via API during the reporting period to populate and record the numerator. The report must enable the user to identify the patients who viewed, downloaded, or transmitted their health information and the patients who accessed their health information via API in order to determine if the measure is fulfilled through patients either (1) viewing, downloading or transmitting health information, (2) accessing their health information via API, or (3) a combination of (1) and (2).  Please see the Certification Companion Guide for more information on how a Health IT Module could count that a patient has accessed their health information via API.",
+    "All measure scenarios require the patient or authorized representative to view, download, or transmit their health information no earlier than the first day of the calendar year of the reporting/performance period (for a 90-day reporting/performance period only), during the reporting/performance period (for a 90-day reporting/performance period only), or no later than the last day of the calendar year of the reporting/performance period (for a 90-day reporting/performance period only) to populate and record the numerator.",
+    "Health IT Developers will have three options for testing the Promoting Interoperability measure.  If the health IT developer has a product certified to (e)(1) AND (g)(7)-(g)(10), they will be expected to demonstrate that the numerator correctly accrues for methods 1, 2, and 3 (as described in number 3).  If the product is certified to only (e)(1), the health IT developer will be expected to demonstrate that the numerator correctly accrues for method 1 (as described in number 3). If the product is certified to only (g)(7)-(g)(10), the health IT developer will be expected to demonstrate that the numerator correctly accrues for method 2 (as described in number 3). Required Test 4c tests method 2.",
+    "Scenario 2 tests that an existing patient's actions properly populate/increment the numerator. Not all test cases will result in an increment.",
+    "Test data supply: ONC and Vendor-supplied. ONC provides the Test Data Scenarios and parameters; the Vendor supplies the patient visit and clinical information."
+  ],
+  "scenarios": [
+    {
+      "scenario_title": "Scenario 1",
+      "scenario_description": "Test Data set-up for new patient (populate numerator)",
+      "segments": [
+        {
+          "segment_total":
+            {
+              "numerator_value": 2
+            },
+          "segment_entries": [
+            {
+              "entry_title": "Patient Discharged During or Outside of Reporting  Period",
+              "denom": true,
+              "entry_values": [
+                {
+                  "patient_id": "Tracy Daniels",
+                  "entry_value": "First discharge, during"
+                },
+                {
+                  "patient_id": "Dianne Potter",
+                  "entry_value": "First discharge, during"
+                },
+                {
+                  "patient_id": "Katrina Owens",
+                  "entry_value": "First discharge, during"
+                },
+                {
+                  "patient_id": "Allan Summers",
+                  "entry_value": "First discharge, during"
+                },
+                {
+                  "patient_id": "Ada Mack",
+                  "entry_value": "First discharge, during"
+                }
+              ]
+            },
+            {
+              "entry_title": "Patient Accessed Health Information Through API During the Calendar Year",
+              "numer": true,
+              "entry_values": [
+                {
+                  "patient_id": "Tracy Daniels",
+                  "entry_value": "Not accessed"
+                },
+                {
+                  "patient_id": "Dianne Potter",
+                  "entry_value": "Not accessed"
+                },
+                {
+                  "patient_id": "Katrina Owens",
+                  "entry_value": "Not accessed"
+                },
+                {
+                  "patient_id": "Allan Summers",
+                  "entry_value": "During"
+                },
+                {
+                  "patient_id": "Ada Mack",
+                  "entry_value": "During"
+                }
+              ]
+            }
+          ],
+          "segment_totals": [
+            {
+              "total_heading": "Cumulative Total",
+              "total_values": [
+                {
+                  "patient_id": "Tracy Daniels",
+                  "numerator_value": 0
+                },
+                {
+                  "patient_id": "Dianne Potter",
+                  "numerator_value": 0
+                },
+                {
+                  "patient_id": "Katrina Owens",
+                  "numerator_value": 0
+                },
+                {
+                  "patient_id": "Allan Summers",
+                  "numerator_value": 1
+                },
+                {
+                  "patient_id": "Ada Mack",
+                  "numerator_value": 1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_title": "Scenario 2",
+      "scenario_description": "Modify test data set-up for existing patient (populate numerator only)",
+      "segments": [
+        {
+          "segment_total":
+            {
+              "numerator_value": 5
+            },
+          "segment_entries": [
+            {
+              "entry_title": "Patient Discharged During or Outside of Reporting  Period",
+              "denom": true,
+              "entry_values": [
+                {
+                  "patient_id": "Tracy Daniels",
+                  "entry_value": "Second discharge, during"
+                },
+                {
+                  "patient_id": "Dianne Potter",
+                  "entry_value": "Second discharge, during"
+                },
+                {
+                  "patient_id": "Katrina Owens",
+                  "entry_value": "Second discharge, during"
+                }
+              ]
+            },
+            {
+              "entry_title": "Patient Accessed Health Information Through API During the Calendar Year",
+              "numer": true,
+              "entry_values": [
+                {
+                  "patient_id": "Tracy Daniels",
+                  "entry_value": "Yes"
+                },
+                {
+                  "patient_id": "Dianne Potter",
+                  "entry_value": "Yes"
+                },
+                {
+                  "patient_id": "Katrina Owens",
+                  "entry_value": "Yes"
+                }
+              ]
+            }
+          ],
+          "segment_totals": [
+            {
+              "total_heading": "Cumulative Total",
+              "total_values": [
+                {
+                  "patient_id": "Tracy Daniels",
+                  "numerator_value": 1
+                },
+                {
+                  "patient_id": "Dianne Potter",
+                  "numerator_value": 1
+                },
+                {
+                  "patient_id": "Katrina Owens",
+                  "numerator_value": 1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_title": "Scenario 3",
+      "scenario_description": "Add new or modify existing patient (populate numerator)",
+      "segments": [
+        {
+          "segment_total":
+            {
+              "numerator_value": 8
+            },
+          "segment_entries": [
+            {
+              "entry_title": "Patient Discharged During or Outside of Reporting  Period",
+              "denom": true,
+              "entry_values": [
+                {
+                  "patient_id": "Anthony Edwards",
+                  "entry_value": "First discharge, during"
+                },
+                {
+                  "patient_id": "Bruce Hall",
+                  "entry_value": "First discharge, during"
+                },
+                {
+                  "patient_id": "Debra Steele",
+                  "entry_value": "First discharge, during"
+                }
+              ]
+            },
+            {
+              "entry_title": "Patient Accessed Health Information Through API During the Calendar Year",
+              "numer": true,
+              "entry_values": [
+                {
+                  "patient_id": "Anthony Edwards",
+                  "entry_value": "Yes"
+                },
+                {
+                  "patient_id": "Bruce Hall",
+                  "entry_value": "Yes"
+                },
+                {
+                  "patient_id": "Debra Steele",
+                  "entry_value": "Yes"
+                }
+              ]
+            }
+          ],
+          "segment_totals": [
+            {
+              "total_heading": "Cumulative Total",
+              "total_values": [
+                {
+                  "patient_id": "Anthony Edwards",
+                  "numerator_value": 1
+                },
+                {
+                  "patient_id": "Bruce Hall",
+                  "numerator_value": 1
+                },
+                {
+                  "patient_id": "Debra Steele",
+                  "numerator_value": 1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_title": "Scenario 4",
+      "scenario_description": "Add new or modify existing patient (do not populate numerator)",
+      "segments": [
+        {
+          "segment_total":
+            {
+              "numerator_value": 8
+            },
+          "segment_entries": [
+            {
+              "entry_title": "Patient Discharged During or Outside of Reporting  Period",
+              "denom": true,
+              "entry_values": [
+                {
+                  "patient_id": "Ada Mack",
+                  "entry_value": "Second discharge, during"
+                }
+              ]
+            },
+            {
+              "entry_title": "Patient Accessed Health Information Through API During the Calendar Year",
+              "numer": true,
+              "entry_values": [
+                {
+                  "patient_id": "Ada Mack",
+                  "entry_value": "Yes"
+                }
+              ]
+            }
+          ],
+          "segment_totals": [
+            {
+              "total_heading": "Cumulative Total",
+              "total_values": [
+                {
+                  "patient_id": "Ada Mack",
+                  "numerator_value": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

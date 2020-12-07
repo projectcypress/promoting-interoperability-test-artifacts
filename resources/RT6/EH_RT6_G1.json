@@ -1,0 +1,297 @@
+{
+  "test_deck": "G1 EH",
+  "test_number": "Required Test 6",
+  "test_short_name": "RT 6 PGHD",
+  "program_info": [
+    { 
+      "program_name": "Medicaid Eligible Hospital/Critical Access Hospital (EH/CAH)",
+      "measure_objective": "Coordination of Care Through Patient Engagement",
+      "objective_number": "Objective 6 of 8",
+      "measure_name": "Measure 3",
+      "measure_description": "Patient generated health data or data from a nonclinical setting is incorporated into the CEHRT for more than 5 percent of all unique patients discharged from the eligible hospital or CAH inpatient or emergency department (POS 21 or 23) during the EHR reporting period."
+    }
+  ],
+  "test_data_notes": [
+    "A patient seen during the reporting period for whom the EH incorporates data will populate and record the numerator once, after the first incorporation of data.  ",
+    "The Promoting Interoperability measure scenarios require the provider to incorporate data during the reporting period for a 90-day and full calendar year reporting period.",
+    "Test data supply: ONC and Vendor-supplied. ONC provides the Test Data Scenarios and parameters; the Vendor will supply the non-clinical setting information to be incorporated."
+  ],
+  "scenarios": [
+    {
+      "scenario_title": "Scenario 1",
+      "scenario_description": "Test Data set-up for new patient (populate numerator)",
+      "segments": [
+        {
+          "segment_total":
+            {
+              "numerator_value": 2
+            },
+          "segment_entries": [
+            {
+              "entry_title": "Patient Discharged Within or Outside ReportingPeriod ",
+              "denom": true,
+              "entry_values": [
+                {
+                  "patient_id": "Tracy Daniels",
+                  "entry_value": "First discharge, during"
+                },
+                {
+                  "patient_id": "Dianne Potter",
+                  "entry_value": "First discharge, during"
+                },
+                {
+                  "patient_id": "Katrina Owens",
+                  "entry_value": "First discharge, during"
+                },
+                {
+                  "patient_id": "Allan Summers",
+                  "entry_value": "First discharge, during"
+                },
+                {
+                  "patient_id": "Ada Mack",
+                  "entry_value": "First discharge, during"
+                }
+              ]
+            },
+            {
+              "entry_title": "Patient Data From Non-Clinical Settings Captured During Reporting Period",
+              "numer": true,
+              "entry_values": [
+                {
+                  "patient_id": "Tracy Daniels",
+                  "entry_value": "No"
+                },
+                {
+                  "patient_id": "Dianne Potter",
+                  "entry_value": "No"
+                },
+                {
+                  "patient_id": "Katrina Owens",
+                  "entry_value": "No"
+                },
+                {
+                  "patient_id": "Allan Summers",
+                  "entry_value": "Yes"
+                },
+                {
+                  "patient_id": "Ada Mack",
+                  "entry_value": "Yes"
+                }
+              ]
+            }
+          ],
+          "segment_totals": [
+            {
+              "total_heading": "Cumulative Total",
+              "total_values": [
+                {
+                  "patient_id": "Tracy Daniels",
+                  "numerator_value": 0
+                },
+                {
+                  "patient_id": "Dianne Potter",
+                  "numerator_value": 0
+                },
+                {
+                  "patient_id": "Katrina Owens",
+                  "numerator_value": 0
+                },
+                {
+                  "patient_id": "Allan Summers",
+                  "numerator_value": 1
+                },
+                {
+                  "patient_id": "Ada Mack",
+                  "numerator_value": 1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_title": "Scenario 2",
+      "scenario_description": "Modify test data set-up for existing patient (populate numerator only)",
+      "segments": [
+        {
+          "segment_total":
+            {
+              "numerator_value": 5
+            },
+          "segment_entries": [
+            {
+              "entry_title": "Patient Discharged Within or Outside ReportingPeriod ",
+              "denom": true,
+              "entry_values": [
+                {
+                  "patient_id": "Tracy Daniels",
+                  "entry_value": "Second discharge, during"
+                },
+                {
+                  "patient_id": "Dianne Potter",
+                  "entry_value": "Second discharge, during"
+                },
+                {
+                  "patient_id": "Katrina Owens",
+                  "entry_value": "Second discharge, during"
+                }
+              ]
+            },
+            {
+              "entry_title": "Patient Data From Non-Clinical Settings Captured During Reporting Period",
+              "numer": true,
+              "entry_values": [
+                {
+                  "patient_id": "Tracy Daniels",
+                  "entry_value": "Yes"
+                },
+                {
+                  "patient_id": "Dianne Potter",
+                  "entry_value": "Yes"
+                },
+                {
+                  "patient_id": "Katrina Owens",
+                  "entry_value": "Yes"
+                }
+              ]
+            }
+          ],
+          "segment_totals": [
+            {
+              "total_heading": "Cumulative Total",
+              "total_values": [
+                {
+                  "patient_id": "Tracy Daniels",
+                  "numerator_value": 1
+                },
+                {
+                  "patient_id": "Dianne Potter",
+                  "numerator_value": 1
+                },
+                {
+                  "patient_id": "Katrina Owens",
+                  "numerator_value": 1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_title": "Scenario 3",
+      "scenario_description": "Add new or modify existing patient (populate numerator)",
+      "segments": [
+        {
+          "segment_total":
+            {
+              "numerator_value": 8
+            },
+          "segment_entries": [
+            {
+              "entry_title": "Patient Discharged Within or Outside ReportingPeriod ",
+              "denom": true,
+              "entry_values": [
+                {
+                  "patient_id": "Anthony Edwards",
+                  "entry_value": "First discharge, during"
+                },
+                {
+                  "patient_id": "Bruce Hall",
+                  "entry_value": "First discharge, during"
+                },
+                {
+                  "patient_id": "Debra Steele",
+                  "entry_value": "First discharge, during"
+                }
+              ]
+            },
+            {
+              "entry_title": "Patient Data From Non-Clinical Settings Captured During Reporting Period",
+              "numer": true,
+              "entry_values": [
+                {
+                  "patient_id": "Anthony Edwards",
+                  "entry_value": "Yes"
+                },
+                {
+                  "patient_id": "Bruce Hall",
+                  "entry_value": "Yes"
+                },
+                {
+                  "patient_id": "Debra Steele",
+                  "entry_value": "Yes"
+                }
+              ]
+            }
+          ],
+          "segment_totals": [
+            {
+              "total_heading": "Cumulative Total",
+              "total_values": [
+                {
+                  "patient_id": "Anthony Edwards",
+                  "numerator_value": 1
+                },
+                {
+                  "patient_id": "Bruce Hall",
+                  "numerator_value": 1
+                },
+                {
+                  "patient_id": "Debra Steele",
+                  "numerator_value": 1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_title": "Scenario 4",
+      "scenario_description": "Add new or modify existing patient (do not populate numerator)",
+      "segments": [
+        {
+          "segment_total":
+            {
+              "numerator_value": 8
+            },
+          "segment_entries": [
+            {
+              "entry_title": "Patient Discharged Within or Outside ReportingPeriod ",
+              "denom": true,
+              "entry_values": [
+                {
+                  "patient_id": "Ada Mack",
+                  "entry_value": "Second discharge, during"
+                }
+              ]
+            },
+            {
+              "entry_title": "Patient Data From Non-Clinical Settings Captured During Reporting Period",
+              "numer": true,
+              "entry_values": [
+                {
+                  "patient_id": "Ada Mack",
+                  "entry_value": "Yes"
+                }
+              ]
+            }
+          ],
+          "segment_totals": [
+            {
+              "total_heading": "Cumulative Total",
+              "total_values": [
+                {
+                  "patient_id": "Ada Mack",
+                  "numerator_value": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

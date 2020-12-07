@@ -1,0 +1,2046 @@
+{
+  "test_deck": "G2 EP",
+  "test_number": "Required Test 15",
+  "test_short_name": "RT 15 Receive & Reconcile",
+  "program_info": [
+    { 
+      "program_name": "Merit-based Incentive Payment System (MIPS) Promoting Interoperability Performance Category Measure",
+      "measure_objective": "Health Information Exchange",
+      "measure_name": "Support Electronic Referral Loops By Receiving and Incorporating Health Information",
+      "measure_description": "Any MIPS eligible clinician who receives transitions of care or referrals or has patient encounters in which the MIPS eligible clinician has never before encountered the patient fewer than 100 times during the performance period."
+    }
+  ],
+  "test_data_notes": [
+    "The Promoting Interoperability measure require reconciliation of medications, medication allergies, and the current problem list in order to populate and record the numerator.",
+    "The scenarios require the provider to receive an electronic a summary of care document and perform reconciliation during the reporting period for a 90-day reporting period and during the calendar year for a full calendar year reporting period.",
+    "Test data supply: ONC and Vendor-supplied. ONC provides the Test Data Scenarios and parameters; the Vendor supplies the summary of care records, where applicable.",
+    "Starting in 2019, for the Promoting Interoperability measure an EP may use any document template within the C-CDA standard for the purposes of the measure.  ",
+    "The Promoting Interoperability measure only requires the reconcillation of current information, not historic.  ",
+    "If the health IT module supports the reconciling of all current information from multiple electronic summary of care records in a single instance this combined information may be considered a single instance in the denominator. If the health IT module supports the reconciliation of each individual electronic summary of care record received separately, then each current record received may be considered a separate instance in the denominator. For either workflow, the completion of the reconciliation in either workflow would increment the numerator.   ATLs may use different test data for health IT modules that supports the reconciling of all current information from multiple electronic summary of care records in a single instance. "
+  ],
+  "scenarios_have_providers": true,
+  "scenarios": [
+    {
+      "scenario_title": "Scenario 1",
+      "scenario_description": "Test Data set-up for new patient (populate numerator)",
+      "segments": [
+        {
+          "segment_total":
+            {
+              "providers": [
+                {
+                  "provider": "TIN A/Provider 1",
+                  "denominator_value": 9,
+                  "numerator_value": 8
+                },
+                {
+                  "provider": "TIN B/Provider 1",
+                  "denominator_value": 4,
+                  "numerator_value": 2
+                },
+                {
+                  "provider": "TIN A/Provider 2",
+                  "denominator_value": 4,
+                  "numerator_value": 3
+                },
+                {
+                  "provider": "TIN B/Provider 2",
+                  "denominator_value": 4,
+                  "numerator_value": 2
+                },
+                {
+                  "provider": "Group/TIN A",
+                  "denominator_value": 13,
+                  "numerator_value": 11
+                },
+                {
+                  "provider": "Group/TIN B",
+                  "denominator_value": 8,
+                  "numerator_value": 4
+                }
+              ]
+            },
+          "segment_entries": [
+            {
+              "entry_title": "Transitioned, Referred, New, or Existing Patient Within the Reporting Period ",
+              "denom": true,
+              "entry_values": [
+                {
+                  "patient_id": "Lavon Earle",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "Transitioned"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "Referred"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "No"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Trula Covey",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "New"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "No"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Mai Nguyen",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "Referred"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "Referred"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "Referred"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "Transitioned"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "Transitioned"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "No"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Elsa Wu",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "New"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "Referred"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "No"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "entry_title": "Number of Electronic Summary of Care Records Received",
+              "denom": true,
+              "entry_values": [
+                {
+                  "patient_id": "Lavon Earle",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 3
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 0
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 0
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Trula Covey",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 0
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 0
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 0
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Mai Nguyen",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 0
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 2
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 0
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 4
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 0
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Elsa Wu",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 5
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 0
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 2
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 2
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "entry_title": "Number of Electronic Summary of Care Records Where  Medication Reconciliation Occurred During the Performance Period ",
+              "numer": true,
+              "entry_values": [
+                {
+                  "patient_id": "Lavon Earle",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 3
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "N/A"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "N/A"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Trula Covey",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "N/A"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "N/A"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "N/A"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Mai Nguyen",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "N/A"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 0
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "N/A"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 2
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 0
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "N/A"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Elsa Wu",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 5
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "N/A"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 2
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 2
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "entry_title": "Number of Electronic Summary of Care Records Where  Medication Allergy Reconciliation Occurred During the Performance Period ",
+              "numer": true,
+              "entry_values": [
+                {
+                  "patient_id": "Lavon Earle",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 3
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "N/A"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "N/A"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Trula Covey",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "N/A"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "N/A"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "N/A"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Mai Nguyen",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "N/A"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 0
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "N/A"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 3
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "N/A"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Elsa Wu",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 5
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "N/A"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 2
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 2
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "entry_title": "Number of Electronic Summary of Care Records Where  Current Problem List Reconciliation Occurred During the Performance Period ",
+              "numer": true,
+              "entry_values": [
+                {
+                  "patient_id": "Lavon Earle",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 3
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "N/A"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "N/A"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Trula Covey",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "N/A"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "N/A"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "N/A"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Mai Nguyen",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "N/A"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 2
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "N/A"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 4
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 0
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "N/A"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Elsa Wu",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 5
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "N/A"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 2
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 2
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "segment_totals": [
+            {
+              "total_heading": "Cumulative Total",
+              "total_values": [
+                {
+                  "patient_id": "Lavon Earle",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "denominator_value": 3,
+                      "numerator_value": 3
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "denominator_value": 0,
+                      "numerator_value": 0
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 1
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "denominator_value": 0,
+                      "numerator_value": 0
+                    },
+                    {
+                      "provider": "Group/TIN A",
+                      "denominator_value": 4,
+                      "numerator_value": 4
+                    },
+                    {
+                      "provider": "Group/TIN B",
+                      "denominator_value": 0,
+                      "numerator_value": 0
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Trula Covey",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "denominator_value": 0,
+                      "numerator_value": 0
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 1
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "denominator_value": 0,
+                      "numerator_value": 0
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "denominator_value": 0,
+                      "numerator_value": 0
+                    },
+                    {
+                      "provider": "Group/TIN A",
+                      "denominator_value": 0,
+                      "numerator_value": 0
+                    },
+                    {
+                      "provider": "Group/TIN B",
+                      "denominator_value": 1,
+                      "numerator_value": 1
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Mai Nguyen",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "denominator_value": 0,
+                      "numerator_value": 0
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "denominator_value": 2,
+                      "numerator_value": 0
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "denominator_value": 0,
+                      "numerator_value": 0
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "denominator_value": 4,
+                      "numerator_value": 2
+                    },
+                    {
+                      "provider": "Group/TIN A",
+                      "denominator_value": 0,
+                      "numerator_value": 0
+                    },
+                    {
+                      "provider": "Group/TIN B",
+                      "denominator_value": 6,
+                      "numerator_value": 2
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 0
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 1
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 0
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "denominator_value": 0,
+                      "numerator_value": 0
+                    },
+                    {
+                      "provider": "Group/TIN A",
+                      "denominator_value": 2,
+                      "numerator_value": 0
+                    },
+                    {
+                      "provider": "Group/TIN B",
+                      "denominator_value": 1,
+                      "numerator_value": 1
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Elsa Wu",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "denominator_value": 5,
+                      "numerator_value": 5
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "denominator_value": 0,
+                      "numerator_value": 0
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "denominator_value": 2,
+                      "numerator_value": 2
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "denominator_value": 0,
+                      "numerator_value": 0
+                    },
+                    {
+                      "provider": "Group/TIN A",
+                      "denominator_value": 7,
+                      "numerator_value": 7
+                    },
+                    {
+                      "provider": "Group/TIN B",
+                      "denominator_value": 0,
+                      "numerator_value": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_title": "Scenario 2",
+      "scenario_description": "Modify test data set-up for existing patient (populate numerator only)",
+      "segments": [
+        {
+          "segment_total":
+            {
+              "providers": [
+                {
+                  "provider": "TIN A/Provider 1",
+                  "denominator_value": 5,
+                  "numerator_value": 1
+                },
+                {
+                  "provider": "TIN B/Provider 1",
+                  "denominator_value": 4,
+                  "numerator_value": 0
+                },
+                {
+                  "provider": "TIN A/Provider 2",
+                  "denominator_value": 4,
+                  "numerator_value": 1
+                },
+                {
+                  "provider": "TIN B/Provider 2",
+                  "denominator_value": 5,
+                  "numerator_value": 1
+                },
+                {
+                  "provider": "Group/TIN A",
+                  "denominator_value": 5,
+                  "numerator_value": 1
+                },
+                {
+                  "provider": "Group/TIN B",
+                  "denominator_value": 5,
+                  "numerator_value": 1
+                }
+              ]
+            }
+        }
+      ]
+    },
+    {
+      "scenario_title": "Scenario 3",
+      "scenario_description": "Add new patient or modify existing patient (populate numerator and denominator)",
+      "segments": [
+        {
+          "segment_total":
+            {
+              "providers": [
+                {
+                  "provider": "TIN A/Provider 1",
+                  "denominator_value": 19,
+                  "numerator_value": 18
+                },
+                {
+                  "provider": "TIN B/Provider 1",
+                  "denominator_value": 13,
+                  "numerator_value": 11
+                },
+                {
+                  "provider": "TIN A/Provider 2",
+                  "denominator_value": 19,
+                  "numerator_value": 17
+                },
+                {
+                  "provider": "TIN B/Provider 2",
+                  "denominator_value": 12,
+                  "numerator_value": 10
+                },
+                {
+                  "provider": "Group/TIN A",
+                  "denominator_value": 38,
+                  "numerator_value": 35
+                },
+                {
+                  "provider": "Group/TIN B",
+                  "denominator_value": 25,
+                  "numerator_value": 21
+                }
+              ]
+            },
+          "segment_entries": [
+            {
+              "entry_title": "Transitioned, Referred, New, or Existing Patient Within the Reporting Period",
+              "denom": true,
+              "entry_values": [
+                {
+                  "patient_id": "Alan Bench",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "New"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "Transitioned"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "Referred"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "Transitioned"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Rashida Champagne",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "Transitioned"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "Transitioned"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "Transitioned"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "Transitioned"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "David Brown",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "Referred"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "Transitioned"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "New"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "Transitioned"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "Transitioned"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "Transitioned"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "Referred"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "Transitioned"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "entry_title": "Number of Electronic Summary of Care Records Received",
+              "denom": true,
+              "entry_values": [
+                {
+                  "patient_id": "Alan Bench",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 3
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 4
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 1
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Rashida Champagne",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 1
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "David Brown",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 2
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 2
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 2
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 2
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 6
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 3
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 8
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 4
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "entry_title": "Number of Electronic Summary of Care Records Where  Medication Reconciliation Occurred During the Performance Period ",
+              "numer": true,
+              "entry_values": [
+                {
+                  "patient_id": "Alan Bench",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 3
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 4
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 1
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Rashida Champagne",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 0
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 1
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "David Brown",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 2
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 2
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 2
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 2
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 6
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 3
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 8
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 4
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "entry_title": "Number of Electronic Summary of Care Records Where  Medication Allergy Reconciliation Occurred During the Performance Period ",
+              "numer": true,
+              "entry_values": [
+                {
+                  "patient_id": "Alan Bench",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 3
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 4
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 1
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Rashida Champagne",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 1
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "David Brown",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 2
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 2
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 2
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 2
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 6
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 3
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 8
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 4
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "entry_title": "Number of Electronic Summary of Care Records Where  Current Problem List Reconciliation Occurred During the Performance Period ",
+              "numer": true,
+              "entry_values": [
+                {
+                  "patient_id": "Alan Bench",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 3
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 4
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 1
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Rashida Champagne",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 1
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "David Brown",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 2
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 2
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 2
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 2
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 6
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 3
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 8
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 4
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "segment_totals": [
+            {
+              "total_heading": "Cumulative Total",
+              "total_values": [
+                {
+                  "patient_id": "Alan Bench",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 1
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "denominator_value": 3,
+                      "numerator_value": 3
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "denominator_value": 4,
+                      "numerator_value": 4
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 1
+                    },
+                    {
+                      "provider": "Group/TIN A",
+                      "denominator_value": 5,
+                      "numerator_value": 5
+                    },
+                    {
+                      "provider": "Group/TIN B",
+                      "denominator_value": 4,
+                      "numerator_value": 4
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Rashida Champagne",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 1
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 1
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 0
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 1
+                    },
+                    {
+                      "provider": "Group/TIN A",
+                      "denominator_value": 2,
+                      "numerator_value": 1
+                    },
+                    {
+                      "provider": "Group/TIN B",
+                      "denominator_value": 2,
+                      "numerator_value": 2
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "David Brown",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "denominator_value": 2,
+                      "numerator_value": 2
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "denominator_value": 2,
+                      "numerator_value": 2
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "denominator_value": 2,
+                      "numerator_value": 2
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "denominator_value": 2,
+                      "numerator_value": 2
+                    },
+                    {
+                      "provider": "Group/TIN A",
+                      "denominator_value": 4,
+                      "numerator_value": 4
+                    },
+                    {
+                      "provider": "Group/TIN B",
+                      "denominator_value": 4,
+                      "numerator_value": 4
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "denominator_value": 6,
+                      "numerator_value": 6
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "denominator_value": 3,
+                      "numerator_value": 3
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "denominator_value": 8,
+                      "numerator_value": 8
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "denominator_value": 4,
+                      "numerator_value": 4
+                    },
+                    {
+                      "provider": "Group/TIN A",
+                      "denominator_value": 14,
+                      "numerator_value": 14
+                    },
+                    {
+                      "provider": "Group/TIN B",
+                      "denominator_value": 7,
+                      "numerator_value": 7
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_title": "Scenario 4",
+      "scenario_description": "Add new or modify existing patient (populate denominator only)",
+      "segments": [
+        {
+          "segment_total":
+            {
+              "providers": [
+                {
+                  "provider": "TIN A/Provider 1",
+                  "denominator_value": 24,
+                  "numerator_value": 18
+                },
+                {
+                  "provider": "TIN B/Provider 1",
+                  "denominator_value": 21,
+                  "numerator_value": 11
+                },
+                {
+                  "provider": "TIN A/Provider 2",
+                  "denominator_value": 25,
+                  "numerator_value": 17
+                },
+                {
+                  "provider": "TIN B/Provider 2",
+                  "denominator_value": 18,
+                  "numerator_value": 10
+                },
+                {
+                  "provider": "Group/TIN A",
+                  "denominator_value": 49,
+                  "numerator_value": 35
+                },
+                {
+                  "provider": "Group/TIN B",
+                  "denominator_value": 39,
+                  "numerator_value": 21
+                }
+              ]
+            },
+          "segment_entries": [
+            {
+              "entry_title": "Transitioned, Referred, New, or Existing Patient Within the Reporting Period",
+              "denom": true,
+              "entry_values": [
+                {
+                  "patient_id": "Margaret Wise",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "New"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "Transitioned"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "Referred"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "Transitioned"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Frank Patterson",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "Transitioned"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "Transitioned"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "Transitioned"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "Transitioned"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Na Dangelo",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "Referred"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "New"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "Transitioned"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "Transitioned"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "entry_title": "Number of Electronic Summary of Care Records Received",
+              "denom": true,
+              "entry_values": [
+                {
+                  "patient_id": "Margaret Wise",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 1
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Frank Patterson",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 4
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 2
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 2
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Na Dangelo",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 3
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 3
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 3
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 3
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "entry_title": "Number of Electronic Summary of Care Records Where  Medication Reconciliation Occurred During the Performance Period ",
+              "numer": true,
+              "entry_values": [
+                {
+                  "patient_id": "Margaret Wise",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 0
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 0
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 1
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Frank Patterson",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 0
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 0
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 2
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Na Dangelo",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 0
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 0
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 0
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 0
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "entry_title": "Number of Electronic Summary of Care Records Where  Medication Allergy Reconciliation Occurred During the Performance Period",
+              "numer": true,
+              "entry_values": [
+                {
+                  "patient_id": "Margaret Wise",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 0
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 0
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 0
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Frank Patterson",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 0
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 0
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 0
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 1
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Na Dangelo",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 0
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 0
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 0
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 0
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "entry_title": "Number of Electronic Summary of Care Records Where  Current Problem List Reconciliation Occurred During the Performance Period",
+              "numer": true,
+              "entry_values": [
+                {
+                  "patient_id": "Margaret Wise",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 0
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 0
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 1
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Frank Patterson",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 1
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 3
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 0
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 0
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Na Dangelo",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": 3
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": 3
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": 0
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "segment_totals": [
+            {
+              "total_heading": "Cumulative Total",
+              "total_values": [
+                {
+                  "patient_id": "Margaret Wise",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 0
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 0
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 0
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 0
+                    },
+                    {
+                      "provider": "Group/TIN A",
+                      "denominator_value": 2,
+                      "numerator_value": 0
+                    },
+                    {
+                      "provider": "Group/TIN B",
+                      "denominator_value": 2,
+                      "numerator_value": 0
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Frank Patterson",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 0
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "denominator_value": 4,
+                      "numerator_value": 0
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "denominator_value": 2,
+                      "numerator_value": 0
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "denominator_value": 2,
+                      "numerator_value": 0
+                    },
+                    {
+                      "provider": "Group/TIN A",
+                      "denominator_value": 3,
+                      "numerator_value": 0
+                    },
+                    {
+                      "provider": "Group/TIN B",
+                      "denominator_value": 6,
+                      "numerator_value": 0
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Na Dangelo",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "denominator_value": 3,
+                      "numerator_value": 0
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "denominator_value": 3,
+                      "numerator_value": 0
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "denominator_value": 3,
+                      "numerator_value": 0
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "denominator_value": 3,
+                      "numerator_value": 0
+                    },
+                    {
+                      "provider": "Group/TIN A",
+                      "denominator_value": 6,
+                      "numerator_value": 0
+                    },
+                    {
+                      "provider": "Group/TIN B",
+                      "denominator_value": 6,
+                      "numerator_value": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_title": "Scenario 5",
+      "scenario_description": "Add new or modify existing patient (do not populate numerator or denominator)",
+      "segments": [
+        {
+          "segment_total":
+            {
+              "providers": [
+                {
+                  "provider": "Provider 1",
+                  "denominator_value": 11,
+                  "numerator_value": 3
+                },
+                {
+                  "provider": "Provider 2",
+                  "denominator_value": 11,
+                  "numerator_value": 4
+                },
+                {
+                  "provider": "TIN A/Provider 1",
+                  "denominator_value": 11,
+                  "numerator_value": 4
+                },
+                {
+                  "provider": "TIN B/Provider 1",
+                  "denominator_value": 10,
+                  "numerator_value": 3
+                },
+                {
+                  "provider": "TIN A/Provider 2",
+                  "denominator_value": 10,
+                  "numerator_value": 4
+                },
+                {
+                  "provider": "TIN B/Provider 2",
+                  "denominator_value": 11,
+                  "numerator_value": 4
+                },
+                {
+                  "provider": "Group/TIN A",
+                  "denominator_value": 11,
+                  "numerator_value": 4
+                },
+                {
+                  "provider": "Group/TIN B",
+                  "denominator_value": 11,
+                  "numerator_value": 4
+                }
+              ]
+            }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,317 @@
+{
+  "test_deck": "G1 EP",
+  "test_number": "Required Test 15",
+  "test_short_name": "RT 15 Receive & Reconcile",
+  "program_info": [
+    { 
+      "program_name": "Merit-based Incentive Payment System (MIPS) Promoting Interoperability Performance Category Measure",
+      "measure_objective": "Health Information Exchange",
+      "measure_name": "Support Electronic Referral Loops By Receiving and Incorporating Health Information",
+      "measure_description": "Any MIPS eligible clinician who receives transitions of care or referrals or has patient encounters in which the MIPS eligible clinician has never before encountered the patient fewer than 100 times during the performance period."
+    }
+  ],
+  "test_data_notes": [
+    "The Promoting Interoperability measure require reconciliation of medications, medication allergies, and the current problem list in order to populate and record the numerator.",
+    "The scenarios require the provider to receive an electronic a summary of care document and perform reconciliation during the reporting period for a 90-day reporting period and during the calendar year for a full calendar year reporting period.",
+    "Test data supply: ONC and Vendor-supplied. ONC provides the Test Data Scenarios and parameters; the Vendor supplies the summary of care records, where applicable.",
+    "Starting in 2019, for the Promoting Interoperability measure an EP may use any document template within the C-CDA standard for the purposes of the measure.  ",
+    "The Promoting Interoperability measure only requires the reconcillation of current information, not historic.  ",
+    "If the health IT module supports the reconciling of all current information from multiple electronic summary of care records in a single instance this combined information may be considered a single instance in the denominator. If the health IT module supports the reconciliation of each individual electronic summary of care record received separately, then each current record received may be considered a separate instance in the denominator. For either workflow, the completion of the reconciliation in either workflow would increment the numerator.   ATLs may use different test data for health IT modules that supports the reconciling of all current information from multiple electronic summary of care records in a single instance. "
+  ],
+  "scenarios": [
+    {
+      "scenario_title": "Scenario 1",
+      "scenario_description": "Test Data set-up for new patient (populate numerator)",
+      "segments": [
+        {
+          "segment_total":
+            {
+              "numerator_value": 7
+            },
+          "segment_entries": [
+            {
+              "entry_title": "Number of Electronic Summary of Care Records Received",
+              "denom": true,
+              "entry_values": [
+                {
+                  "patient_id": "Lavon Earle",
+                  "entry_value": 5
+                },
+                {
+                  "patient_id": "Trula Covey",
+                  "entry_value": 2
+                },
+                {
+                  "patient_id": "Mai Nguyen",
+                  "entry_value": 1
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "entry_value": 0
+                },
+                {
+                  "patient_id": "Elsa Wu",
+                  "entry_value": 2
+                }
+              ]
+            },
+            {
+              "entry_title": "Number of Electronic Summary of Care Records Where  Medication Reconciliation Occurred During the Performance Period ",
+              "numer": true,
+              "entry_values": [
+                {
+                  "patient_id": "Lavon Earle",
+                  "entry_value": 5
+                },
+                {
+                  "patient_id": "Trula Covey",
+                  "entry_value": 1
+                },
+                {
+                  "patient_id": "Mai Nguyen",
+                  "entry_value": 1
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "entry_value": "N/A"
+                },
+                {
+                  "patient_id": "Elsa Wu",
+                  "entry_value": 2
+                }
+              ]
+            },
+            {
+              "entry_title": "Number of Electronic Summary of Care Records Where  Medication Allergy Reconciliation Occurred During the Performance Period",
+              "numer": true,
+              "entry_values": [
+                {
+                  "patient_id": "Lavon Earle",
+                  "entry_value": 4
+                },
+                {
+                  "patient_id": "Trula Covey",
+                  "entry_value": 0
+                },
+                {
+                  "patient_id": "Mai Nguyen",
+                  "entry_value": 1
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "entry_value": "N/A"
+                },
+                {
+                  "patient_id": "Elsa Wu",
+                  "entry_value": 2
+                }
+              ]
+            },
+            {
+              "entry_title": "Number of Electronic Summary of Care Records Where  Current Problem List Reconciliation Occurred During the Performance Period",
+              "numer": true,
+              "entry_values": [
+                {
+                  "patient_id": "Lavon Earle",
+                  "entry_value": 5
+                },
+                {
+                  "patient_id": "Trula Covey",
+                  "entry_value": 2
+                },
+                {
+                  "patient_id": "Mai Nguyen",
+                  "entry_value": 1
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "entry_value": "N/A"
+                },
+                {
+                  "patient_id": "Elsa Wu",
+                  "entry_value": 2
+                }
+              ]
+            }
+          ],
+          "segment_totals": [
+            {
+              "total_heading": "Cumulative Total",
+              "total_values": [
+                {
+                  "patient_id": "Lavon Earle",
+                  "numerator_value": 4
+                },
+                {
+                  "patient_id": "Trula Covey",
+                  "numerator_value": 0
+                },
+                {
+                  "patient_id": "Mai Nguyen",
+                  "numerator_value": 1
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "numerator_value": 0
+                },
+                {
+                  "patient_id": "Elsa Wu",
+                  "numerator_value": 2
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_title": "Scenario 2",
+      "scenario_description": "Modify test data set-up for existing patient (populate numerator only)",
+      "segments": [
+        {
+          "segment_total":
+            {
+              "numerator_value": 7
+            }
+        }
+      ]
+    },
+    {
+      "scenario_title": "Scenario 3",
+      "scenario_description": "Add new or modify existing patient (populate numerator)",
+      "segments": [
+        {
+          "segment_total":
+            {
+              "numerator_value": 21
+            },
+          "segment_entries": [
+            {
+              "entry_title": "Number of Electronic Summary of Care Records Received",
+              "denom": true,
+              "entry_values": [
+                {
+                  "patient_id": "Alan Bench",
+                  "entry_value": 2
+                },
+                {
+                  "patient_id": "Rashida Champagne",
+                  "entry_value": 3
+                },
+                {
+                  "patient_id": "David Brown",
+                  "entry_value": 1
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "entry_value": 8
+                }
+              ]
+            },
+            {
+              "entry_title": "Number of Electronic Summary of Care Records Where  Medication Reconciliation Occurred During the Performance Period",
+              "numer": true,
+              "entry_values": [
+                {
+                  "patient_id": "Alan Bench",
+                  "entry_value": 2
+                },
+                {
+                  "patient_id": "Rashida Champagne",
+                  "entry_value": 3
+                },
+                {
+                  "patient_id": "David Brown",
+                  "entry_value": 1
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "entry_value": 8
+                }
+              ]
+            },
+            {
+              "entry_title": "Number of Electronic Summary of Care Records Where  Medication Allergy Reconciliation Occurred During the Performance Period",
+              "numer": true,
+              "entry_values": [
+                {
+                  "patient_id": "Alan Bench",
+                  "entry_value": 2
+                },
+                {
+                  "patient_id": "Rashida Champagne",
+                  "entry_value": 3
+                },
+                {
+                  "patient_id": "David Brown",
+                  "entry_value": 1
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "entry_value": 8
+                }
+              ]
+            },
+            {
+              "entry_title": "Number of Electronic Summary of Care Records Where  Current Problem List Reconciliation Occurred During the Performance Period",
+              "numer": true,
+              "entry_values": [
+                {
+                  "patient_id": "Alan Bench",
+                  "entry_value": 2
+                },
+                {
+                  "patient_id": "Rashida Champagne",
+                  "entry_value": 3
+                },
+                {
+                  "patient_id": "David Brown",
+                  "entry_value": 1
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "entry_value": 8
+                }
+              ]
+            }
+          ],
+          "segment_totals": [
+            {
+              "total_heading": "Cumulative Total",
+              "total_values": [
+                {
+                  "patient_id": "Alan Bench",
+                  "numerator_value": 2
+                },
+                {
+                  "patient_id": "Rashida Champagne",
+                  "numerator_value": 3
+                },
+                {
+                  "patient_id": "David Brown",
+                  "numerator_value": 1
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "numerator_value": 8
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_title": "Scenario 4",
+      "scenario_description": "Modify test data set-up for existing patient (populate numerator only)",
+      "segments": [
+        {
+          "segment_total":
+            {
+              "numerator_value": 21
+            }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2271 @@
+{
+  "test_deck": "G2 EP",
+  "test_number": "Required Test 2a - Health IT Modules Certified to (e) (1) and (g)(8), (g)(9) or (g)(10)",
+  "test_short_name": "RT 2a Provider Patient Exchange",
+  "automated_steps": [ { "title": "Steps that assume data availablity is not automatic", "index": 1 } ],
+  "automated_steps_info": "More information can be found in Note 4",
+  "program_info": [
+    { 
+      "program_specific_info": true,
+      "program_title": "medicaid_2020",
+      "program_name": "Medicaid Eligible Professional (EP)",
+      "measure_objective": "Patient Electronic Access to Health Information",
+      "objective_number": "Objective 5 of 8",
+      "measure_name": "Measure 1",
+      "measure_description": "For more than 80 percent of all unique patients seen by the EP: (1) The patient (or the patient-authorized representative) is provided timely access to view online, download, and transmit his or her health information; and (2) The provider ensures the patient’s health information is available for the patient (or patient-authorized representative) to access using any application of their choice that is configured to meet the technical specifications of the Application Programming Interface (API) in the provider’s certified electronic health record technology (CEHRT)."
+    },
+    { 
+      "program_specific_info": true,
+      "program_title": "mips_2020",
+      "program_name": "Merit-based Incentive Payment System (MIPS) Promoting Interoperability Performance Category Measure",
+      "measure_objective": "Provider To Patient Exchange",
+      "measure_name": "Provide Patients Electronic Access to Their Health Information",
+      "measure_description": "For at least one unique patient seen by the MIPS eligible clinician: (1) The patient (or the patient-authorized representative) is provided timely access to view online, download, and transmit his or her health information; and (2) The MIPS eligible clinician ensures the patient's health information is available for the patient (or patient-authorized representative) to access using any application of their choice that is configured to meet the technical specifications of the Application Programing Interface (API) in the MIPS eligible clinician's certified electronic health record technology (CEHRT)."
+    }
+  ],
+  "test_data_notes": [
+    "A patient seen during the reporting period with the numerator already populated and recorded will not increment the denominator and will not increment and re-record the numerator.",
+    "A patient seen during the reporting period who receives access at the first encounter and does not receive access at the second, or subsequent, encounters will populate and record the numerator at the first encounter and will decrement the numerator for the first subsequent visit, in which the required data is not provided within the required time period.",
+    "A patient seen during the reporting period who does not receive access at the first encounter and does receive access at the second, or subsequent, encounters will not populate and record the numerator for the first or any subsequent visits.",    
+    "If a Health IT Module automatically and simultaneously makes patient data available to both View, Download, and Transmit health information and available to an API, it is at the discretion of the ONC-ATL not to test the scenarios where it is assumed that this is not automatic for each method.",
+    "Patients seen multiple times during the reporting period will not increment the denominator after the initial visit.",
+    "Scenario 2 tests appropriate increments and decrements to the numerator. The numerator may not increment or record for the provided test cases, however, each case tests proper numerator behavior.",
+    "Test data supply: ONC and Vendor-supplied. ONC provides the Test Data Scenarios and parameters; the Vendor supplies the patient visit, clinical information, and Ambulatory and Inpatient summaries (or Inpatient Summary of Care). ",
+    "The Promoting Interoperability Measure requires that a patient have access to both view online, download, and transmit to a third party AND have the data available via an API in an EP/EC's CEHRT.  Please see the Certification Companion Guide for more information on the requirement for testing and attestation requirements. Required Test 2a tests both methods for Promoting Interoperability only.",
+    "The name of this measure changed from Patient Electronic Access to Health Information to Provide Patients Electronic Access to Their Health Information.  No other changes were made to the test data.  "
+  ],
+  "scenarios_have_providers": true,
+  "scenarios": [
+    {
+      "scenario_title": "Scenario 1",
+      "scenario_description": "Test Data set-up for new patient (populate numerator)",
+      "segments": [
+        {
+          "segment_total":
+            {
+              "providers": [
+                {
+                  "provider": "Provider 1",
+                  "denominator_value": 5,
+                  "numerator_value": 3,
+                  "programs": ["mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 5} ]
+                },
+                {
+                  "provider": "Provider 2",
+                  "denominator_value": 5,
+                  "numerator_value": 4,
+                  "programs": ["mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 5} ]
+                },
+                {
+                  "provider": "TIN A/Provider 1",
+                  "denominator_value": 5,
+                  "numerator_value": 4,
+                  "programs": ["medicaid_2020", "mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 5} ]
+
+                },
+                {
+                  "provider": "TIN B/Provider 1",
+                  "denominator_value": 4,
+                  "numerator_value": 3,
+                  "programs": ["mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 4} ]
+                },
+                {
+                  "provider": "TIN A/Provider 2",
+                  "denominator_value": 4,
+                  "numerator_value": 4,
+                  "programs": ["medicaid_2020", "mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 4} ]
+                },
+                {
+                  "provider": "TIN B/Provider 2",
+                  "denominator_value": 5,
+                  "numerator_value": 4,
+                  "programs": ["mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 5} ]
+                },
+                {
+                  "provider": "Group/TIN A",
+                  "denominator_value": 5,
+                  "numerator_value": 4,
+                  "programs": ["mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 5} ]
+                },
+                {
+                  "provider": "Group/TIN B",
+                  "denominator_value": 5,
+                  "numerator_value": 4,
+                  "programs": ["mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 5} ]
+                }
+              ]
+            },
+          "segment_entries": [
+            {
+              "entry_title": "Patient Seen  During or Outside EHR Reporting Period",
+              "denom": true,
+              "entry_values": [
+                {
+                  "patient_id": "Lavon Earle",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "First encounter, during"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "First encounter, during"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "First encounter, during"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "First encounter, during"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Trula Covey",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "First encounter, during"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "First encounter, during"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "First encounter, during"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "First encounter, during"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Mai Nguyen",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "First encounter, during"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "First encounter, during"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "First encounter, during"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "First encounter, during"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "First encounter, during"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "Not Seen"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "Not Seen"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "First encounter, during"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Elsa Wu",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "First encounter, during"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "First encounter, during"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "First encounter, during"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "First encounter, during"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "entry_title": "Patient or Authorized Representative Provided Access to View, Download, and Transmit Their Health Information within 48 hours (Medicaid) or 4 business days (MIPS)",
+              "numer": true,
+              "automatable_step": { "title": "Steps that assume data availablity is not automatic" },
+              "entry_values": [
+                {
+                  "patient_id": "Lavon Earle",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "Yes"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Trula Covey",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "Yes"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Mai Nguyen",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "Yes"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "Yes"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Elsa Wu",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "No"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "entry_title": "Patient Health Information is Available to Access via API  within 48 hours (Medicaid) or 4 business days (MIPS)",
+              "numer": true,
+              "automatable_step": { "title": "Steps that assume data availablity is not automatic" },
+              "entry_values": [
+                {
+                  "patient_id": "Lavon Earle",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "Yes"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Trula Covey",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "Yes"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Mai Nguyen",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "Yes"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "Yes"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Elsa Wu",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "No"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "segment_totals": [
+            {
+              "total_heading": "Cumulative Total",
+              "total_values": [
+                {
+                  "patient_id": "Lavon Earle",
+                  "providers": [
+                    {
+                      "provider": "Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "Group/TIN A",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "Group/TIN B",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Trula Covey",
+                  "providers": [
+                    {
+                      "provider": "Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "Group/TIN A",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "Group/TIN B",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Mai Nguyen",
+                  "providers": [
+                    {
+                      "provider": "Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "Group/TIN A",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "Group/TIN B",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "providers": [
+                    {
+                      "provider": "Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "denominator_value": 0,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "denominator_value": 0,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "Group/TIN A",
+                      "denominator_value": 1,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "Group/TIN B",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Elsa Wu",
+                  "providers": [
+                    {
+                      "provider": "Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "Group/TIN A",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "Group/TIN B",
+                      "denominator_value": 1,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_title": "Scenario 2",
+      "scenario_description": "Modify test data set-up for existing patient (populate numerator only)",
+      "segments": [
+        {
+          "segment_total":
+            {
+              "providers": [
+                {
+                  "provider": "Provider 1",
+                  "denominator_value": 5,
+                  "numerator_value": 0,
+                  "programs": ["mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 5} ]
+                },
+                {
+                  "provider": "Provider 2",
+                  "denominator_value": 5,
+                  "numerator_value": 1,
+                  "programs": ["mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 5} ]
+                },
+                {
+                  "provider": "TIN A/Provider 1",
+                  "denominator_value": 5,
+                  "numerator_value": 1,
+                  "programs": ["medicaid_2020", "mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 5} ]
+                },
+                {
+                  "provider": "TIN B/Provider 1",
+                  "denominator_value": 4,
+                  "numerator_value": 0,
+                  "programs": ["mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 4} ]
+                },
+                {
+                  "provider": "TIN A/Provider 2",
+                  "denominator_value": 4,
+                  "numerator_value": 1,
+                  "programs": ["medicaid_2020", "mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 4} ]
+                },
+                {
+                  "provider": "TIN B/Provider 2",
+                  "denominator_value": 5,
+                  "numerator_value": 1,
+                  "programs": ["mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 5} ]
+                },
+                {
+                  "provider": "Group/TIN A",
+                  "denominator_value": 5,
+                  "numerator_value": 1,
+                  "programs": ["mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 5} ]
+                },
+                {
+                  "provider": "Group/TIN B",
+                  "denominator_value": 5,
+                  "numerator_value": 1,
+                  "programs": ["mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 5} ]
+                }
+              ]
+            },
+          "segment_entries": [
+            {
+              "entry_title": "Patient Seen  During or Outside EHR Reporting Period",
+              "denom": true,
+              "entry_values": [
+                {
+                  "patient_id": "Trula Covey",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "Second encounter, during"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "Second encounter, during"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "Second encounter, during"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "Second encounter, during"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Lavon Earle",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "Second encounter, during"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "Second encounter, during"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "Second encounter, during"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "Second encounter, during"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Mai Nguyen",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "Second encounter, during"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "Second encounter, during"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "Second encounter, during"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "Second encounter, during"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "entry_title": "Patient or Authorized Representative Provided Access to View, Download, and Transmit Their Health Information within 48 hours (Medicaid) or 4 business days (MIPS)",
+              "numer": true,
+              "automatable_step": { "title": "Steps that assume data availablity is not automatic" },
+              "entry_values": [
+                {
+                  "patient_id": "Trula Covey",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "No"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Lavon Earle",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "No"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Mai Nguyen",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "No"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "entry_title": "Patient Health Information is Available to Access via API  within 48 hours (Medicaid) or 4 business days (MIPS)",
+              "numer": true,
+              "automatable_step": { "title": "Steps that assume data availablity is not automatic" },
+              "entry_values": [
+                {
+                  "patient_id": "Trula Covey",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "No"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Lavon Earle",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "No"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Mai Nguyen",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "No"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "segment_totals": [
+            {
+              "total_heading": "Cumulative Total",
+              "total_values": [
+                {
+                  "patient_id": "Trula Covey",
+                  "providers": [
+                    {
+                      "provider": "Provider 1",
+                      "denominator_value": 0,
+                      "numerator_value": -1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
+                    },
+                    {
+                      "provider": "Provider 2",
+                      "denominator_value": 0,
+                      "numerator_value": -1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
+                    },
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "denominator_value": 0,
+                      "numerator_value": -1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "denominator_value": 0,
+                      "numerator_value": -1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "denominator_value": 0,
+                      "numerator_value": -1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "denominator_value": 0,
+                      "numerator_value": -1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
+                    },
+                    {
+                      "provider": "Group/TIN A",
+                      "denominator_value": 0,
+                      "numerator_value": -1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
+                    },
+                    {
+                      "provider": "Group/TIN B",
+                      "denominator_value": 0,
+                      "numerator_value": -1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Lavon Earle",
+                  "providers": [
+                    {
+                      "provider": "Provider 1",
+                      "denominator_value": 0,
+                      "numerator_value": -1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
+                    },
+                    {
+                      "provider": "Provider 2",
+                      "denominator_value": 0,
+                      "numerator_value": -1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
+                    },
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "denominator_value": 0,
+                      "numerator_value": -1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "denominator_value": 0,
+                      "numerator_value": -1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "denominator_value": 0,
+                      "numerator_value": -1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "denominator_value": 0,
+                      "numerator_value": -1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
+                    },
+                    {
+                      "provider": "Group/TIN A",
+                      "denominator_value": 0,
+                      "numerator_value": -1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
+                    },
+                    {
+                      "provider": "Group/TIN B",
+                      "denominator_value": 0,
+                      "numerator_value": -1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Mai Nguyen",
+                  "providers": [
+                    {
+                      "provider": "Provider 1",
+                      "denominator_value": 0,
+                      "numerator_value": -1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
+                    },
+                    {
+                      "provider": "Provider 2",
+                      "denominator_value": 0,
+                      "numerator_value": -1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
+                    },
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "denominator_value": 0,
+                      "numerator_value": -1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "denominator_value": 0,
+                      "numerator_value": -1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "denominator_value": 0,
+                      "numerator_value": -1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "denominator_value": 0,
+                      "numerator_value": -1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
+                    },
+                    {
+                      "provider": "Group/TIN A",
+                      "denominator_value": 0,
+                      "numerator_value": -1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
+                    },
+                    {
+                      "provider": "Group/TIN B",
+                      "denominator_value": 0,
+                      "numerator_value": -1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_title": "Scenario 3",
+      "scenario_description": "Add new patient or modify existing patient (populate numerator and denominator)",
+      "segments": [
+        {
+          "segment_total":
+            {
+              "providers": [
+                {
+                  "provider": "Provider 1",
+                  "denominator_value": 8,
+                  "numerator_value": 3,
+                  "programs": ["mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 8} ]
+                },
+                {
+                  "provider": "Provider 2",
+                  "denominator_value": 8,
+                  "numerator_value": 4,
+                  "programs": ["mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 8} ]
+                },
+                {
+                  "provider": "TIN A/Provider 1",
+                  "denominator_value": 8,
+                  "numerator_value": 4,
+                  "programs": ["medicaid_2020", "mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 8} ]
+                },
+                {
+                  "provider": "TIN B/Provider 1",
+                  "denominator_value": 7,
+                  "numerator_value": 3,
+                  "programs": ["mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 7} ]
+                },
+                {
+                  "provider": "TIN A/Provider 2",
+                  "denominator_value": 7,
+                  "numerator_value": 4,
+                  "programs": ["medicaid_2020", "mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 7} ]
+                },
+                {
+                  "provider": "TIN B/Provider 2",
+                  "denominator_value": 8,
+                  "numerator_value": 4,
+                  "programs": ["mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 8} ]
+                },
+                {
+                  "provider": "Group/TIN A",
+                  "denominator_value": 8,
+                  "numerator_value": 4,
+                  "programs": ["mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 8} ]
+                },
+                {
+                  "provider": "Group/TIN B",
+                  "denominator_value": 8,
+                  "numerator_value": 4,
+                  "programs": ["mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 8} ]
+                }
+              ]
+            },
+          "segment_entries": [
+            {
+              "entry_title": "Patient Seen  During or Outside EHR Reporting Period",
+              "denom": true,
+              "entry_values": [
+                {
+                  "patient_id": "Alan Bench",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "First encounter, during"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "First encounter, during"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "First encounter, during"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "First encounter, during"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Rashida Champagne",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "First encounter, during"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "First encounter, during"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "First encounter, during"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "First encounter, during"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "David Brown",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "First encounter, during"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "First encounter, during"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "First encounter, during"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "First encounter, during"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "entry_title": "Patient or Authorized Representative Provided Access to View, Download, and Transmit Their Health Information within 48 hours (Medicaid) or 4 business days (MIPS)",
+              "numer": true,
+              "automatable_step": { "title": "Steps that assume data availablity is not automatic" },
+              "entry_values": [
+                {
+                  "patient_id": "Alan Bench",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "Yes"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Rashida Champagne",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "Yes"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "David Brown",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "Yes"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "entry_title": "Patient Health Information is Available to Access via API  within 48 hours (Medicaid) or 4 business days (MIPS)",
+              "numer": true,
+              "automatable_step": { "title": "Steps that assume data availablity is not automatic" },
+              "entry_values": [
+                {
+                  "patient_id": "Alan Bench",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "Yes"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Rashida Champagne",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "Yes"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "David Brown",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "Yes"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "segment_totals": [
+            {
+              "total_heading": "Cumulative Total",
+              "total_values": [
+                {
+                  "patient_id": "Alan Bench",
+                  "providers": [
+                    {
+                      "provider": "Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "Group/TIN A",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "Group/TIN B",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Rashida Champagne",
+                  "providers": [
+                    {
+                      "provider": "Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "Group/TIN A",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "Group/TIN B",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "David Brown",
+                  "providers": [
+                    {
+                      "provider": "Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "Group/TIN A",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "Group/TIN B",
+                      "denominator_value": 1,
+                      "numerator_value": 1,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_title": "Scenario 4",
+      "scenario_description": "Add new or modify existing patient (populate denominator only)",
+      "segments": [
+        {
+          "segment_total":
+            {
+              "providers": [
+                {
+                  "provider": "Provider 1",
+                  "denominator_value": 11,
+                  "numerator_value": 3,
+                  "programs": ["mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 11} ]
+                },
+                {
+                  "provider": "Provider 2",
+                  "denominator_value": 11,
+                  "numerator_value": 4,
+                  "programs": ["mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 11} ]
+                },
+                {
+                  "provider": "TIN A/Provider 1",
+                  "denominator_value": 11,
+                  "numerator_value": 4,
+                  "programs": ["medicaid_2020", "mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 11} ]
+                },
+                {
+                  "provider": "TIN B/Provider 1",
+                  "denominator_value": 10,
+                  "numerator_value": 3,
+                  "programs": ["mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 10} ]
+                },
+                {
+                  "provider": "TIN A/Provider 2",
+                  "denominator_value": 10,
+                  "numerator_value": 4,
+                  "programs": ["medicaid_2020", "mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 10} ]
+                },
+                {
+                  "provider": "TIN B/Provider 2",
+                  "denominator_value": 11,
+                  "numerator_value": 4,
+                  "programs": ["mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 11} ]
+                },
+                {
+                  "provider": "Group/TIN A",
+                  "denominator_value": 11,
+                  "numerator_value": 4,
+                  "programs": ["mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 11} ]
+                },
+                {
+                  "provider": "Group/TIN B",
+                  "denominator_value": 11,
+                  "numerator_value": 4,
+                  "programs": ["mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 11} ]
+                }
+              ]
+            },
+          "segment_entries": [
+            {
+              "entry_title": "Patient Seen  During or Outside EHR Reporting Period",
+              "denom": true,
+              "entry_values": [
+                {
+                  "patient_id": "Margaret Wise",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "First encounter, during"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "First encounter, during"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "First encounter, during"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "First encounter, during"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Frank Patterson",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "First encounter, during"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "First encounter, during"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "First encounter, during"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "First encounter, during"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Na Dangelo",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "First encounter, during"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "First encounter, during"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "First encounter, during"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "First encounter, during"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "entry_title": "Patient or Authorized Representative Provided Access to View, Download, and Transmit Their Health Information within 48 hours (Medicaid) or 4 business days (MIPS)",
+              "numer": true,
+              "automatable_step": { "title": "Steps that assume data availablity is not automatic" },
+              "entry_values": [
+                {
+                  "patient_id": "Margaret Wise",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "No"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Frank Patterson",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "No"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Na Dangelo",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "No"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "entry_title": "Patient Health Information is Available to Access via API  within 48 hours (Medicaid) or 4 business days (MIPS)",
+              "numer": true,
+              "automatable_step": { "title": "Steps that assume data availablity is not automatic" },
+              "entry_values": [
+                {
+                  "patient_id": "Margaret Wise",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "No"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Frank Patterson",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "Yes"
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Na Dangelo",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "No"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "segment_totals": [
+            {
+              "total_heading": "Cumulative Total",
+              "total_values": [
+                {
+                  "patient_id": "Margaret Wise",
+                  "providers": [
+                    {
+                      "provider": "Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "Group/TIN A",
+                      "denominator_value": 1,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "Group/TIN B",
+                      "denominator_value": 1,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Frank Patterson",
+                  "providers": [
+                    {
+                      "provider": "Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "Group/TIN A",
+                      "denominator_value": 1,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "Group/TIN B",
+                      "denominator_value": 1,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    }
+                  ]
+                },
+                {
+                  "patient_id": "Na Dangelo",
+                  "providers": [
+                    {
+                      "provider": "Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "denominator_value": 1,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "denominator_value": 1,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "Group/TIN A",
+                      "denominator_value": 1,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    },
+                    {
+                      "provider": "Group/TIN B",
+                      "denominator_value": 1,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_title": "Scenario 5",
+      "scenario_description": "Add new or modify existing patient (do not populate numerator or denominator)",
+      "segments": [
+        {
+          "segment_total":
+            {
+              "providers": [
+                {
+                  "provider": "Provider 1",
+                  "denominator_value": 11,
+                  "numerator_value": 3,
+                  "programs": ["mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 11} ]
+                },
+                {
+                  "provider": "Provider 2",
+                  "denominator_value": 11,
+                  "numerator_value": 4,
+                  "programs": ["mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 11} ]
+                },
+                {
+                  "provider": "TIN A/Provider 1",
+                  "denominator_value": 11,
+                  "numerator_value": 4,
+                  "programs": ["medicaid_2020", "mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 11} ]
+                },
+                {
+                  "provider": "TIN B/Provider 1",
+                  "denominator_value": 10,
+                  "numerator_value": 3,
+                  "programs": ["mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 10} ]
+                },
+                {
+                  "provider": "TIN A/Provider 2",
+                  "denominator_value": 10,
+                  "numerator_value": 4,
+                  "programs": ["medicaid_2020", "mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 10} ]
+                },
+                {
+                  "provider": "TIN B/Provider 2",
+                  "denominator_value": 11,
+                  "numerator_value": 4,
+                  "programs": ["mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 11} ]
+                },
+                {
+                  "provider": "Group/TIN A",
+                  "denominator_value": 11,
+                  "numerator_value": 4,
+                  "programs": ["mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 11} ]
+                },
+                {
+                  "provider": "Group/TIN B",
+                  "denominator_value": 11,
+                  "numerator_value": 4,
+                  "programs": ["mips_2020"],
+                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 11} ]
+                }
+              ]
+            },
+          "segment_entries": [
+            {
+              "entry_title": "Patient Seen  During or Outside EHR Reporting Period",
+              "denom": true,
+              "entry_values": [
+                {
+                  "patient_id": "Elsa Wu",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "Second encounter, during"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "Not Seen"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "Not Seen"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "Second encounter, during"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "entry_title": "Patient or Authorized Representative Provided Access to View, Download, and Transmit Their Health Information within 48 hours (Medicaid) or 4 business days (MIPS)",
+              "numer": true,
+              "automatable_step": { "title": "Steps that assume data availablity is not automatic" },
+              "entry_values": [
+                {
+                  "patient_id": "Elsa Wu",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "No"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "entry_title": "Patient Health Information is Available to Access via API  within 48 hours (Medicaid) or 4 business days (MIPS)",
+              "numer": true,
+              "automatable_step": { "title": "Steps that assume data availablity is not automatic" },
+              "entry_values": [
+                {
+                  "patient_id": "Elsa Wu",
+                  "providers": [
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "entry_value": "Yes"
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "entry_value": "No"
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "entry_value": "Yes"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "segment_totals": [
+            {
+              "total_heading": "Cumulative Total",
+              "total_values": [
+                {
+                  "patient_id": "Elsa Wu",
+                  "providers": [
+                    {
+                      "provider": "Provider 1",
+                      "denominator_value": 0,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
+                    },
+                    {
+                      "provider": "Provider 2",
+                      "denominator_value": 0,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
+                    },
+                    {
+                      "provider": "TIN A/Provider 1",
+                      "denominator_value": 0,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
+                    },
+                    {
+                      "provider": "TIN B/Provider 1",
+                      "denominator_value": 0,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
+                    },
+                    {
+                      "provider": "TIN A/Provider 2",
+                      "denominator_value": 0,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
+                    },
+                    {
+                      "provider": "TIN B/Provider 2",
+                      "denominator_value": 0,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
+                    },
+                    {
+                      "provider": "Group/TIN A",
+                      "denominator_value": 0,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
+                    },
+                    {
+                      "provider": "Group/TIN B",
+                      "denominator_value": 0,
+                      "numerator_value": 0,
+                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

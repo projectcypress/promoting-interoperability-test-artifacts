@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:n1="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    {{> _header_css}}
+  </head>
+  <body onload="w3.showAutomatable()">
+    <div id="block-breadcrumbs" class="block block-system block-system-breadcrumb-block">
+      <nav class="breadcrumb" role="navigation" aria-labelledby="system-breadcrumb">
+        <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+        <ol>
+          {{#breadcrumbs}}
+            {{#ref}}
+              <li><a href="{{.}}">{{title}}</a></li>
+            {{/ref}}
+            {{^ref}}
+              <li>{{title}}</li>
+            {{/ref}}
+          {{/breadcrumbs}}
+        </ol>
+      </nav>
+    </div>
+    {{^index_page}}
+      <div class="flex">
+      {{#last_test}}
+        <a class="music" href="{{link}}">Last Test ({{test_short_name}})</a>
+      {{/last_test}}
+      {{#next_test}}
+        <a class="music" href="{{link}}">Next Test ({{test_short_name}})</a>
+      {{/next_test}}
+      </div>
+    {{/index_page}}
+    {{#test_data}}
+      <h1>{{test_number}}</h1>
+      <div><br/></div>
+      <div class="measures_container">
+        {{#program_info}}
+        <div class="measure_container">
+          <div class="divTable withBorder">
+            <div class="divTableBody">
+              <div class="divTableNoteRow">
+              {{#program_name}}
+                <div class="divTableCell noBorder"><span class="divBold">Program Name:</span> {{.}}</div>
+              {{/program_name}}
+              </div>
+              <div class="divTableNoteRow">
+              {{#measure_objective}}
+                <div class="divTableCell noBorder"><span class="divBold">Measure Objective:</span> {{.}}{{#objective_number}} ({{.}}){{/objective_number}}</div>
+              {{/measure_objective}}
+              </div>
+              <div class="divTableNoteRow">
+              {{#measure_name}}
+                <div class="divTableCell noBorder"><span class="divBold">2020 Promoting Interoperability Measure: </span><span class="blueItallic">{{.}}:</span>{{#measure_description}}{{.}}{{/measure_description}}</div>
+              {{/measure_name}}
+              </div>
+            </div>
+          </div>
+        </div>
+        {{/program_info}}
+      </div>
+      {{^index_page}}
+      <h2>Notes:</h2>
+      {{/index_page}}
+      <div class="divTable withBorder blah">
+        <div class="divTableBody">
+          {{#test_notes}}
+          <div class="divTableNoteRow">
+            <div class="divTableCell noBorder">{{#note_index}}{{.}}{{/note_index}}: {{#note}}{{.}}{{/note}}</div>
+          </div>
+          {{/test_notes}}
+        </div>
+      </div>
+      {{#index_page}}
+        <div class="divTable">
+          <div class="divTableBody">
+            <div class="divTableNoteRow">
+              <h2>Objectives and Measures</h2>
+            </div>
+            {{#test_links}}
+              <div class="divTableNoteRow">
+                <div class="divTableCell noBorder"><a href="{{ref}}">{{summary}}</a></div>
+              </div>
+            {{/test_links}}
+          </div>
+        </div>
+        <div class="divTable">
+          <div class="divTableBody">
+            <div class="divTableRow">
+              <h2>Revision History</h2>
+            </div>
+            <div class="divTableRow">
+                <div class="divTableHead">Version #</div>
+                <div class="divTableHead">Description of Change</div>
+                <div class="divTableHead">Version Date</div>
+              </div>
+            {{#version_log}}
+              <div class="divTableRow">
+                <div class="divTableCell">{{version_number}}</div>
+                <div class="divTableCell">{{version_description}}</div>
+                <div class="divTableCell">{{version_date}}</div>
+              </div>
+            {{/version_log}}
+          </div>
+        </div>
+      {{/index_page}}
+      {{^index_page}}
+        <h2>Scenarios:</h2>
+        <div class="radio_container">
+          {{#more_than_one_program?}}
+          <div>
+            <form action="">
+              <fieldset>
+                <legend>Select Programs</legend>
+                {{#program_info}}
+                {{#mips_program?}}
+                <label for="">Show MIPS Data</label>
+                <input type="radio" name="program_radio" value="mips" onclick="w3.showMips()"><br>
+                {{/mips_program?}}
+                {{#medicaid_program?}}
+                <label for="">Show Medicaid Data</label>
+                <input type="radio" name="program_radio" value="medicaid" onclick="w3.showMedicaid()"><br>
+                {{/medicaid_program?}}
+                {{/program_info}}
+                <label for="">Show All</label>
+                <input type="radio" name="program_radio" value="all_programs" onclick="w3.show_all_programs()" checked><br>
+              </fieldset>
+            </form>
+          </div>
+          {{/more_than_one_program?}}
+          {{#has_automated_steps?}}
+          <div>
+            <form action="">
+              <fieldset>
+                <legend>Show/Hide Discretionary Steps</legend>
+                <label for="">Show All Discretionary Steps</label>
+                <input type="radio" name="automatable_radio" value="show_automatable" onclick="w3.showAutomatable()" checked><br>
+                {{#automated_steps}}
+                <label for="">Hide - {{title}}</label>
+                <input type="radio" name="automatable_radio" value="hide_automatable{{index}}" onclick="w3.hideAutomatable{{index}}()"><br>
+                {{/automated_steps}}
+                {{#has_more_than_one_automated_step?}}
+                <label for="">Hide All Discretionary Steps</label>
+                <input type="radio" name="automatable_radio" value="hide_all_automatable" onclick="w3.hideAllAutomatable()"><br>
+                {{/has_more_than_one_automated_step?}}
+                <span class="help-block">{{automated_steps_info}}</span>
+              </fieldset>
+            </form>
+          </div>
+          {{/has_automated_steps?}}
+          {{#other_options}}
+          <div>
+            <form action="">
+              <fieldset>
+                <legend>Other Options</legend>
+                <label for="">Include controlled substances</label>
+                <input type="radio" name="controlled_radio" value="includes_controlled" onclick="w3.includeControlled()" checked><br>
+                <label for="">Exclude controlled substances</label>
+                <input type="radio" name="controlled_radio" value="excludes_controlled" onclick="w3.excludeControlled()"><br>
+                <span class="help-block">{{other_option_info}}</span>
+              </fieldset>
+            </form>
+          </div>
+          {{/other_options}}
+        </div>
+        {{#scenarios_have_providers}}          
+          {{#row_scenario_data}}
+            {{> _scenarios_with_provider}}
+          {{/row_scenario_data}}
+        {{/scenarios_have_providers}}
+        {{^scenarios_have_providers}}
+          {{#row_scenario_data}}
+            {{> _scenarios}}
+          {{/row_scenario_data}}
+        {{/scenarios_have_providers}}
+      {{/index_page}}
+    {{/test_data}}
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+      {{> vendor/_w3js}}
+    </script>
+  </body>
+</html>

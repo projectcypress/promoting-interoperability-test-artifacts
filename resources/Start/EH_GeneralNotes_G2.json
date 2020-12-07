@@ -1,0 +1,150 @@
+{
+  "test_deck": "G2 EH",
+  "test_number": "General Notes",
+  "test_data_notes": [
+    "Each tab includes the Promoting Interoperability measure.",
+    "Health IT developers are required to use the same patient names, date of birth, and sex included in the test data and may not use their own test names, date of birth, and sex.",
+    "Where CMS allows for providers to include or exclude certain data, health IT developers must demonstrate the ability to record the numerator with or without the data (i.e. ePrescribing allows for the inclusion or exclusion of controlled substances).",
+    "Measures that are no longer included in the Promoting Interoperability programs will not be tested and therefore do not have test data.",
+    "If a Health IT Module performs a function automatically, such as making the patient education materials available electronically once identified, or automatically making data available to a patient via view, download, transmit, or an API, it is at the ATL's discretion not to test scenarios that assume this functionality is not automatic.",
+    "Starting in 2019, CMS has clarified that the numerator for the Promoting Interoperability measures is constrained to the EHR reporting period.  The numerator action therefore must take place during the reporting period.   Actions occurring outside of the reporting period, including after the calendar year will not count in the numerator."
+  ],
+  "index_page": true,
+  "test_links": [
+    {
+      "ref": "G2_EH_Required_Test_1.html",
+      "summary": "Required Test 1 - Electronic Prescribing"
+    },
+    {
+      "ref": "G2_EH_Required_Test_2a_.html",
+      "summary": "Required Test 2a - Patient Electronic Access (certified to (e)(1) and (g)(8) or (g)(9))"
+    },
+    {
+      "ref": "G2_EH_Required_Test_2b_.html",    
+      "summary": "Required Test 2b - Patient Electronic Access (certified to (e)(1))"
+    },
+    {
+      "ref": "G2_EH_Required_Test_2c_.html",
+      "summary": "Required Test 2c - Patient Electronic Access (certified to (g)(8) or (g)(9))"
+    },
+    {
+      "ref": "G2_EH_Required_Test_3.html",
+      "summary": "Required Test 3 - Patient Education"
+    },
+    {
+      "ref": "G2_EH_Required_Test_4a_.html",
+      "summary": "Required Test 4a - View, Download, and Transmit (certified to (e)(1) and (g)(8) or (g)(9))"
+    },
+    {
+      "ref": "G2_EH_Required_Test_4b_.html",
+      "summary": "Required Test 4b - View, Download, and Transmit (certified to (e)(1))"
+    },
+    {
+      "ref": "G2_EH_Required_Test_4c_.html",
+      "summary": "Required Test 4c - View, Download, and Transmit (certified to (g)(8) or (g)(9))"
+    },
+    {
+      "ref": "G2_EH_Required_Test_5.html",
+      "summary": "Required Test 5 - Secure Messaging"
+    },
+    {
+      "ref": "G2_EH_Required_Test_6.html",
+      "summary": "Required Test 6 - Patient Generated Health Data"
+    },
+    {
+      "ref": "G2_EH_Required_Test_7.html",
+      "summary": "Required Test 7 - Transitions of Care"
+    },
+    {
+      "ref": "G2_EH_Required_Test_8.html",
+      "summary": "Required Test 8 - Receive and Incorporate"
+    },
+    {
+      "ref": "G2_EH_Required_Test_9.html",
+      "summary": "Required Test 9 - Clinical Information Reconciliation"
+    },
+    {
+      "ref": "G2_EH_Required_Test_10.html",
+      "summary": "Required Test 10 - CPOE Medications"
+    },
+    {
+      "ref": "G2_EH_Required_Test_11.html",
+      "summary": "Required Test 11 - CPOE Laboratory"
+    },
+    {
+      "ref": "G2_EH_Required_Test_12.html",
+      "summary": "Required Test 12 - CPOE Diagnostic Imaging"
+    },
+    {
+      "ref": "G2_EH_Required_Test_15.html",
+      "summary": "Required Test 15 - Electronic Referral Loops by Receiving and Incorporating Health Information"
+    }
+  ],
+  "version_log": [
+    {
+      "version_number": "1.0",
+      "version_description": "Final Test Data",
+      "version_date": "10/30/2016"
+    },
+    {
+      "version_number": "1.1",
+      "version_description": "Removed ambulatory data, added totals for each scenario, modified test notes.",
+      "version_date": "12/30/2016"
+    },
+    {
+      "version_number": "1.2",
+      "version_description": "In Required Test 2b, updated test case 3.3.  Removed note 5 from Required Test 2c. Removed the Stage 2 column from Required Test 5.  Added Required Tests 10, 11, and 12 which are applicable to EHs/CAHs reporting to the Medicaid Meaningful Use Program only.  Added two test notes to Required Test 1.",
+      "version_date": "1/23/2017"
+    },
+    {
+      "version_number": "1.3",
+      "version_description": "Updated test notes in Required Tests 2a, b, c; 3, 4a, b, c; 5; 6; 7; and 8.  Corrected data errors in Required Test 1.",
+      "version_date": "2/16/2017"
+    },
+    {
+      "version_number": "1.4",
+      "version_description": "Updated test notes in Required Tests 4a and 4c.  Removed the reference to the CCG from Required Tests 4a, 4b, and 4c.  Fixed test data for Required Test 2a. ",
+      "version_date": "5/26/2017"
+    },
+    {
+      "version_number": "1.5",
+      "version_description": "Updated test notes in Required Test 3 and 5.",
+      "version_date": "8/25/2017"
+    },
+    {
+      "version_number": "1.6",
+      "version_description": "Added Required Tests 13, 14, and 15. Updated the measure thresholds for the Stage 3 measure for Required Test 1, 2a, 2b, 2c, and 7. Updated Required Test 7 Stage 3 measure to limit the numerator to actions taken during the reporting period.  Updated the tab names for Required Test 2a, 2b, 2c, and 7. Revised general note 6 to reflect new CMS policy that starting in 2019 actions must take place during the reporting period to count towards the numerator of Stage 3 measures.",
+      "version_date": "8/17/2018"
+    },
+    {
+      "version_number": "1.7",
+      "version_description": "Modified Required Tests 13, 14, and 15 to clarify they are currently draft. For Required Test 2a, 2b, 2c, and 7 added a test data note outlining that the measure name changed and that no other changes were made to the test data. Added general note 9 stating that Required Tests 13, 14, and 15 are draft.  Added general note 10 noting the Medicare Stage 3 measures that are only applicable in 2018.  Added general note 11 noting the Stage 3 measures that are only applicable starting in 2019. ",
+      "version_date": "12/6/2018"
+    },
+    {
+      "version_number": "1.8",
+      "version_description": "Added general note 12 stating that testing for Required Tests 13 and 14 is self-declaration.  Updated Required Tests 13 and 14 and removed draft status.",
+      "version_date": "2/28/2019"
+    },
+    {
+      "version_number": "1.9",
+      "version_description": "Added a test data note to Required Test 7 noting that starting in 2019 a hospital can use any document template of the C-CDA to meet the measure requirements.  Revised Required Test 15 based on new CMS FAQs and removed draft status.  Removed general note 13 as Required Test 15 is no longer draft.",
+      "version_date": "4/26/2019"
+    },
+    {
+      "version_number": "2.0",
+      "version_description": "Modified general note 10 to remove reference to Required Test 2.  Added general note 13 clarifying that testing to the Modified Stage 2 calculation method for inpatient modules is optional starting in 2019.",
+      "version_date": "6/28/2019"
+    },
+    {
+      "version_number": "2.1",
+      "version_description": "Updated test data note 2 in Required Test 4 a, b, and c to remove the reference to the reporting period.  Updated general note 9 to clarify that RT 14, and 15 are available for testing.  Modified general note 9 to remove RT 13.  Modified general note 11 removing RT 13 and clarifying that RT 14 is only applicable in 2019.  Added general note 14 clarifying that RT 13 is no longer available for testing as it is now a Yes/No measure.",
+      "version_date": "8/17/2018"
+    },
+    {
+      "version_number": "3.0",
+      "version_description": "Based on the sunsetting of the 2014 Edition in the Cures Final rule measure descriptions have been updated to reflect 2020 Promoting Interoperability requirements. RT 14 was for 2019 only and has been removed",
+      "version_date": ""
+    }
+  ]
+}

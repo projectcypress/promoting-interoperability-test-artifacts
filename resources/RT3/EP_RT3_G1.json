@@ -1,0 +1,313 @@
+{
+  "test_deck": "G1 EP",
+  "test_number": "Required Test 3",
+  "test_short_name": "RT 3 Patient Education",
+  "automated_steps": [ { "title": "Steps that assume education material availablity is not automatic", "index": 1 } ],
+  "automated_steps_info": "More information can be found in Note 4",
+  "program_info": [
+    { 
+      "program_name": "Medicaid Eligible Professional (EP)",
+      "measure_objective": "Patient Electronic Access to Health Information",
+      "objective_number": "Objective 5 of 8",
+      "measure_name": "Measure 2",
+      "measure_description": "The EP must use clinically relevant information from CEHRT to identify patient-specific educational resources and provide electronic access to those materials to more than 35 percent of unique patients seen by the EP during the EHR reporting period."
+    }
+  ],
+  "test_data_notes": [
+    "A patient seen during the reporting period with the numerator already populated and recorded will not increment and re-record the numerator.",
+    "The scenarios for the Promoting Interoperability measures require the EP/EC to provide CEHRT-identified patient-specific education resources no earlier than the first day of the calendar year of the reporting/performance period, during the reporting/performance period, or no later than the last day of the calendar year of the reporting period to populate and record the numerator.",
+    "The Promoting Interoperability measure scenarios require the EC to use CEHRT to identify patient-specific education resources and provide electronic access to those materials during the reporting/performance period.  ",
+    "If a Health IT Module automatically makes patient education materials available to the patient electronically when the patient has a visit and has access to a patient portal or API, it is at the discretion of the ATL to allow the health IT developer to use different patient names for Required Test 3.  To count for the measure the provider must be involved in determining which patient education materials will be made available to patients automatically based on patient specific information.  ",
+    "Test data supply: ONC and Vendor-supplied. ONC provides the Test Data Scenarios and parameters; the Vendor supplies the patient education content."
+  ],
+  "scenarios": [
+    {
+      "scenario_title": "Scenario 1",
+      "scenario_description": "Test Data set-up for new patient (populate numerator)",
+      "segments": [
+        {
+          "segment_total":
+            {
+              "numerator_value": 3,
+              "automated_numerator_values": [ { "title": "Steps that assume education material availablity is not automatic", "value": 3} ]
+            },
+          "segment_entries": [
+            {
+              "entry_title": "Patient Seen During or Outside of Reporting / Performance Period",
+              "denom": true,
+              "entry_values": [
+                {
+                  "patient_id": "Lavon Earle",
+                  "entry_value": "First encounter, during"
+                },
+                {
+                  "patient_id": "Trula Covey",
+                  "entry_value": "First encounter, during"
+                },
+                {
+                  "patient_id": "Mai Nguyen",
+                  "entry_value": "First encounter, during"
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "entry_value": "First encounter, during"
+                },
+                {
+                  "patient_id": "Elsa Wu",
+                  "entry_value": "First encounter, during"
+                }
+              ]
+            },
+            {
+              "entry_title": "CEHRT Identifies Patient-Specific Education Resources  During or Outside Reporting/Performance Period",
+              "numer": true,
+              "entry_values": [
+                {
+                  "patient_id": "Lavon Earle",
+                  "entry_value": "Yes"
+                },
+                {
+                  "patient_id": "Trula Covey",
+                  "entry_value": "No"
+                },
+                {
+                  "patient_id": "Mai Nguyen",
+                  "entry_value": "No"
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "entry_value": "Yes"
+                },
+                {
+                  "patient_id": "Elsa Wu",
+                  "entry_value": "Yes"
+                }
+              ]
+            },
+            {
+              "entry_title": "EP/EC Provides Electronic Access to Patient-Specific Educational Resources Identified by CEHRT During or Outside Reporting/Performance Period",
+              "numer": true,
+              "automatable_step": { "title": "Steps that assume education material availablity is not automatic" },
+              "entry_values": [
+                {
+                  "patient_id": "Lavon Earle",
+                  "entry_value": "Provided"
+                },
+                {
+                  "patient_id": "Trula Covey",
+                  "entry_value": "Not Provided"
+                },
+                {
+                  "patient_id": "Mai Nguyen",
+                  "entry_value": "Not Provided"
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "entry_value": "Provided"
+                },
+                {
+                  "patient_id": "Elsa Wu",
+                  "entry_value": "Provided"
+                }
+              ]
+            }
+          ],
+          "segment_totals": [
+            {
+              "total_heading": "Cumulative Total",
+              "total_values": [
+                {
+                  "patient_id": "Lavon Earle",
+                  "numerator_value": 1,
+                  "automated_numerator_values": [ { "title": "Steps that assume education material availablity is not automatic", "value": 1} ]
+                },
+                {
+                  "patient_id": "Trula Covey",
+                  "numerator_value": 0,
+                  "automated_numerator_values": [ { "title": "Steps that assume education material availablity is not automatic", "value": 0} ]
+                },
+                {
+                  "patient_id": "Mai Nguyen",
+                  "numerator_value": 0,
+                  "automated_numerator_values": [ { "title": "Steps that assume education material availablity is not automatic", "value": 0} ]
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "numerator_value": 1,
+                  "automated_numerator_values": [ { "title": "Steps that assume education material availablity is not automatic", "value": 1} ]
+                },
+                {
+                  "patient_id": "Elsa Wu",
+                  "numerator_value": 1,
+                  "automated_numerator_values": [ { "title": "Steps that assume education material availablity is not automatic", "value": 1} ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_title": "Scenario 2",
+      "scenario_description": "Modify test data set-up for existing patient (populate numerator only)",
+      "segments": [
+        {
+          "segment_total":
+            {
+              "numerator_value": 3
+            }
+        }
+      ]
+    },
+    {
+      "scenario_title": "Scenario 3",
+      "scenario_description": "Add new or modify existing patient (populate numerator)",
+      "segments": [
+        {
+          "segment_total":
+            {
+              "numerator_value": 6,
+              "automated_numerator_values": [ { "title": "Steps that assume education material availablity is not automatic", "value": 6} ]
+            },
+          "segment_entries": [
+            {
+              "entry_title": "Patient Seen During or Outside of Reporting / Performance Period",
+              "denom": true,
+              "entry_values": [
+                {
+                  "patient_id": "Alan Bench",
+                  "entry_value": "First encounter, during"
+                },
+                {
+                  "patient_id": "Rashida Champagne",
+                  "entry_value": "First encounter, during"
+                },
+                {
+                  "patient_id": "David Brown",
+                  "entry_value": "First encounter, during"
+                }
+              ]
+            },
+            {
+              "entry_title": "CEHRT Identifies Patient-Specific Education Resources  During or Outside Reporting/Performance Period",
+              "numer": true,
+              "entry_values": [
+                {
+                  "patient_id": "Alan Bench",
+                  "entry_value": "Yes"
+                },
+                {
+                  "patient_id": "Rashida Champagne",
+                  "entry_value": "Yes"
+                },
+                {
+                  "patient_id": "David Brown",
+                  "entry_value": "Yes"
+                }
+              ]
+            },
+            {
+              "entry_title": "EP/EC Provides Electronic Access to Patient-Specific Educational Resources Identified by CEHRT During or Outside Reporting/Performance Period",
+              "numer": true,
+              "automatable_step": { "title": "Steps that assume education material availablity is not automatic" },
+              "entry_values": [
+                {
+                  "patient_id": "Alan Bench",
+                  "entry_value": "Provided"
+                },
+                {
+                  "patient_id": "Rashida Champagne",
+                  "entry_value": "Provided"
+                },
+                {
+                  "patient_id": "David Brown",
+                  "entry_value": "Provided"
+                }
+              ]
+            }
+          ],
+          "segment_totals": [
+            {
+              "total_heading": "Cumulative Total",
+              "total_values": [
+                {
+                  "patient_id": "Alan Bench",
+                  "numerator_value": 1,
+                  "automated_numerator_values": [ { "title": "Steps that assume education material availablity is not automatic", "value": 1} ]
+                },
+                {
+                  "patient_id": "Rashida Champagne",
+                  "numerator_value": 1,
+                  "automated_numerator_values": [ { "title": "Steps that assume education material availablity is not automatic", "value": 1} ]
+                },
+                {
+                  "patient_id": "David Brown",
+                  "numerator_value": 1,
+                  "automated_numerator_values": [ { "title": "Steps that assume education material availablity is not automatic", "value": 1} ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_title": "Scenario 4",
+      "scenario_description": "Modify test data set-up for existing patient (populate numerator only)",
+      "segments": [
+        {
+          "segment_total":
+            {
+              "numerator_value": 6,
+              "automated_numerator_values": [ { "title": "Steps that assume education material availablity is not automatic", "value": 6} ]
+            },
+          "segment_entries": [
+            {
+              "entry_title": "Patient Seen During or Outside of Reporting / Performance Period",
+              "denom": true,
+              "entry_values": [
+                {
+                  "patient_id": "Elsa Wu",
+                  "entry_value": "Second encounter, during"
+                }
+              ]
+            },
+            {
+              "entry_title": "CEHRT Identifies Patient-Specific Education Resources  During or Outside Reporting/Performance Period",
+              "numer": true,
+              "entry_values": [
+                {
+                  "patient_id": "Elsa Wu",
+                  "entry_value": "Yes"
+                }
+              ]
+            },
+            {
+              "entry_title": "EP/EC Provides Electronic Access to Patient-Specific Educational Resources Identified by CEHRT During or Outside Reporting/Performance Period",
+              "numer": true,
+              "automatable_step": { "title": "Steps that assume education material availablity is not automatic" },
+              "entry_values": [
+                {
+                  "patient_id": "Elsa Wu",
+                  "entry_value": "Provided"
+                }
+              ]
+            }
+          ],
+          "segment_totals": [
+            {
+              "total_heading": "Cumulative Total",
+              "total_values": [
+                {
+                  "patient_id": "Elsa Wu",
+                  "numerator_value": 0,
+                  "automated_numerator_values": [ { "title": "Steps that assume education material availablity is not automatic", "value": 0} ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

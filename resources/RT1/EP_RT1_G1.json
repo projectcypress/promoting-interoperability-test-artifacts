@@ -1,0 +1,634 @@
+{
+  "test_deck": "G1 EP",
+  "test_number": "Required Test 1",
+  "test_short_name": "RT 1 ePrescribing",
+  "automated_steps": [ { "title": "Automated Drug Queries", "index": 1 }, { "title" : "Automated Transmissions", "index": 2} ],
+  "automated_steps_info": "More information can be found in Notes 2-3",
+  "other_options": ["yes"],
+  "other_option_info": "More information can be found in Note 1",
+  "program_info": [
+    { 
+      "program_name": "Medicaid Eligible Professional (EP)",
+      "measure_objective": "Electronic Prescribing",
+      "objective_number": "Objective 2 of 8",
+      "measure_name": "Measure 1",
+      "measure_description": "More than 60 percent of all permissible prescriptions written by the eligible professional (EP) are queried for a drug formulary and transmitted electronically using certified electronic health record technology (CEHRT)."
+    },
+    { 
+      "program_name": "Merit-based Incentive Payment System (MIPS) Promoting Interoperability Performance Category Measure",
+      "measure_objective": "Electronic Prescribing",
+      "measure_name": "e-Prescribing",
+      "measure_description": "At least one permissible prescription written by the MIPS eligible clinician is queried for a drug formulary and transmitted electronically using CEHRT."
+    }
+  ],
+  "test_data_notes": [
+    "The set of calculations including controlled substances and the set of calculations excluding controlled substances are both required.  If a Health IT Module is not able to transmit controlled substances, it is at the discretion of the ONC-ATL to not test the controlled substance calculations.",
+    "If a Health IT Module automatically transmits a prescription electronically when it is generated, it is at the discretion of the ATL not to test scenarios that assume this is not automatic.",
+    "If a Health IT Module automatically queries for a drug formulary upon every prescription that is generated, it is at the discretion of the ATL not to test scenarios that assume this is not automatic.",
+    "If a Health IT Module can only send changes electronically, it is at the discretion of the ATL not to test scenarios that assume a change could be sent via non-electronic means.  ",
+    "The scenarios that test changed prescriptions assume that the original prescription was written electronically.",
+    "Test data supply: ONC and Vendor-supplied. ONC provides the Test Data Scenarios and parameters; the Vendor will supply the Electronic Prescription entry and formulary details."
+  ],
+  "scenarios": [
+    {
+      "scenario_title": "Scenario 1",
+      "scenario_description": "Test Data set-up for new patient (populate numerator)",
+      "segments": [
+        {
+          "segment_total":
+            {
+              "numerator_value": 8,
+              "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 9}, { "title": "Automated Transmissions", "value":8}, { "title": "All", "value": 9} ]
+            },
+          "segment_title": "Includes controlled substances", 
+          "segment_entries": [
+            {
+              "entry_title": "Number of Prescriptions Written during reporting/ performance period (not controlled)",
+              "denom": true,
+              "entry_values": [
+                {
+                  "patient_id": "Lavon Earle",
+                  "entry_value": 1
+                },
+                {
+                  "patient_id": "Trula Covey",
+                  "entry_value": 0
+                },
+                {
+                  "patient_id": "Mai Nguyen",
+                  "entry_value": 1
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "entry_value": 2
+                },
+                {
+                  "patient_id": "Elsa Wu",
+                  "entry_value": 1
+                }
+              ]
+            },
+            {
+              "entry_title": "Number of Controlled Prescriptions Written during reporting/  performance period",
+              "denom": true,
+              "entry_values": [
+                {
+                  "patient_id": "Lavon Earle",
+                  "entry_value": 1
+                },
+                {
+                  "patient_id": "Trula Covey",
+                  "entry_value": 1
+                },
+                {
+                  "patient_id": "Mai Nguyen",
+                  "entry_value": 0
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "entry_value": 1
+                },
+                {
+                  "patient_id": "Elsa Wu",
+                  "entry_value": 1
+                }
+              ]
+            },
+            {
+              "entry_title": "Number of Prescriptions (not controlled) Generated and Transmitted Electronically",
+              "numer": true,
+              "automatable_step": { "title": "Automated Transmissions" },
+              "entry_values": [
+                {
+                  "patient_id": "Lavon Earle",
+                  "entry_value": 1
+                },
+                {
+                  "patient_id": "Trula Covey",
+                  "entry_value": 0
+                },
+                {
+                  "patient_id": "Mai Nguyen",
+                  "entry_value": 1
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "entry_value": 2
+                },
+                {
+                  "patient_id": "Elsa Wu",
+                  "entry_value": 1
+                }
+              ]
+            },
+            {
+              "entry_title": "Number of Controlled Substances Generated and Transmitted Electronically",
+              "numer": true,
+              "automatable_step": { "title": "Automated Transmissions" },
+              "entry_values": [
+                {
+                  "patient_id": "Lavon Earle",
+                  "entry_value": 1
+                },
+                {
+                  "patient_id": "Trula Covey",
+                  "entry_value": 1
+                },
+                {
+                  "patient_id": "Mai Nguyen",
+                  "entry_value": 0
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "entry_value": 1
+                },
+                {
+                  "patient_id": "Elsa Wu",
+                  "entry_value": 1
+                }
+              ]
+            },
+            {
+              "entry_title": "Prescription(s) Queried for Drug Formulary",
+              "numer": true,
+              "automatable_step": { "title": "Automated Drug Queries" },
+              "entry_values": [
+                {
+                  "patient_id": "Lavon Earle",
+                  "entry_value": "Yes"
+                },
+                {
+                  "patient_id": "Trula Covey",
+                  "entry_value": "No"
+                },
+                {
+                  "patient_id": "Mai Nguyen",
+                  "entry_value": "Yes"
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "entry_value": "Yes"
+                },
+                {
+                  "patient_id": "Elsa Wu",
+                  "entry_value": "Yes"
+                }
+              ]
+            }
+          ],
+          "segment_totals": [
+            {
+              "total_heading": "Cumulative Total",
+              "total_values": [
+                {
+                  "patient_id": "Lavon Earle",
+                  "numerator_value": 2,
+                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 2}, { "title": "Automated Transmissions", "value":2}, { "title": "All", "value": 2} ]
+                },
+                {
+                  "patient_id": "Trula Covey",
+                  "numerator_value": 0,
+                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 1}, { "title": "Automated Transmissions", "value":0}, { "title": "All", "value": 1} ]
+                },
+                {
+                  "patient_id": "Mai Nguyen",
+                  "numerator_value": 1,
+                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 1}, { "title": "Automated Transmissions", "value":1}, { "title": "All", "value": 1} ]
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "numerator_value": 3,
+                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 3}, { "title": "Automated Transmissions", "value":3}, { "title": "All", "value": 3} ]
+                },
+                {
+                  "patient_id": "Elsa Wu",
+                  "numerator_value": 2,
+                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 2}, { "title": "Automated Transmissions", "value":2}, { "title": "All", "value": 2} ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "segment_total":
+            {
+              "numerator_value": 5,
+              "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 5}, { "title": "Automated Transmissions", "value":5}, { "title": "All", "value": 5} ]
+            },
+          "segment_title": "Excludes controlled substances",
+          "segment_entries": [
+            {
+              "entry_title": "Number of Prescriptions Written during reporting/ performance period (not controlled)",
+              "denom": true,
+              "entry_values": [
+                {
+                  "patient_id": "Lavon Earle",
+                  "entry_value": 1
+                },
+                {
+                  "patient_id": "Trula Covey",
+                  "entry_value": 0
+                },
+                {
+                  "patient_id": "Mai Nguyen",
+                  "entry_value": 1
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "entry_value": 2
+                },
+                {
+                  "patient_id": "Elsa Wu",
+                  "entry_value": 1
+                }
+              ]
+            },
+            {
+              "entry_title": "Number of Prescriptions (not controlled) Generated and Transmitted Electronically",
+              "numer": true,
+              "automatable_step": { "title": "Automated Transmissions" },
+              "entry_values": [
+                {
+                  "patient_id": "Lavon Earle",
+                  "entry_value": 1
+                },
+                {
+                  "patient_id": "Trula Covey",
+                  "entry_value": 0
+                },
+                {
+                  "patient_id": "Mai Nguyen",
+                  "entry_value": 1
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "entry_value": 2
+                },
+                {
+                  "patient_id": "Elsa Wu",
+                  "entry_value": 1
+                }
+              ]
+            },
+            {
+              "entry_title": "Prescription(s) Queried for Drug Formulary",
+              "numer": true,
+              "automatable_step": { "title": "Automated Drug Queries" },
+              "entry_values": [
+                {
+                  "patient_id": "Lavon Earle",
+                  "entry_value": "Yes"
+                },
+                {
+                  "patient_id": "Trula Covey",
+                  "entry_value": "No"
+                },
+                {
+                  "patient_id": "Mai Nguyen",
+                  "entry_value": "Yes"
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "entry_value": "Yes"
+                },
+                {
+                  "patient_id": "Elsa Wu",
+                  "entry_value": "Yes"
+                }
+              ]
+            }
+          ],
+          "segment_totals": [
+            {
+              "total_heading": "Cumulative Total",
+              "total_values": [
+                {
+                  "patient_id": "Lavon Earle",
+                  "numerator_value": 1,
+                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 1}, { "title": "Automated Transmissions", "value":1}, { "title": "All", "value": 1} ]
+                },
+                {
+                  "patient_id": "Trula Covey",
+                  "numerator_value": 0,
+                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 0}, { "title": "Automated Transmissions", "value":0}, { "title": "All", "value": 0} ]
+                },
+                {
+                  "patient_id": "Mai Nguyen",
+                  "numerator_value": 1,
+                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 1}, { "title": "Automated Transmissions", "value":1}, { "title": "All", "value": 1} ]
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "numerator_value": 2,
+                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 2}, { "title": "Automated Transmissions", "value":2}, { "title": "All", "value": 2} ]
+                },
+                {
+                  "patient_id": "Elsa Wu",
+                  "numerator_value": 1,
+                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 1}, { "title": "Automated Transmissions", "value":1}, { "title": "All", "value": 1} ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_title": "Scenario 2",
+      "scenario_description": "Modify test data set-up for existing patient (populate numerator only)",
+      "segments": [
+        {
+          "segment_total":
+            {
+              "numerator_value": 8
+            }
+        },
+        {
+          "segment_total":
+            {
+              "numerator_value": 5
+            }
+        }
+      ]
+    },
+    {
+      "scenario_title": "Scenario 3",
+      "scenario_description": "Add new or modify existing patient (populate numerator)",
+      "segments": [
+        {
+          "segment_total":
+            {
+              "numerator_value": 15,
+              "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 16}, { "title": "Automated Transmissions", "value":17}, { "title": "All", "value": 18} ]
+            },
+          "segment_title": "Includes controlled substances",
+          "segment_entries": [
+            {
+              "entry_title": "Number of Prescriptions Written during reporting/ performance period (not controlled)",
+              "denom": true,
+              "entry_values": [
+                {
+                  "patient_id": "Alan Bench",
+                  "entry_value": 1
+                },
+                {
+                  "patient_id": "Rashida Champagne",
+                  "entry_value": 1
+                },
+                {
+                  "patient_id": "David Brown",
+                  "entry_value": 1
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "entry_value": 2
+                }
+              ]
+            },
+            {
+              "entry_title": "Number of Controlled Prescriptions Written during reporting/  performance period",
+              "denom": true,
+              "entry_values": [
+                {
+                  "patient_id": "Alan Bench",
+                  "entry_value": 0
+                },
+                {
+                  "patient_id": "Rashida Champagne",
+                  "entry_value": 2
+                },
+                {
+                  "patient_id": "David Brown",
+                  "entry_value": 1
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "entry_value": 1
+                }
+              ]
+            },
+            {
+              "entry_title": "Number of Prescriptions (not controlled) Generated and Transmitted Electronically",
+              "numer": true,
+              "automatable_step": { "title": "Automated Transmissions" },
+              "entry_values": [
+                {
+                  "patient_id": "Alan Bench",
+                  "entry_value": 1
+                },
+                {
+                  "patient_id": "Rashida Champagne",
+                  "entry_value": 0
+                },
+                {
+                  "patient_id": "David Brown",
+                  "entry_value": 1
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "entry_value": 2
+                }
+              ]
+            },
+            {
+              "entry_title": "Number of Controlled Substances Generated and Transmitted Electronically",
+              "numer": true,
+              "automatable_step": { "title": "Automated Transmissions" },
+              "entry_values": [
+                {
+                  "patient_id": "Alan Bench",
+                  "entry_value": 0
+                },
+                {
+                  "patient_id": "Rashida Champagne",
+                  "entry_value": 1
+                },
+                {
+                  "patient_id": "David Brown",
+                  "entry_value": 1
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "entry_value": 1
+                }
+              ]
+            },
+            {
+              "entry_title": "Prescription(s) Queried for Drug Formulary",
+              "numer": true,
+              "automatable_step": { "title": "Automated Drug Queries" },
+              "entry_values": [
+                {
+                  "patient_id": "Alan Bench",
+                  "entry_value": "Yes"
+                },
+                {
+                  "patient_id": "Rashida Champagne",
+                  "entry_value": "Yes"
+                },
+                {
+                  "patient_id": "David Brown",
+                  "entry_value": "Yes"
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "entry_value": "Yes"
+                }
+              ]
+            }
+          ],
+          "segment_totals": [
+            {
+              "total_heading": "Cumulative Total",
+              "total_values": [
+                {
+                  "patient_id": "Alan Bench",
+                  "numerator_value": 1,
+                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 1}, { "title": "Automated Transmissions", "value":1}, { "title": "All", "value": 1} ]
+                },
+                {
+                  "patient_id": "Rashida Champagne",
+                  "numerator_value": 1,
+                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 1}, { "title": "Automated Transmissions", "value":3}, { "title": "All", "value": 3} ]
+                },
+                {
+                  "patient_id": "David Brown",
+                  "numerator_value": 2,
+                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 2}, { "title": "Automated Transmissions", "value":2}, { "title": "All", "value": 2} ]
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "numerator_value": 3,
+                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 3}, { "title": "Automated Transmissions", "value":3}, { "title": "All", "value": 3} ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "segment_total":
+            {
+              "numerator_value": 9,
+              "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 9}, { "title": "Automated Transmissions", "value":10}, { "title": "All", "value": 10} ]
+            },
+          "segment_title": "Excludes controlled substances",
+          "segment_entries": [
+            {
+              "entry_title": "Number of Prescriptions Written during reporting/ performance period (not controlled)",
+              "denom": true,
+              "entry_values": [
+                {
+                  "patient_id": "Alan Bench",
+                  "entry_value": 1
+                },
+                {
+                  "patient_id": "Rashida Champagne",
+                  "entry_value": 1
+                },
+                {
+                  "patient_id": "David Brown",
+                  "entry_value": 1
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "entry_value": 2
+                }
+              ]
+            },
+            {
+              "entry_title": "Number of Prescriptions (not controlled) Generated and Transmitted Electronically",
+              "numer": true,
+              "automatable_step": { "title": "Automated Transmissions" },
+              "entry_values": [
+                {
+                  "patient_id": "Alan Bench",
+                  "entry_value": 1
+                },
+                {
+                  "patient_id": "Rashida Champagne",
+                  "entry_value": 0
+                },
+                {
+                  "patient_id": "David Brown",
+                  "entry_value": 1
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "entry_value": 2
+                }
+              ]
+            },
+            {
+              "entry_title": "Prescription(s) Queried for Drug Formulary",
+              "numer": true,
+              "automatable_step": { "title": "Automated Drug Queries" },
+              "entry_values": [
+                {
+                  "patient_id": "Alan Bench",
+                  "entry_value": "Yes"
+                },
+                {
+                  "patient_id": "Rashida Champagne",
+                  "entry_value": "Yes"
+                },
+                {
+                  "patient_id": "David Brown",
+                  "entry_value": "Yes"
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "entry_value": "Yes"
+                }
+              ]
+            }
+          ],
+          "segment_totals": [
+            {
+              "total_heading": "Cumulative Total",
+              "total_values": [
+                {
+                  "patient_id": "Alan Bench",
+                  "numerator_value": 1,
+                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 1}, { "title": "Automated Transmissions", "value":1}, { "title": "All", "value": 1} ]
+                },
+                {
+                  "patient_id": "Rashida Champagne",
+                  "numerator_value": 0,
+                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 0}, { "title": "Automated Transmissions", "value":1}, { "title": "All", "value": 1} ]
+                },
+                {
+                  "patient_id": "David Brown",
+                  "numerator_value": 1,
+                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 1}, { "title": "Automated Transmissions", "value":1}, { "title": "All", "value": 1} ]
+                },
+                {
+                  "patient_id": "Tom Warner",
+                  "numerator_value": 2,
+                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 2}, { "title": "Automated Transmissions", "value":2}, { "title": "All", "value": 2} ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_title": "Scenario 4",
+      "scenario_description": "Modify test data set-up for existing patient (populate numerator only)",
+      "segments": [
+        {
+          "segment_total":
+            {
+              "numerator_value": 15
+            }
+        },
+        {
+          "segment_total":
+            {
+              "numerator_value": 9
+            }
+        }
+      ]
+    }
+  ]
+}
