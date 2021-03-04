@@ -77,7 +77,7 @@ class G1G2Export < Mustache
 
   def breadcrumbs
     b_crumbs = []
-    b_crumbs << { title: "G1/G2 home", ref: "../index.html" }
+    b_crumbs << { title: "#{self['test_data'][0]['test_deck'].split(' ')[0]} home", ref: "../index.html" }
     if self['test_data'][0]['index_page']
       b_crumbs << { title: "#{self['test_data'][0]['test_deck']}" }
     else
