@@ -9,7 +9,7 @@ Patient is >= 18 years old
 
 ### Exclusion:
 <pre>
-Evidence of alcohol screening in the past 10 months (final, amended, corrected)
+Evidence of alcohol screening in the past 12 months (final, amended, corrected)
     AND NOT
     Pregnant (active, recurring)
     OR Pregnancy Observation in the past 42 weeks (final, amended, corrected)
