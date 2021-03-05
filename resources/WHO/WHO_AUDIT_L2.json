@@ -1,0 +1,486 @@
+{
+  "title": "WHO AUDIT L2",
+  "workflow_image": "WHO_AUDIT_L2.png",
+  "steps": [
+    {
+      "step_name": "STEP 1: Consider Alcohol Pre-Screen",
+      "logic_paths": [
+        {
+          "logic_criteria": [
+            {
+              "criteria_type": "Inclusion",
+              "cell_data": [
+                "Patient is >= 18 years old"
+              ],
+              "comments": [
+              ]
+            },
+            {
+              "criteria_type": "Exclusion",
+              "cell_data": [
+                "Evidence of alcohol screening in the past 12 months (final, amended, corrected)",
+                "    AND NOT",
+                "    Pregnant (active, recurring)",
+                "    OR Pregnancy Observation in the past 42 weeks (final, amended, corrected)",
+                "OR",
+                "    Evidence of alcohol screening in the past three months",
+                "    AND",
+                "        Pregnancy (active/recurring) with onset date BEFORE screening",
+                "        OR Pregnancy (active/recurring) with recorded date BEFORE screening",
+                "        OR Pregnancy observation (final, amended, corrected) in past 42 weeks",
+                "        OR Pregnancy (active/recurring)",
+                "OR",
+                "   AUD (active, recurrence, relapse)"
+              ],
+              "comments": [
+                {
+                  "date": "2/20/2021",
+                  "cell_data": [
+                    "Alcohol screening will be defined as:",
+                    "USAUDIT-C score (rep. by a local code)",
+                    "OR USAUDIT score (rep. by a local code)",
+                    "OR (WHO) AUDIT-C score (rep. by a VS that includes the LOINC code for this score)",
+                    "OR (WHO) AUDIT score (rep. by a VS that includes the LOINC code for this score)",
+                    "OR APS response = “No” (rep. by a local code)",
+                    "OR APS response of “Yes” (rep. by a local code)",
+                    "     AND",
+                    "          USAUDIT Q1 score = “0”  (rep. by a local code)",
+                    "          OR (WHO) Q1 score = “0”  (rep. by a local code)"
+                  ]
+                }
+              ]
+            },
+            {
+              "criteria_type": "Interventions and Actions",
+              "cell_data": [
+                 "- Introduce the purpose of alcohol use screening",
+                 "- Display the Alcohol Pre-Screen (PS) Question: Do you sometimes drink beer, wine, or other alcoholic beverages?",
+                 "- Display the standard drink size graphic",
+                 "- Record and display the response to the alcohol pre-screen question"
+              ],
+              "comments": [
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "step_name": "STEP 2: Consider (WHO) AUDIT-C Screening",
+      "logic_paths": [
+        {
+          "logic_path_name": "LOGIC PATH #1 (continue screening)",
+          "logic_criteria": [
+            {
+              "criteria_type": "Inclusion",
+              "cell_data": [
+                "Patient is >= 18 years old",
+                "AND most recent Alcohol PS Question response is 'YES'"
+              ],
+              "comments": [
+              ]
+            },
+            {
+              "criteria_type": "Exclusion",
+              "cell_data": [
+                "Carry over exclusions from Step 1"
+              ],
+              "comments": [
+              ]
+            },
+            {
+              "criteria_type": "Interventions and Actions",
+              "cell_data": [
+                 "- Display (WHO) AUDIT-C screening instructions",
+                 "- Display U.S. standard drink size graphic",
+                 "- Display Question #1 of the (WHO) AUDIT-C",
+                 "- Record and display the response to Question #1"
+              ],
+              "comments": [
+              ]
+            }
+          ]
+        },
+        {
+          "logic_path_name": "LOGIC PATH #2 (stop screening)",
+          "logic_criteria": [
+            {
+              "criteria_type": "Inclusion",
+              "cell_data": [
+                "Patient is >= 18 years old",
+                "AND most recent Alcohol PS Question response is 'NO'"
+              ],
+              "comments": [
+              ]
+            },
+            {
+              "criteria_type": "Exclusion",
+              "cell_data": [
+                "Carry over exclusions from Step 1"
+              ],
+              "comments": [
+              ]
+            },
+            {
+              "criteria_type": "Interventions and Actions",
+              "cell_data": [
+                 "- End screening"
+              ],
+              "comments": [
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "step_name": "STEP 3: Consider administering Question #2  and Question #3  of the (WHO) AUDIT-C ",
+      "logic_paths": [
+        {
+          "logic_path_name": "LOGIC PATH #1: Continue screening for women, men > 65 y.o., or individuals whose sex at birth is unknown",
+          "logic_criteria": [
+            {
+              "criteria_type": "Inclusion",
+              "cell_data": [
+                "Patient is >= 18 years old",
+                "AND most recent Alcohol PS Question response is 'YES'",
+                "AND NOT most recent (WHO) AUDIT-C Question #1 response is 'Never'",
+                "AND",
+                "     Female",
+                "     OR Male > 65 years old",
+                "     OR Sex at birth is unknown"
+              ],
+              "comments": [
+              ]
+            },
+            {
+              "criteria_type": "Exclusion",
+              "cell_data": [
+                "Carry over exclusions from Step 1"
+              ],
+              "comments": [
+              ]
+            },
+            {
+              "criteria_type": "Interventions and Actions",
+              "cell_data": [
+                 "- Continue to display (WHO) AUDIT-C screening instructions",
+                 "- Continue to display U.S. standard drink size graphic",
+                 "- Display Question #2 and Question #3 of the (WHO) AUDIT-C (Question #3 = How often do you have four or more drinks on one occasion?)",
+                 "- Record and display the response to Question #2  and Question #3",
+                 "- Calculate (WHO) AUDIT-C score",
+                 "- Record and display (WHO) AUDIT-C score"
+              ],
+              "comments": [
+              ]
+            }
+          ]
+        },
+        {
+          "logic_path_name": "LOGIC PATH #2: Continue screening for men <= 65",
+          "logic_criteria": [
+            {
+              "criteria_type": "Inclusion",
+              "cell_data": [
+                "Patient is >= 18 years old",
+                "AND most recent Alcohol PS Question response is 'YES'", 
+                "AND NOT most recent (WHO) AUDIT-C Question #1 response is 'Never'",
+                "AND Male <= 65 years old"
+              ],
+              "comments": [
+              ]
+            },
+            {
+              "criteria_type": "Exclusion",
+              "cell_data": [
+                "Carry over exclusions from Step 1"
+              ],
+              "comments": [
+              ]
+            },
+            {
+              "criteria_type": "Interventions and Actions",
+              "cell_data": [
+                 "- Continue to display (WHO) AUDIT-C screening instructions",
+                 "- Continue to display standard drink size graphic",
+                 "- Display Question #2  and Question #3 of the (WHO) AUDIT-C (Question #3 = How often do you have five or more drinks on one occasion?)",
+                 "- Record and display responses to Question #2 and Question #3",
+                 "- Calculate (WHO) AUDIT-C score",
+                 "- Record and display (WHO) AUDIT-C score"
+              ],
+              "comments": [
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "step_name": "STEP 4: Consider presenting Question #9 and Question #10 of the (WHO) AUDIT when not administering the full (WHO) AUDIT",
+      "logic_paths": [
+        {
+          "logic_path_name": "LOGIC PATH #1: Jump from Question #1 to Question #9 & Question #10 OR jump from end of (WHO) AUDIT-C to Question #9 & Question #10",
+          "logic_criteria": [
+            {
+              "criteria_type": "Inclusion",
+              "cell_data": [
+                "Patient is >= 18 years old",
+                "AND most recent Alcohol PS Question response is 'YES'",
+                "AND",
+                "     Most recent (WHO) AUDIT-C Question #1 response is 'Never'",
+                "OR",
+                "     Most recent (WHO) AUDIT-C Question #1 score < 3",
+                "     AND most recent (WHO) AUDIT-C Question #2 score = 0",
+                "     AND most recent (WHO) AUDIT-C Question #3 score = 0",
+                "     AND",
+                "           Female",
+                "          OR Sex at birth is unknown",
+                "          Male > 65 years old ",
+                " OR   ",
+                "      Most recent (WHO) AUDIT-C Question #1 score < 4",
+                "      AND most recent (WHO) AUDIT-C Question #2 score = 0",
+                "      AND most recent (WHO) AUDIT-C Question #3 score = 0",
+                "      AND Male"
+              ],
+              "comments": [
+                {
+                  "date": "2/20/2021",
+                  "cell_data": [
+                    "ORIGINAL LOGIC:",
+                    "Patient is >= 18 years old",
+                    "AND most recent Alcohol PS Question response is 'YES'",
+                    "AND NOT most recent (WHO) AUDIT-C Question #1 response 'Never'",
+                    "AND",
+                         "Most recent (WHO) AUDIT-C Question #1 score <3",
+                         "AND most recent (WHO) AUDIT-C Question #2 score = 0",
+                         "AND most recent (WHO) AUDIT-C Question #3 score = 0",
+                         "AND Female OR Sex at birth is Unknown OR Male > 65",
+                         "OR",
+                         "Most recent (WHO) AUDIT-C Question #1 score <4",
+                         "AND most recent (WHO) AUDIT-C Question #2 score = 0",
+                         "AND most recent (WHO) AUDIT-C Question #3 score = 0",
+                         "AND Male"
+                  ]
+                },
+                {
+                  "date": "2/12/2021 - 2/20/2021",
+                  "cell_data": [
+                    "Ginny: For now, I left the following phrase in, but perhaps we could remove it since we are reasoning over the Q1 response in other phrases. (AND NOT most recent (WHO) AUDIT-C Question #1 response 'Never'). Do you have strong feelings about this?",
+                    "GM - Haha I was looking at that and wondering if it was needed, and THEN saw your question. I don't suppose it hurts to have it there, but it seems cleaner not to?",
+                    "SS: I removed the NOT NEVER clause as we originally thought. It makes the logic a bit more clear that way. Thanks!"
+                  ]
+                }
+              ]
+            },
+            {
+              "criteria_type": "Exclusion",
+              "cell_data": [
+                "Carry over exclusions from Step 1"
+              ],
+              "comments": [
+              ]
+            },
+            {
+              "criteria_type": "Interventions and Actions",
+              "cell_data": [
+                 "- Display Question #9 & Question #10 of the (WHO) AUDIT",
+                 "- Record and display responses to Question #9 & Question #10  of the (WHO) AUDIT"
+              ],
+              "comments": [
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "step_name": "STEP 5: Consider additional screening",
+      "logic_paths": [
+        {
+          "logic_path_name": "LOGIC PATH #1: Provide full (WHO) AUDIT",
+          "logic_criteria": [
+            {
+              "criteria_type": "Inclusion",
+              "cell_data": [
+                "Patient is >= 18 years old",
+                "AND most recent Alcohol PS Question Response is 'YES'",
+                "AND NOT most recent (WHO) AUDIT-C Q1 response is 'Never'",
+                "AND most recent (WHO) AUDIT-C score >=3",
+                "     AND Female",
+                "     OR Male > 65 years old",
+                "     OR Sex at birth is unknown",
+                "OR most recent (WHO) AUDIT-C score >=4 AND Male <=65 years old"
+              ],
+              "comments": [
+                {
+                  "date": "2/20/2021",
+                  "cell_data": [
+                    "GM: what did we decide about males that are >=65? The logic flow indicates they would be included in the first calculation, for AUDIT-C >=3, but this says all males are created equal.",
+                    "SS: Updated to include a man's age"
+                  ]
+                },
+                {
+                  "date": "2/12/2021 - 2/20/2021",
+                  "cell_data": [
+                    "SS: I don't think that Dave's suggestion applies here. We ALWAYS want to default to providing the full AUDIT if the score is >=3/4. The only time that we would care about providing Q9-Q10 to the patient is if their AUDIT-C is <3/4 (in which case we check to see if Q2+Q3=0. I think this logic is correct as stated."
+                  ]
+                }
+              ]
+            },
+            {
+              "criteria_type": "Exclusion",
+              "cell_data": [
+                "Carry over exclusions from Step 1"
+              ],
+              "comments": [
+              ]
+            },
+            {
+              "criteria_type": "Interventions and Actions",
+              "cell_data": [
+                 "- Display Question #4-Question #10 of the (WHO) AUDIT",
+                 "- Record and display responses to Question #4-Question #10 of the (WHO) AUDIT",
+                 "- Calculate score of (WHO) AUDIT",
+                 "- Record score of (WHO) AUDIT"
+              ],
+              "comments": [
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "step_name": "STEP 6: Consider pregnancy status",
+      "logic_paths": [
+        {
+          "logic_path_name": "LOGIC PATH #1: Post (WHO) AUDIT Questions #1, #9, and #10",
+          "logic_criteria": [
+            {
+              "criteria_type": "Inclusion",
+              "cell_data": [
+                "Patient is >= 18 years old and < 50 years old",
+                "AND Female",
+                "AND most recent (WHO) AUDIT-C Question #1 response is 'Never'",
+                "AND most recent response to (WHO) AUDIT Question #9 and #10 is present"
+              ],
+              "comments": [
+                {
+                  "date": "2/20/2021",
+                  "cell_data": [
+                    "SS: Although I could potentially combine Path #1 and Path #2, I'm concerned that doing so will make the logic harder to follow for someone not as familiar with the granular details in the guidance. As a result, I kept them separate."
+                  ]
+                }
+              ]
+            },
+            {
+              "criteria_type": "Exclusion",
+              "cell_data": [
+                "Carry over exclusions from Step 1",
+                "AND Pregnant (active, recurring)",
+                "    OR Pregnancy Observation in past 42 weeks (final, amended, corrected)",
+                "    OR Hysterectomy (completed)"
+
+              ],
+              "comments": [
+              ]
+            },
+            {
+              "criteria_type": "Interventions and Actions",
+              "cell_data": [
+                 "- Display 'Pregnancy Question'  (i.e., Are you pregnant or trying to become pregnant?)",
+                 "- Record and display 'Pregnancy Question' response"
+              ],
+              "comments": [
+              ]
+            }
+          ]
+        },
+        {
+          "logic_path_name": "LOGIC PATH #2: Post (WHO) AUDIT-C (with or without responses to Question #9 and Question #10)",
+          "logic_criteria": [
+            {
+              "criteria_type": "Inclusion",
+              "cell_data": [
+                "Patient is >= 18 years old and < 50 years old",
+                "AND Female",
+                "AND Most recent (WHO) AUDIT-C score < 3",
+                "AND",
+                "        Most recent (WHO) AUDIT-C Question #2 score >  0",
+                "        OR Most recent (WHO) AUDIT -C Question #3 score > 0",
+                "OR",
+                "     Most recent (WHO) AUDIT Question #2 score = 0",
+                "     AND most recent (WHO) AUDIT Question #3 score = 0",
+                "     AND most recent response to (WHO) AUDIT Question #9 and #10"
+              ],
+              "comments": [
+                {
+                  "date": "2/12/2021 - 2/20/2021",
+                  "cell_data": [
+                    "Dave: any concerns with this 'sum' logic phrase? There are so many combinations of responses that could add up to <3, that the human readable logic would be super long. Can we stay at this high level for the L2 and let there be more math under the hood to create the L3 version? If not, please provide me with the proposed logic",
+                    "SS: After group discussion, the 'sum' logic phrase was replaced by what is posted to the left. Additionally, Logic paths #1 and #2 were combined so that all patients who score  'negative' for the (WHO) AUDIT-C  will be presented with the pregnancy question after they finish screening. - "
+                  ]
+                }
+              ]
+            },
+            {
+              "criteria_type": "Exclusion",
+              "cell_data": [
+                "Carry over exclusions from Step 1",
+                "AND Pregnant (active, recurring)",
+                "    OR Pregnancy Observation in past 42 weeks (final, amended, corrected)",
+                "    OR Hysterectomy (completed)"
+              ],
+              "comments": [
+              ]
+            },
+            {
+              "criteria_type": "Interventions and Actions",
+              "cell_data": [
+                 "- Display 'Pregnancy Question'  (i.e., Are you pregnant or trying to become pregnant?)",
+                 "- Record and display 'Pregnancy Question' response"
+              ],
+              "comments": [
+              ]
+            }
+          ]
+        },
+        {
+          "logic_path_name": "LOGIC PATH #3: Post the full (WHO) AUDIT",
+          "logic_criteria": [
+            {
+              "criteria_type": "Inclusion",
+              "cell_data": [
+                "Patient is >= 18 years old and < 50 years old",
+                "AND Female",
+                "AND most recent (WHO) AUDIT score >=3"
+              ],
+              "comments": [
+              ]
+            },
+            {
+              "criteria_type": "Exclusion",
+              "cell_data": [
+                "Carry over exclusions from Step 1",
+                "AND Pregnant (active, recurring)",
+                "    OR Pregnancy Observation in past 42 weeks (final, amended, corrected)",
+                "    OR Hysterectomy (completed)"
+              ],
+              "comments": [
+              ]
+            },
+            {
+              "criteria_type": "Interventions and Actions",
+              "cell_data": [
+                 "- Display 'Pregnancy Question'",
+                 "- Record and display 'Pregnancy Question;' response"
+              ],
+              "comments": [
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

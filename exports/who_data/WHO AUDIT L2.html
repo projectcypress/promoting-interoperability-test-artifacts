@@ -1,0 +1,765 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:n1="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <head>
+      <title>WHO AUDIT L2</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css">
+    .music {
+        border-color: #424242;
+        color: #0D3868;
+        background-color: #fff;
+        display: inline-block;
+        margin-bottom: 0;
+        font-weight: normal;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        border: 1px solid;
+        padding: 6px 12px;
+        border-radius: 0;
+    }
+    .measures_container > div {
+      display: inline-block;
+      vertical-align: top;
+    }
+    .measure_container {
+      max-width: 49%;
+    }
+    .flex {
+      display: flex;
+      justify-content: space-between;
+    }
+    .radio_container {
+        text-align: left;
+    }
+    .radio_container > div {
+        display: inline-block;
+        vertical-align: top;
+        padding: 5px 25px;
+    }
+    .help-block {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        color: #737373;
+    }
+    .provider_color_1 {
+      background-color: #DDEBF7;
+    }
+    .provider_color_2 {
+      background-color: #FCE4D6;
+    }
+    .provider_color_3 {
+      background-color: #E2EFDB;
+    }
+    .provider_color_4 {
+      background-color: #D9E1F2;
+    }
+    .provider_color_5 {
+      background-color: #FFF2CC;
+    }
+    .provider_color_6 {
+      background-color: #C9C9C9;
+    }
+    .provider_color_7 {
+      background-color: #F4B084;
+    }
+    .provider_color_8 {
+      background-color: #A9D08E;
+    }
+    .denom_color {
+      background-color: #D9E1F2;
+    }
+    .numer_color {
+      background-color: #A9D08E;
+    }
+    .result_color {
+      background-color: #C9C9C9;
+    }
+    html {
+        font-size: 80%;
+    }
+    .divTable{
+      margin: 5px;
+      display: table;
+      font-family: "Source Sans Pro",sans-serif;
+    }
+    .data {
+      white-space: pre;
+    }
+    .comment {
+      white-space: pre-wrap;
+    }
+    .divTableRow {
+      display: table-row;
+    }
+    .divTableAlternatingRow:nth-child(odd) {
+      background-color: #E0E0E0;
+      display: table-row;
+    }
+    .divTableAlternatingRow:nth-child(even) {s
+      display: table-row;
+    }
+    .divTableCell {
+      border: 1px solid #dcdcdc;
+      display: table-cell;
+      padding: 0.5em .6em;
+      vertical-align: top;
+      max-width: 49%;
+    }
+    .divTableBorderlessCell {
+      display: table-cell;
+      padding: 0.75em 1em;
+      vertical-align: bottom;
+    }
+    .divBold {
+      font-weight: bold;
+    }
+    .divSmall {
+      font-size: smaller;
+    }
+    .divTableAlternatingCell {
+      border: 1px solid #dcdcdc;
+      display: table-cell;
+      padding: 0.75em 1em;
+      vertical-align: bottom;
+    }
+    
+    .noWrap {
+      white-space: nowrap;
+    }
+    
+    .right {
+      text-align: right;
+    }
+    
+    .divTableAlternatingCell:nth-child(even) {
+      background-color: #E0E0E0;
+    }
+    <!-- .divTableHead {
+      border: 1px solid #999999;
+      display: table-cell;
+      padding: 3px 10px;
+      font-weight: bold;
+      vertical-align: bottom;
+    } -->
+    .divTableHead {
+      display: table-cell;
+      font-weight: bold;
+      vertical-align: bottom;
+      background-color: #ebeef1;
+      border: 1px solid #dcdcdc;
+      padding: 0.75em 1em;
+      color: #323a45;
+    }
+    .divTableHeading {
+      color: #0D3868;
+      display: table-header-group;
+      font-weight: bold;
+    }
+    .divTableFoot {
+      background-color: #EEE;
+      display: table-footer-group;
+      font-weight: bold;
+    }
+    .divTableBody {
+      display: table-row-group;
+    }
+    .divTableNoteRow {
+      display: table-row;
+    }
+    .noBorder {
+      border: none;
+    }
+    .withBorder{
+      border: 1px solid #dcdcdc;
+    }
+    .divLi:nth-child(odd) {
+      font-weight: normal;
+    }
+    .divLi:nth-child(even) {
+      font-weight: bold;
+    }
+    
+    /* Style the button that is used to open and close the collapsible content */
+    .collapsible {
+      background-color: #536b78;
+      font-weight: bold;
+      color: #fff;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+    }
+    
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    .active, .collapsible:hover {
+      background-color: #FC7011;
+    }
+    
+    /* Style the collapsible content. Note: hidden by default */
+    .content {
+      padding: 0 5px;
+      display: none;
+      overflow: hidden;
+      overflow-x: auto;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    .blueItallic {
+      color: #0D3868;
+    }
+    
+    h1, h2, h3 {
+      color: #0D3868;
+      border-bottom: 3px solid #ffc425;
+    }
+    
+    h4 {
+      color: #0D3868;
+    }
+    
+    table {
+      border-collapse: collapse;
+    }
+    
+    .visually-hidden {
+        position: absolute !important;
+        overflow: hidden;
+        clip: rect(1px,1px,1px,1px);
+        width: 1px;
+        height: 1px;
+        word-wrap: normal;
+    }
+    
+    ul, ol {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .breadcrumb ol {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .breadcrumb li {
+        display: inline;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    
+    #block-breadcrumbs {
+        padding: 1rem 1rem 0 1rem;
+    }
+    
+    #block-breadcrumbs .breadcrumb li:first-child::before {
+        content: '';
+    }
+    
+    #block-breadcrumbs .breadcrumb {
+        display: inline-block;
+        margin-bottom: 1.5rem;
+        text-align: left;
+    }
+    
+    #block-breadcrumbs .breadcrumb li:first-child > a {
+        padding-left: 0;
+    }
+    
+    #block-breadcrumbs .breadcrumb li::before {
+        z-index: 1;
+        content: '\003e';
+        color: #ffc425;
+        font-weight: bold;
+    }
+    
+    #block-breadcrumbs .breadcrumb li > a {
+        color: #1d4f90;
+        display: inline-block;
+        font-size: 1.4rem;
+        line-height: 2.25rem;
+        margin-bottom: 2px;
+        margin-right: -5px;
+        padding: 0 1.125rem 0 1.125rem;
+        position: relative;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    #block-breadcrumbs .breadcrumb li:last-child {
+        font-size: 1.6rem;
+    }
+    
+    #block-breadcrumbs .breadcrumb li:last-child {
+        font-weight: bold;
+        font-size: 1.4rem;
+        color: #555;
+    }
+    
+    .breadcrumb li {
+        display: inline;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    
+    #block-breadcrumbs .breadcrumb li:last-child::before {
+        padding-right: 1.125rem;
+    }
+    
+    </style>  </head>
+  <body>
+      <h1>WHO AUDIT L2</h1>
+        <button type="button" class="collapsible ckeditor-accordion-toggle">Workflow</button>
+        <div class="content image">
+          <img src="WHO_AUDIT_L2.png" alt="Workflow"/>
+        </div>
+        <button type="button" class="collapsible ckeditor-accordion-toggle">STEP 1: Consider Alcohol Pre-Screen</button>
+        <div class="content">
+            <table class="divTable">
+              <div class="divTableBody">
+                <tr class="divTableRow">
+                  <th class="divTableCell" colspan="1"></th>
+                  <th class="divTableCell" colspan="1">Human Readable Logic</th>
+                  <th class="divTableCell" colspan="1">Comments</th>
+                </tr>
+                  <tr class="divTableRow">
+                    <td class="divTableCell" colspan="1">Inclusion</td>
+                    <td class="divTableCell" colspan="1"><span class="data">Patient is &gt;= 18 years old
+</span></td>
+                    <td class="divTableCell" colspan="1"></td>
+                  </tr>
+                  <tr class="divTableRow">
+                    <td class="divTableCell" colspan="1">Exclusion</td>
+                    <td class="divTableCell" colspan="1"><span class="data">Evidence of alcohol screening in the past 12 months (final, amended, corrected)
+    AND NOT
+    Pregnant (active, recurring)
+    OR Pregnancy Observation in the past 42 weeks (final, amended, corrected)
+OR
+    Evidence of alcohol screening in the past three months
+    AND
+        Pregnancy (active/recurring) with onset date BEFORE screening
+        OR Pregnancy (active/recurring) with recorded date BEFORE screening
+        OR Pregnancy observation (final, amended, corrected) in past 42 weeks
+        OR Pregnancy (active/recurring)
+OR
+   AUD (active, recurrence, relapse)
+</span></td>
+                    <td class="divTableCell" colspan="1"><span class="divBold">2/20/2021</span><br><span class="comment">Alcohol screening will be defined as:
+USAUDIT-C score (rep. by a local code)
+OR USAUDIT score (rep. by a local code)
+OR (WHO) AUDIT-C score (rep. by a VS that includes the LOINC code for this score)
+OR (WHO) AUDIT score (rep. by a VS that includes the LOINC code for this score)
+OR APS response = “No” (rep. by a local code)
+OR APS response of “Yes” (rep. by a local code)
+     AND
+          USAUDIT Q1 score = “0”  (rep. by a local code)
+          OR (WHO) Q1 score = “0”  (rep. by a local code)
+</span><br></td>
+                  </tr>
+                  <tr class="divTableRow">
+                    <td class="divTableCell" colspan="1">Interventions and Actions</td>
+                    <td class="divTableCell" colspan="1"><span class="data">- Introduce the purpose of alcohol use screening
+- Display the Alcohol Pre-Screen (PS) Question: Do you sometimes drink beer, wine, or other alcoholic beverages?
+- Display the standard drink size graphic
+- Record and display the response to the alcohol pre-screen question
+</span></td>
+                    <td class="divTableCell" colspan="1"></td>
+                  </tr>
+              </div>
+            </table>
+        </div>
+        <button type="button" class="collapsible ckeditor-accordion-toggle">STEP 2: Consider (WHO) AUDIT-C Screening</button>
+        <div class="content">
+              <h2>LOGIC PATH #1 (continue screening)</h2>
+            <table class="divTable">
+              <div class="divTableBody">
+                <tr class="divTableRow">
+                  <th class="divTableCell" colspan="1"></th>
+                  <th class="divTableCell" colspan="1">Human Readable Logic</th>
+                  <th class="divTableCell" colspan="1">Comments</th>
+                </tr>
+                  <tr class="divTableRow">
+                    <td class="divTableCell" colspan="1">Inclusion</td>
+                    <td class="divTableCell" colspan="1"><span class="data">Patient is &gt;= 18 years old
+AND most recent Alcohol PS Question response is &#39;YES&#39;
+</span></td>
+                    <td class="divTableCell" colspan="1"></td>
+                  </tr>
+                  <tr class="divTableRow">
+                    <td class="divTableCell" colspan="1">Exclusion</td>
+                    <td class="divTableCell" colspan="1"><span class="data">Carry over exclusions from Step 1
+</span></td>
+                    <td class="divTableCell" colspan="1"></td>
+                  </tr>
+                  <tr class="divTableRow">
+                    <td class="divTableCell" colspan="1">Interventions and Actions</td>
+                    <td class="divTableCell" colspan="1"><span class="data">- Display (WHO) AUDIT-C screening instructions
+- Display U.S. standard drink size graphic
+- Display Question #1 of the (WHO) AUDIT-C
+- Record and display the response to Question #1
+</span></td>
+                    <td class="divTableCell" colspan="1"></td>
+                  </tr>
+              </div>
+            </table>
+              <h2>LOGIC PATH #2 (stop screening)</h2>
+            <table class="divTable">
+              <div class="divTableBody">
+                <tr class="divTableRow">
+                  <th class="divTableCell" colspan="1"></th>
+                  <th class="divTableCell" colspan="1">Human Readable Logic</th>
+                  <th class="divTableCell" colspan="1">Comments</th>
+                </tr>
+                  <tr class="divTableRow">
+                    <td class="divTableCell" colspan="1">Inclusion</td>
+                    <td class="divTableCell" colspan="1"><span class="data">Patient is &gt;= 18 years old
+AND most recent Alcohol PS Question response is &#39;NO&#39;
+</span></td>
+                    <td class="divTableCell" colspan="1"></td>
+                  </tr>
+                  <tr class="divTableRow">
+                    <td class="divTableCell" colspan="1">Exclusion</td>
+                    <td class="divTableCell" colspan="1"><span class="data">Carry over exclusions from Step 1
+</span></td>
+                    <td class="divTableCell" colspan="1"></td>
+                  </tr>
+                  <tr class="divTableRow">
+                    <td class="divTableCell" colspan="1">Interventions and Actions</td>
+                    <td class="divTableCell" colspan="1"><span class="data">- End screening
+</span></td>
+                    <td class="divTableCell" colspan="1"></td>
+                  </tr>
+              </div>
+            </table>
+        </div>
+        <button type="button" class="collapsible ckeditor-accordion-toggle">STEP 3: Consider administering Question #2  and Question #3  of the (WHO) AUDIT-C </button>
+        <div class="content">
+              <h2>LOGIC PATH #1: Continue screening for women, men &gt; 65 y.o., or individuals whose sex at birth is unknown</h2>
+            <table class="divTable">
+              <div class="divTableBody">
+                <tr class="divTableRow">
+                  <th class="divTableCell" colspan="1"></th>
+                  <th class="divTableCell" colspan="1">Human Readable Logic</th>
+                  <th class="divTableCell" colspan="1">Comments</th>
+                </tr>
+                  <tr class="divTableRow">
+                    <td class="divTableCell" colspan="1">Inclusion</td>
+                    <td class="divTableCell" colspan="1"><span class="data">Patient is &gt;= 18 years old
+AND most recent Alcohol PS Question response is &#39;YES&#39;
+AND NOT most recent (WHO) AUDIT-C Question #1 response is &#39;Never&#39;
+AND
+     Female
+     OR Male &gt; 65 years old
+     OR Sex at birth is unknown
+</span></td>
+                    <td class="divTableCell" colspan="1"></td>
+                  </tr>
+                  <tr class="divTableRow">
+                    <td class="divTableCell" colspan="1">Exclusion</td>
+                    <td class="divTableCell" colspan="1"><span class="data">Carry over exclusions from Step 1
+</span></td>
+                    <td class="divTableCell" colspan="1"></td>
+                  </tr>
+                  <tr class="divTableRow">
+                    <td class="divTableCell" colspan="1">Interventions and Actions</td>
+                    <td class="divTableCell" colspan="1"><span class="data">- Continue to display (WHO) AUDIT-C screening instructions
+- Continue to display U.S. standard drink size graphic
+- Display Question #2 and Question #3 of the (WHO) AUDIT-C (Question #3 = How often do you have four or more drinks on one occasion?)
+- Record and display the response to Question #2  and Question #3
+- Calculate (WHO) AUDIT-C score
+- Record and display (WHO) AUDIT-C score
+</span></td>
+                    <td class="divTableCell" colspan="1"></td>
+                  </tr>
+              </div>
+            </table>
+              <h2>LOGIC PATH #2: Continue screening for men &lt;= 65</h2>
+            <table class="divTable">
+              <div class="divTableBody">
+                <tr class="divTableRow">
+                  <th class="divTableCell" colspan="1"></th>
+                  <th class="divTableCell" colspan="1">Human Readable Logic</th>
+                  <th class="divTableCell" colspan="1">Comments</th>
+                </tr>
+                  <tr class="divTableRow">
+                    <td class="divTableCell" colspan="1">Inclusion</td>
+                    <td class="divTableCell" colspan="1"><span class="data">Patient is &gt;= 18 years old
+AND most recent Alcohol PS Question response is &#39;YES&#39;
+AND NOT most recent (WHO) AUDIT-C Question #1 response is &#39;Never&#39;
+AND Male &lt;= 65 years old
+</span></td>
+                    <td class="divTableCell" colspan="1"></td>
+                  </tr>
+                  <tr class="divTableRow">
+                    <td class="divTableCell" colspan="1">Exclusion</td>
+                    <td class="divTableCell" colspan="1"><span class="data">Carry over exclusions from Step 1
+</span></td>
+                    <td class="divTableCell" colspan="1"></td>
+                  </tr>
+                  <tr class="divTableRow">
+                    <td class="divTableCell" colspan="1">Interventions and Actions</td>
+                    <td class="divTableCell" colspan="1"><span class="data">- Continue to display (WHO) AUDIT-C screening instructions
+- Continue to display standard drink size graphic
+- Display Question #2  and Question #3 of the (WHO) AUDIT-C (Question #3 = How often do you have five or more drinks on one occasion?)
+- Record and display responses to Question #2 and Question #3
+- Calculate (WHO) AUDIT-C score
+- Record and display (WHO) AUDIT-C score
+</span></td>
+                    <td class="divTableCell" colspan="1"></td>
+                  </tr>
+              </div>
+            </table>
+        </div>
+        <button type="button" class="collapsible ckeditor-accordion-toggle">STEP 4: Consider presenting Question #9 and Question #10 of the (WHO) AUDIT when not administering the full (WHO) AUDIT</button>
+        <div class="content">
+              <h2>LOGIC PATH #1: Jump from Question #1 to Question #9 &amp; Question #10 OR jump from end of (WHO) AUDIT-C to Question #9 &amp; Question #10</h2>
+            <table class="divTable">
+              <div class="divTableBody">
+                <tr class="divTableRow">
+                  <th class="divTableCell" colspan="1"></th>
+                  <th class="divTableCell" colspan="1">Human Readable Logic</th>
+                  <th class="divTableCell" colspan="1">Comments</th>
+                </tr>
+                  <tr class="divTableRow">
+                    <td class="divTableCell" colspan="1">Inclusion</td>
+                    <td class="divTableCell" colspan="1"><span class="data">Patient is &gt;= 18 years old
+AND most recent Alcohol PS Question response is &#39;YES&#39;
+AND
+     Most recent (WHO) AUDIT-C Question #1 response is &#39;Never&#39;
+OR
+     Most recent (WHO) AUDIT-C Question #1 score &lt; 3
+     AND most recent (WHO) AUDIT-C Question #2 score = 0
+     AND most recent (WHO) AUDIT-C Question #3 score = 0
+     AND
+           Female
+          OR Sex at birth is unknown
+          Male &gt; 65 years old 
+ OR   
+      Most recent (WHO) AUDIT-C Question #1 score &lt; 4
+      AND most recent (WHO) AUDIT-C Question #2 score = 0
+      AND most recent (WHO) AUDIT-C Question #3 score = 0
+      AND Male
+</span></td>
+                    <td class="divTableCell" colspan="1"><span class="divBold">2/20/2021</span><br><span class="comment">ORIGINAL LOGIC:
+Patient is &gt;= 18 years old
+AND most recent Alcohol PS Question response is &#39;YES&#39;
+AND NOT most recent (WHO) AUDIT-C Question #1 response &#39;Never&#39;
+AND
+Most recent (WHO) AUDIT-C Question #1 score &lt;3
+AND most recent (WHO) AUDIT-C Question #2 score = 0
+AND most recent (WHO) AUDIT-C Question #3 score = 0
+AND Female OR Sex at birth is Unknown OR Male &gt; 65
+OR
+Most recent (WHO) AUDIT-C Question #1 score &lt;4
+AND most recent (WHO) AUDIT-C Question #2 score = 0
+AND most recent (WHO) AUDIT-C Question #3 score = 0
+AND Male
+</span><br><span class="divBold">2/12/2021 - 2/20/2021</span><br><span class="comment">Ginny: For now, I left the following phrase in, but perhaps we could remove it since we are reasoning over the Q1 response in other phrases. (AND NOT most recent (WHO) AUDIT-C Question #1 response &#39;Never&#39;). Do you have strong feelings about this?
+GM - Haha I was looking at that and wondering if it was needed, and THEN saw your question. I don&#39;t suppose it hurts to have it there, but it seems cleaner not to?
+SS: I removed the NOT NEVER clause as we originally thought. It makes the logic a bit more clear that way. Thanks!
+</span><br></td>
+                  </tr>
+                  <tr class="divTableRow">
+                    <td class="divTableCell" colspan="1">Exclusion</td>
+                    <td class="divTableCell" colspan="1"><span class="data">Carry over exclusions from Step 1
+</span></td>
+                    <td class="divTableCell" colspan="1"></td>
+                  </tr>
+                  <tr class="divTableRow">
+                    <td class="divTableCell" colspan="1">Interventions and Actions</td>
+                    <td class="divTableCell" colspan="1"><span class="data">- Display Question #9 &amp; Question #10 of the (WHO) AUDIT
+- Record and display responses to Question #9 &amp; Question #10  of the (WHO) AUDIT
+</span></td>
+                    <td class="divTableCell" colspan="1"></td>
+                  </tr>
+              </div>
+            </table>
+        </div>
+        <button type="button" class="collapsible ckeditor-accordion-toggle">STEP 5: Consider additional screening</button>
+        <div class="content">
+              <h2>LOGIC PATH #1: Provide full (WHO) AUDIT</h2>
+            <table class="divTable">
+              <div class="divTableBody">
+                <tr class="divTableRow">
+                  <th class="divTableCell" colspan="1"></th>
+                  <th class="divTableCell" colspan="1">Human Readable Logic</th>
+                  <th class="divTableCell" colspan="1">Comments</th>
+                </tr>
+                  <tr class="divTableRow">
+                    <td class="divTableCell" colspan="1">Inclusion</td>
+                    <td class="divTableCell" colspan="1"><span class="data">Patient is &gt;= 18 years old
+AND most recent Alcohol PS Question Response is &#39;YES&#39;
+AND NOT most recent (WHO) AUDIT-C Q1 response is &#39;Never&#39;
+AND most recent (WHO) AUDIT-C score &gt;=3
+     AND Female
+     OR Male &gt; 65 years old
+     OR Sex at birth is unknown
+OR most recent (WHO) AUDIT-C score &gt;=4 AND Male &lt;=65 years old
+</span></td>
+                    <td class="divTableCell" colspan="1"><span class="divBold">2/20/2021</span><br><span class="comment">GM: what did we decide about males that are &gt;=65? The logic flow indicates they would be included in the first calculation, for AUDIT-C &gt;=3, but this says all males are created equal.
+SS: Updated to include a man&#39;s age
+</span><br><span class="divBold">2/12/2021 - 2/20/2021</span><br><span class="comment">SS: I don&#39;t think that Dave&#39;s suggestion applies here. We ALWAYS want to default to providing the full AUDIT if the score is &gt;=3/4. The only time that we would care about providing Q9-Q10 to the patient is if their AUDIT-C is &lt;3/4 (in which case we check to see if Q2+Q3=0. I think this logic is correct as stated.
+</span><br></td>
+                  </tr>
+                  <tr class="divTableRow">
+                    <td class="divTableCell" colspan="1">Exclusion</td>
+                    <td class="divTableCell" colspan="1"><span class="data">Carry over exclusions from Step 1
+</span></td>
+                    <td class="divTableCell" colspan="1"></td>
+                  </tr>
+                  <tr class="divTableRow">
+                    <td class="divTableCell" colspan="1">Interventions and Actions</td>
+                    <td class="divTableCell" colspan="1"><span class="data">- Display Question #4-Question #10 of the (WHO) AUDIT
+- Record and display responses to Question #4-Question #10 of the (WHO) AUDIT
+- Calculate score of (WHO) AUDIT
+- Record score of (WHO) AUDIT
+</span></td>
+                    <td class="divTableCell" colspan="1"></td>
+                  </tr>
+              </div>
+            </table>
+        </div>
+        <button type="button" class="collapsible ckeditor-accordion-toggle">STEP 6: Consider pregnancy status</button>
+        <div class="content">
+              <h2>LOGIC PATH #1: Post (WHO) AUDIT Questions #1, #9, and #10</h2>
+            <table class="divTable">
+              <div class="divTableBody">
+                <tr class="divTableRow">
+                  <th class="divTableCell" colspan="1"></th>
+                  <th class="divTableCell" colspan="1">Human Readable Logic</th>
+                  <th class="divTableCell" colspan="1">Comments</th>
+                </tr>
+                  <tr class="divTableRow">
+                    <td class="divTableCell" colspan="1">Inclusion</td>
+                    <td class="divTableCell" colspan="1"><span class="data">Patient is &gt;= 18 years old and &lt; 50 years old
+AND Female
+AND most recent (WHO) AUDIT-C Question #1 response is &#39;Never&#39;
+AND most recent response to (WHO) AUDIT Question #9 and #10 is present
+</span></td>
+                    <td class="divTableCell" colspan="1"><span class="divBold">2/20/2021</span><br><span class="comment">SS: Although I could potentially combine Path #1 and Path #2, I&#39;m concerned that doing so will make the logic harder to follow for someone not as familiar with the granular details in the guidance. As a result, I kept them separate.
+</span><br></td>
+                  </tr>
+                  <tr class="divTableRow">
+                    <td class="divTableCell" colspan="1">Exclusion</td>
+                    <td class="divTableCell" colspan="1"><span class="data">Carry over exclusions from Step 1
+AND Pregnant (active, recurring)
+    OR Pregnancy Observation in past 42 weeks (final, amended, corrected)
+    OR Hysterectomy (completed)
+</span></td>
+                    <td class="divTableCell" colspan="1"></td>
+                  </tr>
+                  <tr class="divTableRow">
+                    <td class="divTableCell" colspan="1">Interventions and Actions</td>
+                    <td class="divTableCell" colspan="1"><span class="data">- Display &#39;Pregnancy Question&#39;  (i.e., Are you pregnant or trying to become pregnant?)
+- Record and display &#39;Pregnancy Question&#39; response
+</span></td>
+                    <td class="divTableCell" colspan="1"></td>
+                  </tr>
+              </div>
+            </table>
+              <h2>LOGIC PATH #2: Post (WHO) AUDIT-C (with or without responses to Question #9 and Question #10)</h2>
+            <table class="divTable">
+              <div class="divTableBody">
+                <tr class="divTableRow">
+                  <th class="divTableCell" colspan="1"></th>
+                  <th class="divTableCell" colspan="1">Human Readable Logic</th>
+                  <th class="divTableCell" colspan="1">Comments</th>
+                </tr>
+                  <tr class="divTableRow">
+                    <td class="divTableCell" colspan="1">Inclusion</td>
+                    <td class="divTableCell" colspan="1"><span class="data">Patient is &gt;= 18 years old and &lt; 50 years old
+AND Female
+AND Most recent (WHO) AUDIT-C score &lt; 3
+AND
+        Most recent (WHO) AUDIT-C Question #2 score &gt;  0
+        OR Most recent (WHO) AUDIT -C Question #3 score &gt; 0
+OR
+     Most recent (WHO) AUDIT Question #2 score = 0
+     AND most recent (WHO) AUDIT Question #3 score = 0
+     AND most recent response to (WHO) AUDIT Question #9 and #10
+</span></td>
+                    <td class="divTableCell" colspan="1"><span class="divBold">2/12/2021 - 2/20/2021</span><br><span class="comment">Dave: any concerns with this &#39;sum&#39; logic phrase? There are so many combinations of responses that could add up to &lt;3, that the human readable logic would be super long. Can we stay at this high level for the L2 and let there be more math under the hood to create the L3 version? If not, please provide me with the proposed logic
+SS: After group discussion, the &#39;sum&#39; logic phrase was replaced by what is posted to the left. Additionally, Logic paths #1 and #2 were combined so that all patients who score  &#39;negative&#39; for the (WHO) AUDIT-C  will be presented with the pregnancy question after they finish screening. - 
+</span><br></td>
+                  </tr>
+                  <tr class="divTableRow">
+                    <td class="divTableCell" colspan="1">Exclusion</td>
+                    <td class="divTableCell" colspan="1"><span class="data">Carry over exclusions from Step 1
+AND Pregnant (active, recurring)
+    OR Pregnancy Observation in past 42 weeks (final, amended, corrected)
+    OR Hysterectomy (completed)
+</span></td>
+                    <td class="divTableCell" colspan="1"></td>
+                  </tr>
+                  <tr class="divTableRow">
+                    <td class="divTableCell" colspan="1">Interventions and Actions</td>
+                    <td class="divTableCell" colspan="1"><span class="data">- Display &#39;Pregnancy Question&#39;  (i.e., Are you pregnant or trying to become pregnant?)
+- Record and display &#39;Pregnancy Question&#39; response
+</span></td>
+                    <td class="divTableCell" colspan="1"></td>
+                  </tr>
+              </div>
+            </table>
+              <h2>LOGIC PATH #3: Post the full (WHO) AUDIT</h2>
+            <table class="divTable">
+              <div class="divTableBody">
+                <tr class="divTableRow">
+                  <th class="divTableCell" colspan="1"></th>
+                  <th class="divTableCell" colspan="1">Human Readable Logic</th>
+                  <th class="divTableCell" colspan="1">Comments</th>
+                </tr>
+                  <tr class="divTableRow">
+                    <td class="divTableCell" colspan="1">Inclusion</td>
+                    <td class="divTableCell" colspan="1"><span class="data">Patient is &gt;= 18 years old and &lt; 50 years old
+AND Female
+AND most recent (WHO) AUDIT score &gt;=3
+</span></td>
+                    <td class="divTableCell" colspan="1"></td>
+                  </tr>
+                  <tr class="divTableRow">
+                    <td class="divTableCell" colspan="1">Exclusion</td>
+                    <td class="divTableCell" colspan="1"><span class="data">Carry over exclusions from Step 1
+AND Pregnant (active, recurring)
+    OR Pregnancy Observation in past 42 weeks (final, amended, corrected)
+    OR Hysterectomy (completed)
+</span></td>
+                    <td class="divTableCell" colspan="1"></td>
+                  </tr>
+                  <tr class="divTableRow">
+                    <td class="divTableCell" colspan="1">Interventions and Actions</td>
+                    <td class="divTableCell" colspan="1"><span class="data">- Display &#39;Pregnancy Question&#39;
+- Record and display &#39;Pregnancy Question;&#39; response
+</span></td>
+                    <td class="divTableCell" colspan="1"></td>
+                  </tr>
+              </div>
+            </table>
+        </div>
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+          </script>
+  </body>
+</html>

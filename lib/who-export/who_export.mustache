@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:n1="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <head>
+    {{#test_data}}
+      <title>{{title}}</title>
+    {{/test_data}}
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    {{> _header_css}}
+  </head>
+  <body>
+    {{#test_data}}
+      <h1>{{title}}</h1>
+      {{#workflow_image}}
+        <button type="button" class="collapsible ckeditor-accordion-toggle">Workflow</button>
+        <div class="content image">
+          <img src="{{.}}" alt="Workflow"/>
+        </div>
+      {{/workflow_image}}
+      {{#steps}}
+        <button type="button" class="collapsible ckeditor-accordion-toggle">{{step_name}}</button>
+        <div class="content">
+          {{#logic_paths}}
+            {{#logic_path_name}}
+              <h2>{{.}}</h2>
+            {{/logic_path_name}}
+            <table class="divTable">
+              <div class="divTableBody">
+                <tr class="divTableRow">
+                  <th class="divTableCell" colspan="1"></th>
+                  <th class="divTableCell" colspan="1">Human Readable Logic</th>
+                  <th class="divTableCell" colspan="1">Comments</th>
+                </tr>
+                {{#logic_criteria}}
+                  <tr class="divTableRow">
+                    <td class="divTableCell" colspan="1">{{criteria_type}}</td>
+                    <td class="divTableCell" colspan="1"><span class="data">{{data_string}}</span></td>
+                    <td class="divTableCell" colspan="1">{{#comments}}<span class="divBold">{{date}}</span><br><span class="comment">{{data_string}}</span><br>{{/comments}}</td>
+                  </tr>
+                {{/logic_criteria}}
+              </div>
+            </table>
+          {{/logic_paths}}
+        </div>
+      {{/steps}}
+    {{/test_data}}
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+      {{> vendor/_w3js}}
+    </script>
+  </body>
+</html>

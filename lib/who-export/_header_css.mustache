@@ -79,6 +79,12 @@ html {
   display: table;
   font-family: "Source Sans Pro",sans-serif;
 }
+.data {
+  white-space: pre;
+}
+.comment {
+  white-space: pre-wrap;
+}
 .divTableRow {
   display: table-row;
 }
@@ -86,14 +92,15 @@ html {
   background-color: #E0E0E0;
   display: table-row;
 }
-.divTableAlternatingRow:nth-child(even) {
+.divTableAlternatingRow:nth-child(even) {s
   display: table-row;
 }
 .divTableCell {
   border: 1px solid #dcdcdc;
   display: table-cell;
   padding: 0.5em .6em;
-  vertical-align: bottom;
+  vertical-align: top;
+  max-width: 49%;
 }
 .divTableBorderlessCell {
   display: table-cell;
@@ -194,6 +201,11 @@ html {
   display: none;
   overflow: hidden;
   overflow-x: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .blueItallic {
