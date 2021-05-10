@@ -150,6 +150,11 @@
       "version_number": "2.2",
       "version_description": "2021 Promoting Interoperability programs changed the name of the Support Electronic Referral Loops by Receiving and Incorporating Health Information measure by replacing incorporating with reconciling.",
       "version_date": "12/17/2020"
+    },
+    {
+      "version_number": "2.3",
+      "version_description": "Updated column headers in RT2a and RT2b to correctly specify View, Download, and Transmit.",
+      "version_date": "5/5/2021"
     }
   ]
 }

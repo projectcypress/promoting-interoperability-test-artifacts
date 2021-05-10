@@ -92,33 +92,6 @@
                   "entry_value": "Yes"
                 }
               ]
-            },
-            {
-              "entry_title": "Patient Health Information is Available to Access via API  within 48 hours (Medicaid) or 4 business days (MIPS)",
-              "numer": true,
-              "automatable_step": { "title": "Steps that assume data availablity is not automatic" },
-              "entry_values": [
-                {
-                  "patient_id": "Lavon Earle",
-                  "entry_value": "Yes"
-                },
-                {
-                  "patient_id": "Trula Covey",
-                  "entry_value": "Yes"
-                },
-                {
-                  "patient_id": "Mai Nguyen",
-                  "entry_value": "No"
-                },
-                {
-                  "patient_id": "Tom Warner",
-                  "entry_value": "Yes"
-                },
-                {
-                  "patient_id": "Elsa Wu",
-                  "entry_value": "Yes"
-                }
-              ]
             }
           ],
           "segment_totals": [
@@ -215,25 +188,6 @@
                   "entry_value": "Yes"
                 }
               ]
-            },
-            {
-              "entry_title": "Patient Health Information is Available to Access via API  within 48 hours (Medicaid) or 4 business days (MIPS)",
-              "numer": true,
-              "automatable_step": { "title": "Steps that assume data availablity is not automatic" },
-              "entry_values": [
-                {
-                  "patient_id": "Alan Bench",
-                  "entry_value": "Yes"
-                },
-                {
-                  "patient_id": "Rashida Champagne",
-                  "entry_value": "Yes"
-                },
-                {
-                  "patient_id": "David Brown",
-                  "entry_value": "Yes"
-                }
-              ]
             }
           ],
           "segment_totals": [
@@ -284,17 +238,6 @@
             },
             {
               "entry_title": "Patient or Authorized Representative Provided Access to View, Download, and Transmit Their Health Information within 48 hours (Medicaid) or 4 business days (MIPS)",
-              "numer": true,
-              "automatable_step": { "title": "Steps that assume data availablity is not automatic" },
-              "entry_values": [
-                {
-                  "patient_id": "Elsa Wu",
-                  "entry_value": "Yes"
-                }
-              ]
-            },
-            {
-              "entry_title": "Patient Health Information is Available to Access via API  within 48 hours (Medicaid) or 4 business days (MIPS)",
               "numer": true,
               "automatable_step": { "title": "Steps that assume data availablity is not automatic" },
               "entry_values": [
