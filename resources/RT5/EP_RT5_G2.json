@@ -36,7 +36,7 @@
                   "provider": "Provider 1",
                   "denominator_value": 5,
                   "numerator_value": 2,
-                  "automated_numerator_values": [ { "title": "Steps for patients copied on a secure message to provider", "value": 2} ]
+                  "automated_numerator_values": [ { "title": "Steps for patients copied on a secure message to provider", "value": 1} ]
                 },
                 {
                   "provider": "Provider 2",
@@ -483,7 +483,7 @@
                       "provider": "Provider 1",
                       "denominator_value": 1,
                       "numerator_value": 1,
-                      "automated_numerator_values": [ { "title": "Steps for patients copied on a secure message to provider", "value": 1} ]
+                      "automated_numerator_values": [ { "title": "Steps for patients copied on a secure message to provider", "value": 0} ]
                     },
                     {
                       "provider": "Provider 2",
@@ -511,7 +511,7 @@
                   "provider": "Provider 1",
                   "denominator_value": 5,
                   "numerator_value": 5,
-                  "automated_numerator_values": [ { "title": "Steps for patients copied on a secure message to provider", "value": 5} ]
+                  "automated_numerator_values": [ { "title": "Steps for patients copied on a secure message to provider", "value": 4} ]
                 },
                 {
                   "provider": "Provider 2",
@@ -822,7 +822,7 @@
                   "provider": "Provider 1",
                   "denominator_value": 8,
                   "numerator_value": 7,
-                  "automated_numerator_values": [ { "title": "Steps for patients copied on a secure message to provider", "value": 7} ]
+                  "automated_numerator_values": [ { "title": "Steps for patients copied on a secure message to provider", "value": 6} ]
                 },
                 {
                   "provider": "Provider 2",
@@ -1133,7 +1133,7 @@
                   "provider": "Provider 1",
                   "denominator_value": 11,
                   "numerator_value": 7,
-                  "automated_numerator_values": [ { "title": "Steps for patients copied on a secure message to provider", "value": 7} ]
+                  "automated_numerator_values": [ { "title": "Steps for patients copied on a secure message to provider", "value": 6} ]
                 },
                 {
                   "provider": "Provider 2",
@@ -1442,13 +1442,13 @@
               "providers": [
                 {
                   "provider": "Provider 1",
-                  "denominator_value": 8,
+                  "denominator_value": 11,
                   "numerator_value": 7,
-                  "automated_numerator_values": [ { "title": "Steps for patients copied on a secure message to provider", "value": 7} ]
+                  "automated_numerator_values": [ { "title": "Steps for patients copied on a secure message to provider", "value": 6} ]
                 },
                 {
                   "provider": "Provider 2",
-                  "denominator_value": 7,
+                  "denominator_value": 10,
                   "numerator_value": 5,
                   "automated_numerator_values": [ { "title": "Steps for patients copied on a secure message to provider", "value": 5} ]
                 }

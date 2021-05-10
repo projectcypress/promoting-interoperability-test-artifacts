@@ -70,7 +70,7 @@
               ]
             },
             {
-              "entry_title": "Patient Health Information is Available to Access via API within 36 hours",
+              "entry_title": "Patient Provided Access to View, Download, and Transmit Their Health Information within 36 hours",
               "numer": true,
               "automatable_step": { "title": "Steps that assume data availablity is not automatic" },
               "entry_values": [
@@ -195,7 +195,7 @@
               ]
             },
             {
-              "entry_title": "Patient Health Information is Available to Access via API within 36 hours",
+              "entry_title": "Patient Provided Access to View, Download, and Transmit Their Health Information within 36 hours",
               "numer": true,
               "automatable_step": { "title": "Steps that assume data availablity is not automatic" },
               "entry_values": [
@@ -292,7 +292,7 @@
               ]
             },
             {
-              "entry_title": "Patient Health Information is Available to Access via API within 36 hours",
+              "entry_title": "Patient Provided Access to View, Download, and Transmit Their Health Information within 36 hours",
               "numer": true,
               "automatable_step": { "title": "Steps that assume data availablity is not automatic" },
               "entry_values": [
@@ -392,7 +392,7 @@
               ]
             },
             {
-              "entry_title": "Patient Health Information is Available to Access via API within 36 hours",
+              "entry_title": "Patient Provided Access to View, Download, and Transmit Their Health Information within 36 hours",
               "numer": true,
               "automatable_step": { "title": "Steps that assume data availablity is not automatic" },
               "entry_values": [
@@ -495,7 +495,7 @@
               ]
             },
             {
-              "entry_title": "Patient Health Information is Available to Access via API within 36 hours",
+              "entry_title": "Patient Provided Access to View, Download, and Transmit Their Health Information within 36 hours",
               "numer": true,
               "automatable_step": { "title": "Steps that assume data availablity is not automatic" },
               "entry_values": [
