@@ -87,7 +87,7 @@ namespace :g1g2 do
       test_deck_name = source['test_deck']
       test_number = source['test_number']
       File.write("exports/test_data/#{test_deck_name.gsub(" ","_")}_#{test_number.split('-')[0].gsub(" ","_")}.html", G1G2Export.new(source).render)
-      File.write("exports/index.html", IndexExport.new.render)
+      File.write("index.html", IndexExport.new.render)
     end
   end
 end

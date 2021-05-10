@@ -1,0 +1,1300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:n1="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <head>
+      <title>General Notes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css">
+    .music {
+        border-color: #424242;
+        color: #0D3868;
+        background-color: #fff;
+        display: inline-block;
+        margin-bottom: 0;
+        font-weight: normal;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        border: 1px solid;
+        padding: 6px 12px;
+        border-radius: 0;
+    }
+    .measures_container > div {
+      display: inline-block;
+      vertical-align: top;
+    }
+    .measure_container {
+      max-width: 49%;
+    }
+    .flex {
+      display: flex;
+      justify-content: space-between;
+    }
+    .radio_container {
+        text-align: left;
+    }
+    .radio_container > div {
+        display: inline-block;
+        vertical-align: top;
+        padding: 5px 25px;
+    }
+    .help-block {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        color: #737373;
+    }
+    .provider_color_1 {
+      background-color: #DDEBF7;
+    }
+    .provider_color_2 {
+      background-color: #FCE4D6;
+    }
+    .provider_color_3 {
+      background-color: #E2EFDB;
+    }
+    .provider_color_4 {
+      background-color: #D9E1F2;
+    }
+    .provider_color_5 {
+      background-color: #FFF2CC;
+    }
+    .provider_color_6 {
+      background-color: #C9C9C9;
+    }
+    .provider_color_7 {
+      background-color: #F4B084;
+    }
+    .provider_color_8 {
+      background-color: #A9D08E;
+    }
+    .denom_color {
+      background-color: #D9E1F2;
+    }
+    .numer_color {
+      background-color: #A9D08E;
+    }
+    .result_color {
+      background-color: #C9C9C9;
+    }
+    html {
+        font-size: 80%;
+    }
+    .divTable{
+      margin: 5px;
+      display: table;
+      font-family: "Source Sans Pro",sans-serif;
+    }
+    .divTableRow {
+      display: table-row;
+    }
+    .divTableAlternatingRow:nth-child(odd) {
+      background-color: #E0E0E0;
+      display: table-row;
+    }
+    .divTableAlternatingRow:nth-child(even) {
+      display: table-row;
+    }
+    .divTableCell {
+      border: 1px solid #dcdcdc;
+      display: table-cell;
+      padding: 0.5em .6em;
+      vertical-align: bottom;
+    }
+    .divTableBorderlessCell {
+      display: table-cell;
+      padding: 0.75em 1em;
+      vertical-align: bottom;
+    }
+    .divBold {
+      font-weight: bold;
+    }
+    .divSmall {
+      font-size: smaller;
+    }
+    .divTableAlternatingCell {
+      border: 1px solid #dcdcdc;
+      display: table-cell;
+      padding: 0.75em 1em;
+      vertical-align: bottom;
+    }
+    
+    .noWrap {
+      white-space: nowrap;
+    }
+    
+    .right {
+      text-align: right;
+    }
+    
+    .divTableAlternatingCell:nth-child(even) {
+      background-color: #E0E0E0;
+    }
+    <!-- .divTableHead {
+      border: 1px solid #999999;
+      display: table-cell;
+      padding: 3px 10px;
+      font-weight: bold;
+      vertical-align: bottom;
+    } -->
+    .divTableHead {
+      display: table-cell;
+      font-weight: bold;
+      vertical-align: bottom;
+      background-color: #ebeef1;
+      border: 1px solid #dcdcdc;
+      padding: 0.75em 1em;
+      color: #323a45;
+    }
+    .divTableHeading {
+      color: #0D3868;
+      display: table-header-group;
+      font-weight: bold;
+    }
+    .divTableFoot {
+      background-color: #EEE;
+      display: table-footer-group;
+      font-weight: bold;
+    }
+    .divTableBody {
+      display: table-row-group;
+    }
+    .divTableNoteRow {
+      display: table-row;
+    }
+    .noBorder {
+      border: none;
+    }
+    .withBorder{
+      border: 1px solid #dcdcdc;
+    }
+    .divLi:nth-child(odd) {
+      font-weight: normal;
+    }
+    .divLi:nth-child(even) {
+      font-weight: bold;
+    }
+    
+    /* Style the button that is used to open and close the collapsible content */
+    .collapsible {
+      background-color: #536b78;
+      font-weight: bold;
+      color: #fff;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+    }
+    
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    .active, .collapsible:hover {
+      background-color: #FC7011;
+    }
+    
+    /* Style the collapsible content. Note: hidden by default */
+    .content {
+      padding: 0 5px;
+      display: none;
+      overflow: hidden;
+      overflow-x: auto;
+    }
+    
+    .blueItallic {
+      color: #0D3868;
+    }
+    
+    h1, h2, h3 {
+      color: #0D3868;
+      border-bottom: 3px solid #ffc425;
+    }
+    
+    h4 {
+      color: #0D3868;
+    }
+    
+    table {
+      border-collapse: collapse;
+    }
+    
+    .visually-hidden {
+        position: absolute !important;
+        overflow: hidden;
+        clip: rect(1px,1px,1px,1px);
+        width: 1px;
+        height: 1px;
+        word-wrap: normal;
+    }
+    
+    ul, ol {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .breadcrumb ol {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .breadcrumb li {
+        display: inline;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    
+    #block-breadcrumbs {
+        padding: 1rem 1rem 0 1rem;
+    }
+    
+    #block-breadcrumbs .breadcrumb li:first-child::before {
+        content: '';
+    }
+    
+    #block-breadcrumbs .breadcrumb {
+        display: inline-block;
+        margin-bottom: 1.5rem;
+        text-align: left;
+    }
+    
+    #block-breadcrumbs .breadcrumb li:first-child > a {
+        padding-left: 0;
+    }
+    
+    #block-breadcrumbs .breadcrumb li::before {
+        z-index: 1;
+        content: '\003e';
+        color: #ffc425;
+        font-weight: bold;
+    }
+    
+    #block-breadcrumbs .breadcrumb li > a {
+        color: #1d4f90;
+        display: inline-block;
+        font-size: 1.4rem;
+        line-height: 2.25rem;
+        margin-bottom: 2px;
+        margin-right: -5px;
+        padding: 0 1.125rem 0 1.125rem;
+        position: relative;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    #block-breadcrumbs .breadcrumb li:last-child {
+        font-size: 1.6rem;
+    }
+    
+    #block-breadcrumbs .breadcrumb li:last-child {
+        font-weight: bold;
+        font-size: 1.4rem;
+        color: #555;
+    }
+    
+    .breadcrumb li {
+        display: inline;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    
+    #block-breadcrumbs .breadcrumb li:last-child::before {
+        padding-right: 1.125rem;
+    }
+    
+    </style>  </head>
+  <body onload="w3.showAutomatable()">
+    <div id="block-breadcrumbs" class="block block-system block-system-breadcrumb-block">
+      <nav class="breadcrumb" role="navigation" aria-labelledby="system-breadcrumb">
+        <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+        <ol>
+              <li><a href="../../index.html">G2 home</a></li>
+              <li>G2 EP</li>
+        </ol>
+      </nav>
+    </div>
+      <div class="flex">
+      </div>
+      <h1>General Notes</h1>
+      <div><br/></div>
+      <div class="measures_container">
+      </div>
+      <div class="divTable withBorder blah">
+        <div class="divTableBody">
+          <div class="divTableNoteRow">
+            <div class="divTableCell noBorder">1: Each tab includes the Promoting Interoperability measure.</div>
+          </div>
+          <div class="divTableNoteRow">
+            <div class="divTableCell noBorder">2: Health IT developers are required to use the same patient names, date of birth, and sex included in the test data and may not use their own test names, date of birth, and sex.</div>
+          </div>
+          <div class="divTableNoteRow">
+            <div class="divTableCell noBorder">3: Where CMS allows for providers to include or exclude certain data, health IT developers must demonstrate the ability to record the denominator and numerator with and without the data (i.e. ePrescribing allows for the inclusion or exclusion of controlled substances).</div>
+          </div>
+          <div class="divTableNoteRow">
+            <div class="divTableCell noBorder">4: Measures that are no longer included in the Promoting Interoperability programs will not be tested and therefore do not have test data.</div>
+          </div>
+          <div class="divTableNoteRow">
+            <div class="divTableCell noBorder">5: If a Health IT Module performs a function automatically, such as making the patient education materials available electronically once identified, or automatically making data available to a patient via view, download, transmit, or an API, it is at the ONC-ATL&#39;s discretion not to test scenarios that assume this functionality is not automatic.</div>
+          </div>
+          <div class="divTableNoteRow">
+            <div class="divTableCell noBorder">6: For Promoting Interoperability Measures, CMS clarified that a numerator is not constrained to an EHR reporting period when the EHR reporting period is less than one year. The numerator action may reasonably fall outside the EHR reporting period timeframe but must take place no earlier than the start of the calendar year and no later than the end of the calendar year in order for the patients to be counted in the numerator. As such, actions occurring after the end of the reporting period&#39;s calendar year will not count in the numerator. For applicable measures, the test data has been built to verify that a Health IT Module can record the numerator correctly for each scenario.</div>
+          </div>
+          <div class="divTableNoteRow">
+            <div class="divTableCell noBorder">7: Starting in 2019, a Promoting Interoperability Measure numerator and denominator is constrained to the performance period chosen, with the exception of the Security Risk Analysis measure which may occur any time during the calendar year.</div>
+          </div>
+          <div class="divTableNoteRow">
+            <div class="divTableCell noBorder">8: For the EC Individual and Group calculation methods, actions that accrue to the numerator have a transitive effect across all of the TINs that an individual NPI is included in.  This transitive effect applies to measures that are unique patient based: Required Tests 3, 4a, 4b, 4c, 5, and 6.</div>
+          </div>
+          <div class="divTableNoteRow">
+            <div class="divTableCell noBorder">9: Provider 1 is considered one unique NPI and Provider 2 is considered one unique NPI.  Group/TIN A is calculated by adding together TIN A/Provider 1 and TIN A/Provider 2.  Group/TIN B is calculated by adding together TIN B/Provider 1 and TIN B/Provider 2.  Note that for the unique patient measures, patients must be deduplicated when adding together for Group/TIN A and Group/TIN B.</div>
+          </div>
+        </div>
+      </div>
+        <div class="divTable">
+          <div class="divTableBody">
+            <div class="divTableNoteRow">
+              <h2>Objectives and Measures</h2>
+            </div>
+              <div class="divTableNoteRow">
+                <div class="divTableCell noBorder"><a href="G2_EP_Required_Test_1.html">Required Test 1 - Electronic Prescribing</a></div>
+              </div>
+              <div class="divTableNoteRow">
+                <div class="divTableCell noBorder"><a href="G2_EP_Required_Test_2a_.html">Required Test 2a - Patient Electronic Access (certified to (e)(1) and (g)(8) or (g)(9))</a></div>
+              </div>
+              <div class="divTableNoteRow">
+                <div class="divTableCell noBorder"><a href="G2_EP_Required_Test_2b_.html">Required Test 2b - Patient Electronic Access (certified to (e)(1))</a></div>
+              </div>
+              <div class="divTableNoteRow">
+                <div class="divTableCell noBorder"><a href="G2_EP_Required_Test_2c_.html">Required Test 2c - Patient Electronic Access (certified to (g)(8) or (g)(9))</a></div>
+              </div>
+              <div class="divTableNoteRow">
+                <div class="divTableCell noBorder"><a href="G2_EP_Required_Test_3.html">Required Test 3 - Patient Education</a></div>
+              </div>
+              <div class="divTableNoteRow">
+                <div class="divTableCell noBorder"><a href="G2_EP_Required_Test_4a_.html">Required Test 4a - View, Download, and Transmit (certified to (e)(1) and (g)(8) or (g)(9))</a></div>
+              </div>
+              <div class="divTableNoteRow">
+                <div class="divTableCell noBorder"><a href="G2_EP_Required_Test_4b_.html">Required Test 4b - View, Download, and Transmit (certified to (e)(1))</a></div>
+              </div>
+              <div class="divTableNoteRow">
+                <div class="divTableCell noBorder"><a href="G2_EP_Required_Test_4c_.html">Required Test 4c - View, Download, and Transmit (certified to (g)(8) or (g)(9))</a></div>
+              </div>
+              <div class="divTableNoteRow">
+                <div class="divTableCell noBorder"><a href="G2_EP_Required_Test_5.html">Required Test 5 - Secure Messaging</a></div>
+              </div>
+              <div class="divTableNoteRow">
+                <div class="divTableCell noBorder"><a href="G2_EP_Required_Test_6.html">Required Test 6 - Patient Generated Health Data</a></div>
+              </div>
+              <div class="divTableNoteRow">
+                <div class="divTableCell noBorder"><a href="G2_EP_Required_Test_7.html">Required Test 7 - Transitions of Care</a></div>
+              </div>
+              <div class="divTableNoteRow">
+                <div class="divTableCell noBorder"><a href="G2_EP_Required_Test_8.html">Required Test 8 - Receive and Incorporate</a></div>
+              </div>
+              <div class="divTableNoteRow">
+                <div class="divTableCell noBorder"><a href="G2_EP_Required_Test_9.html">Required Test 9 - Clinical Information Reconciliation</a></div>
+              </div>
+              <div class="divTableNoteRow">
+                <div class="divTableCell noBorder"><a href="G2_EP_Required_Test_10.html">Required Test 10 - CPOE Medications</a></div>
+              </div>
+              <div class="divTableNoteRow">
+                <div class="divTableCell noBorder"><a href="G2_EP_Required_Test_11.html">Required Test 11 - CPOE Laboratory</a></div>
+              </div>
+              <div class="divTableNoteRow">
+                <div class="divTableCell noBorder"><a href="G2_EP_Required_Test_12.html">Required Test 12 - CPOE Diagnostic Imaging</a></div>
+              </div>
+              <div class="divTableNoteRow">
+                <div class="divTableCell noBorder"><a href="G2_EP_Required_Test_15.html">Required Test 15 - Electronic Referral Loops by Receiving and Incorporating/Reconciling Health Information</a></div>
+              </div>
+          </div>
+        </div>
+        <div class="divTable">
+          <div class="divTableBody">
+            <div class="divTableRow">
+              <h2>Revision History</h2>
+            </div>
+            <div class="divTableRow">
+                <div class="divTableHead">Version #</div>
+                <div class="divTableHead">Description of Change</div>
+                <div class="divTableHead">Version Date</div>
+              </div>
+              <div class="divTableRow">
+                <div class="divTableCell">1.0</div>
+                <div class="divTableCell">Final Test Data</div>
+                <div class="divTableCell">10/30/2016</div>
+              </div>
+              <div class="divTableRow">
+                <div class="divTableCell">1.1</div>
+                <div class="divTableCell">Reformatted data to account for testing indiviual EPs, individual ECs, and group ECs.  Made corrections to data, reorganized the required tests to follow the order of CMS measure numbers, modified test notes. </div>
+                <div class="divTableCell">12/30/2016</div>
+              </div>
+              <div class="divTableRow">
+                <div class="divTableCell">1.2</div>
+                <div class="divTableCell">Removed note 5 from Required Test 2c.  Fixed test note in Required Test 5. Modified Required Tests 4a and 4c to allow for use of an API for the Modified Stage 2 and ACI Transition measures. Modified test data in Required Test 1, Test Scenario 1.1 to change the numerator and denominator for Group/TIN A to 2 and Group/TIN B to 4 in the test that excludes controlled substances.</div>
+                <div class="divTableCell">1/23/2017</div>
+              </div>
+              <div class="divTableRow">
+                <div class="divTableCell">1.3</div>
+                <div class="divTableCell">Updated test notes in Required Tests 2a, b, c; 3, 4a, b, c; 5; 6; 7; and 8.  Corrected data errors in Required Tests 1 and 2a.  Updated test data in Required Tests 4a, 4b, and 4c.</div>
+                <div class="divTableCell">2/16/2017</div>
+              </div>
+              <div class="divTableRow">
+                <div class="divTableCell">1.4</div>
+                <div class="divTableCell">Modified Column I Row 50 in Required Test 2b to indicate No.</div>
+                <div class="divTableCell">4/24/2017</div>
+              </div>
+              <div class="divTableRow">
+                <div class="divTableCell">1.5</div>
+                <div class="divTableCell">Updated test notes in Required Tests 4a and 4c.  Removed the reference to the CCG from Required Tests 4a, 4b, and 4c.  Fixed test data for Required Tests 1, 2a, and 5. </div>
+                <div class="divTableCell">5/26/2017</div>
+              </div>
+              <div class="divTableRow">
+                <div class="divTableCell">1.6</div>
+                <div class="divTableCell">Updated General Notes.  Updated test notes in Required Test 3, 4a, 4b, 4c, and 5.  </div>
+                <div class="divTableCell">8/25/2017</div>
+              </div>
+              <div class="divTableRow">
+                <div class="divTableCell">1.7</div>
+                <div class="divTableCell">Updated test notes in Required Test 5 and 6.</div>
+                <div class="divTableCell">9/29/2017</div>
+              </div>
+              <div class="divTableRow">
+                <div class="divTableCell">1.8</div>
+                <div class="divTableCell">Updated test data in Required Test 3.</div>
+                <div class="divTableCell">10/27/2017</div>
+              </div>
+              <div class="divTableRow">
+                <div class="divTableCell">1.9</div>
+                <div class="divTableCell">Updated Required Test 3 test data note 6, Required Test 4 test data note 10, Required Test 5 test data note 8, and Required Test 6 test data note 5 to state that “it is up the discretion of the ONC-ATL to not test TIN B/Provider 1 and TIN A/Provider 2” not “it is up the discretion of the ONC-ATL to not test TIN B/Provider 1 and TIN B/Provider 2”.  Updated General Note 3 to clarify that health IT developers must demostrate the ability to record both methods</div>
+                <div class="divTableCell">11/14/2017</div>
+              </div>
+              <div class="divTableRow">
+                <div class="divTableCell">2.0</div>
+                <div class="divTableCell">Updated the ACI measure in RT 4a, 4b, and 4c to clarify that the action is taken by the patient or patient authorized representative rather than the Eligible Clinician.  </div>
+                <div class="divTableCell">2/1/2018</div>
+              </div>
+              <div class="divTableRow">
+                <div class="divTableCell">2.1</div>
+                <div class="divTableCell">Updated General Note 12 to clarify that both the EC Individual and EC Group methods must be tested by a Health IT Module supporting the ACI Transition or ACI calculation method. Modified the timely access requirement for the ACI Patient Electronic Access measure in RT 2a, 2b, and 2c based on a CMS policy change per the QPP CY 2018 final rule (82 FR 53568). Modified the test data in Required Test 5 scenario 1.5 to increment the Modified Stage 2 measure for Provider 1.</div>
+                <div class="divTableCell">8/17/2018</div>
+              </div>
+              <div class="divTableRow">
+                <div class="divTableCell">2.2</div>
+                <div class="divTableCell">Made the following changes based on CMS policy changes per the CY2019 PFS final rule: Updated the tab names for Required Test 2a, 2b, 2c, and 7 and added a test data note outlining the measure name change and that no other changes were made to the test data. Added a test data note to Required Test 7 noting that any document template within the C-CDA can be used to meet the measure.  Added general note 14 noting Promoting Interoperability measures that are only applicable in 2018.  Modified the information on when actions must occur to populate the numerator for Promoting Interoperability measures starting in 2019.</div>
+                <div class="divTableCell">2/28/2019</div>
+              </div>
+              <div class="divTableRow">
+                <div class="divTableCell">2.3</div>
+                <div class="divTableCell">Made the following changes based on CMS policy changes per the CY2019 PFS final rule: added Required Tests 13, 14, and 15. Added general note 15 stating that testing for Required Tests 13 and 14 is self-declaration. Added general note 16 noting Promoting Interoperability measures that are only applicable starting in 2019.  Added general note 17 noting that testing to the Modified Stage 2 and Promoting Interoperability Transition calculation methods is optional starting in 2019.</div>
+                <div class="divTableCell">9/30/2019</div>
+              </div>
+              <div class="divTableRow">
+                <div class="divTableCell">2.4</div>
+                <div class="divTableCell">Updated general note 15 to remove RT 13. Modified general note 16 removing RT 13 and clarifying that RT 14 is only applicable in 2019.  Added general note 18 clarifying that RT 13 is no longer available for testing as it is now a Yes/No measure.  Updated RT 15 to replace the &#39;No&#39; with 0 in the number of electronic summary of care records received column.  </div>
+                <div class="divTableCell">11/4/2019</div>
+              </div>
+              <div class="divTableRow">
+                <div class="divTableCell">2.1</div>
+                <div class="divTableCell">Based on the sunsetting of the 2014 Edition in the Cures Final rule measure descriptions have been updated to reflect 2020 Promoting Interoperability requirements. RT 14 was for 2019 only and has been removed</div>
+                <div class="divTableCell">6/15/2020</div>
+              </div>
+              <div class="divTableRow">
+                <div class="divTableCell">2.2</div>
+                <div class="divTableCell">2021 Promoting Interoperability programs changed the name of the Support Electronic Referral Loops by Receiving and Incorporating Health Information measure by replacing incorporating with reconciling.</div>
+                <div class="divTableCell">12/17/2020</div>
+              </div>
+          </div>
+        </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+      /* W3.JS 1.04 April 2019 by w3schools.com */
+      "use strict";
+      var w3 = {};
+      
+      w3.showAll = function () {
+        w3.showElements(w3.getElements(".automatable1"));
+        w3.showElements(w3.getElements(".automatable2"));
+        w3.showElements(w3.getElements(".automated1_result"));
+        w3.showElements(w3.getElements(".automated2_result"));
+        w3.showElements(w3.getElements(".all_automated_result"));
+        w3.showElements(w3.getElements(".not_automated_result"));
+        w3.showElements(w3.getElements(".resultsAll"));
+        w3.showElements(w3.getElements(".resultsMips"));
+        w3.showElements(w3.getElements(".resultsMedicaid"));
+        w3.showElements(w3.getElements(".mips_2020"));
+        w3.showElements(w3.getElements(".medicaid_2020"));
+        w3.showElements(w3.getElements(".mips_2020medicaid_2020"));
+        w3.showElements(w3.getElements(".includesControlled"));
+        w3.showElements(w3.getElements(".excludesControlled"));
+        w3.showElements(w3.getElements(".numerAll"));
+        w3.showElements(w3.getElements(".numerNone"));
+        w3.showElements(w3.getElements(".numer1"));
+        w3.showElements(w3.getElements(".numer2"));
+      };
+      
+      w3.showMips = function () {
+        w3.showAll()
+        var automatableRadioValue = $("input[name='automatable_radio']:checked").val();
+        var controlledRadioValue = $("input[name='controlled_radio']:checked").val();
+        w3.hideElements(w3.getElements(".medicaid_2020"));
+        w3.hideElements(w3.getElements(".resultsMedicaid"));
+        w3.hideElements(w3.getElements(".resultsAll"));
+        if (automatableRadioValue == 'hide_automatable1' ) {
+          w3.hideElements(w3.getElements(".automatable1"));
+          w3.hideElements(w3.getElements(".automated2_result"));
+          w3.hideElements(w3.getElements(".all_automated_result"));
+          w3.hideElements(w3.getElements(".not_automated_result"));
+          w3.hideElements(w3.getElements(".numerAll"));
+          w3.hideElements(w3.getElements(".numerNone"));
+          w3.hideElements(w3.getElements(".numer1"));
+        };
+        if (automatableRadioValue == 'hide_automatable2' ) {
+          w3.hideElements(w3.getElements(".automatable2"));
+          w3.hideElements(w3.getElements(".automated1_result"));
+          w3.hideElements(w3.getElements(".all_automated_result"));
+          w3.hideElements(w3.getElements(".not_automated_result"));
+          w3.hideElements(w3.getElements(".numerAll"));
+          w3.hideElements(w3.getElements(".numerNone"));
+          w3.hideElements(w3.getElements(".numer2"));
+        };
+        if (automatableRadioValue == 'hide_all_automatable' ) {
+          w3.hideElements(w3.getElements(".automatable1"));
+          w3.hideElements(w3.getElements(".automatable2"));
+          w3.hideElements(w3.getElements(".automated1_result"));
+          w3.hideElements(w3.getElements(".automated2_result"));
+          w3.hideElements(w3.getElements(".not_automated_result"));
+          w3.hideElements(w3.getElements(".numerAll"));
+          w3.hideElements(w3.getElements(".numer1"));
+          w3.hideElements(w3.getElements(".numer2"));
+        };
+        if (automatableRadioValue == 'show_automatable' ) {
+          w3.hideElements(w3.getElements(".automated1_result"));
+          w3.hideElements(w3.getElements(".automated2_result"));
+          w3.hideElements(w3.getElements(".all_automated_result"));
+          w3.hideElements(w3.getElements(".numerNone"));
+          w3.hideElements(w3.getElements(".numer1"));
+          w3.hideElements(w3.getElements(".numer2"));
+        };
+        if (controlledRadioValue == 'includes_controlled' ) {
+           w3.hideElements(w3.getElements(".excludesControlled"));
+        };
+        if (controlledRadioValue == 'excludes_controlled' ) {
+           w3.hideElements(w3.getElements(".includesControlled"));
+        };
+      };
+      
+      w3.showMedicaid = function () {
+        w3.showAll()
+        var automatableRadioValue = $("input[name='automatable_radio']:checked").val();
+        var controlledRadioValue = $("input[name='controlled_radio']:checked").val();
+        w3.hideElements(w3.getElements(".mips_2020"));
+        w3.hideElements(w3.getElements(".resultsMips"));
+        w3.hideElements(w3.getElements(".resultsAll"));
+        if (automatableRadioValue == 'hide_automatable1' ) {
+          w3.hideElements(w3.getElements(".automatable1"));
+          w3.hideElements(w3.getElements(".automated2_result"));
+          w3.hideElements(w3.getElements(".all_automated_result"));
+          w3.hideElements(w3.getElements(".not_automated_result"));
+          w3.hideElements(w3.getElements(".numerAll"));
+          w3.hideElements(w3.getElements(".numerNone"));
+          w3.hideElements(w3.getElements(".numer1"));
+        };
+        if (automatableRadioValue == 'hide_automatable2' ) {
+          w3.hideElements(w3.getElements(".automatable2"));
+          w3.hideElements(w3.getElements(".automated1_result"));
+          w3.hideElements(w3.getElements(".all_automated_result"));
+          w3.hideElements(w3.getElements(".not_automated_result"));
+          w3.hideElements(w3.getElements(".numerAll"));
+          w3.hideElements(w3.getElements(".numerNone"));
+          w3.hideElements(w3.getElements(".numer2"));
+        };
+        if (automatableRadioValue == 'hide_all_automatable' ) {
+          w3.hideElements(w3.getElements(".automatable1"));
+          w3.hideElements(w3.getElements(".automatable2"));
+          w3.hideElements(w3.getElements(".automated1_result"));
+          w3.hideElements(w3.getElements(".automated2_result"));
+          w3.hideElements(w3.getElements(".not_automated_result"));
+          w3.hideElements(w3.getElements(".numerAll"));
+          w3.hideElements(w3.getElements(".numer1"));
+          w3.hideElements(w3.getElements(".numer2"));
+        };
+        if (automatableRadioValue == 'show_automatable' ) {
+          w3.hideElements(w3.getElements(".automated1_result"));
+          w3.hideElements(w3.getElements(".automated2_result"));
+          w3.hideElements(w3.getElements(".all_automated_result"));
+          w3.hideElements(w3.getElements(".numerNone"));
+          w3.hideElements(w3.getElements(".numer1"));
+          w3.hideElements(w3.getElements(".numer2"));
+        };
+        if (controlledRadioValue == 'includes_controlled' ) {
+           w3.hideElements(w3.getElements(".excludesControlled"));
+        };
+        if (controlledRadioValue == 'excludes_controlled' ) {
+           w3.hideElements(w3.getElements(".includesControlled"));
+        };
+      };
+      
+      w3.show_all_programs = function () {
+        w3.showAll()
+        var automatableRadioValue = $("input[name='automatable_radio']:checked").val();
+        var controlledRadioValue = $("input[name='controlled_radio']:checked").val();
+        w3.hideElements(w3.getElements(".resultsMedicaid"));
+        w3.hideElements(w3.getElements(".resultsMips"));
+        if (automatableRadioValue == 'hide_automatable1' ) {
+          w3.hideElements(w3.getElements(".automatable1"));
+          w3.hideElements(w3.getElements(".automated2_result"));
+          w3.hideElements(w3.getElements(".all_automated_result"));
+          w3.hideElements(w3.getElements(".not_automated_result"));
+          w3.hideElements(w3.getElements(".numerAll"));
+          w3.hideElements(w3.getElements(".numerNone"));
+          w3.hideElements(w3.getElements(".numer1"));
+        };
+        if (automatableRadioValue == 'hide_automatable2' ) {
+          w3.hideElements(w3.getElements(".automatable2"));
+          w3.hideElements(w3.getElements(".automated1_result"));
+          w3.hideElements(w3.getElements(".all_automated_result"));
+          w3.hideElements(w3.getElements(".not_automated_result"));
+          w3.hideElements(w3.getElements(".numerAll"));
+          w3.hideElements(w3.getElements(".numerNone"));
+          w3.hideElements(w3.getElements(".numer2"));
+        };
+        if (automatableRadioValue == 'hide_all_automatable' ) {
+          w3.hideElements(w3.getElements(".automatable1"));
+          w3.hideElements(w3.getElements(".automatable2"));
+          w3.hideElements(w3.getElements(".automated1_result"));
+          w3.hideElements(w3.getElements(".automated2_result"));
+          w3.hideElements(w3.getElements(".not_automated_result"));
+          w3.hideElements(w3.getElements(".numerAll"));
+          w3.hideElements(w3.getElements(".numer1"));
+          w3.hideElements(w3.getElements(".numer2"));
+        };
+        if (automatableRadioValue == 'show_automatable' ) {
+          w3.hideElements(w3.getElements(".automated1_result"));
+          w3.hideElements(w3.getElements(".automated2_result"));
+          w3.hideElements(w3.getElements(".all_automated_result"));
+          w3.hideElements(w3.getElements(".numerNone"));
+          w3.hideElements(w3.getElements(".numer1"));
+          w3.hideElements(w3.getElements(".numer2"));
+        };
+        if (controlledRadioValue == 'includes_controlled' ) {
+           w3.hideElements(w3.getElements(".excludesControlled"));
+        };
+        if (controlledRadioValue == 'excludes_controlled' ) {
+           w3.hideElements(w3.getElements(".includesControlled"));
+        };
+      };
+      
+      w3.showAutomatable = function () {
+        w3.showAll()
+        var programRadioValue = $("input[name='program_radio']:checked").val();
+        var controlledRadioValue = $("input[name='controlled_radio']:checked").val();
+        w3.hideElements(w3.getElements(".automated1_result"));
+        w3.hideElements(w3.getElements(".automated2_result"));
+        w3.hideElements(w3.getElements(".all_automated_result"));
+        w3.hideElements(w3.getElements(".numerNone"));
+        w3.hideElements(w3.getElements(".numer1"));
+        w3.hideElements(w3.getElements(".numer2"));
+        if (programRadioValue == 'mips' ) {
+          w3.hideElements(w3.getElements(".medicaid_2020"));
+          w3.hideElements(w3.getElements(".resultsAll"));
+          w3.hideElements(w3.getElements(".resultsMedicaid"));
+        };
+        if (programRadioValue == 'medicaid' ) {
+          w3.hideElements(w3.getElements(".mips_2020"));
+          w3.hideElements(w3.getElements(".resultsAll"));
+          w3.hideElements(w3.getElements(".resultsMips"));
+        };
+        if (programRadioValue == 'all_programs' ) {
+          w3.hideElements(w3.getElements(".resultsMedicaid"));
+          w3.hideElements(w3.getElements(".resultsMips"));
+        };
+        if (controlledRadioValue == 'includes_controlled' ) {
+           w3.hideElements(w3.getElements(".excludesControlled"));
+        };
+        if (controlledRadioValue == 'excludes_controlled' ) {
+           w3.hideElements(w3.getElements(".includesControlled"));
+        };
+      };
+      
+      w3.hideAutomatable1 = function () {
+        w3.showAll()
+        var programRadioValue = $("input[name='program_radio']:checked").val();
+        var controlledRadioValue = $("input[name='controlled_radio']:checked").val();
+        w3.hideElements(w3.getElements(".automatable1"));
+        w3.hideElements(w3.getElements(".automated2_result"));
+        w3.hideElements(w3.getElements(".all_automated_result"));
+        w3.hideElements(w3.getElements(".not_automated_result"));
+        w3.hideElements(w3.getElements(".numerAll"));
+        w3.hideElements(w3.getElements(".numer1"));
+        if (programRadioValue == 'mips' ) {
+          w3.hideElements(w3.getElements(".medicaid_2020"));
+          w3.hideElements(w3.getElements(".resultsAll"));
+          w3.hideElements(w3.getElements(".resultsMedicaid"));
+        };
+        if (programRadioValue == 'medicaid' ) {
+          w3.hideElements(w3.getElements(".mips_2020"));
+          w3.hideElements(w3.getElements(".resultsAll"));
+          w3.hideElements(w3.getElements(".resultsMips"));
+        };
+        if (programRadioValue == 'all_programs' ) {
+          w3.hideElements(w3.getElements(".resultsMedicaid"));
+          w3.hideElements(w3.getElements(".resultsMips"));
+        };
+        if (controlledRadioValue == 'includes_controlled' ) {
+           w3.hideElements(w3.getElements(".excludesControlled"));
+        };
+        if (controlledRadioValue == 'excludes_controlled' ) {
+           w3.hideElements(w3.getElements(".includesControlled"));
+        };
+      };
+      
+      w3.hideAutomatable2 = function () {
+        w3.showAll()
+        var programRadioValue = $("input[name='program_radio']:checked").val();
+        var controlledRadioValue = $("input[name='controlled_radio']:checked").val();
+        w3.hideElements(w3.getElements(".automatable2"));
+        w3.hideElements(w3.getElements(".automated1_result"));
+        w3.hideElements(w3.getElements(".all_automated_result"));
+        w3.hideElements(w3.getElements(".not_automated_result"));
+        w3.hideElements(w3.getElements(".numerAll"));
+        w3.hideElements(w3.getElements(".numer2"));
+        if (programRadioValue == 'mips' ) {
+          w3.hideElements(w3.getElements(".medicaid_2020"));
+          w3.hideElements(w3.getElements(".resultsAll"));
+          w3.hideElements(w3.getElements(".resultsMedicaid"));
+        };
+        if (programRadioValue == 'medicaid' ) {
+          w3.hideElements(w3.getElements(".mips_2020"));
+          w3.hideElements(w3.getElements(".resultsAll"));
+          w3.hideElements(w3.getElements(".resultsMips"));
+        };
+        if (programRadioValue == 'all_programs' ) {
+          w3.hideElements(w3.getElements(".resultsMedicaid"));
+          w3.hideElements(w3.getElements(".resultsMips"));
+        };
+        if (controlledRadioValue == 'includes_controlled' ) {
+           w3.hideElements(w3.getElements(".excludesControlled"));
+        };
+        if (controlledRadioValue == 'excludes_controlled' ) {
+           w3.hideElements(w3.getElements(".includesControlled"));
+        };
+      };
+      
+      w3.hideAllAutomatable = function () {
+        w3.showAll()
+        var programRadioValue = $("input[name='program_radio']:checked").val();
+        var controlledRadioValue = $("input[name='controlled_radio']:checked").val();
+        w3.hideElements(w3.getElements(".automatable1"));
+        w3.hideElements(w3.getElements(".automated1_result"));
+        w3.hideElements(w3.getElements(".automatable2"));
+        w3.hideElements(w3.getElements(".automated2_result"));
+        w3.hideElements(w3.getElements(".not_automated_result"));
+        w3.hideElements(w3.getElements(".numerAll"));
+        w3.hideElements(w3.getElements(".numer1"));
+        w3.hideElements(w3.getElements(".numer2"));
+        if (programRadioValue == 'mips' ) {
+          w3.hideElements(w3.getElements(".medicaid_2020"));
+          w3.hideElements(w3.getElements(".resultsAll"));
+          w3.hideElements(w3.getElements(".resultsMedicaid"));
+        };
+        if (programRadioValue == 'medicaid' ) {
+          w3.hideElements(w3.getElements(".mips_2020"));
+          w3.hideElements(w3.getElements(".resultsAll"));
+          w3.hideElements(w3.getElements(".resultsMips"));
+        };
+        if (programRadioValue == 'all_programs' ) {
+          w3.hideElements(w3.getElements(".resultsMedicaid"));
+          w3.hideElements(w3.getElements(".resultsMips"));
+        };
+        if (controlledRadioValue == 'includes_controlled' ) {
+           w3.hideElements(w3.getElements(".excludesControlled"));
+        };
+        if (controlledRadioValue == 'excludes_controlled' ) {
+           w3.hideElements(w3.getElements(".includesControlled"));
+        };
+      };
+      w3.includeControlled = function () {
+        w3.showAll()
+        var programRadioValue = $("input[name='program_radio']:checked").val();
+        var automatableRadioValue = $("input[name='automatable_radio']:checked").val();
+        w3.hideElements(w3.getElements(".excludesControlled"));
+        if (programRadioValue == 'mips' ) {
+          w3.hideElements(w3.getElements(".medicaid_2020"));
+          w3.hideElements(w3.getElements(".resultsAll"));
+          w3.hideElements(w3.getElements(".resultsMedicaid"));
+        };
+        if (programRadioValue == 'medicaid' ) {
+          w3.hideElements(w3.getElements(".mips_2020"));
+          w3.hideElements(w3.getElements(".resultsAll"));
+          w3.hideElements(w3.getElements(".resultsMips"));
+        };
+        if (programRadioValue == 'all_programs' ) {
+          w3.hideElements(w3.getElements(".resultsMedicaid"));
+          w3.hideElements(w3.getElements(".resultsMips"));
+        };
+        if (automatableRadioValue == 'hide_automatable1' ) {
+          w3.hideElements(w3.getElements(".automatable1"));
+          w3.hideElements(w3.getElements(".automated2_result"));
+          w3.hideElements(w3.getElements(".all_automated_result"));
+          w3.hideElements(w3.getElements(".not_automated_result"));
+          w3.hideElements(w3.getElements(".numerAll"));
+          w3.hideElements(w3.getElements(".numerNone"));
+          w3.hideElements(w3.getElements(".numer1"));
+        };
+        if (automatableRadioValue == 'hide_automatable2' ) {
+          w3.hideElements(w3.getElements(".automatable2"));
+          w3.hideElements(w3.getElements(".automated1_result"));
+          w3.hideElements(w3.getElements(".all_automated_result"));
+          w3.hideElements(w3.getElements(".not_automated_result"));
+          w3.hideElements(w3.getElements(".numerAll"));
+          w3.hideElements(w3.getElements(".numerNone"));
+          w3.hideElements(w3.getElements(".numer2"));
+        };
+        if (automatableRadioValue == 'hide_all_automatable' ) {
+          w3.hideElements(w3.getElements(".automatable1"));
+          w3.hideElements(w3.getElements(".automatable2"));
+          w3.hideElements(w3.getElements(".automated1_result"));
+          w3.hideElements(w3.getElements(".automated2_result"));
+          w3.hideElements(w3.getElements(".not_automated_result"));
+          w3.hideElements(w3.getElements(".numerAll"));
+          w3.hideElements(w3.getElements(".numer1"));
+          w3.hideElements(w3.getElements(".numer2"));
+        };
+        if (automatableRadioValue == 'show_automatable' ) {
+          w3.hideElements(w3.getElements(".automated1_result"));
+          w3.hideElements(w3.getElements(".automated2_result"));
+          w3.hideElements(w3.getElements(".all_automated_result"));
+          w3.hideElements(w3.getElements(".numerNone"));
+          w3.hideElements(w3.getElements(".numer1"));
+          w3.hideElements(w3.getElements(".numer2"));
+        };
+      }
+      
+      w3.excludeControlled = function () {
+        w3.showAll()
+        var programRadioValue = $("input[name='program_radio']:checked").val();
+        var automatableRadioValue = $("input[name='automatable_radio']:checked").val();
+        w3.hideElements(w3.getElements(".includesControlled"));
+        if (programRadioValue == 'mips' ) {
+          w3.hideElements(w3.getElements(".medicaid_2020"));
+          w3.hideElements(w3.getElements(".resultsAll"));
+          w3.hideElements(w3.getElements(".resultsMedicaid"));
+        };
+        if (programRadioValue == 'medicaid' ) {
+          w3.hideElements(w3.getElements(".mips_2020"));
+          w3.hideElements(w3.getElements(".resultsAll"));
+          w3.hideElements(w3.getElements(".resultsMips"));
+        };
+        if (programRadioValue == 'all_programs' ) {
+          w3.hideElements(w3.getElements(".resultsMedicaid"));
+          w3.hideElements(w3.getElements(".resultsMips"));
+        };
+        if (automatableRadioValue == 'hide_automatable1' ) {
+          w3.hideElements(w3.getElements(".automatable1"));
+          w3.hideElements(w3.getElements(".automated2_result"));
+          w3.hideElements(w3.getElements(".all_automated_result"));
+          w3.hideElements(w3.getElements(".not_automated_result"));
+          w3.hideElements(w3.getElements(".numerAll"));
+          w3.hideElements(w3.getElements(".numerNone"));
+          w3.hideElements(w3.getElements(".numer1"));
+        };
+        if (automatableRadioValue == 'hide_automatable2' ) {
+          w3.hideElements(w3.getElements(".automatable2"));
+          w3.hideElements(w3.getElements(".automated1_result"));
+          w3.hideElements(w3.getElements(".all_automated_result"));
+          w3.hideElements(w3.getElements(".not_automated_result"));
+          w3.hideElements(w3.getElements(".numerAll"));
+          w3.hideElements(w3.getElements(".numerNone"));
+          w3.hideElements(w3.getElements(".numer2"));
+        };
+        if (automatableRadioValue == 'hide_all_automatable' ) {
+          w3.hideElements(w3.getElements(".automatable1"));
+          w3.hideElements(w3.getElements(".automatable2"));
+          w3.hideElements(w3.getElements(".automated1_result"));
+          w3.hideElements(w3.getElements(".automated2_result"));
+          w3.hideElements(w3.getElements(".not_automated_result"));
+          w3.hideElements(w3.getElements(".numerAll"));
+          w3.hideElements(w3.getElements(".numer1"));
+          w3.hideElements(w3.getElements(".numer2"));
+        };
+        if (automatableRadioValue == 'show_automatable' ) {
+          w3.hideElements(w3.getElements(".automated1_result"));
+          w3.hideElements(w3.getElements(".automated2_result"));
+          w3.hideElements(w3.getElements(".all_automated_result"));
+          w3.hideElements(w3.getElements(".numerNone"));
+          w3.hideElements(w3.getElements(".numer1"));
+          w3.hideElements(w3.getElements(".numer2"));
+        };
+      }
+      
+      w3.hide = function (sel) {
+        w3.hideElements(w3.getElements(sel));
+      };
+      w3.hideElements = function (elements) {
+        var i, l = elements.length;
+        for (i = 0; i < l; i++) {
+          w3.hideElement(elements[i]);
+        }
+      };
+      w3.hideElement = function (element) {
+        w3.styleElement(element, "display", "none");
+      };
+      w3.show = function (sel, a) {
+        var elements = w3.getElements(sel);
+        if (a) {w3.hideElements(elements);}
+        w3.showElements(elements);
+      };
+      w3.showElements = function (elements) {
+        var i, l = elements.length;
+        for (i = 0; i < l; i++) {
+          w3.showElement(elements[i]);
+        }
+      };
+      w3.showElement = function (element) {
+        element.style.removeProperty('display')
+      };
+      w3.addStyle = function (sel, prop, val) {
+        w3.styleElements(w3.getElements(sel), prop, val);
+      };
+      w3.styleElements = function (elements, prop, val) {
+        var i, l = elements.length;
+        for (i = 0; i < l; i++) {    
+          w3.styleElement(elements[i], prop, val);
+        }
+      };
+      w3.styleElement = function (element, prop, val) {
+        element.style.setProperty(prop, val);
+      };
+      w3.toggleShow = function (sel) {
+        var i, x = w3.getElements(sel), l = x.length;
+        for (i = 0; i < l; i++) {    
+          if (x[i].style.display == "none") {
+            x[i].style.removeProperty('display')
+          } else {
+            w3.styleElement(x[i], "display", "none");
+          }
+        }
+      };
+      w3.addClass = function (sel, name) {
+        w3.addClassElements(w3.getElements(sel), name);
+      };
+      w3.addClassElements = function (elements, name) {
+        var i, l = elements.length;
+        for (i = 0; i < l; i++) {
+          w3.addClassElement(elements[i], name);
+        }
+      };
+      w3.addClassElement = function (element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+        }
+      };
+      w3.removeClass = function (sel, name) {
+        w3.removeClassElements(w3.getElements(sel), name);
+      };
+      w3.removeClassElements = function (elements, name) {
+        var i, l = elements.length, arr1, arr2, j;
+        for (i = 0; i < l; i++) {
+          w3.removeClassElement(elements[i], name);
+        }
+      };
+      w3.removeClassElement = function (element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);     
+          }
+        }
+        element.className = arr1.join(" ");
+      };
+      w3.toggleClass = function (sel, c1, c2) {
+        w3.toggleClassElements(w3.getElements(sel), c1, c2);
+      };
+      w3.toggleClassElements = function (elements, c1, c2) {
+        var i, l = elements.length;
+        for (i = 0; i < l; i++) {    
+          w3.toggleClassElement(elements[i], c1, c2);
+        }
+      };
+      w3.toggleClassElement = function (element, c1, c2) {
+        var t1, t2, t1Arr, t2Arr, j, arr, allPresent;
+        t1 = (c1 || "");
+        t2 = (c2 || "");
+        t1Arr = t1.split(" ");
+        t2Arr = t2.split(" ");
+        arr = element.className.split(" ");
+        if (t2Arr.length == 0) {
+          allPresent = true;
+          for (j = 0; j < t1Arr.length; j++) {
+            if (arr.indexOf(t1Arr[j]) == -1) {allPresent = false;}
+          }
+          if (allPresent) {
+            w3.removeClassElement(element, t1);
+          } else {
+            w3.addClassElement(element, t1);
+          }
+        } else {
+          allPresent = true;
+          for (j = 0; j < t1Arr.length; j++) {
+            if (arr.indexOf(t1Arr[j]) == -1) {allPresent = false;}
+          }
+          if (allPresent) {
+            w3.removeClassElement(element, t1);
+            w3.addClassElement(element, t2);          
+          } else {
+            w3.removeClassElement(element, t2);        
+            w3.addClassElement(element, t1);
+          }
+        }
+      };
+      w3.getElements = function (id) {
+        if (typeof id == "object") {
+          return [id];
+        } else {
+          return document.querySelectorAll(id);
+        }
+      };
+      w3.filterHTML = function(id, sel, filter) {
+        var a, b, c, i, ii, iii, hit;
+        a = w3.getElements(id);
+        for (i = 0; i < a.length; i++) {
+          b = a[i].querySelectorAll(sel);
+          for (ii = 0; ii < b.length; ii++) {
+            hit = 0;
+            if (b[ii].innerText.toUpperCase().indexOf(filter.toUpperCase()) > -1) {
+              hit = 1;
+            }
+            c = b[ii].getElementsByTagName("*");
+            for (iii = 0; iii < c.length; iii++) {
+              if (c[iii].innerText.toUpperCase().indexOf(filter.toUpperCase()) > -1) {
+                hit = 1;
+              }
+            }
+            if (hit == 1) {
+              b[ii].style.display = "";
+            } else {
+              b[ii].style.display = "none";
+            }
+          }
+        }
+      };
+      w3.sortHTML = function(id, sel, sortvalue) {
+        var a, b, i, ii, y, bytt, v1, v2, cc, j;
+        a = w3.getElements(id);
+        for (i = 0; i < a.length; i++) {
+          for (j = 0; j < 2; j++) {
+            cc = 0;
+            y = 1;
+            while (y == 1) {
+              y = 0;
+              b = a[i].querySelectorAll(sel);
+              for (ii = 0; ii < (b.length - 1); ii++) {
+                bytt = 0;
+                if (sortvalue) {
+                  v1 = b[ii].querySelector(sortvalue).innerText;
+                  v2 = b[ii + 1].querySelector(sortvalue).innerText;
+                } else {
+                  v1 = b[ii].innerText;
+                  v2 = b[ii + 1].innerText;
+                }
+                v1 = v1.toLowerCase();
+                v2 = v2.toLowerCase();
+                if ((j == 0 && (v1 > v2)) || (j == 1 && (v1 < v2))) {
+                  bytt = 1;
+                  break;
+                }
+              }
+              if (bytt == 1) {
+                b[ii].parentNode.insertBefore(b[ii + 1], b[ii]);
+                y = 1;
+                cc++;
+              }
+            }
+            if (cc > 0) {break;}
+          }
+        }
+      };
+      w3.slideshow = function (sel, ms, func) {
+        var i, ss, x = w3.getElements(sel), l = x.length;
+        ss = {};
+        ss.current = 1;
+        ss.x = x;
+        ss.ondisplaychange = func;
+        if (!isNaN(ms) || ms == 0) {
+          ss.milliseconds = ms;
+        } else {
+          ss.milliseconds = 1000;
+        }
+        ss.start = function() {
+          ss.display(ss.current)
+          if (ss.ondisplaychange) {ss.ondisplaychange();}
+          if (ss.milliseconds > 0) {
+            window.clearTimeout(ss.timeout);
+            ss.timeout = window.setTimeout(ss.next, ss.milliseconds);
+          }
+        };
+        ss.next = function() {
+          ss.current += 1;
+          if (ss.current > ss.x.length) {ss.current = 1;}
+          ss.start();
+        };
+        ss.previous = function() {
+          ss.current -= 1;
+          if (ss.current < 1) {ss.current = ss.x.length;}
+          ss.start();
+        };
+        ss.display = function (n) {
+          w3.styleElements(ss.x, "display", "none");
+          w3.styleElement(ss.x[n - 1], "display", "block");
+        }
+        ss.start();
+        return ss;
+      };
+      w3.includeHTML = function(cb) {
+        var z, i, elmnt, file, xhttp;
+        z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+          elmnt = z[i];
+          file = elmnt.getAttribute("w3-include-html");
+          if (file) {
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+              if (this.readyState == 4) {
+                if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                elmnt.removeAttribute("w3-include-html");
+                w3.includeHTML(cb);
+              }
+            }      
+            xhttp.open("GET", file, true);
+            xhttp.send();
+            return;
+          }
+        }
+        if (cb) cb();
+      };
+      w3.getHttpData = function (file, func) {
+        w3.http(file, function () {
+          if (this.readyState == 4 && this.status == 200) {
+            func(this.responseText);
+          }
+        });
+      };
+      w3.getHttpObject = function (file, func) {
+        w3.http(file, function () {
+          if (this.readyState == 4 && this.status == 200) {
+            func(JSON.parse(this.responseText));
+          }
+        });
+      };
+      w3.displayHttp = function (id, file) {
+        w3.http(file, function () {
+          if (this.readyState == 4 && this.status == 200) {
+            w3.displayObject(id, JSON.parse(this.responseText));
+          }
+        });
+      };
+      w3.http = function (target, readyfunc, xml, method) {
+        var httpObj;
+        if (!method) {method = "GET"; }
+        if (window.XMLHttpRequest) {
+          httpObj = new XMLHttpRequest();
+        } else if (window.ActiveXObject) {
+          httpObj = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        if (httpObj) {
+          if (readyfunc) {httpObj.onreadystatechange = readyfunc;}
+          httpObj.open(method, target, true);
+          httpObj.send(xml);
+        }
+      };
+      w3.getElementsByAttribute = function (x, att) {
+        var arr = [], arrCount = -1, i, l, y = x.getElementsByTagName("*"), z = att.toUpperCase();
+        l = y.length;
+        for (i = -1; i < l; i += 1) {
+          if (i == -1) {y[i] = x;}
+          if (y[i].getAttribute(z) !== null) {arrCount += 1; arr[arrCount] = y[i];}
+        }
+        return arr;
+      };  
+      w3.dataObject = {},
+      w3.displayObject = function (id, data) {
+        var htmlObj, htmlTemplate, html, arr = [], a, l, rowClone, x, j, i, ii, cc, repeat, repeatObj, repeatX = "";
+        htmlObj = document.getElementById(id);
+        htmlTemplate = init_template(id, htmlObj);
+        html = htmlTemplate.cloneNode(true);
+        arr = w3.getElementsByAttribute(html, "w3-repeat");
+        l = arr.length;
+        for (j = (l - 1); j >= 0; j -= 1) {
+          cc = arr[j].getAttribute("w3-repeat").split(" ");
+          if (cc.length == 1) {
+            repeat = cc[0];
+          } else {
+            repeatX = cc[0];
+            repeat = cc[2];
+          }
+          arr[j].removeAttribute("w3-repeat");
+          repeatObj = data[repeat];
+          if (repeatObj && typeof repeatObj == "object" && repeatObj.length != "undefined") {
+            i = 0;
+            for (x in repeatObj) {
+              i += 1;
+              rowClone = arr[j];
+              rowClone = w3_replace_curly(rowClone, "element", repeatX, repeatObj[x]);
+              a = rowClone.attributes;
+              for (ii = 0; ii < a.length; ii += 1) {
+                a[ii].value = w3_replace_curly(a[ii], "attribute", repeatX, repeatObj[x]).value;
+              }
+              (i === repeatObj.length) ? arr[j].parentNode.replaceChild(rowClone, arr[j]) : arr[j].parentNode.insertBefore(rowClone, arr[j]);
+            }
+          } else {
+            console.log("w3-repeat must be an array. " + repeat + " is not an array.");
+            continue;
+          }
+        }
+        html = w3_replace_curly(html, "element");
+        htmlObj.parentNode.replaceChild(html, htmlObj);
+        function init_template(id, obj) {
+          var template;
+          template = obj.cloneNode(true);
+          if (w3.dataObject.hasOwnProperty(id)) {return w3.dataObject[id];}
+          w3.dataObject[id] = template;
+          return template;
+        }
+        function w3_replace_html(a, r, result) {
+          var b, l, i, a, x, j;
+          if (a.hasAttributes()) {
+            b = a.attributes;
+            l = b.length;
+            for (i = 0; i < l; i += 1) {
+              if (b[i].value.indexOf(r) > -1) {b[i].value = b[i].value.replace(r, result);}
+            }
+          }
+          x = a.getElementsByTagName("*");
+          l = x.length;
+          a.innerHTML = a.innerHTML.replace(r, result);
+        }
+      };    </script>
+  </body>
+</html>

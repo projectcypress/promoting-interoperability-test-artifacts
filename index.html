@@ -1,1 +1,337 @@
-<h1>Hello</h1>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:n1="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <head>
+    <title>G1/G2 home</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css">
+    .music {
+        border-color: #424242;
+        color: #0D3868;
+        background-color: #fff;
+        display: inline-block;
+        margin-bottom: 0;
+        font-weight: normal;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        border: 1px solid;
+        padding: 6px 12px;
+        border-radius: 0;
+    }
+    .measures_container > div {
+      display: inline-block;
+      vertical-align: top;
+    }
+    .measure_container {
+      max-width: 49%;
+    }
+    .flex {
+      display: flex;
+      justify-content: space-between;
+    }
+    .radio_container {
+        text-align: left;
+    }
+    .radio_container > div {
+        display: inline-block;
+        vertical-align: top;
+        padding: 5px 25px;
+    }
+    .help-block {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        color: #737373;
+    }
+    .provider_color_1 {
+      background-color: #DDEBF7;
+    }
+    .provider_color_2 {
+      background-color: #FCE4D6;
+    }
+    .provider_color_3 {
+      background-color: #E2EFDB;
+    }
+    .provider_color_4 {
+      background-color: #D9E1F2;
+    }
+    .provider_color_5 {
+      background-color: #FFF2CC;
+    }
+    .provider_color_6 {
+      background-color: #C9C9C9;
+    }
+    .provider_color_7 {
+      background-color: #F4B084;
+    }
+    .provider_color_8 {
+      background-color: #A9D08E;
+    }
+    .denom_color {
+      background-color: #D9E1F2;
+    }
+    .numer_color {
+      background-color: #A9D08E;
+    }
+    .result_color {
+      background-color: #C9C9C9;
+    }
+    html {
+        font-size: 80%;
+    }
+    .divTable{
+      margin: 5px;
+      display: table;
+      font-family: "Source Sans Pro",sans-serif;
+    }
+    .divTableRow {
+      display: table-row;
+    }
+    .divTableAlternatingRow:nth-child(odd) {
+      background-color: #E0E0E0;
+      display: table-row;
+    }
+    .divTableAlternatingRow:nth-child(even) {
+      display: table-row;
+    }
+    .divTableCell {
+      border: 1px solid #dcdcdc;
+      display: table-cell;
+      padding: 0.5em .6em;
+      vertical-align: bottom;
+    }
+    .divTableBorderlessCell {
+      display: table-cell;
+      padding: 0.75em 1em;
+      vertical-align: bottom;
+    }
+    .divBold {
+      font-weight: bold;
+    }
+    .divSmall {
+      font-size: smaller;
+    }
+    .divTableAlternatingCell {
+      border: 1px solid #dcdcdc;
+      display: table-cell;
+      padding: 0.75em 1em;
+      vertical-align: bottom;
+    }
+    
+    .noWrap {
+      white-space: nowrap;
+    }
+    
+    .right {
+      text-align: right;
+    }
+    
+    .divTableAlternatingCell:nth-child(even) {
+      background-color: #E0E0E0;
+    }
+    <!-- .divTableHead {
+      border: 1px solid #999999;
+      display: table-cell;
+      padding: 3px 10px;
+      font-weight: bold;
+      vertical-align: bottom;
+    } -->
+    .divTableHead {
+      display: table-cell;
+      font-weight: bold;
+      vertical-align: bottom;
+      background-color: #ebeef1;
+      border: 1px solid #dcdcdc;
+      padding: 0.75em 1em;
+      color: #323a45;
+    }
+    .divTableHeading {
+      color: #0D3868;
+      display: table-header-group;
+      font-weight: bold;
+    }
+    .divTableFoot {
+      background-color: #EEE;
+      display: table-footer-group;
+      font-weight: bold;
+    }
+    .divTableBody {
+      display: table-row-group;
+    }
+    .divTableNoteRow {
+      display: table-row;
+    }
+    .noBorder {
+      border: none;
+    }
+    .withBorder{
+      border: 1px solid #dcdcdc;
+    }
+    .divLi:nth-child(odd) {
+      font-weight: normal;
+    }
+    .divLi:nth-child(even) {
+      font-weight: bold;
+    }
+    
+    /* Style the button that is used to open and close the collapsible content */
+    .collapsible {
+      background-color: #536b78;
+      font-weight: bold;
+      color: #fff;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+    }
+    
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    .active, .collapsible:hover {
+      background-color: #FC7011;
+    }
+    
+    /* Style the collapsible content. Note: hidden by default */
+    .content {
+      padding: 0 5px;
+      display: none;
+      overflow: hidden;
+      overflow-x: auto;
+    }
+    
+    .blueItallic {
+      color: #0D3868;
+    }
+    
+    h1, h2, h3 {
+      color: #0D3868;
+      border-bottom: 3px solid #ffc425;
+    }
+    
+    h4 {
+      color: #0D3868;
+    }
+    
+    table {
+      border-collapse: collapse;
+    }
+    
+    .visually-hidden {
+        position: absolute !important;
+        overflow: hidden;
+        clip: rect(1px,1px,1px,1px);
+        width: 1px;
+        height: 1px;
+        word-wrap: normal;
+    }
+    
+    ul, ol {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .breadcrumb ol {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .breadcrumb li {
+        display: inline;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    
+    #block-breadcrumbs {
+        padding: 1rem 1rem 0 1rem;
+    }
+    
+    #block-breadcrumbs .breadcrumb li:first-child::before {
+        content: '';
+    }
+    
+    #block-breadcrumbs .breadcrumb {
+        display: inline-block;
+        margin-bottom: 1.5rem;
+        text-align: left;
+    }
+    
+    #block-breadcrumbs .breadcrumb li:first-child > a {
+        padding-left: 0;
+    }
+    
+    #block-breadcrumbs .breadcrumb li::before {
+        z-index: 1;
+        content: '\003e';
+        color: #ffc425;
+        font-weight: bold;
+    }
+    
+    #block-breadcrumbs .breadcrumb li > a {
+        color: #1d4f90;
+        display: inline-block;
+        font-size: 1.4rem;
+        line-height: 2.25rem;
+        margin-bottom: 2px;
+        margin-right: -5px;
+        padding: 0 1.125rem 0 1.125rem;
+        position: relative;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    #block-breadcrumbs .breadcrumb li:last-child {
+        font-size: 1.6rem;
+    }
+    
+    #block-breadcrumbs .breadcrumb li:last-child {
+        font-weight: bold;
+        font-size: 1.4rem;
+        color: #555;
+    }
+    
+    .breadcrumb li {
+        display: inline;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    
+    #block-breadcrumbs .breadcrumb li:last-child::before {
+        padding-right: 1.125rem;
+    }
+    
+    </style>  </head>
+    <body>
+    <div id="block-breadcrumbs" class="block block-system block-system-breadcrumb-block">
+      <nav class="breadcrumb" role="navigation" aria-labelledby="system-breadcrumb">
+        <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+        <ol>
+              <li><a href="../index.html">G1/G2 home</a></li>
+        </ol>
+      </nav>
+    </div>
+        <h1>§170.315(g)(1)/§170.315(g)(2) Test Data</h1>
+        <div class="divTable">
+          <div class="divTableBody">
+              <div class="divTableNoteRow">
+                <div class="divTableCell noBorder"><a href="exports/test_data/G1_EH_General_Notes.html">§170.315(g)(1) Test Data Set 1 – EH/CAH</a></div>
+              </div>
+              <div class="divTableNoteRow">
+                <div class="divTableCell noBorder"><a href="exports/test_data/G1_EP_General_Notes.html">§170.315(g)(1) Test Data Set 2 – EP/EC</a></div>
+              </div>
+              <div class="divTableNoteRow">
+                <div class="divTableCell noBorder"><a href="exports/test_data/G2_EH_General_Notes.html">§170.315(g)(2) Test Data Set 1 – EH/CAH</a></div>
+              </div>
+              <div class="divTableNoteRow">
+                <div class="divTableCell noBorder"><a href="exports/test_data/G2_EP_General_Notes.html">§170.315(g)(2) Test Data Set 2 – EP/EC</a></div>
+              </div>
+          </div>
+        </div>
+        <br/>
+        <div>Version: 2.2 - Exported 2021-05-10 by the <a href="https://github.com/projectcypress/promoting-interoperability-test-artifacts">promoting-interoperability-test-artifacts</a> generator</div>
+  </body>
+</html>
