@@ -34,28 +34,28 @@
             },
           "segment_entries": [
             {
-              "entry_title": "Patient Seen  During or Outside Reporting/Performance Period",
+              "entry_title": "Patient Seen During Reporting/Performance Period",
               "denom": true,
               "entry_values": [
                 {
                   "patient_id": "Lavon Earle",
-                  "entry_value": "First encounter, during"
+                  "entry_value": "First encounter"
                 },
                 {
                   "patient_id": "Trula Covey",
-                  "entry_value": "First encounter, during"
+                  "entry_value": "First encounter"
                 },
                 {
                   "patient_id": "Mai Nguyen",
-                  "entry_value": "First encounter, during"
+                  "entry_value": "First encounter"
                 },
                 {
                   "patient_id": "Tom Warner",
-                  "entry_value": "First encounter, during"
+                  "entry_value": "First encounter"
                 },
                 {
                   "patient_id": "Elsa Wu",
-                  "entry_value": "First encounter, during"
+                  "entry_value": "First encounter"
                 }
               ]
             },
@@ -212,20 +212,20 @@
             },
           "segment_entries": [
             {
-              "entry_title": "Patient Seen  During or Outside Reporting/Performance Period",
+              "entry_title": "Patient Seen During Reporting/Performance Period",
               "denom": true,
               "entry_values": [
                 {
                   "patient_id": "Trula Covey",
-                  "entry_value": "Second encounter, during"
+                  "entry_value": "Second encounter"
                 },
                 {
                   "patient_id": "Lavon Earle",
-                  "entry_value": "Second encounter, during"
+                  "entry_value": "Second encounter"
                 },
                 {
                   "patient_id": "Mai Nguyen",
-                  "entry_value": "Second encounter, during"
+                  "entry_value": "Second encounter"
                 }
               ]
             },
@@ -330,7 +330,7 @@
     },
     {
       "scenario_title": "Scenario 3",
-      "scenario_description": "Patient Seen  During or Outside Reporting/Performance Period",
+      "scenario_description": "Patient Seen During Reporting/Performance Period",
       "segments": [
         {
           "segment_total":
@@ -340,19 +340,19 @@
             },
           "segment_entries": [
             {
-              "entry_title": "Patient Seen During or Outside Reporting Period ",
+              "entry_title": "Patient Seen During Reporting Period ",
               "entry_values": [
                 {
                   "patient_id": "Alan Bench",
-                  "entry_value": "First encounter, during"
+                  "entry_value": "First encounter"
                 },
                 {
                   "patient_id": "Rashida Champagne",
-                  "entry_value": "First encounter, during"
+                  "entry_value": "First encounter"
                 },
                 {
                   "patient_id": "David Brown",
-                  "entry_value": "First encounter, during"
+                  "entry_value": "First encounter"
                 }
               ]
             },
@@ -467,12 +467,12 @@
             },
           "segment_entries": [
             {
-              "entry_title": "Patient Seen  During or Outside Reporting/Performance Period",
+              "entry_title": "Patient Seen During Reporting/Performance Period",
               "denom": true,
               "entry_values": [
                 {
                   "patient_id": "Elsa Wu",
-                  "entry_value": "Second encounter, during"
+                  "entry_value": "Second encounter"
                 }
               ]
             },

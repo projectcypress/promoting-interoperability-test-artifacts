@@ -44,28 +44,28 @@
             },
           "segment_entries": [
             {
-              "entry_title": "Patient Discharged During or Outside of Reporting / Performance Period",
+              "entry_title": "Patient Discharged During Reporting / Performance Period",
               "denom": true,
               "entry_values": [
                 {
                   "patient_id": "Tracy Daniels",
-                  "entry_value": "First discharge, during"
+                  "entry_value": "First discharge"
                 },
                 {
                   "patient_id": "Dianne Potter",
-                  "entry_value": "First discharge, during"
+                  "entry_value": "First discharge"
                 },
                 {
                   "patient_id": "Katrina Owens",
-                  "entry_value": "First discharge, during"
+                  "entry_value": "First discharge"
                 },
                 {
                   "patient_id": "Allan Summers",
-                  "entry_value": "First discharge, during"
+                  "entry_value": "First discharge"
                 },
                 {
                   "patient_id": "Ada Mack",
-                  "entry_value": "First discharge, during"
+                  "entry_value": "First discharge"
                 }
               ]
             },
@@ -177,20 +177,20 @@
             },
           "segment_entries": [
             {
-              "entry_title": "Patient Discharged During or Outside of Reporting / Performance Period",
+              "entry_title": "Patient Discharged During Reporting / Performance Period",
               "denom": true,
               "entry_values": [
                 {
                   "patient_id": "Tracy Daniels",
-                  "entry_value": "Second discharge, during"
+                  "entry_value": "Second discharge"
                 },
                 {
                   "patient_id": "Dianne Potter",
-                  "entry_value": "Second discharge, during"
+                  "entry_value": "Second discharge"
                 },
                 {
                   "patient_id": "Katrina Owens",
-                  "entry_value": "Second discharge, during"
+                  "entry_value": "Second discharge"
                 }
               ]
             },
@@ -274,20 +274,20 @@
             },
           "segment_entries": [
             {
-              "entry_title": "Patient Discharged During or Outside of Reporting / Performance Period",
+              "entry_title": "Patient Discharged During Reporting / Performance Period",
               "denom": true,
               "entry_values": [
                 {
                   "patient_id": "Anthony Edwards",
-                  "entry_value": "First discharge, during"
+                  "entry_value": "First discharge"
                 },
                 {
                   "patient_id": "Bruce Hall",
-                  "entry_value": "First discharge, during"
+                  "entry_value": "First discharge"
                 },
                 {
                   "patient_id": "Debra Steele",
-                  "entry_value": "First discharge, during"
+                  "entry_value": "First discharge"
                 }
               ]
             },
@@ -371,23 +371,23 @@
             },
           "segment_entries": [
             {
-              "entry_title": "Patient Discharged During or Outside of Reporting Period",
+              "entry_title": "Patient Discharged During Reporting Period",
               "entry_values": [
                 {
                   "patient_id": "Debra Price",
-                  "entry_value": "First discharge, during"
+                  "entry_value": "First discharge"
                 },
                 {
                   "patient_id": "Mark Gordon",
-                  "entry_value": "First discharge, during"
+                  "entry_value": "First discharge"
                 },
                 {
                   "patient_id": "Gabriel Brady",
-                  "entry_value": "First discharge, during"
+                  "entry_value": "First discharge"
                 },
                 {
                   "patient_id": "Kirk Patterson",
-                  "entry_value": "First discharge, during"
+                  "entry_value": "First discharge"
                 }
               ]
             },
@@ -485,12 +485,12 @@
             },
           "segment_entries": [
             {
-              "entry_title": "Patient Discharged During or Outside of Reporting / Performance Period",
+              "entry_title": "Patient Discharged During Reporting / Performance Period",
               "denom": true,
               "entry_values": [
                 {
                   "patient_id": "Ada Mack",
-                  "entry_value": "Second discharge, during"
+                  "entry_value": "Second discharge"
                 }
               ]
             },

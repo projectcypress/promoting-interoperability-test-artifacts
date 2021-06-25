@@ -28,7 +28,7 @@
             },
           "segment_entries": [
             {
-              "entry_title": "Patient Admitted Within or Outside Reporting Period",
+              "entry_title": "Patient Admitted Within Reporting Period",
               "denom": true,
               "entry_values": [
                 {
@@ -185,7 +185,7 @@
             },
           "segment_entries": [
             {
-              "entry_title": "Patient Admitted Within or Outside Reporting Period",
+              "entry_title": "Patient Admitted Within Reporting Period",
               "denom": true,
               "entry_values": [
                 {

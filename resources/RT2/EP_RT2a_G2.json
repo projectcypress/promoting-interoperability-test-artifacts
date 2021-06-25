@@ -105,7 +105,7 @@
             },
           "segment_entries": [
             {
-              "entry_title": "Patient Seen  During or Outside EHR Reporting Period",
+              "entry_title": "Patient Seen During EHR Reporting Period",
               "denom": true,
               "entry_values": [
                 {
@@ -113,19 +113,19 @@
                   "providers": [
                     {
                       "provider": "TIN A/Provider 1",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "TIN B/Provider 1",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "TIN A/Provider 2",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "TIN B/Provider 2",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     }
                   ]
                 },
@@ -134,19 +134,19 @@
                   "providers": [
                     {
                       "provider": "TIN A/Provider 1",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "TIN B/Provider 1",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "TIN A/Provider 2",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "TIN B/Provider 2",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     }
                   ]
                 },
@@ -155,19 +155,19 @@
                   "providers": [
                     {
                       "provider": "TIN A/Provider 1",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "TIN B/Provider 1",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "TIN A/Provider 2",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "TIN B/Provider 2",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     }
                   ]
                 },
@@ -176,7 +176,7 @@
                   "providers": [
                     {
                       "provider": "TIN A/Provider 1",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "TIN B/Provider 1",
@@ -188,7 +188,7 @@
                     },
                     {
                       "provider": "TIN B/Provider 2",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     }
                   ]
                 },
@@ -197,19 +197,19 @@
                   "providers": [
                     {
                       "provider": "TIN A/Provider 1",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "TIN B/Provider 1",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "TIN A/Provider 2",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "TIN B/Provider 2",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     }
                   ]
                 }
@@ -783,7 +783,7 @@
             },
           "segment_entries": [
             {
-              "entry_title": "Patient Seen  During or Outside EHR Reporting Period",
+              "entry_title": "Patient Seen During EHR Reporting Period",
               "denom": true,
               "entry_values": [
                 {
@@ -791,19 +791,19 @@
                   "providers": [
                     {
                       "provider": "TIN A/Provider 1",
-                      "entry_value": "Second encounter, during"
+                      "entry_value": "Second encounter"
                     },
                     {
                       "provider": "TIN B/Provider 1",
-                      "entry_value": "Second encounter, during"
+                      "entry_value": "Second encounter"
                     },
                     {
                       "provider": "TIN A/Provider 2",
-                      "entry_value": "Second encounter, during"
+                      "entry_value": "Second encounter"
                     },
                     {
                       "provider": "TIN B/Provider 2",
-                      "entry_value": "Second encounter, during"
+                      "entry_value": "Second encounter"
                     }
                   ]
                 },
@@ -812,19 +812,19 @@
                   "providers": [
                     {
                       "provider": "TIN A/Provider 1",
-                      "entry_value": "Second encounter, during"
+                      "entry_value": "Second encounter"
                     },
                     {
                       "provider": "TIN B/Provider 1",
-                      "entry_value": "Second encounter, during"
+                      "entry_value": "Second encounter"
                     },
                     {
                       "provider": "TIN A/Provider 2",
-                      "entry_value": "Second encounter, during"
+                      "entry_value": "Second encounter"
                     },
                     {
                       "provider": "TIN B/Provider 2",
-                      "entry_value": "Second encounter, during"
+                      "entry_value": "Second encounter"
                     }
                   ]
                 },
@@ -833,19 +833,19 @@
                   "providers": [
                     {
                       "provider": "TIN A/Provider 1",
-                      "entry_value": "Second encounter, during"
+                      "entry_value": "Second encounter"
                     },
                     {
                       "provider": "TIN B/Provider 1",
-                      "entry_value": "Second encounter, during"
+                      "entry_value": "Second encounter"
                     },
                     {
                       "provider": "TIN A/Provider 2",
-                      "entry_value": "Second encounter, during"
+                      "entry_value": "Second encounter"
                     },
                     {
                       "provider": "TIN B/Provider 2",
-                      "entry_value": "Second encounter, during"
+                      "entry_value": "Second encounter"
                     }
                   ]
                 }
@@ -1229,7 +1229,7 @@
             },
           "segment_entries": [
             {
-              "entry_title": "Patient Seen  During or Outside EHR Reporting Period",
+              "entry_title": "Patient Seen During EHR Reporting Period",
               "denom": true,
               "entry_values": [
                 {
@@ -1237,19 +1237,19 @@
                   "providers": [
                     {
                       "provider": "TIN A/Provider 1",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "TIN B/Provider 1",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "TIN A/Provider 2",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "TIN B/Provider 2",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     }
                   ]
                 },
@@ -1258,19 +1258,19 @@
                   "providers": [
                     {
                       "provider": "TIN A/Provider 1",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "TIN B/Provider 1",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "TIN A/Provider 2",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "TIN B/Provider 2",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     }
                   ]
                 },
@@ -1279,19 +1279,19 @@
                   "providers": [
                     {
                       "provider": "TIN A/Provider 1",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "TIN B/Provider 1",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "TIN A/Provider 2",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "TIN B/Provider 2",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     }
                   ]
                 }
@@ -1675,7 +1675,7 @@
             },
           "segment_entries": [
             {
-              "entry_title": "Patient Seen  During or Outside EHR Reporting Period",
+              "entry_title": "Patient Seen During EHR Reporting Period",
               "denom": true,
               "entry_values": [
                 {
@@ -1683,19 +1683,19 @@
                   "providers": [
                     {
                       "provider": "TIN A/Provider 1",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "TIN B/Provider 1",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "TIN A/Provider 2",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "TIN B/Provider 2",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     }
                   ]
                 },
@@ -1704,19 +1704,19 @@
                   "providers": [
                     {
                       "provider": "TIN A/Provider 1",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "TIN B/Provider 1",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "TIN A/Provider 2",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "TIN B/Provider 2",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     }
                   ]
                 },
@@ -1725,19 +1725,19 @@
                   "providers": [
                     {
                       "provider": "TIN A/Provider 1",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "TIN B/Provider 1",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "TIN A/Provider 2",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "TIN B/Provider 2",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     }
                   ]
                 }
@@ -2121,7 +2121,7 @@
             },
           "segment_entries": [
             {
-              "entry_title": "Patient Seen  During or Outside EHR Reporting Period",
+              "entry_title": "Patient Seen During EHR Reporting Period",
               "denom": true,
               "entry_values": [
                 {
@@ -2129,7 +2129,7 @@
                   "providers": [
                     {
                       "provider": "TIN A/Provider 1",
-                      "entry_value": "Second encounter, during"
+                      "entry_value": "Second encounter"
                     },
                     {
                       "provider": "TIN B/Provider 1",
@@ -2141,7 +2141,7 @@
                     },
                     {
                       "provider": "TIN B/Provider 2",
-                      "entry_value": "Second encounter, during"
+                      "entry_value": "Second encounter"
                     }
                   ]
                 }

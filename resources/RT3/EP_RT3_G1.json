@@ -33,33 +33,33 @@
             },
           "segment_entries": [
             {
-              "entry_title": "Patient Seen During or Outside of Reporting / Performance Period",
+              "entry_title": "Patient Seen During Reporting / Performance Period",
               "denom": true,
               "entry_values": [
                 {
                   "patient_id": "Lavon Earle",
-                  "entry_value": "First encounter, during"
+                  "entry_value": "First encounter"
                 },
                 {
                   "patient_id": "Trula Covey",
-                  "entry_value": "First encounter, during"
+                  "entry_value": "First encounter"
                 },
                 {
                   "patient_id": "Mai Nguyen",
-                  "entry_value": "First encounter, during"
+                  "entry_value": "First encounter"
                 },
                 {
                   "patient_id": "Tom Warner",
-                  "entry_value": "First encounter, during"
+                  "entry_value": "First encounter"
                 },
                 {
                   "patient_id": "Elsa Wu",
-                  "entry_value": "First encounter, during"
+                  "entry_value": "First encounter"
                 }
               ]
             },
             {
-              "entry_title": "CEHRT Identifies Patient-Specific Education Resources  During or Outside Reporting/Performance Period",
+              "entry_title": "CEHRT Identifies Patient-Specific Education Resources  During Reporting/Performance Period",
               "numer": true,
               "entry_values": [
                 {
@@ -85,7 +85,7 @@
               ]
             },
             {
-              "entry_title": "EP/EC Provides Electronic Access to Patient-Specific Educational Resources Identified by CEHRT During or Outside Reporting/Performance Period",
+              "entry_title": "EP/EC Provides Electronic Access to Patient-Specific Educational Resources Identified by CEHRT During Reporting/Performance Period",
               "numer": true,
               "automatable_step": { "title": "Steps that assume education material availablity is not automatic" },
               "entry_values": [
@@ -171,25 +171,25 @@
             },
           "segment_entries": [
             {
-              "entry_title": "Patient Seen During or Outside of Reporting / Performance Period",
+              "entry_title": "Patient Seen During Reporting / Performance Period",
               "denom": true,
               "entry_values": [
                 {
                   "patient_id": "Alan Bench",
-                  "entry_value": "First encounter, during"
+                  "entry_value": "First encounter"
                 },
                 {
                   "patient_id": "Rashida Champagne",
-                  "entry_value": "First encounter, during"
+                  "entry_value": "First encounter"
                 },
                 {
                   "patient_id": "David Brown",
-                  "entry_value": "First encounter, during"
+                  "entry_value": "First encounter"
                 }
               ]
             },
             {
-              "entry_title": "CEHRT Identifies Patient-Specific Education Resources  During or Outside Reporting/Performance Period",
+              "entry_title": "CEHRT Identifies Patient-Specific Education Resources  During Reporting/Performance Period",
               "numer": true,
               "entry_values": [
                 {
@@ -207,7 +207,7 @@
               ]
             },
             {
-              "entry_title": "EP/EC Provides Electronic Access to Patient-Specific Educational Resources Identified by CEHRT During or Outside Reporting/Performance Period",
+              "entry_title": "EP/EC Provides Electronic Access to Patient-Specific Educational Resources Identified by CEHRT During Reporting/Performance Period",
               "numer": true,
               "automatable_step": { "title": "Steps that assume education material availablity is not automatic" },
               "entry_values": [
@@ -263,17 +263,17 @@
             },
           "segment_entries": [
             {
-              "entry_title": "Patient Seen During or Outside of Reporting / Performance Period",
+              "entry_title": "Patient Seen During Reporting / Performance Period",
               "denom": true,
               "entry_values": [
                 {
                   "patient_id": "Elsa Wu",
-                  "entry_value": "Second encounter, during"
+                  "entry_value": "Second encounter"
                 }
               ]
             },
             {
-              "entry_title": "CEHRT Identifies Patient-Specific Education Resources  During or Outside Reporting/Performance Period",
+              "entry_title": "CEHRT Identifies Patient-Specific Education Resources  During Reporting/Performance Period",
               "numer": true,
               "entry_values": [
                 {
@@ -283,7 +283,7 @@
               ]
             },
             {
-              "entry_title": "EP/EC Provides Electronic Access to Patient-Specific Educational Resources Identified by CEHRT During or Outside Reporting/Performance Period",
+              "entry_title": "EP/EC Provides Electronic Access to Patient-Specific Educational Resources Identified by CEHRT During Reporting/Performance Period",
               "numer": true,
               "automatable_step": { "title": "Steps that assume education material availablity is not automatic" },
               "entry_values": [
