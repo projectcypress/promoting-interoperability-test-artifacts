@@ -24,7 +24,7 @@
   "test_data_notes": [
     "The set of calculations including controlled substances and the set of calculations excluding controlled substances are both required.  If a Health IT Module is not able to transmit controlled substances, it is at the discretion of the ATL to not test the controlled substance calculations.",
     "If a Health IT Module automatically transmits a prescription electronically when it is generated, it is at the discretion of the ATL not to test scenarios that assume this is not automatic.",
-    "If a Health IT Module automatically queries for a drug formulary upon every prescription that is generated, it is at the discretion of the ATL not to test scenarios that assume this is not automatic.",
+    "If a Health IT Module automatically queries for a drug formulary upon every prescription that is generated, it is at the discretion of the ATL not to test scenarios that assume this is not automatic. Additionally, the 2021 specification for Medicare has removed the requirement for formulary checking as part of the calculations (Select 'Hide - Automated Drug Queries' to remove this step from the test data).",
     "If a Health IT Module can only send changes electronically, it is at the discretion of the ATL not to test scenarios that assume a change could be sent via non-electronic means.",
     "The scenarios that test changed prescriptions assume that the original prescription was written electronically.",
     "Test data supply: ONC and Vendor-supplied. ONC provides the Test Data Scenarios and parameters; the Vendor will supply the Electronic Prescription entry and formulary details."
@@ -44,28 +44,28 @@
           "segment_title": "Includes controlled substances", 
           "segment_entries": [
             {
-              "entry_title": "Prescriptions  (New, Changed) Written Within or Outside the Reporting Period",
+              "entry_title": "Prescriptions  (New, Changed) Written Within the Reporting Period",
               "denom": true,
               "entry_values": [
                 {
                   "patient_id": "Tracy Daniels",
-                  "entry_value": "New, Within"
+                  "entry_value": "New"
                 },
                 {
                   "patient_id": "Dianne Potter",
-                  "entry_value": "New, Within"
+                  "entry_value": "New"
                 },
                 {
                   "patient_id": "Katrina Owens",
-                  "entry_value": "Changed, Within"
+                  "entry_value": "Changed"
                 },
                 {
                   "patient_id": "Allan Summers",
-                  "entry_value": "Changed, Within"
+                  "entry_value": "Changed"
                 },
                 {
                   "patient_id": "Ada Mack",
-                  "entry_value": "New, Within"
+                  "entry_value": "New"
                 }
               ]
             },
@@ -251,28 +251,28 @@
           "segment_title": "Excludes controlled substances",
           "segment_entries": [
             {
-              "entry_title": "Prescriptions  (New, Changed) Written Within or Outside the Reporting Period",
+              "entry_title": "Prescriptions  (New, Changed) Written Within the Reporting Period",
               "denom": true,
               "entry_values": [
                 {
                   "patient_id": "Tracy Daniels",
-                  "entry_value": "New, Within"
+                  "entry_value": "New"
                 },
                 {
                   "patient_id": "Dianne Potter",
-                  "entry_value": "New, Within"
+                  "entry_value": "New"
                 },
                 {
                   "patient_id": "Katrina Owens",
-                  "entry_value": "Changed, Within"
+                  "entry_value": "Changed"
                 },
                 {
                   "patient_id": "Allan Summers",
-                  "entry_value": "Changed, Within"
+                  "entry_value": "Changed"
                 },
                 {
                   "patient_id": "Ada Mack",
-                  "entry_value": "New, Within"
+                  "entry_value": "New"
                 }
               ]
             },
@@ -431,24 +431,24 @@
           "segment_title": "Includes controlled substances",
           "segment_entries": [
             {
-              "entry_title": "Prescriptions  (New, Changed) Written Within or Outside the Reporting Period",
+              "entry_title": "Prescriptions  (New, Changed) Written Within the Reporting Period",
               "denom": true,
               "entry_values": [
                 {
                   "patient_id": "Anthony Edwards",
-                  "entry_value": "New, Within"
+                  "entry_value": "New"
                 },
                 {
                   "patient_id": "Bruce Hall",
-                  "entry_value": "New, Within"
+                  "entry_value": "New"
                 },
                 {
                   "patient_id": "Debra Steele",
-                  "entry_value": "Changed, Within"
+                  "entry_value": "Changed"
                 },
                 {
                   "patient_id": "Allan Summers",
-                  "entry_value": "Changed, Within"
+                  "entry_value": "Changed"
                 }
               ]
             },
@@ -608,24 +608,24 @@
           "segment_title": "Excludes controlled substances",
           "segment_entries": [
             {
-              "entry_title": "Prescriptions  (New, Changed) Written Within or Outside the Reporting Period",
+              "entry_title": "Prescriptions  (New, Changed) Written Within the Reporting Period",
               "denom": true,
               "entry_values": [
                 {
                   "patient_id": "Anthony Edwards",
-                  "entry_value": "New, Within"
+                  "entry_value": "New"
                 },
                 {
                   "patient_id": "Bruce Hall",
-                  "entry_value": "New, Within"
+                  "entry_value": "New"
                 },
                 {
                   "patient_id": "Debra Steele",
-                  "entry_value": "Changed, Within"
+                  "entry_value": "Changed"
                 },
                 {
                   "patient_id": "Allan Summers",
-                  "entry_value": "Changed, Within"
+                  "entry_value": "Changed"
                 }
               ]
             },
@@ -746,24 +746,24 @@
           "segment_title": "Includes controlled substances",
           "segment_entries": [
             {
-              "entry_title": "Prescriptions  (New, Changed) Written Within or Outside the Reporting Period",
+              "entry_title": "Prescriptions  (New, Changed) Written Within the Reporting Period",
               "denom": true,
               "entry_values": [
                 {
                   "patient_id": "Debra Price",
-                  "entry_value": "New, Within"
+                  "entry_value": "New"
                 },
                 {
                   "patient_id": "Mark Gordon",
-                  "entry_value": "New, Within"
+                  "entry_value": "New"
                 },
                 {
                   "patient_id": "Gabriel Brady",
-                  "entry_value": "Changed, Within"
+                  "entry_value": "Changed"
                 },
                 {
                   "patient_id": "Kirk Patterson",
-                  "entry_value": "Changed, Within"
+                  "entry_value": "Changed"
                 }
               ]
             },
@@ -923,24 +923,24 @@
           "segment_title": "Excludes controlled substances",
           "segment_entries": [
             {
-              "entry_title": "Prescriptions  (New, Changed) Written Within or Outside the Reporting Period",
+              "entry_title": "Prescriptions  (New, Changed) Written Within the Reporting Period",
               "denom": true,
               "entry_values": [
                 {
                   "patient_id": "Debra Price",
-                  "entry_value": "New, Within"
+                  "entry_value": "New"
                 },
                 {
                   "patient_id": "Mark Gordon",
-                  "entry_value": "New, Within"
+                  "entry_value": "New"
                 },
                 {
                   "patient_id": "Gabriel Brady",
-                  "entry_value": "Changed, Within"
+                  "entry_value": "Changed"
                 },
                 {
                   "patient_id": "Kirk Patterson",
-                  "entry_value": "Changed, Within"
+                  "entry_value": "Changed"
                 }
               ]
             },

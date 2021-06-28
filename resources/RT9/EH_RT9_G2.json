@@ -29,28 +29,28 @@
             },
           "segment_entries": [
             {
-              "entry_title": "Patient Admitted Within or Outside Reporting Period",
+              "entry_title": "Patient Admitted Within Reporting Period",
               "denom": true,
               "entry_values": [
                 {
                   "patient_id": "Tracy Daniels",
-                  "entry_value": "Admitted (EH/CAH), Within"
+                  "entry_value": "Admitted (EH/CAH)"
                 },
                 {
                   "patient_id": "Dianne Potter",
-                  "entry_value": "Admitted (EH/CAH), Within"
+                  "entry_value": "Admitted (EH/CAH)"
                 },
                 {
                   "patient_id": "Katrina Owens",
-                  "entry_value": "Admitted (EH/CAH), Within"
+                  "entry_value": "Admitted (EH/CAH)"
                 },
                 {
                   "patient_id": "Allan Summers",
-                  "entry_value": "Admitted (EH/CAH), Within"
+                  "entry_value": "Admitted (EH/CAH)"
                 },
                 {
                   "patient_id": "Ada Mack",
-                  "entry_value": "Admitted (EH/CAH), Within"
+                  "entry_value": "Admitted (EH/CAH)"
                 }
               ]
             },
@@ -193,24 +193,24 @@
             },
           "segment_entries": [
             {
-              "entry_title": "Patient Admitted Within or Outside Reporting Period",
+              "entry_title": "Patient Admitted Within Reporting Period",
               "denom": true,
               "entry_values": [
                 {
                   "patient_id": "Anthony Edwards",
-                  "entry_value": "Admitted (EH/CAH), Within"
+                  "entry_value": "Admitted (EH/CAH)"
                 },
                 {
                   "patient_id": "Bruce Hall",
-                  "entry_value": "Admitted (EH/CAH), Within"
+                  "entry_value": "Admitted (EH/CAH)"
                 },
                 {
                   "patient_id": "Debra Steele",
-                  "entry_value": "Admitted (EH/CAH), Within"
+                  "entry_value": "Admitted (EH/CAH)"
                 },
                 {
                   "patient_id": "Allan Summers",
-                  "entry_value": "Admitted (EH/CAH), Within"
+                  "entry_value": "Admitted (EH/CAH)"
                 }
               ]
             },
@@ -323,24 +323,24 @@
             },
           "segment_entries": [
             {
-              "entry_title": "Patient Admitted Within or Outside Reporting Period",
+              "entry_title": "Patient Admitted Within Reporting Period",
               "denom": true,
               "entry_values": [
                 {
                   "patient_id": "Debra Price",
-                  "entry_value": "Admitted (EH/CAH), Within"
+                  "entry_value": "Admitted (EH/CAH)"
                 },
                 {
                   "patient_id": "Mark Gordon",
-                  "entry_value": "Admitted (EH/CAH), Within"
+                  "entry_value": "Admitted (EH/CAH)"
                 },
                 {
                   "patient_id": "Gabriel Brady",
-                  "entry_value": "Admitted (EH/CAH), Within"
+                  "entry_value": "Admitted (EH/CAH)"
                 },
                 {
                   "patient_id": "Kirk Patterson",
-                  "entry_value": "Admitted (EH/CAH), Within"
+                  "entry_value": "Admitted (EH/CAH)"
                 }
               ]
             },

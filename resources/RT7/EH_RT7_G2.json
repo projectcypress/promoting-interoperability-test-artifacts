@@ -36,7 +36,7 @@
             },
           "segment_entries": [
             {
-              "entry_title": "Transition of Care or Referral Within or Outside Reporting Period",
+              "entry_title": "Transition of Care or Referral Within Reporting Period",
               "denom": true,
               "entry_values": [
                 {
@@ -174,7 +174,7 @@
             },
           "segment_entries": [
             {
-              "entry_title": "Transition of Care or Referral Within or Outside Reporting Period",
+              "entry_title": "Transition of Care or Referral Within Reporting Period",
               "denom": true,
               "entry_values": [
                 {
@@ -282,7 +282,7 @@
             },
           "segment_entries": [
             {
-              "entry_title": "Transition of Care or Referral Within or Outside Reporting Period",
+              "entry_title": "Transition of Care or Referral Within Reporting Period",
               "denom": true,
               "entry_values": [
                 {

@@ -41,28 +41,28 @@
             },
           "segment_entries": [
             {
-              "entry_title": "Patient Seen  During or Outside EHR Reporting Period",
+              "entry_title": "Patient Seen During EHR Reporting Period",
               "denom": true,
               "entry_values": [
                 {
                   "patient_id": "Lavon Earle",
-                  "entry_value": "First encounter, during"
+                  "entry_value": "First encounter"
                 },
                 {
                   "patient_id": "Trula Covey",
-                  "entry_value": "First encounter, during"
+                  "entry_value": "First encounter"
                 },
                 {
                   "patient_id": "Mai Nguyen",
-                  "entry_value": "First encounter, during"
+                  "entry_value": "First encounter"
                 },
                 {
                   "patient_id": "Tom Warner",
-                  "entry_value": "First encounter, during"
+                  "entry_value": "First encounter"
                 },
                 {
                   "patient_id": "Elsa Wu",
-                  "entry_value": "First encounter, during"
+                  "entry_value": "First encounter"
                 }
               ]
             },
@@ -180,20 +180,20 @@
             },
           "segment_entries": [
             {
-              "entry_title": "Patient Seen  During or Outside EHR Reporting Period",
+              "entry_title": "Patient Seen During EHR Reporting Period",
               "denom": true,
               "entry_values": [
                 {
                   "patient_id": "Alan Bench",
-                  "entry_value": "First encounter, during"
+                  "entry_value": "First encounter"
                 },
                 {
                   "patient_id": "Rashida Champagne",
-                  "entry_value": "First encounter, during"
+                  "entry_value": "First encounter"
                 },
                 {
                   "patient_id": "David Brown",
-                  "entry_value": "First encounter, during"
+                  "entry_value": "First encounter"
                 }
               ]
             },
@@ -273,12 +273,12 @@
             },
           "segment_entries": [
             {
-              "entry_title": "Patient Seen  During or Outside EHR Reporting Period",
+              "entry_title": "Patient Seen During EHR Reporting Period",
               "denom": true,
               "entry_values": [
                 {
                   "patient_id": "Elsa Wu",
-                  "entry_value": "Second encounter, during"
+                  "entry_value": "Second encounter"
                 }
               ]
             },

@@ -43,7 +43,7 @@
             },
           "segment_entries": [
             {
-              "entry_title": "Patient Seen During or Outside Reporting Period ",
+              "entry_title": "Patient Seen During Reporting Period ",
               "denom": true,
               "entry_values": [
                 {
@@ -51,11 +51,11 @@
                   "providers": [
                     {
                       "provider": "Provider 1",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "Provider 2",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     }
                   ]
                 },
@@ -64,11 +64,11 @@
                   "providers": [
                     {
                       "provider": "Provider 1",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "Provider 2",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     }
                   ]
                 },
@@ -77,11 +77,11 @@
                   "providers": [
                     {
                       "provider": "Provider 1",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "Provider 2",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     }
                   ]
                 },
@@ -90,7 +90,7 @@
                   "providers": [
                     {
                       "provider": "Provider 1",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "Provider 2",
@@ -103,11 +103,11 @@
                   "providers": [
                     {
                       "provider": "Provider 1",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "Provider 2",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     }
                   ]
                 }
@@ -363,7 +363,7 @@
             },
           "segment_entries": [
             {
-              "entry_title": "Patient Seen During or Outside Reporting Period ",
+              "entry_title": "Patient Seen During Reporting Period ",
               "denom": true,
               "entry_values": [
                 {
@@ -371,11 +371,11 @@
                   "providers": [
                     {
                       "provider": "Provider 1",
-                      "entry_value": "Second encounter, during"
+                      "entry_value": "Second encounter"
                     },
                     {
                       "provider": "Provider 2",
-                      "entry_value": "Second encounter, during"
+                      "entry_value": "Second encounter"
                     }
                   ]
                 },
@@ -384,11 +384,11 @@
                   "providers": [
                     {
                       "provider": "Provider 1",
-                      "entry_value": "Second encounter, during"
+                      "entry_value": "Second encounter"
                     },
                     {
                       "provider": "Provider 2",
-                      "entry_value": "Second encounter, during"
+                      "entry_value": "Second encounter"
                     }
                   ]
                 },
@@ -397,11 +397,11 @@
                   "providers": [
                     {
                       "provider": "Provider 1",
-                      "entry_value": "Second encounter, during"
+                      "entry_value": "Second encounter"
                     },
                     {
                       "provider": "Provider 2",
-                      "entry_value": "Second encounter, during"
+                      "entry_value": "Second encounter"
                     }
                   ]
                 }
@@ -575,7 +575,7 @@
             },
           "segment_entries": [
             {
-              "entry_title": "Patient Seen During or Outside Reporting Period ",
+              "entry_title": "Patient Seen During Reporting Period ",
               "denom": true,
               "entry_values": [
                 {
@@ -583,11 +583,11 @@
                   "providers": [
                     {
                       "provider": "Provider 1",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "Provider 2",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     }
                   ]
                 },
@@ -596,11 +596,11 @@
                   "providers": [
                     {
                       "provider": "Provider 1",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "Provider 2",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     }
                   ]
                 },
@@ -609,11 +609,11 @@
                   "providers": [
                     {
                       "provider": "Provider 1",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "Provider 2",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     }
                   ]
                 }
@@ -787,7 +787,7 @@
             },
           "segment_entries": [
             {
-              "entry_title": "Patient Seen During or Outside Reporting Period ",
+              "entry_title": "Patient Seen During Reporting Period ",
               "denom": true,
               "entry_values": [
                 {
@@ -795,11 +795,11 @@
                   "providers": [
                     {
                       "provider": "Provider 1",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "Provider 2",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     }
                   ]
                 },
@@ -808,11 +808,11 @@
                   "providers": [
                     {
                       "provider": "Provider 1",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "Provider 2",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     }
                   ]
                 },
@@ -821,11 +821,11 @@
                   "providers": [
                     {
                       "provider": "Provider 1",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     },
                     {
                       "provider": "Provider 2",
-                      "entry_value": "First encounter, during"
+                      "entry_value": "First encounter"
                     }
                   ]
                 }
@@ -999,7 +999,7 @@
             },
           "segment_entries": [
             {
-              "entry_title": "Patient Seen During or Outside Reporting Period ",
+              "entry_title": "Patient Seen During Reporting Period ",
               "denom": true,
               "entry_values": [
                 {
@@ -1007,7 +1007,7 @@
                   "providers": [
                     {
                       "provider": "Provider 1",
-                      "entry_value": "Second encounter, during"
+                      "entry_value": "Second encounter"
                     },
                     {
                       "provider": "Provider 2",
