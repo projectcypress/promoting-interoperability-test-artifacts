@@ -28,7 +28,7 @@
   "test_data_notes": [
     "The set of calculations including controlled substances and the set of calculations excluding controlled substances are both required.  If a Health IT Module is not able to transmit controlled substances, it is at the discretion of the ONC-ATL to not test the controlled substance calculations.",
     "If a Health IT Module automatically transmits a prescription electronically when it is generated, it is at the discretion of the ONC-ATL not to test scenarios that assume this is not automatic.",
-    "If a Health IT Module automatically queries for a drug formulary upon every prescription that is generated, it is at the discretion of the ONC-ATL not to test scenarios that assume this is not automatic. Additionally, the 2021 specification for MIPS has removed the requirement for formulary checking as part of the calculations.",
+    "If a Health IT Module automatically queries for a drug formulary upon every prescription that is generated, it is at the discretion of the ONC-ATL not to test scenarios that assume this is not automatic. Additionally, the 2021 specification for MIPS has removed the requirement for formulary checking as part of the calculations (Select 'Hide - Automated Drug Queries' to remove this step from the test data).",
     "If a Health IT Module can only send changes electronically, it is at the discretion of the ONC-ATL not to test scenarios that assume a change could be sent via non-electronic means.  ",
     "The scenarios that test changed prescriptions assume that the original prescription was written electronically.",
     "Test data supply: ONC and Vendor-supplied. ONC provides the Test Data Scenarios and parameters; the Vendor will supply the Electronic Prescription entry and formulary details."
