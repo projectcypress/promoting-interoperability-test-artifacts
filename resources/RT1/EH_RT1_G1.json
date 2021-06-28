@@ -48,23 +48,23 @@
               "entry_values": [
                 {
                   "patient_id": "Tracy Daniels",
-                  "entry_value": "New, Within"
+                  "entry_value": "New"
                 },
                 {
                   "patient_id": "Dianne Potter",
-                  "entry_value": "New, Within"
+                  "entry_value": "New"
                 },
                 {
                   "patient_id": "Katrina Owens",
-                  "entry_value": "Changed, Within"
+                  "entry_value": "Changed"
                 },
                 {
                   "patient_id": "Allan Summers",
-                  "entry_value": "Changed, Within"
+                  "entry_value": "Changed"
                 },
                 {
                   "patient_id": "Ada Mack",
-                  "entry_value": "New, Within"
+                  "entry_value": "New"
                 }
               ]
             },
@@ -249,23 +249,23 @@
               "entry_values": [
                 {
                   "patient_id": "Tracy Daniels",
-                  "entry_value": "New, Within"
+                  "entry_value": "New"
                 },
                 {
                   "patient_id": "Dianne Potter",
-                  "entry_value": "New, Within"
+                  "entry_value": "New"
                 },
                 {
                   "patient_id": "Katrina Owens",
-                  "entry_value": "Changed, Within"
+                  "entry_value": "Changed"
                 },
                 {
                   "patient_id": "Allan Summers",
-                  "entry_value": "Changed, Within"
+                  "entry_value": "Changed"
                 },
                 {
                   "patient_id": "Ada Mack",
-                  "entry_value": "New, Within"
+                  "entry_value": "New"
                 }
               ]
             },
@@ -421,19 +421,19 @@
               "entry_values": [
                 {
                   "patient_id": "Anthony Edwards",
-                  "entry_value": "New, Within"
+                  "entry_value": "New"
                 },
                 {
                   "patient_id": "Bruce Hall",
-                  "entry_value": "New, Within"
+                  "entry_value": "New"
                 },
                 {
                   "patient_id": "Debra Steele",
-                  "entry_value": "Changed, Within"
+                  "entry_value": "Changed"
                 },
                 {
                   "patient_id": "Allan Summers",
-                  "entry_value": "Changed, Within"
+                  "entry_value": "Changed"
                 }
               ]
             },
@@ -593,19 +593,19 @@
               "entry_values": [
                 {
                   "patient_id": "Anthony Edwards",
-                  "entry_value": "New, Within"
+                  "entry_value": "New"
                 },
                 {
                   "patient_id": "Bruce Hall",
-                  "entry_value": "New, Within"
+                  "entry_value": "New"
                 },
                 {
                   "patient_id": "Debra Steele",
-                  "entry_value": "Changed, Within"
+                  "entry_value": "Changed"
                 },
                 {
                   "patient_id": "Allan Summers",
-                  "entry_value": "Changed, Within"
+                  "entry_value": "Changed"
                 }
               ]
             },
