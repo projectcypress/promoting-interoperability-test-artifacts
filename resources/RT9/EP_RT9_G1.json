@@ -28,7 +28,7 @@
             },
           "segment_entries": [
             {
-              "entry_title": "Transitioned, Referred, New, or Existing Patient Within Reporting/ Performance Period ",
+              "entry_title": "Transitioned, Referred, New, or Existing Patient Within Reporting / Performance Period ",
               "denom": true,
               "entry_values": [
                 {
@@ -185,7 +185,7 @@
             },
           "segment_entries": [
             {
-              "entry_title": "Transitioned, Referred, New, or Existing Patient Within Reporting/ Performance Period ",
+              "entry_title": "Transitioned, Referred, New, or Existing Patient Within Reporting / Performance Period ",
               "denom": true,
               "entry_values": [
                 {

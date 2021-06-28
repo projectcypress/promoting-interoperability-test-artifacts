@@ -340,7 +340,7 @@
             },
           "segment_entries": [
             {
-              "entry_title": "Patient Seen During Reporting Period ",
+              "entry_title": "Patient Seen During Reporting/Performance Period ",
               "entry_values": [
                 {
                   "patient_id": "Alan Bench",

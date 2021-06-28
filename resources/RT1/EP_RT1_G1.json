@@ -43,7 +43,7 @@
           "segment_title": "Includes controlled substances", 
           "segment_entries": [
             {
-              "entry_title": "Number of Prescriptions Written during reporting/ performance period (not controlled)",
+              "entry_title": "Number of Prescriptions Written During Reporting / Performance Period (not controlled)",
               "denom": true,
               "entry_values": [
                 {
@@ -69,7 +69,7 @@
               ]
             },
             {
-              "entry_title": "Number of Controlled Prescriptions Written during reporting/  performance period",
+              "entry_title": "Number of Controlled Prescriptions Written During Reporting / Performance Period ",
               "denom": true,
               "entry_values": [
                 {
@@ -218,7 +218,7 @@
           "segment_title": "Excludes controlled substances",
           "segment_entries": [
             {
-              "entry_title": "Number of Prescriptions Written during reporting/ performance period (not controlled)",
+              "entry_title": "Number of Prescriptions Written During Reporting / Performance Period (not controlled)",
               "denom": true,
               "entry_values": [
                 {
@@ -364,7 +364,7 @@
           "segment_title": "Includes controlled substances",
           "segment_entries": [
             {
-              "entry_title": "Number of Prescriptions Written during reporting/ performance period (not controlled)",
+              "entry_title": "Number of Prescriptions Written During Reporting / Performance Period (not controlled)",
               "denom": true,
               "entry_values": [
                 {
@@ -386,7 +386,7 @@
               ]
             },
             {
-              "entry_title": "Number of Controlled Prescriptions Written during reporting/  performance period",
+              "entry_title": "Number of Controlled Prescriptions Written During Reporting / Performance Period ",
               "denom": true,
               "entry_values": [
                 {
@@ -514,7 +514,7 @@
           "segment_title": "Excludes controlled substances",
           "segment_entries": [
             {
-              "entry_title": "Number of Prescriptions Written during reporting/ performance period (not controlled)",
+              "entry_title": "Number of Prescriptions Written During Reporting / Performance Period (not controlled)",
               "denom": true,
               "entry_values": [
                 {

@@ -371,7 +371,7 @@
             },
           "segment_entries": [
             {
-              "entry_title": "Patient Discharged During Reporting Period",
+              "entry_title": "Patient Discharged During Reporting / Performance Period",
               "entry_values": [
                 {
                   "patient_id": "Debra Price",
