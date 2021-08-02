@@ -228,7 +228,7 @@
                   "patient_id": "Tracy Daniels",
                   "denominator_value": 0,
                   "numerator_value": 1,
-                  "automated_numerator_values": [ { "title": "Steps that assume education material availablity is not automatic", "value": 1} ]                  
+                  "automated_numerator_values": [ { "title": "Steps that assume education material availablity is not automatic", "value": 0} ]                  
                 },
                 {
                   "patient_id": "Dianne Potter",

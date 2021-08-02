@@ -544,7 +544,7 @@
                       "provider": "Provider 1",
                       "denominator_value": 0,
                       "numerator_value": 1,
-                      "automated_numerator_values": [ { "title": "Steps that assume education material availablity is not automatic", "value": 1} ]
+                      "automated_numerator_values": [ { "title": "Steps that assume education material availablity is not automatic", "value": 0} ]
                     },
                     {
                       "provider": "Provider 2",

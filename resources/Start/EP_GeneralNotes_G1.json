@@ -156,6 +156,11 @@
       "version_number": "2.4",
       "version_description": "Added guidance to hide Automated Drug Queries for 2021 RT1 tests for MIPS. Removed references to encounters that happen outside Reporting/Performance Period for RT1, RT2, RT3, RT4, RT5, RT6, RT7, RT8, RT9, RT10, RT11, RT12 and RT15.",
       "version_date": "6/25/2021"
+    },
+    {
+      "version_number": "2.5",
+      "version_description": "Updated measure description for RT15, previously it was the exclusion.",
+      "version_date": "8/3/2021"
     }
   ]
 }
