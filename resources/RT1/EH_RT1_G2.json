@@ -426,7 +426,7 @@
             {
               "denominator_value": 20,
               "numerator_value": 16,
-              "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 19}, { "title": "Automated Transmissions", "value":17}, { "title": "All", "value": 20} ]
+              "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 18}, { "title": "Automated Transmissions", "value":18}, { "title": "All", "value": 20} ]
             },
           "segment_title": "Includes controlled substances",
           "segment_entries": [
@@ -592,7 +592,7 @@
                   "patient_id": "Allan Summers",
                   "denominator_value": 3,
                   "numerator_value": 2,
-                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 3}, { "title": "Automated Transmissions", "value":2}, { "title": "All", "value": 3} ]
+                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 2}, { "title": "Automated Transmissions", "value":3}, { "title": "All", "value": 3} ]
                 }
               ]
             }
@@ -603,7 +603,7 @@
             {
               "denominator_value": 11,
               "numerator_value": 10,
-              "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 10}, { "title": "Automated Transmissions", "value":10}, { "title": "All", "value": 11} ]
+              "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 11}, { "title": "Automated Transmissions", "value":10}, { "title": "All", "value": 11} ]
             },
           "segment_title": "Excludes controlled substances",
           "segment_entries": [
@@ -741,7 +741,7 @@
             {
               "denominator_value": 27,
               "numerator_value": 16,
-              "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 21}, { "title": "Automated Transmissions", "value":21}, { "title": "All", "value": 27} ]
+              "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 20}, { "title": "Automated Transmissions", "value":22}, { "title": "All", "value": 27} ]
             },
           "segment_title": "Includes controlled substances",
           "segment_entries": [
@@ -918,7 +918,7 @@
             {
               "denominator_value": 16,
               "numerator_value": 10,
-              "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 12}, { "title": "Automated Transmissions", "value":14}, { "title": "All", "value": 16} ]
+              "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 13}, { "title": "Automated Transmissions", "value":13}, { "title": "All", "value": 16} ]
             },
           "segment_title": "Excludes controlled substances",
           "segment_entries": [
@@ -1021,7 +1021,7 @@
                   "patient_id": "Debra Price",
                   "denominator_value": 1,
                   "numerator_value": 0,
-                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 1}, { "title": "Automated Transmissions", "value":1}, { "title": "All", "value": 1} ]
+                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 1}, { "title": "Automated Transmissions", "value":0}, { "title": "All", "value": 1} ]
                 },
                 {
                   "patient_id": "Mark Gordon",

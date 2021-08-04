@@ -30,7 +30,7 @@
           "segment_total":
             {
               "numerator_value": 2,
-              "automated_numerator_values": [ { "title": "Steps for patients copied on a secure message to provider", "value": 2} ]
+              "automated_numerator_values": [ { "title": "Steps for patients copied on a secure message to provider", "value": 1} ]
             },
           "segment_entries": [
             {
@@ -192,7 +192,7 @@
                 {
                   "patient_id": "Elsa Wu",
                   "numerator_value": 1,
-                  "automated_numerator_values": [ { "title": "Steps for patients copied on a secure message to provider", "value": 1} ]
+                  "automated_numerator_values": [ { "title": "Steps for patients copied on a secure message to provider", "value": 0} ]
                 }
               ]
             }
@@ -208,7 +208,7 @@
           "segment_total":
             {
               "numerator_value": 5,
-              "automated_numerator_values": [ { "title": "Steps for patients copied on a secure message to provider", "value": 5} ]
+              "automated_numerator_values": [ { "title": "Steps for patients copied on a secure message to provider", "value": 4} ]
             },
           "segment_entries": [
             {
@@ -336,7 +336,7 @@
           "segment_total":
             {
               "numerator_value": 8,
-              "automated_numerator_values": [ { "title": "Steps for patients copied on a secure message to provider", "value": 8} ]
+              "automated_numerator_values": [ { "title": "Steps for patients copied on a secure message to provider", "value": 7} ]
             },
           "segment_entries": [
             {
@@ -463,7 +463,7 @@
           "segment_total":
             {
               "numerator_value": 8,
-              "automated_numerator_values": [ { "title": "Steps for patients copied on a secure message to provider", "value": 8} ]
+              "automated_numerator_values": [ { "title": "Steps for patients copied on a secure message to provider", "value": 7} ]
             },
           "segment_entries": [
             {
