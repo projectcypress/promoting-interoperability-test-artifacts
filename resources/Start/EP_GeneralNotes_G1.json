@@ -161,6 +161,11 @@
       "version_number": "2.5",
       "version_description": "Updated measure description for RT15, previously it was the exclusion. Fixed calculation errors when hiding automated steps for RT5.",
       "version_date": "8/4/2021"
+    },
+    {
+      "version_number": "2.6",
+      "version_description": "No changes in this version",
+      "version_date": "11/8/2021"
     }
   ]
 }
