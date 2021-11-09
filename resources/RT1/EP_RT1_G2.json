@@ -2478,7 +2478,7 @@
                   "provider": "Provider 1",
                   "denominator_value": 19,
                   "numerator_value": 16,
-                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 16}, { "title": "Automated Transmissions", "value": 18}, { "title": "All", "value": 19} ],
+                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 17}, { "title": "Automated Transmissions", "value": 18}, { "title": "All", "value": 19} ],
                   "programs": ["mips_2020"]
                 },
                 {
@@ -3621,7 +3621,7 @@
                   "provider": "Provider 1",
                   "denominator_value": 26,
                   "numerator_value": 16,
-                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 18}, { "title": "Automated Transmissions", "value": 23}, { "title": "All", "value": 26} ],
+                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 19}, { "title": "Automated Transmissions", "value": 23}, { "title": "All", "value": 26} ],
                   "programs": ["mips_2020"]
                 },
                 {
