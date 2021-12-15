@@ -6,7 +6,7 @@
     { 
       "program_name": "Medicare Eligible Hospital/Critical Access Hospital (EH/CAH)",
       "measure_objective": "Health Information Exchange",
-      "measure_name": "Support Electronic Referral Loops by Receiving and Incorporating/Reconciling Health Information",
+      "measure_name": "Support Electronic Referral Loops by Receiving and Reconciling Health Information",
       "measure_description": "For at least one electronic summary of care record received for patient encounters during the electronic health record (EHR) reporting period for which an eligible hospital or CAH was the receiving party of a transition of care or referral, or for patient encounters during the EHR reporting period in which the eligible hospital or CAH has never before encountered the patient, the eligible hospital or CAH conducts clinical information reconciliation for medication, medication allergy, and current problem list."
     }
   ],
