@@ -142,7 +142,7 @@
       "version_date": "8/17/2018"
     },
     {
-      "version_number": "2.1",
+      "version_number": "2.1.1",
       "version_description": "Based on the sunsetting of the 2014 Edition in the Cures Final rule measure descriptions have been updated to reflect 2020 Promoting Interoperability requirements. RT 14 was for 2019 only and has been removed",
       "version_date": "6/15/2020"
     },
@@ -170,6 +170,11 @@
       "version_number": "2.6",
       "version_description": "No changes in this version",
       "version_date": "11/8/2021"
+    },
+    {
+      "version_number": "2.7",
+      "version_description": "Removed references to 2020 Promoting Interoperability. Added references to 2022 Promoting Interoperability. Added indication that the Medicaid measures are for 2021 Only.",
+      "version_date": "12/15/2021"
     }
   ]
 }

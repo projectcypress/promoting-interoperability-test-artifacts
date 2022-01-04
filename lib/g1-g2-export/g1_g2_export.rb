@@ -330,6 +330,10 @@ class G1G2Export < Mustache
     !self['automated_numerator_values'].nil?
   end
 
+  def is_medicaid_program
+    self['program_name'].include?('Medicaid')
+  end
+
   def total_providers
     provider_totals = []
     if self['total_values']&.first['providers']
