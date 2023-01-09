@@ -193,6 +193,11 @@
       "version_number": "2.7",
       "version_description": "Removed references to 2020 Promoting Interoperability. Added references to 2022 Promoting Interoperability. Added indication that the Medicaid measures are for 2021 Only.",
       "version_date": "12/15/2021"
+    },
+    {
+      "version_number": "2.8",
+      "version_description": "Added references to 2023 Promoting Interoperability.",
+      "version_date": "1/9/2023"
     }
   ]
 }
