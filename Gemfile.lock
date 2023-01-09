@@ -46,7 +46,7 @@ GEM
     log_switch (1.0.0)
     macaddr (1.7.2)
       systemu (~> 2.6.5)
-    mini_portile2 (2.4.0)
+    mini_portile2 (2.8.1)
     minitest (5.14.2)
     minitest-reporters (1.4.2)
       ansi
@@ -54,8 +54,9 @@ GEM
       minitest (>= 5.0)
       ruby-progressbar
     mustache (1.1.1)
-    nokogiri (1.10.10)
-      mini_portile2 (~> 2.4.0)
+    nokogiri (1.13.10)
+      mini_portile2 (~> 2.8.0)
+      racc (~> 1.4)
     nokogiri-diff (0.2.0)
       nokogiri (~> 1.5)
       tdiff (~> 0.3, >= 0.3.2)
@@ -66,6 +67,7 @@ GEM
     protected_attributes_continued (1.7.0)
       activemodel (>= 5.0)
     public_suffix (4.0.6)
+    racc (1.6.2)
     rainbow (3.0.0)
     rake (13.0.1)
     rubocop (0.52.1)
