@@ -9,15 +9,6 @@
   "program_info": [
     { 
       "program_specific_info": true,
-      "program_title": "medicaid_2020",
-      "program_name": "Medicaid Eligible Professional (EP)",
-      "measure_objective": "Electronic Prescribing",
-      "objective_number": "Objective 2 of 8",
-      "measure_name": "Measure 1",
-      "measure_description": "More than 60 percent of all permissible prescriptions written by the eligible professional (EP) are queried for a drug formulary and transmitted electronically using certified electronic health record technology (CEHRT)."
-    },
-    { 
-      "program_specific_info": true,
       "program_title": "mips_2020",
       "program_name": "Merit-based Incentive Payment System (MIPS) Promoting Interoperability Performance Category Measure",
       "measure_objective": "Electronic Prescribing",
@@ -62,7 +53,7 @@
                   "denominator_value": 9,
                   "numerator_value": 8,
                   "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 9}, { "title": "Automated Transmissions", "value": 8}, { "title": "All", "value": 9} ],
-                  "programs": ["medicaid_2020", "mips_2020"]
+                  "programs": ["mips_2020"]
                 },
                 {
                   "provider": "TIN B/Provider 1",
@@ -76,7 +67,7 @@
                   "denominator_value": 12,
                   "numerator_value": 8,
                   "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 10}, { "title": "Automated Transmissions", "value": 9}, { "title": "All", "value": 12} ],
-                  "programs": ["medicaid_2020", "mips_2020"]
+                  "programs": ["mips_2020"]
                 },
                 {
                   "provider": "TIN B/Provider 2",
@@ -958,7 +949,7 @@
                   "denominator_value": 5,
                   "numerator_value": 5,
                   "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 5}, { "title": "Automated Transmissions", "value": 5}, { "title": "All", "value": 5} ],
-                  "programs": ["medicaid_2020", "mips_2020"]
+                  "programs": ["mips_2020"]
                 },
                 {
                   "provider": "TIN B/Provider 1",
@@ -972,7 +963,7 @@
                   "denominator_value": 6,
                   "numerator_value": 4,
                   "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 6}, { "title": "Automated Transmissions", "value": 4}, { "title": "All", "value": 6} ],
-                  "programs": ["medicaid_2020", "mips_2020"]
+                  "programs": ["mips_2020"]
                 },
                 {
                   "provider": "TIN B/Provider 2",
@@ -1634,7 +1625,7 @@
                   "provider": "TIN A/Provider 1",
                   "denominator_value": 9,
                   "numerator_value": 8,
-                  "programs": ["medicaid_2020", "mips_2020"]
+                  "programs": ["mips_2020"]
                 },
                 {
                   "provider": "TIN B/Provider 1",
@@ -1690,7 +1681,7 @@
                   "provider": "TIN A/Provider 1",
                   "denominator_value": 9,
                   "numerator_value": 8,
-                  "programs": ["medicaid_2020", "mips_2020"]
+                  "programs": ["mips_2020"]
                 },
                 {
                   "provider": "TIN B/Provider 1",
@@ -1755,7 +1746,7 @@
                   "denominator_value": 18,
                   "numerator_value": 15,
                   "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 16}, { "title": "Automated Transmissions", "value": 17}, { "title": "All", "value": 18} ],
-                  "programs": ["mips_2020", "medicaid_2020"]
+                  "programs": ["mips_2020"]
                 },
                 {
                   "provider": "TIN B/Provider 1",
@@ -1769,7 +1760,7 @@
                   "denominator_value": 21,
                   "numerator_value": 13,
                   "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 15}, { "title": "Automated Transmissions", "value": 18}, { "title": "All", "value": 21} ],
-                  "programs": ["medicaid_2020", "mips_2020"]
+                  "programs": ["mips_2020"]
                 },
                 {
                   "provider": "TIN B/Provider 2",
@@ -2493,7 +2484,7 @@
                   "denominator_value": 10,
                   "numerator_value": 9,
                   "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 9}, { "title": "Automated Transmissions", "value": 5}, { "title": "All", "value": 10} ],
-                  "programs": ["mips_2020", "medicaid_2020"]
+                  "programs": ["mips_2020"]
                 },
                 {
                   "provider": "TIN B/Provider 1",
@@ -2507,7 +2498,7 @@
                   "denominator_value": 10,
                   "numerator_value": 6,
                   "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 8}, { "title": "Automated Transmissions", "value": 8}, { "title": "All", "value": 10} ],
-                  "programs": ["medicaid_2020", "mips_2020"]
+                  "programs": ["mips_2020"]
                 },
                 {
                   "provider": "TIN B/Provider 2",
@@ -3056,7 +3047,7 @@
                   "denominator_value": 23,
                   "numerator_value": 15,
                   "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 17}, { "title": "Automated Transmissions", "value": 21}, { "title": "All", "value": 23} ],
-                  "programs": ["mips_2020", "medicaid_2020"]
+                  "programs": ["mips_2020"]
                 },
                 {
                   "provider": "TIN B/Provider 1",
@@ -3070,7 +3061,7 @@
                   "denominator_value": 26,
                   "numerator_value": 13,
                   "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 16}, { "title": "Automated Transmissions", "value": 21}, { "title": "All", "value": 26} ],
-                  "programs": ["medicaid_2020", "mips_2020"]
+                  "programs": ["mips_2020"]
                 },
                 {
                   "provider": "TIN B/Provider 2",
@@ -3636,7 +3627,7 @@
                   "denominator_value": 14,
                   "numerator_value": 9,
                   "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 10}, { "title": "Automated Transmissions", "value": 8}, { "title": "All", "value": 14} ],
-                  "programs": ["mips_2020", "medicaid_2020"]
+                  "programs": ["mips_2020"]
                 },
                 {
                   "provider": "TIN B/Provider 1",
@@ -3650,7 +3641,7 @@
                   "denominator_value": 13,
                   "numerator_value": 6,
                   "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 9}, { "title": "Automated Transmissions", "value": 10}, { "title": "All", "value": 13} ],
-                  "programs": ["medicaid_2020", "mips_2020"]
+                  "programs": ["mips_2020"]
                 },
                 {
                   "provider": "TIN B/Provider 2",
@@ -4080,7 +4071,7 @@
                   "provider": "TIN A/Provider 1",
                   "denominator_value": 9,
                   "numerator_value": 8,
-                  "programs": ["mips_2020", "medicaid_2020"]
+                  "programs": ["mips_2020"]
                 },
                 {
                   "provider": "TIN B/Provider 1",
@@ -4136,7 +4127,7 @@
                   "provider": "TIN A/Provider 1",
                   "denominator_value": 9,
                   "numerator_value": 8,
-                  "programs": ["mips_2020", "medicaid_2020"]
+                  "programs": ["mips_2020"]
                 },
                 {
                   "provider": "TIN B/Provider 1",

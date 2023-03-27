@@ -8,13 +8,6 @@
   "other_option_info": "More information can be found in Note 1",
   "program_info": [
     { 
-      "program_name": "Medicaid Eligible Hospital/Critical Access Hospital (EH/CAH)",
-      "measure_objective": "Electronic Prescribing",
-      "objective_number": "Objective 2 of 8",
-      "measure_name": "Measure 1",
-      "measure_description": "More than 25 percent of hospital discharge medication orders for permissible prescriptions (for new and changed prescriptions) are queried for a drug formulary and transmitted electronically using certified electronic health record technology (CEHRT)."
-    },
-    { 
       "program_name": "Medicare Eligible Hospital/Critical Access Hospital (EH/CAH)",
       "measure_objective": "Electronic Prescribing",
       "measure_name": "e-Prescribing",

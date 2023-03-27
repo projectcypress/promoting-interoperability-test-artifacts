@@ -7,15 +7,6 @@
   "program_info": [
     { 
       "program_specific_info": true,
-      "program_title": "medicaid_2020",
-      "program_name": "Medicaid Eligible Professional (EP)",
-      "measure_objective": "Patient Electronic Access to Health Information",
-      "objective_number": "Objective 5 of 8",
-      "measure_name": "Measure 1",
-      "measure_description": "For more than 80 percent of all unique patients seen by the EP: (1) The patient (or the patient-authorized representative) is provided timely access to view online, download, and transmit his or her health information; and (2) The provider ensures the patient’s health information is available for the patient (or patient-authorized representative) to access using any application of their choice that is configured to meet the technical specifications of the Application Programming Interface (API) in the provider’s certified electronic health record technology (CEHRT)."
-    },
-    { 
-      "program_specific_info": true,
       "program_title": "mips_2020",
       "program_name": "Merit-based Incentive Payment System (MIPS) Promoting Interoperability Performance Category Measure",
       "measure_objective": "Provider To Patient Exchange",
@@ -62,7 +53,7 @@
                   "provider": "TIN A/Provider 1",
                   "denominator_value": 5,
                   "numerator_value": 5,
-                  "programs": ["medicaid_2020", "mips_2020"],
+                  "programs": ["mips_2020"],
                   "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 5} ]
                 },
                 {
@@ -76,7 +67,7 @@
                   "provider": "TIN A/Provider 2",
                   "denominator_value": 4,
                   "numerator_value": 4,
-                  "programs": ["medicaid_2020", "mips_2020"],
+                  "programs": ["mips_2020"],
                   "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 4} ]
                 },
                 {
@@ -215,7 +206,7 @@
               ]
             },
             {
-              "entry_title": "Patient Health Information is Available to Access via API  within 48 hours (Medicaid) or 4 business days (MIPS)",
+              "entry_title": "Patient Health Information is Available to Access via API  within 4 business days (MIPS)",
               "numer": true,
               "automatable_step": { "title": "Steps that assume data availablity is not automatic" },
               "entry_values": [
@@ -628,7 +619,7 @@
                   "provider": "TIN A/Provider 1",
                   "denominator_value": 5,
                   "numerator_value": 2,
-                  "programs": ["medicaid_2020", "mips_2020"],
+                  "programs": ["mips_2020"],
                   "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 5} ]
                 },
                 {
@@ -642,7 +633,7 @@
                   "provider": "TIN A/Provider 2",
                   "denominator_value": 4,
                   "numerator_value": 1,
-                  "programs": ["medicaid_2020", "mips_2020"],
+                  "programs": ["mips_2020"],
                   "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 4} ]
                 },
                 {
@@ -739,7 +730,7 @@
               ]
             },
             {
-              "entry_title": "Patient Health Information is Available to Access via API  within 48 hours (Medicaid) or 4 business days (MIPS)",
+              "entry_title": "Patient Health Information is Available to Access via API  within 4 business days (MIPS)",
               "numer": true,
               "automatable_step": { "title": "Steps that assume data availablity is not automatic" },
               "entry_values": [
@@ -1004,14 +995,14 @@
                   "provider": "TIN A/Provider 1",
                   "denominator_value": 8,
                   "numerator_value": 5,
-                  "programs": ["medicaid_2020", "mips_2020"],
+                  "programs": ["mips_2020"],
                   "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 8} ]
                 },
                 {
                   "provider": "TIN B/Provider 1",
                   "denominator_value": 7,
                   "numerator_value": 4,
-                  "programs": ["medicaid_2020", "mips_2020"],
+                  "programs": ["mips_2020"],
                   "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 7} ]
                 },
                 {
@@ -1115,7 +1106,7 @@
               ]
             },
             {
-              "entry_title": "Patient Health Information is Available to Access via API  within 48 hours (Medicaid) or 4 business days (MIPS)",
+              "entry_title": "Patient Health Information is Available to Access via API  within 4 business days (MIPS)",
               "numer": true,
               "automatable_step": { "title": "Steps that assume data availablity is not automatic" },
               "entry_values": [
@@ -1380,7 +1371,7 @@
                   "provider": "TIN A/Provider 1",
                   "denominator_value": 11,
                   "numerator_value": 5,
-                  "programs": ["medicaid_2020", "mips_2020"],
+                  "programs": ["mips_2020"],
                   "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 11} ]
                 },
                 {
@@ -1394,7 +1385,7 @@
                   "provider": "TIN A/Provider 2",
                   "denominator_value": 10,
                   "numerator_value": 4,
-                  "programs": ["medicaid_2020", "mips_2020"],
+                  "programs": ["mips_2020"],
                   "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 10} ]
                 },
                 {
@@ -1491,7 +1482,7 @@
               ]
             },
             {
-              "entry_title": "Patient Health Information is Available to Access via API  within 48 hours (Medicaid) or 4 business days (MIPS)",
+              "entry_title": "Patient Health Information is Available to Access via API  within 4 business days (MIPS)",
               "numer": true,
               "automatable_step": { "title": "Steps that assume data availablity is not automatic" },
               "entry_values": [
@@ -1756,7 +1747,7 @@
                   "provider": "TIN A/Provider 1",
                   "denominator_value": 11,
                   "numerator_value": 5,
-                  "programs": ["medicaid_2020", "mips_2020"],
+                  "programs": ["mips_2020"],
                   "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 11} ]
                 },
                 {
@@ -1770,7 +1761,7 @@
                   "provider": "TIN A/Provider 2",
                   "denominator_value": 10,
                   "numerator_value": 4,
-                  "programs": ["medicaid_2020", "mips_2020"],
+                  "programs": ["mips_2020"],
                   "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 10} ]
                 },
                 {
@@ -1825,7 +1816,7 @@
               ]
             },
             {
-              "entry_title": "Patient Health Information is Available to Access via API  within 48 hours (Medicaid) or 4 business days (MIPS)",
+              "entry_title": "Patient Health Information is Available to Access via API  within 4 business days (MIPS)",
               "numer": true,
               "automatable_step": { "title": "Steps that assume data availablity is not automatic" },
               "entry_values": [

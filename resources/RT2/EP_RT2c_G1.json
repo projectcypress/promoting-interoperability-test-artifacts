@@ -6,13 +6,6 @@
   "automated_steps_info": "More information can be found in Note 4",
   "program_info": [
     { 
-      "program_name": "Medicaid Eligible Professional (EP)",
-      "measure_objective": "Patient Electronic Access to Health Information",
-      "objective_number": "Objective 5 of 8",
-      "measure_name": "Measure 1",
-      "measure_description": "For more than 80 percent of all unique patients seen by the EP: (1) The patient (or the patient-authorized representative) is provided timely access to view online, download, and transmit his or her health information; and (2) The provider ensures the patient’s health information is available for the patient (or patient-authorized representative) to access using any application of their choice that is configured to meet the technical specifications of the Application Programming Interface (API) in the provider’s certified electronic health record technology (CEHRT)."
-    },
-    { 
       "program_name": "Merit-based Incentive Payment System (MIPS) Promoting Interoperability Performance Category Measure",
       "measure_objective": "Provider To Patient Exchange",
       "measure_name": "Provide Patients Electronic Access to Their Health Information",
@@ -67,7 +60,7 @@
               ]
             },
             {
-              "entry_title": "Patient Health Information is Available to Access via API  within 48 hours (Medicaid) or 4 business days (MIPS)",
+              "entry_title": "Patient Health Information is Available to Access via API  within 4 business days (MIPS)",
               "numer": true,
               "automatable_step": { "title": "Steps that assume data availablity is not automatic" },
               "entry_values": [
@@ -171,7 +164,7 @@
               ]
             },
             {
-              "entry_title": "Patient Health Information is Available to Access via API  within 48 hours (Medicaid) or 4 business days (MIPS)",
+              "entry_title": "Patient Health Information is Available to Access via API  within 4 business days (MIPS)",
               "numer": true,
               "automatable_step": { "title": "Steps that assume data availablity is not automatic" },
               "entry_values": [
@@ -237,7 +230,7 @@
               ]
             },
             {
-              "entry_title": "Patient Health Information is Available to Access via API  within 48 hours (Medicaid) or 4 business days (MIPS)",
+              "entry_title": "Patient Health Information is Available to Access via API  within 4 business days (MIPS)",
               "numer": true,
               "automatable_step": { "title": "Steps that assume data availablity is not automatic" },
               "entry_values": [

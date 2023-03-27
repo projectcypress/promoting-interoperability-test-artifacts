@@ -4,13 +4,6 @@
   "test_short_name": "RT 7 Electronic Referral Loops",
   "program_info": [
     { 
-      "program_name": "Medicaid Eligible Professional (EP)",
-      "measure_objective": "Health Information Exchange",
-      "objective_number": "Objective 7 of 8",
-      "measure_name": "Measure 1",
-      "measure_description": "For more than 50 percent of transitions of care and referrals, the EP that transitions or refers their patient to another setting of care or provider of care: (1) Creates a summary of care record using CEHRT; and (2) Electronically exchanges the summary of care record."
-    },
-    { 
       "program_name": "Merit-based Incentive Payment System (MIPS) Promoting Interoperability Performance Category Measure",
       "measure_objective": "Health Information Exchange",
       "measure_name": "Support Electronic Referral Loops By Sending Health Information",
