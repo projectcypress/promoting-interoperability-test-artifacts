@@ -3,7 +3,7 @@
   "test_number": "Required Test 1",
   "test_short_name": "RT 1 ePrescribing",
   "automated_steps": [ { "title" : "Automated Transmissions", "index": 1} ],
-  "automated_steps_info": "More information can be found in Notes 2-3",
+  "automated_steps_info": "More information can be found in Note 2",
   "other_options": ["yes"],
   "other_option_info": "More information can be found in Note 1",
   "program_info": [
