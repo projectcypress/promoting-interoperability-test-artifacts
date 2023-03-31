@@ -320,27 +320,12 @@
       </nav>
     </div>
       <div class="flex">
-        <a class="music" href="G2_EP_Required_Test_6.html">Last Test (RT 6 PGHD)</a>
-        <a class="music" href="G2_EP_Required_Test_8.html">Next Test (RT 8 Receive Incorporate)</a>
+        <a class="music" href="G2_EP_Required_Test_2c_.html">Last Test (RT 2c Provider Patient Exchange)</a>
+        <a class="music" href="G2_EP_Required_Test_15.html">Next Test (RT 15 Receive &amp; Reconcile)</a>
       </div>
       <h1>Required Test 7</h1>
       <div><br/></div>
       <div class="measures_container">
-        <div class="measure_container">
-          <div class="divTable withBorder">
-            <div class="divTableBody">
-              <div class="divTableNoteRow">
-                <div class="divTableCell noBorder"><span class="divBold">Program Name:</span> Medicaid Eligible Professional (EP)</div>
-              </div>
-              <div class="divTableNoteRow">
-                <div class="divTableCell noBorder"><span class="divBold">Measure Objective:</span> Health Information Exchange (Objective 7 of 8)</div>
-              </div>
-              <div class="divTableNoteRow">
-                  <div class="divTableCell noBorder"><span class="divBold medicaid">2021 Only - </span><span class="divBold">Promoting Interoperability Measure: </span><span class="blueItallic">Measure 1:</span>For more than 50 percent of transitions of care and referrals, the EP that transitions or refers their patient to another setting of care or provider of care: (1) Creates a summary of care record using CEHRT; and (2) Electronically exchanges the summary of care record.</div>
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="measure_container">
           <div class="divTable withBorder">
             <div class="divTableBody">
@@ -376,19 +361,6 @@
       </div>
         <h2>Scenarios:</h2>
         <div class="radio_container">
-          <div>
-            <form action="">
-              <fieldset>
-                <legend>Select Programs</legend>
-                <label for="">Show Medicaid Data</label>
-                <input type="radio" name="program_radio" value="medicaid" onclick="w3.showMedicaid()"><br>
-                <label for="">Show MIPS Data</label>
-                <input type="radio" name="program_radio" value="mips" onclick="w3.showMips()"><br>
-                <label for="">Show All</label>
-                <input type="radio" name="program_radio" value="all_programs" onclick="w3.show_all_programs()" checked><br>
-              </fieldset>
-            </form>
-          </div>
         </div>
                   
                 <button type="button" class="collapsible ckeditor-accordion-toggle">Scenario 1 - Test Data set-up for new patient (populate numerator)</button>
@@ -401,7 +373,7 @@
                         <th class="divTableBorderlessCell"/>
                         <th class='denom_color divTableBorderlessCell' colspan='0'>Denominator Criteria</th>
                         <th class='numer_color divTableBorderlessCell numerAll' colspan='2'>Numerator Criteria</th>
-                        <th class='result_color divTableBorderlessCell resultsAll' colspan='8'>Results</th><th class='result_color divTableBorderlessCell resultsMedicaid' colspan='2'>Results</th><th class='result_color divTableBorderlessCell resultsMips' colspan='8'>Results</th>
+                        <th class='result_color divTableBorderlessCell resultsAll' colspan='8'>Results</th><th class='result_color divTableBorderlessCell resultsMips' colspan='8'>Results</th>
                       </tr>
                       <tr class="divTableRow">
                         <th class="divTableCell blueItallic">Patient</th>
@@ -411,9 +383,9 @@
                           <th class="divTableCell blueItallic divSmall ">Receipt of Summary of Care Record Confirmed During Calendar Year</th>
                           <th class="divTableCell blueItallic divSmall  mips_2020">Provider 1</th>
                           <th class="divTableCell blueItallic divSmall  mips_2020">Provider 2</th>
-                          <th class="divTableCell blueItallic divSmall  medicaid_2020mips_2020">TIN A / Provider 1</th>
+                          <th class="divTableCell blueItallic divSmall  mips_2020">TIN A / Provider 1</th>
                           <th class="divTableCell blueItallic divSmall  mips_2020">TIN B / Provider 1</th>
-                          <th class="divTableCell blueItallic divSmall  medicaid_2020mips_2020">TIN A / Provider 2</th>
+                          <th class="divTableCell blueItallic divSmall  mips_2020">TIN A / Provider 2</th>
                           <th class="divTableCell blueItallic divSmall  mips_2020">TIN B / Provider 2</th>
                           <th class="divTableCell blueItallic divSmall  mips_2020">Group / TIN A</th>
                           <th class="divTableCell blueItallic divSmall  mips_2020">Group / TIN B</th>
@@ -426,44 +398,44 @@
                           </td>
                           <td class="divTableCell">
                             <ol>
-                                <li class="divLi noWrap right medicaid_2020mips_2020">TIN A/Provider 1</li>
-                                <li class="divLi noWrap right mips_2020">TIN B/Provider 1</li>
-                                <li class="divLi noWrap right medicaid_2020mips_2020">TIN A/Provider 2</li>
-                                <li class="divLi noWrap right mips_2020">TIN B/Provider 2</li>
+                                <li class="divLi noWrap right ">TIN A/Provider 1</li>
+                                <li class="divLi noWrap right ">TIN B/Provider 1</li>
+                                <li class="divLi noWrap right ">TIN A/Provider 2</li>
+                                <li class="divLi noWrap right ">TIN B/Provider 2</li>
                             </ol>
                           </td>
                           <td class="divTableCell ">
                             <ol>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">No</li>
-                                <li class="divLi noWrap medicaid_2020mips_2020">No</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">Yes</li>
                             </ol>
                           </td>
                           <td class="divTableCell ">
                             <ol>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">No</li>
-                                <li class="divLi noWrap medicaid_2020mips_2020">No</li>
-                                <li class="divLi noWrap mips_2020">No</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">No</li>
                             </ol>
                           </td>
                           <td class="divTableCell ">
                             <ol>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">No</li>
-                                <li class="divLi noWrap medicaid_2020mips_2020">No</li>
-                                <li class="divLi noWrap mips_2020">No</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">No</li>
                             </ol>
                           </td>
-                              <td class="divTableCell noWrap provider_color_1 mips_2020">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_2 mips_2020">0 / 1</td>
-                              <td class="divTableCell noWrap provider_color_3 medicaid_2020mips_2020">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_4 mips_2020">0 / 0</td>
-                              <td class="divTableCell noWrap provider_color_5 medicaid_2020mips_2020">0 / 0</td>
-                              <td class="divTableCell noWrap provider_color_6 mips_2020">0 / 1</td>
-                              <td class="divTableCell noWrap provider_color_7 mips_2020">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_8 mips_2020">0 / 1</td>
+                              <td class="divTableCell noWrap provider_color_1 ">1 / 1</td>
+                              <td class="divTableCell noWrap provider_color_2 ">0 / 1</td>
+                              <td class="divTableCell noWrap provider_color_3 ">1 / 1</td>
+                              <td class="divTableCell noWrap provider_color_4 ">0 / 0</td>
+                              <td class="divTableCell noWrap provider_color_5 ">0 / 0</td>
+                              <td class="divTableCell noWrap provider_color_6 ">0 / 1</td>
+                              <td class="divTableCell noWrap provider_color_7 ">1 / 1</td>
+                              <td class="divTableCell noWrap provider_color_8 ">0 / 1</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
                           <td class="divTableCell">
@@ -473,44 +445,44 @@
                           </td>
                           <td class="divTableCell">
                             <ol>
-                                <li class="divLi noWrap right medicaid_2020mips_2020">TIN A/Provider 1</li>
-                                <li class="divLi noWrap right mips_2020">TIN B/Provider 1</li>
-                                <li class="divLi noWrap right medicaid_2020mips_2020">TIN A/Provider 2</li>
-                                <li class="divLi noWrap right mips_2020">TIN B/Provider 2</li>
+                                <li class="divLi noWrap right ">TIN A/Provider 1</li>
+                                <li class="divLi noWrap right ">TIN B/Provider 1</li>
+                                <li class="divLi noWrap right ">TIN A/Provider 2</li>
+                                <li class="divLi noWrap right ">TIN B/Provider 2</li>
                             </ol>
                           </td>
                           <td class="divTableCell ">
                             <ol>
-                                <li class="divLi noWrap medicaid_2020mips_2020">No</li>
-                                <li class="divLi noWrap mips_2020">No</li>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
+                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
                             </ol>
                           </td>
                           <td class="divTableCell ">
                             <ol>
-                                <li class="divLi noWrap medicaid_2020mips_2020">No</li>
-                                <li class="divLi noWrap mips_2020">No</li>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
+                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
                             </ol>
                           </td>
                           <td class="divTableCell ">
                             <ol>
-                                <li class="divLi noWrap medicaid_2020mips_2020">No</li>
-                                <li class="divLi noWrap mips_2020">No</li>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
+                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
                             </ol>
                           </td>
-                              <td class="divTableCell noWrap provider_color_1 mips_2020">0 / 0</td>
-                              <td class="divTableCell noWrap provider_color_2 mips_2020">2 / 2</td>
-                              <td class="divTableCell noWrap provider_color_3 medicaid_2020mips_2020">0 / 0</td>
-                              <td class="divTableCell noWrap provider_color_4 mips_2020">0 / 0</td>
-                              <td class="divTableCell noWrap provider_color_5 medicaid_2020mips_2020">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_6 mips_2020">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_7 mips_2020">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_8 mips_2020">1 / 1</td>
+                              <td class="divTableCell noWrap provider_color_1 ">0 / 0</td>
+                              <td class="divTableCell noWrap provider_color_2 ">2 / 2</td>
+                              <td class="divTableCell noWrap provider_color_3 ">0 / 0</td>
+                              <td class="divTableCell noWrap provider_color_4 ">0 / 0</td>
+                              <td class="divTableCell noWrap provider_color_5 ">1 / 1</td>
+                              <td class="divTableCell noWrap provider_color_6 ">1 / 1</td>
+                              <td class="divTableCell noWrap provider_color_7 ">1 / 1</td>
+                              <td class="divTableCell noWrap provider_color_8 ">1 / 1</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
                           <td class="divTableCell">
@@ -520,44 +492,44 @@
                           </td>
                           <td class="divTableCell">
                             <ol>
-                                <li class="divLi noWrap right medicaid_2020mips_2020">TIN A/Provider 1</li>
-                                <li class="divLi noWrap right mips_2020">TIN B/Provider 1</li>
-                                <li class="divLi noWrap right medicaid_2020mips_2020">TIN A/Provider 2</li>
-                                <li class="divLi noWrap right mips_2020">TIN B/Provider 2</li>
+                                <li class="divLi noWrap right ">TIN A/Provider 1</li>
+                                <li class="divLi noWrap right ">TIN B/Provider 1</li>
+                                <li class="divLi noWrap right ">TIN A/Provider 2</li>
+                                <li class="divLi noWrap right ">TIN B/Provider 2</li>
                             </ol>
                           </td>
                           <td class="divTableCell ">
                             <ol>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">No</li>
-                                <li class="divLi noWrap medicaid_2020mips_2020">No</li>
-                                <li class="divLi noWrap mips_2020">No</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">No</li>
                             </ol>
                           </td>
                           <td class="divTableCell ">
                             <ol>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">No</li>
-                                <li class="divLi noWrap medicaid_2020mips_2020">No</li>
-                                <li class="divLi noWrap mips_2020">No</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">No</li>
                             </ol>
                           </td>
                           <td class="divTableCell ">
                             <ol>
-                                <li class="divLi noWrap medicaid_2020mips_2020">No</li>
-                                <li class="divLi noWrap mips_2020">No</li>
-                                <li class="divLi noWrap medicaid_2020mips_2020">No</li>
-                                <li class="divLi noWrap mips_2020">No</li>
+                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">No</li>
                             </ol>
                           </td>
-                              <td class="divTableCell noWrap provider_color_1 mips_2020">0 / 1</td>
-                              <td class="divTableCell noWrap provider_color_2 mips_2020">0 / 0</td>
-                              <td class="divTableCell noWrap provider_color_3 medicaid_2020mips_2020">0 / 1</td>
-                              <td class="divTableCell noWrap provider_color_4 mips_2020">0 / 0</td>
-                              <td class="divTableCell noWrap provider_color_5 medicaid_2020mips_2020">0 / 0</td>
-                              <td class="divTableCell noWrap provider_color_6 mips_2020">0 / 0</td>
-                              <td class="divTableCell noWrap provider_color_7 mips_2020">0 / 1</td>
-                              <td class="divTableCell noWrap provider_color_8 mips_2020">0 / 0</td>
+                              <td class="divTableCell noWrap provider_color_1 ">0 / 1</td>
+                              <td class="divTableCell noWrap provider_color_2 ">0 / 0</td>
+                              <td class="divTableCell noWrap provider_color_3 ">0 / 1</td>
+                              <td class="divTableCell noWrap provider_color_4 ">0 / 0</td>
+                              <td class="divTableCell noWrap provider_color_5 ">0 / 0</td>
+                              <td class="divTableCell noWrap provider_color_6 ">0 / 0</td>
+                              <td class="divTableCell noWrap provider_color_7 ">0 / 1</td>
+                              <td class="divTableCell noWrap provider_color_8 ">0 / 0</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
                           <td class="divTableCell">
@@ -567,44 +539,44 @@
                           </td>
                           <td class="divTableCell">
                             <ol>
-                                <li class="divLi noWrap right medicaid_2020mips_2020">TIN A/Provider 1</li>
-                                <li class="divLi noWrap right mips_2020">TIN B/Provider 1</li>
-                                <li class="divLi noWrap right medicaid_2020mips_2020">TIN A/Provider 2</li>
-                                <li class="divLi noWrap right mips_2020">TIN B/Provider 2</li>
+                                <li class="divLi noWrap right ">TIN A/Provider 1</li>
+                                <li class="divLi noWrap right ">TIN B/Provider 1</li>
+                                <li class="divLi noWrap right ">TIN A/Provider 2</li>
+                                <li class="divLi noWrap right ">TIN B/Provider 2</li>
                             </ol>
                           </td>
                           <td class="divTableCell ">
                             <ol>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
                             </ol>
                           </td>
                           <td class="divTableCell ">
                             <ol>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
                             </ol>
                           </td>
                           <td class="divTableCell ">
                             <ol>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">No</li>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
                             </ol>
                           </td>
-                              <td class="divTableCell noWrap provider_color_1 mips_2020">1 / 2</td>
-                              <td class="divTableCell noWrap provider_color_2 mips_2020">2 / 2</td>
-                              <td class="divTableCell noWrap provider_color_3 medicaid_2020mips_2020">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_4 mips_2020">0 / 1</td>
-                              <td class="divTableCell noWrap provider_color_5 medicaid_2020mips_2020">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_6 mips_2020">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_7 mips_2020">2 / 2</td>
-                              <td class="divTableCell noWrap provider_color_8 mips_2020">1 / 2</td>
+                              <td class="divTableCell noWrap provider_color_1 ">1 / 2</td>
+                              <td class="divTableCell noWrap provider_color_2 ">2 / 2</td>
+                              <td class="divTableCell noWrap provider_color_3 ">1 / 1</td>
+                              <td class="divTableCell noWrap provider_color_4 ">0 / 1</td>
+                              <td class="divTableCell noWrap provider_color_5 ">1 / 1</td>
+                              <td class="divTableCell noWrap provider_color_6 ">1 / 1</td>
+                              <td class="divTableCell noWrap provider_color_7 ">2 / 2</td>
+                              <td class="divTableCell noWrap provider_color_8 ">1 / 2</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
                           <td class="divTableCell">
@@ -614,44 +586,44 @@
                           </td>
                           <td class="divTableCell">
                             <ol>
-                                <li class="divLi noWrap right medicaid_2020mips_2020">TIN A/Provider 1</li>
-                                <li class="divLi noWrap right mips_2020">TIN B/Provider 1</li>
-                                <li class="divLi noWrap right medicaid_2020mips_2020">TIN A/Provider 2</li>
-                                <li class="divLi noWrap right mips_2020">TIN B/Provider 2</li>
+                                <li class="divLi noWrap right ">TIN A/Provider 1</li>
+                                <li class="divLi noWrap right ">TIN B/Provider 1</li>
+                                <li class="divLi noWrap right ">TIN A/Provider 2</li>
+                                <li class="divLi noWrap right ">TIN B/Provider 2</li>
                             </ol>
                           </td>
                           <td class="divTableCell ">
                             <ol>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">No</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">No</li>
                             </ol>
                           </td>
                           <td class="divTableCell ">
                             <ol>
-                                <li class="divLi noWrap medicaid_2020mips_2020">No</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">No</li>
+                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">No</li>
                             </ol>
                           </td>
                           <td class="divTableCell ">
                             <ol>
-                                <li class="divLi noWrap medicaid_2020mips_2020">No</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">No</li>
+                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">No</li>
                             </ol>
                           </td>
-                              <td class="divTableCell noWrap provider_color_1 mips_2020">1 / 2</td>
-                              <td class="divTableCell noWrap provider_color_2 mips_2020">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_3 medicaid_2020mips_2020">0 / 1</td>
-                              <td class="divTableCell noWrap provider_color_4 mips_2020">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_5 medicaid_2020mips_2020">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_6 mips_2020">0 / 0</td>
-                              <td class="divTableCell noWrap provider_color_7 mips_2020">1 / 2</td>
-                              <td class="divTableCell noWrap provider_color_8 mips_2020">1 / 1</td>
+                              <td class="divTableCell noWrap provider_color_1 ">1 / 2</td>
+                              <td class="divTableCell noWrap provider_color_2 ">1 / 1</td>
+                              <td class="divTableCell noWrap provider_color_3 ">0 / 1</td>
+                              <td class="divTableCell noWrap provider_color_4 ">1 / 1</td>
+                              <td class="divTableCell noWrap provider_color_5 ">1 / 1</td>
+                              <td class="divTableCell noWrap provider_color_6 ">0 / 0</td>
+                              <td class="divTableCell noWrap provider_color_7 ">1 / 2</td>
+                              <td class="divTableCell noWrap provider_color_8 ">1 / 1</td>
                         </tr>
                       <tr class="divTableAlternatingRow">
                       <td class="divTableCell"></td>
@@ -661,9 +633,9 @@
                       <td class="divTableCell divBold">Cumulative Total</td>
                             <td class="divTableCell divBold noWrap provider_color_1 mips_2020">3 / 6</td>
                             <td class="divTableCell divBold noWrap provider_color_2 mips_2020">5 / 6</td>
-                            <td class="divTableCell divBold noWrap provider_color_3 medicaid_2020mips_2020">2 / 4</td>
+                            <td class="divTableCell divBold noWrap provider_color_3 mips_2020">2 / 4</td>
                             <td class="divTableCell divBold noWrap provider_color_4 mips_2020">1 / 2</td>
-                            <td class="divTableCell divBold noWrap provider_color_5 medicaid_2020mips_2020">3 / 3</td>
+                            <td class="divTableCell divBold noWrap provider_color_5 mips_2020">3 / 3</td>
                             <td class="divTableCell divBold noWrap provider_color_6 mips_2020">2 / 3</td>
                             <td class="divTableCell divBold noWrap provider_color_7 mips_2020">5 / 7</td>
                             <td class="divTableCell divBold noWrap provider_color_8 mips_2020">3 / 5</td>
@@ -684,7 +656,7 @@
                         <th class="divTableBorderlessCell"/>
                         <th class='denom_color divTableBorderlessCell' colspan='0'>Denominator Criteria</th>
                         <th class='numer_color divTableBorderlessCell numerAll' colspan='2'>Numerator Criteria</th>
-                        <th class='result_color divTableBorderlessCell resultsAll' colspan='8'>Results</th><th class='result_color divTableBorderlessCell resultsMedicaid' colspan='2'>Results</th><th class='result_color divTableBorderlessCell resultsMips' colspan='8'>Results</th>
+                        <th class='result_color divTableBorderlessCell resultsAll' colspan='8'>Results</th><th class='result_color divTableBorderlessCell resultsMips' colspan='8'>Results</th>
                       </tr>
                       <tr class="divTableRow">
                         <th class="divTableCell blueItallic">Patient</th>
@@ -694,9 +666,9 @@
                           <th class="divTableCell blueItallic divSmall ">Receipt of Summary of Care Record Confirmed During Calendar Year</th>
                           <th class="divTableCell blueItallic divSmall  mips_2020">Provider 1</th>
                           <th class="divTableCell blueItallic divSmall  mips_2020">Provider 2</th>
-                          <th class="divTableCell blueItallic divSmall  medicaid_2020mips_2020">TIN A / Provider 1</th>
+                          <th class="divTableCell blueItallic divSmall  mips_2020">TIN A / Provider 1</th>
                           <th class="divTableCell blueItallic divSmall  mips_2020">TIN B / Provider 1</th>
-                          <th class="divTableCell blueItallic divSmall  medicaid_2020mips_2020">TIN A / Provider 2</th>
+                          <th class="divTableCell blueItallic divSmall  mips_2020">TIN A / Provider 2</th>
                           <th class="divTableCell blueItallic divSmall  mips_2020">TIN B / Provider 2</th>
                           <th class="divTableCell blueItallic divSmall  mips_2020">Group / TIN A</th>
                           <th class="divTableCell blueItallic divSmall  mips_2020">Group / TIN B</th>
@@ -709,44 +681,44 @@
                           </td>
                           <td class="divTableCell">
                             <ol>
-                                <li class="divLi noWrap right medicaid_2020mips_2020">TIN A/Provider 1</li>
-                                <li class="divLi noWrap right mips_2020">TIN B/Provider 1</li>
-                                <li class="divLi noWrap right medicaid_2020mips_2020">TIN A/Provider 2</li>
-                                <li class="divLi noWrap right mips_2020">TIN B/Provider 2</li>
+                                <li class="divLi noWrap right ">TIN A/Provider 1</li>
+                                <li class="divLi noWrap right ">TIN B/Provider 1</li>
+                                <li class="divLi noWrap right ">TIN A/Provider 2</li>
+                                <li class="divLi noWrap right ">TIN B/Provider 2</li>
                             </ol>
                           </td>
                           <td class="divTableCell ">
                             <ol>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
                             </ol>
                           </td>
                           <td class="divTableCell ">
                             <ol>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
                             </ol>
                           </td>
                           <td class="divTableCell ">
                             <ol>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
                             </ol>
                           </td>
-                              <td class="divTableCell noWrap provider_color_1 mips_2020">2 / 2</td>
-                              <td class="divTableCell noWrap provider_color_2 mips_2020">2 / 2</td>
-                              <td class="divTableCell noWrap provider_color_3 medicaid_2020mips_2020">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_4 mips_2020">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_5 medicaid_2020mips_2020">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_6 mips_2020">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_7 mips_2020">2 / 2</td>
-                              <td class="divTableCell noWrap provider_color_8 mips_2020">2 / 2</td>
+                              <td class="divTableCell noWrap provider_color_1 ">2 / 2</td>
+                              <td class="divTableCell noWrap provider_color_2 ">2 / 2</td>
+                              <td class="divTableCell noWrap provider_color_3 ">1 / 1</td>
+                              <td class="divTableCell noWrap provider_color_4 ">1 / 1</td>
+                              <td class="divTableCell noWrap provider_color_5 ">1 / 1</td>
+                              <td class="divTableCell noWrap provider_color_6 ">1 / 1</td>
+                              <td class="divTableCell noWrap provider_color_7 ">2 / 2</td>
+                              <td class="divTableCell noWrap provider_color_8 ">2 / 2</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
                           <td class="divTableCell">
@@ -756,44 +728,44 @@
                           </td>
                           <td class="divTableCell">
                             <ol>
-                                <li class="divLi noWrap right medicaid_2020mips_2020">TIN A/Provider 1</li>
-                                <li class="divLi noWrap right mips_2020">TIN B/Provider 1</li>
-                                <li class="divLi noWrap right medicaid_2020mips_2020">TIN A/Provider 2</li>
-                                <li class="divLi noWrap right mips_2020">TIN B/Provider 2</li>
+                                <li class="divLi noWrap right ">TIN A/Provider 1</li>
+                                <li class="divLi noWrap right ">TIN B/Provider 1</li>
+                                <li class="divLi noWrap right ">TIN A/Provider 2</li>
+                                <li class="divLi noWrap right ">TIN B/Provider 2</li>
                             </ol>
                           </td>
                           <td class="divTableCell ">
                             <ol>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
                             </ol>
                           </td>
                           <td class="divTableCell ">
                             <ol>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
                             </ol>
                           </td>
                           <td class="divTableCell ">
                             <ol>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
                             </ol>
                           </td>
-                              <td class="divTableCell noWrap provider_color_1 mips_2020">2 / 2</td>
-                              <td class="divTableCell noWrap provider_color_2 mips_2020">2 / 2</td>
-                              <td class="divTableCell noWrap provider_color_3 medicaid_2020mips_2020">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_4 mips_2020">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_5 medicaid_2020mips_2020">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_6 mips_2020">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_7 mips_2020">2 / 2</td>
-                              <td class="divTableCell noWrap provider_color_8 mips_2020">2 / 2</td>
+                              <td class="divTableCell noWrap provider_color_1 ">2 / 2</td>
+                              <td class="divTableCell noWrap provider_color_2 ">2 / 2</td>
+                              <td class="divTableCell noWrap provider_color_3 ">1 / 1</td>
+                              <td class="divTableCell noWrap provider_color_4 ">1 / 1</td>
+                              <td class="divTableCell noWrap provider_color_5 ">1 / 1</td>
+                              <td class="divTableCell noWrap provider_color_6 ">1 / 1</td>
+                              <td class="divTableCell noWrap provider_color_7 ">2 / 2</td>
+                              <td class="divTableCell noWrap provider_color_8 ">2 / 2</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
                           <td class="divTableCell">
@@ -803,44 +775,44 @@
                           </td>
                           <td class="divTableCell">
                             <ol>
-                                <li class="divLi noWrap right medicaid_2020mips_2020">TIN A/Provider 1</li>
-                                <li class="divLi noWrap right mips_2020">TIN B/Provider 1</li>
-                                <li class="divLi noWrap right medicaid_2020mips_2020">TIN A/Provider 2</li>
-                                <li class="divLi noWrap right mips_2020">TIN B/Provider 2</li>
+                                <li class="divLi noWrap right ">TIN A/Provider 1</li>
+                                <li class="divLi noWrap right ">TIN B/Provider 1</li>
+                                <li class="divLi noWrap right ">TIN A/Provider 2</li>
+                                <li class="divLi noWrap right ">TIN B/Provider 2</li>
                             </ol>
                           </td>
                           <td class="divTableCell ">
                             <ol>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
                             </ol>
                           </td>
                           <td class="divTableCell ">
                             <ol>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
                             </ol>
                           </td>
                           <td class="divTableCell ">
                             <ol>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
                             </ol>
                           </td>
-                              <td class="divTableCell noWrap provider_color_1 mips_2020">2 / 2</td>
-                              <td class="divTableCell noWrap provider_color_2 mips_2020">2 / 2</td>
-                              <td class="divTableCell noWrap provider_color_3 medicaid_2020mips_2020">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_4 mips_2020">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_5 medicaid_2020mips_2020">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_6 mips_2020">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_7 mips_2020">2 / 2</td>
-                              <td class="divTableCell noWrap provider_color_8 mips_2020">2 / 2</td>
+                              <td class="divTableCell noWrap provider_color_1 ">2 / 2</td>
+                              <td class="divTableCell noWrap provider_color_2 ">2 / 2</td>
+                              <td class="divTableCell noWrap provider_color_3 ">1 / 1</td>
+                              <td class="divTableCell noWrap provider_color_4 ">1 / 1</td>
+                              <td class="divTableCell noWrap provider_color_5 ">1 / 1</td>
+                              <td class="divTableCell noWrap provider_color_6 ">1 / 1</td>
+                              <td class="divTableCell noWrap provider_color_7 ">2 / 2</td>
+                              <td class="divTableCell noWrap provider_color_8 ">2 / 2</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
                           <td class="divTableCell">
@@ -850,44 +822,44 @@
                           </td>
                           <td class="divTableCell">
                             <ol>
-                                <li class="divLi noWrap right medicaid_2020mips_2020">TIN A/Provider 1</li>
-                                <li class="divLi noWrap right mips_2020">TIN B/Provider 1</li>
-                                <li class="divLi noWrap right medicaid_2020mips_2020">TIN A/Provider 2</li>
-                                <li class="divLi noWrap right mips_2020">TIN B/Provider 2</li>
+                                <li class="divLi noWrap right ">TIN A/Provider 1</li>
+                                <li class="divLi noWrap right ">TIN B/Provider 1</li>
+                                <li class="divLi noWrap right ">TIN A/Provider 2</li>
+                                <li class="divLi noWrap right ">TIN B/Provider 2</li>
                             </ol>
                           </td>
                           <td class="divTableCell ">
                             <ol>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
                             </ol>
                           </td>
                           <td class="divTableCell ">
                             <ol>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
                             </ol>
                           </td>
                           <td class="divTableCell ">
                             <ol>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
                             </ol>
                           </td>
-                              <td class="divTableCell noWrap provider_color_1 mips_2020">2 / 2</td>
-                              <td class="divTableCell noWrap provider_color_2 mips_2020">2 / 2</td>
-                              <td class="divTableCell noWrap provider_color_3 medicaid_2020mips_2020">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_4 mips_2020">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_5 medicaid_2020mips_2020">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_6 mips_2020">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_7 mips_2020">2 / 2</td>
-                              <td class="divTableCell noWrap provider_color_8 mips_2020">2 / 2</td>
+                              <td class="divTableCell noWrap provider_color_1 ">2 / 2</td>
+                              <td class="divTableCell noWrap provider_color_2 ">2 / 2</td>
+                              <td class="divTableCell noWrap provider_color_3 ">1 / 1</td>
+                              <td class="divTableCell noWrap provider_color_4 ">1 / 1</td>
+                              <td class="divTableCell noWrap provider_color_5 ">1 / 1</td>
+                              <td class="divTableCell noWrap provider_color_6 ">1 / 1</td>
+                              <td class="divTableCell noWrap provider_color_7 ">2 / 2</td>
+                              <td class="divTableCell noWrap provider_color_8 ">2 / 2</td>
                         </tr>
                       <tr class="divTableAlternatingRow">
                       <td class="divTableCell"></td>
@@ -897,9 +869,9 @@
                       <td class="divTableCell divBold">Cumulative Total</td>
                             <td class="divTableCell divBold noWrap provider_color_1 mips_2020">11 / 14</td>
                             <td class="divTableCell divBold noWrap provider_color_2 mips_2020">13 / 14</td>
-                            <td class="divTableCell divBold noWrap provider_color_3 medicaid_2020mips_2020">6 / 8</td>
+                            <td class="divTableCell divBold noWrap provider_color_3 mips_2020">6 / 8</td>
                             <td class="divTableCell divBold noWrap provider_color_4 mips_2020">5 / 6</td>
-                            <td class="divTableCell divBold noWrap provider_color_5 medicaid_2020mips_2020">7 / 7</td>
+                            <td class="divTableCell divBold noWrap provider_color_5 mips_2020">7 / 7</td>
                             <td class="divTableCell divBold noWrap provider_color_6 mips_2020">6 / 7</td>
                             <td class="divTableCell divBold noWrap provider_color_7 mips_2020">13 / 15</td>
                             <td class="divTableCell divBold noWrap provider_color_8 mips_2020">11 / 13</td>
@@ -917,7 +889,7 @@
                         <th class="divTableBorderlessCell"/>
                         <th class='denom_color divTableBorderlessCell' colspan='0'>Denominator Criteria</th>
                         <th class='numer_color divTableBorderlessCell numerAll' colspan='2'>Numerator Criteria</th>
-                        <th class='result_color divTableBorderlessCell resultsAll' colspan='8'>Results</th><th class='result_color divTableBorderlessCell resultsMedicaid' colspan='2'>Results</th><th class='result_color divTableBorderlessCell resultsMips' colspan='8'>Results</th>
+                        <th class='result_color divTableBorderlessCell resultsAll' colspan='8'>Results</th><th class='result_color divTableBorderlessCell resultsMips' colspan='8'>Results</th>
                       </tr>
                       <tr class="divTableRow">
                         <th class="divTableCell blueItallic">Patient</th>
@@ -927,9 +899,9 @@
                           <th class="divTableCell blueItallic divSmall ">Receipt of Summary of Care Record Confirmed During Calendar Year</th>
                           <th class="divTableCell blueItallic divSmall  mips_2020">Provider 1</th>
                           <th class="divTableCell blueItallic divSmall  mips_2020">Provider 2</th>
-                          <th class="divTableCell blueItallic divSmall  medicaid_2020mips_2020">TIN A / Provider 1</th>
+                          <th class="divTableCell blueItallic divSmall  mips_2020">TIN A / Provider 1</th>
                           <th class="divTableCell blueItallic divSmall  mips_2020">TIN B / Provider 1</th>
-                          <th class="divTableCell blueItallic divSmall  medicaid_2020mips_2020">TIN A / Provider 2</th>
+                          <th class="divTableCell blueItallic divSmall  mips_2020">TIN A / Provider 2</th>
                           <th class="divTableCell blueItallic divSmall  mips_2020">TIN B / Provider 2</th>
                           <th class="divTableCell blueItallic divSmall  mips_2020">Group / TIN A</th>
                           <th class="divTableCell blueItallic divSmall  mips_2020">Group / TIN B</th>
@@ -942,44 +914,44 @@
                           </td>
                           <td class="divTableCell">
                             <ol>
-                                <li class="divLi noWrap right medicaid_2020mips_2020">TIN A/Provider 1</li>
-                                <li class="divLi noWrap right mips_2020">TIN B/Provider 1</li>
-                                <li class="divLi noWrap right medicaid_2020mips_2020">TIN A/Provider 2</li>
-                                <li class="divLi noWrap right mips_2020">TIN B/Provider 2</li>
+                                <li class="divLi noWrap right ">TIN A/Provider 1</li>
+                                <li class="divLi noWrap right ">TIN B/Provider 1</li>
+                                <li class="divLi noWrap right ">TIN A/Provider 2</li>
+                                <li class="divLi noWrap right ">TIN B/Provider 2</li>
                             </ol>
                           </td>
                           <td class="divTableCell ">
                             <ol>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
                             </ol>
                           </td>
                           <td class="divTableCell ">
                             <ol>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">No</li>
-                                <li class="divLi noWrap medicaid_2020mips_2020">No</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">Yes</li>
                             </ol>
                           </td>
                           <td class="divTableCell ">
                             <ol>
-                                <li class="divLi noWrap medicaid_2020mips_2020">No</li>
-                                <li class="divLi noWrap mips_2020">No</li>
-                                <li class="divLi noWrap medicaid_2020mips_2020">No</li>
-                                <li class="divLi noWrap mips_2020">No</li>
+                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">No</li>
                             </ol>
                           </td>
-                              <td class="divTableCell noWrap provider_color_1 mips_2020">0 / 2</td>
-                              <td class="divTableCell noWrap provider_color_2 mips_2020">0 / 2</td>
-                              <td class="divTableCell noWrap provider_color_3 medicaid_2020mips_2020">0 / 1</td>
-                              <td class="divTableCell noWrap provider_color_4 mips_2020">0 / 1</td>
-                              <td class="divTableCell noWrap provider_color_5 medicaid_2020mips_2020">0 / 1</td>
-                              <td class="divTableCell noWrap provider_color_6 mips_2020">0 / 1</td>
-                              <td class="divTableCell noWrap provider_color_7 mips_2020">0 / 2</td>
-                              <td class="divTableCell noWrap provider_color_8 mips_2020">0 / 2</td>
+                              <td class="divTableCell noWrap provider_color_1 ">0 / 2</td>
+                              <td class="divTableCell noWrap provider_color_2 ">0 / 2</td>
+                              <td class="divTableCell noWrap provider_color_3 ">0 / 1</td>
+                              <td class="divTableCell noWrap provider_color_4 ">0 / 1</td>
+                              <td class="divTableCell noWrap provider_color_5 ">0 / 1</td>
+                              <td class="divTableCell noWrap provider_color_6 ">0 / 1</td>
+                              <td class="divTableCell noWrap provider_color_7 ">0 / 2</td>
+                              <td class="divTableCell noWrap provider_color_8 ">0 / 2</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
                           <td class="divTableCell">
@@ -989,44 +961,44 @@
                           </td>
                           <td class="divTableCell">
                             <ol>
-                                <li class="divLi noWrap right medicaid_2020mips_2020">TIN A/Provider 1</li>
-                                <li class="divLi noWrap right mips_2020">TIN B/Provider 1</li>
-                                <li class="divLi noWrap right medicaid_2020mips_2020">TIN A/Provider 2</li>
-                                <li class="divLi noWrap right mips_2020">TIN B/Provider 2</li>
+                                <li class="divLi noWrap right ">TIN A/Provider 1</li>
+                                <li class="divLi noWrap right ">TIN B/Provider 1</li>
+                                <li class="divLi noWrap right ">TIN A/Provider 2</li>
+                                <li class="divLi noWrap right ">TIN B/Provider 2</li>
                             </ol>
                           </td>
                           <td class="divTableCell ">
                             <ol>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
                             </ol>
                           </td>
                           <td class="divTableCell ">
                             <ol>
-                                <li class="divLi noWrap medicaid_2020mips_2020">No</li>
-                                <li class="divLi noWrap mips_2020">No</li>
-                                <li class="divLi noWrap medicaid_2020mips_2020">No</li>
-                                <li class="divLi noWrap mips_2020">No</li>
+                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">No</li>
                             </ol>
                           </td>
                           <td class="divTableCell ">
                             <ol>
-                                <li class="divLi noWrap medicaid_2020mips_2020">No</li>
-                                <li class="divLi noWrap mips_2020">No</li>
-                                <li class="divLi noWrap medicaid_2020mips_2020">No</li>
-                                <li class="divLi noWrap mips_2020">No</li>
+                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">No</li>
                             </ol>
                           </td>
-                              <td class="divTableCell noWrap provider_color_1 mips_2020">0 / 2</td>
-                              <td class="divTableCell noWrap provider_color_2 mips_2020">0 / 2</td>
-                              <td class="divTableCell noWrap provider_color_3 medicaid_2020mips_2020">0 / 1</td>
-                              <td class="divTableCell noWrap provider_color_4 mips_2020">0 / 1</td>
-                              <td class="divTableCell noWrap provider_color_5 medicaid_2020mips_2020">0 / 1</td>
-                              <td class="divTableCell noWrap provider_color_6 mips_2020">0 / 1</td>
-                              <td class="divTableCell noWrap provider_color_7 mips_2020">0 / 2</td>
-                              <td class="divTableCell noWrap provider_color_8 mips_2020">0 / 2</td>
+                              <td class="divTableCell noWrap provider_color_1 ">0 / 2</td>
+                              <td class="divTableCell noWrap provider_color_2 ">0 / 2</td>
+                              <td class="divTableCell noWrap provider_color_3 ">0 / 1</td>
+                              <td class="divTableCell noWrap provider_color_4 ">0 / 1</td>
+                              <td class="divTableCell noWrap provider_color_5 ">0 / 1</td>
+                              <td class="divTableCell noWrap provider_color_6 ">0 / 1</td>
+                              <td class="divTableCell noWrap provider_color_7 ">0 / 2</td>
+                              <td class="divTableCell noWrap provider_color_8 ">0 / 2</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
                           <td class="divTableCell">
@@ -1036,44 +1008,44 @@
                           </td>
                           <td class="divTableCell">
                             <ol>
-                                <li class="divLi noWrap right medicaid_2020mips_2020">TIN A/Provider 1</li>
-                                <li class="divLi noWrap right mips_2020">TIN B/Provider 1</li>
-                                <li class="divLi noWrap right medicaid_2020mips_2020">TIN A/Provider 2</li>
-                                <li class="divLi noWrap right mips_2020">TIN B/Provider 2</li>
+                                <li class="divLi noWrap right ">TIN A/Provider 1</li>
+                                <li class="divLi noWrap right ">TIN B/Provider 1</li>
+                                <li class="divLi noWrap right ">TIN A/Provider 2</li>
+                                <li class="divLi noWrap right ">TIN B/Provider 2</li>
                             </ol>
                           </td>
                           <td class="divTableCell ">
                             <ol>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
                             </ol>
                           </td>
                           <td class="divTableCell ">
                             <ol>
-                                <li class="divLi noWrap medicaid_2020mips_2020">No</li>
-                                <li class="divLi noWrap mips_2020">Yes</li>
-                                <li class="divLi noWrap medicaid_2020mips_2020">Yes</li>
-                                <li class="divLi noWrap mips_2020">No</li>
+                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">No</li>
                             </ol>
                           </td>
                           <td class="divTableCell ">
                             <ol>
-                                <li class="divLi noWrap medicaid_2020mips_2020">No</li>
-                                <li class="divLi noWrap mips_2020">No</li>
-                                <li class="divLi noWrap medicaid_2020mips_2020">No</li>
-                                <li class="divLi noWrap mips_2020">No</li>
+                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">No</li>
                             </ol>
                           </td>
-                              <td class="divTableCell noWrap provider_color_1 mips_2020">0 / 2</td>
-                              <td class="divTableCell noWrap provider_color_2 mips_2020">0 / 2</td>
-                              <td class="divTableCell noWrap provider_color_3 medicaid_2020mips_2020">0 / 1</td>
-                              <td class="divTableCell noWrap provider_color_4 mips_2020">0 / 1</td>
-                              <td class="divTableCell noWrap provider_color_5 medicaid_2020mips_2020">0 / 1</td>
-                              <td class="divTableCell noWrap provider_color_6 mips_2020">0 / 1</td>
-                              <td class="divTableCell noWrap provider_color_7 mips_2020">0 / 2</td>
-                              <td class="divTableCell noWrap provider_color_8 mips_2020">0 / 2</td>
+                              <td class="divTableCell noWrap provider_color_1 ">0 / 2</td>
+                              <td class="divTableCell noWrap provider_color_2 ">0 / 2</td>
+                              <td class="divTableCell noWrap provider_color_3 ">0 / 1</td>
+                              <td class="divTableCell noWrap provider_color_4 ">0 / 1</td>
+                              <td class="divTableCell noWrap provider_color_5 ">0 / 1</td>
+                              <td class="divTableCell noWrap provider_color_6 ">0 / 1</td>
+                              <td class="divTableCell noWrap provider_color_7 ">0 / 2</td>
+                              <td class="divTableCell noWrap provider_color_8 ">0 / 2</td>
                         </tr>
                       <tr class="divTableAlternatingRow">
                       <td class="divTableCell"></td>
@@ -1083,9 +1055,9 @@
                       <td class="divTableCell divBold">Cumulative Total</td>
                             <td class="divTableCell divBold noWrap provider_color_1 mips_2020">11 / 20</td>
                             <td class="divTableCell divBold noWrap provider_color_2 mips_2020">13 / 20</td>
-                            <td class="divTableCell divBold noWrap provider_color_3 medicaid_2020mips_2020">6 / 11</td>
+                            <td class="divTableCell divBold noWrap provider_color_3 mips_2020">6 / 11</td>
                             <td class="divTableCell divBold noWrap provider_color_4 mips_2020">5 / 9</td>
-                            <td class="divTableCell divBold noWrap provider_color_5 medicaid_2020mips_2020">7 / 10</td>
+                            <td class="divTableCell divBold noWrap provider_color_5 mips_2020">7 / 10</td>
                             <td class="divTableCell divBold noWrap provider_color_6 mips_2020">6 / 10</td>
                             <td class="divTableCell divBold noWrap provider_color_7 mips_2020">13 / 21</td>
                             <td class="divTableCell divBold noWrap provider_color_8 mips_2020">11 / 19</td>

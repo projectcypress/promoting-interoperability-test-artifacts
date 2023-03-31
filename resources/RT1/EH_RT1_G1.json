@@ -2,18 +2,11 @@
   "test_deck": "G1 EH",
   "test_number": "Required Test 1",
   "test_short_name": "RT 1 ePrescribing",
-  "automated_steps": [ { "title": "Automated Drug Queries", "index": 1 }, { "title" : "Automated Transmissions", "index": 2} ],
-  "automated_steps_info": "More information can be found in Notes 2-3",
+  "automated_steps": [ { "title" : "Automated Transmissions", "index": 1} ],
+  "automated_steps_info": "More information can be found in Note 2",
   "other_options": ["yes"],
   "other_option_info": "More information can be found in Note 1",
   "program_info": [
-    { 
-      "program_name": "Medicaid Eligible Hospital/Critical Access Hospital (EH/CAH)",
-      "measure_objective": "Electronic Prescribing",
-      "objective_number": "Objective 2 of 8",
-      "measure_name": "Measure 1",
-      "measure_description": "More than 25 percent of hospital discharge medication orders for permissible prescriptions (for new and changed prescriptions) are queried for a drug formulary and transmitted electronically using certified electronic health record technology (CEHRT)."
-    },
     { 
       "program_name": "Medicare Eligible Hospital/Critical Access Hospital (EH/CAH)",
       "measure_objective": "Electronic Prescribing",
@@ -24,7 +17,6 @@
   "test_data_notes": [
     "The set of calculations including controlled substances and the set of calculations excluding controlled substances are both required.  If a Health IT Module is not able to transmit controlled substances, it is at the discretion of the ATL to not test the controlled substance calculations.",
     "If a Health IT Module automatically transmits a prescription electronically when it is generated, it is at the discretion of the ATL not to test scenarios that assume this is not automatic.",
-    "If a Health IT Module automatically queries for a drug formulary upon every prescription that is generated, it is at the discretion of the ATL not to test scenarios that assume this is not automatic. Additionally, the 2021 specification for Medicare has removed the requirement for formulary checking as part of the calculations (Select 'Hide - Automated Drug Queries' to remove this step from the test data).",
     "If a Health IT Module can only send changes electronically, it is at the discretion of the ATL not to test scenarios that assume a change could be sent via non-electronic means.",
     "The scenarios that test changed prescriptions assume that the original prescription was written electronically.",
     "Test data supply: ONC and Vendor-supplied. ONC provides the Test Data Scenarios and parameters; the Vendor will supply the Electronic Prescription entry and formulary details."
@@ -37,8 +29,8 @@
         {
           "segment_total":
             {
-              "numerator_value": 8,
-              "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 10}, { "title": "Automated Transmissions", "value":9}, { "title": "All", "value": 11} ]
+              "numerator_value": 10,
+              "automated_numerator_values": [ { "title": "Automated Transmissions", "value": 11}, { "title": "All", "value": 11} ]
             },
           "segment_title": "Includes controlled substances", 
           "segment_entries": [
@@ -173,33 +165,6 @@
                   "entry_value": 1
                 }
               ]
-            },
-            {
-              "entry_title": "Prescription(s) Queried for Drug Formulary",
-              "automatable_step": { "title": "Automated Drug Queries" },
-              "numer": true,
-              "entry_values": [
-                {
-                  "patient_id": "Tracy Daniels",
-                  "entry_value": "Yes"
-                },
-                {
-                  "patient_id": "Dianne Potter",
-                  "entry_value": "Yes"
-                },
-                {
-                  "patient_id": "Katrina Owens",
-                  "entry_value": "Yes"
-                },
-                {
-                  "patient_id": "Allan Summers",
-                  "entry_value": "No"
-                },
-                {
-                  "patient_id": "Ada Mack",
-                  "entry_value": "Yes"
-                }
-              ]
             }
           ],
           "segment_totals": [
@@ -209,27 +174,27 @@
                 {
                   "patient_id": "Tracy Daniels",
                   "numerator_value": 3,
-                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 3}, { "title": "Automated Transmissions", "value": 3}, { "title": "All", "value": 3} ]
+                  "automated_numerator_values": [ { "title": "Automated Transmissions", "value": 3}, { "title": "All", "value": 3} ]
                 },
                 {
                   "patient_id": "Dianne Potter",
                   "numerator_value": 1,
-                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 1}, { "title": "Automated Transmissions", "value": 1}, { "title": "All", "value": 1} ]
+                  "automated_numerator_values": [ { "title": "Automated Transmissions", "value": 1}, { "title": "All", "value": 1} ]
                 },
                 {
                   "patient_id": "Katrina Owens",
                   "numerator_value": 2,
-                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 2}, { "title": "Automated Transmissions", "value": 2}, { "title": "All", "value": 2} ]
+                  "automated_numerator_values": [ { "title": "Automated Transmissions", "value": 2}, { "title": "All", "value": 2} ]
                 },
                 {
                   "patient_id": "Allan Summers",
-                  "numerator_value": 0,
-                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 2}, { "title": "Automated Transmissions", "value": 0}, { "title": "All", "value": 2} ]
+                  "numerator_value": 2,
+                  "automated_numerator_values": [ { "title": "Automated Transmissions", "value": 2}, { "title": "All", "value": 2} ]
                 },
                 {
                   "patient_id": "Ada Mack",
                   "numerator_value": 2,
-                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 2}, { "title": "Automated Transmissions", "value": 3}, { "title": "All", "value": 3} ]
+                  "automated_numerator_values": [ { "title": "Automated Transmissions", "value": 3}, { "title": "All", "value": 3} ]
                 }
               ]
             }
@@ -238,8 +203,8 @@
         {
           "segment_total":
             {
-              "numerator_value": 5,
-              "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 6}, { "title": "Automated Transmissions", "value": 5}, { "title": "All", "value": 6} ]
+              "numerator_value": 6,
+              "automated_numerator_values": [ { "title": "Automated Transmissions", "value": 6}, { "title": "All", "value": 6} ]
             },
           "segment_title": "Excludes controlled substances",
           "segment_entries": [
@@ -321,33 +286,6 @@
                   "entry_value": 1
                 }
               ]
-            },
-            {
-              "entry_title": "Prescription(s) Queried for Drug Formulary",
-              "automatable_step": { "title": "Automated Drug Queries" },
-              "numer": true,
-              "entry_values": [
-                {
-                  "patient_id": "Tracy Daniels",
-                  "entry_value": "Yes"
-                },
-                {
-                  "patient_id": "Dianne Potter",
-                  "entry_value": "Yes"
-                },
-                {
-                  "patient_id": "Katrina Owens",
-                  "entry_value": "Yes"
-                },
-                {
-                  "patient_id": "Allan Summers",
-                  "entry_value": "No"
-                },
-                {
-                  "patient_id": "Ada Mack",
-                  "entry_value": "Yes"
-                }
-              ]
             }
           ],
           "segment_totals": [
@@ -357,27 +295,27 @@
                 {
                   "patient_id": "Tracy Daniels",
                   "numerator_value": 2,
-                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 2}, { "title": "Automated Transmissions", "value": 2}, { "title": "All", "value": 2} ]
+                  "automated_numerator_values": [ { "title": "Automated Transmissions", "value": 2}, { "title": "All", "value": 2} ]
                 },
                 {
                   "patient_id": "Dianne Potter",
                   "numerator_value": 1,
-                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 1}, { "title": "Automated Transmissions", "value": 1}, { "title": "All", "value": 1} ]
+                  "automated_numerator_values": [ { "title": "Automated Transmissions", "value": 1}, { "title": "All", "value": 1} ]
                 },
                 {
                   "patient_id": "Katrina Owens",
                   "numerator_value": 1,
-                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 1}, { "title": "Automated Transmissions", "value": 1}, { "title": "All", "value": 1} ]
+                  "automated_numerator_values": [ { "title": "Automated Transmissions", "value": 1}, { "title": "All", "value": 1} ]
                 },
                 {
                   "patient_id": "Allan Summers",
-                  "numerator_value": 0,
-                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 1}, { "title": "Automated Transmissions", "value": 0}, { "title": "All", "value": 1} ]
+                  "numerator_value": 1,
+                  "automated_numerator_values": [ { "title": "Automated Transmissions", "value": 1}, { "title": "All", "value": 1} ]
                 },
                 {
                   "patient_id": "Ada Mack",
                   "numerator_value": 1,
-                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 1}, { "title": "Automated Transmissions", "value": 1}, { "title": "All", "value": 1} ]
+                  "automated_numerator_values": [ { "title": "Automated Transmissions", "value": 1}, { "title": "All", "value": 1} ]
                 }
               ]
             }
@@ -410,8 +348,8 @@
         {
           "segment_total":
             {
-              "numerator_value": 16,
-              "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 18}, { "title": "Automated Transmissions", "value": 18}, { "title": "All", "value": 20} ]
+              "numerator_value": 18,
+              "automated_numerator_values": [ { "title": "Automated Transmissions", "value": 20}, { "title": "All", "value": 20} ]
             },
           "segment_title": "Includes controlled substances",
           "segment_entries": [
@@ -526,29 +464,6 @@
                   "entry_value": 1
                 }
               ]
-            },
-            {
-              "entry_title": "Prescription(s) Queried for Drug Formulary",
-              "automatable_step": { "title": "Automated Drug Queries" },
-              "numer": true,
-              "entry_values": [
-                {
-                  "patient_id": "Anthony Edwards",
-                  "entry_value": "Yes"
-                },
-                {
-                  "patient_id": "Bruce Hall",
-                  "entry_value": "Yes"
-                },
-                {
-                  "patient_id": "Debra Steele",
-                  "entry_value": "Yes"
-                },
-                {
-                  "patient_id": "Allan Summers",
-                  "entry_value": "Yes"
-                }
-              ]
             }
           ],
           "segment_totals": [
@@ -558,22 +473,22 @@
                 {
                   "patient_id": "Anthony Edwards",
                   "numerator_value": 1,
-                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 1}, { "title": "Automated Transmissions", "value": 1}, { "title": "All", "value": 1} ]
+                  "automated_numerator_values": [ { "title": "Automated Transmissions", "value": 1}, { "title": "All", "value": 1} ]
                 },
                 {
                   "patient_id": "Bruce Hall",
                   "numerator_value": 2,
-                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 2}, { "title": "Automated Transmissions", "value": 2}, { "title": "All", "value": 2} ]
+                  "automated_numerator_values": [ { "title": "Automated Transmissions", "value": 2}, { "title": "All", "value": 2} ]
                 },
                 {
                   "patient_id": "Debra Steele",
                   "numerator_value": 3,
-                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 3}, { "title": "Automated Transmissions", "value": 3}, { "title": "All", "value": 3} ]
+                  "automated_numerator_values": [ { "title": "Automated Transmissions", "value": 3}, { "title": "All", "value": 3} ]
                 },
                 {
                   "patient_id": "Allan Summers",
                   "numerator_value": 2,
-                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 2}, { "title": "Automated Transmissions", "value": 3}, { "title": "All", "value": 3} ]
+                  "automated_numerator_values": [ { "title": "Automated Transmissions", "value": 3}, { "title": "All", "value": 3} ]
                 }
               ]
             }
@@ -582,8 +497,8 @@
         {
           "segment_total":
             {
-              "numerator_value": 10,
-              "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 11}, { "title": "Automated Transmissions", "value": 10}, { "title": "All", "value": 11} ]
+              "numerator_value": 11,
+              "automated_numerator_values": [ { "title": "Automated Transmissions", "value": 11}, { "title": "All", "value": 11} ]
             },
           "segment_title": "Excludes controlled substances",
           "segment_entries": [
@@ -653,29 +568,6 @@
                   "entry_value": 1
                 }
               ]
-            },
-            {
-              "entry_title": "Prescription(s) Queried for Drug Formulary",
-              "automatable_step": { "title": "Automated Drug Queries" },
-              "numer": true,
-              "entry_values": [
-                {
-                  "patient_id": "Anthony Edwards",
-                  "entry_value": "Yes"
-                },
-                {
-                  "patient_id": "Bruce Hall",
-                  "entry_value": "Yes"
-                },
-                {
-                  "patient_id": "Debra Steele",
-                  "entry_value": "Yes"
-                },
-                {
-                  "patient_id": "Allan Summers",
-                  "entry_value": "Yes"
-                }
-              ]
             }
           ],
           "segment_totals": [
@@ -685,22 +577,22 @@
                 {
                   "patient_id": "Anthony Edwards",
                   "numerator_value": 1,
-                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 1}, { "title": "Automated Transmissions", "value": 1}, { "title": "All", "value": 1} ]
+                  "automated_numerator_values": [ { "title": "Automated Transmissions", "value": 1}, { "title": "All", "value": 1} ]
                 },
                 {
                   "patient_id": "Bruce Hall",
                   "numerator_value": 1,
-                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 1}, { "title": "Automated Transmissions", "value": 1}, { "title": "All", "value": 1} ]
+                  "automated_numerator_values": [ { "title": "Automated Transmissions", "value": 1}, { "title": "All", "value": 1} ]
                 },
                 {
                   "patient_id": "Debra Steele",
                   "numerator_value": 2,
-                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 2}, { "title": "Automated Transmissions", "value": 2}, { "title": "All", "value": 2} ]
+                  "automated_numerator_values": [ { "title": "Automated Transmissions", "value": 2}, { "title": "All", "value": 2} ]
                 },
                 {
                   "patient_id": "Allan Summers",
                   "numerator_value": 1,
-                  "automated_numerator_values": [ { "title": "Automated Drug Queries", "value": 1}, { "title": "Automated Transmissions", "value": 1}, { "title": "All", "value": 1} ]
+                  "automated_numerator_values": [ { "title": "Automated Transmissions", "value": 1}, { "title": "All", "value": 1} ]
                 }
               ]
             }

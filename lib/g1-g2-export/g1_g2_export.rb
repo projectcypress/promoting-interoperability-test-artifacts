@@ -259,18 +259,7 @@ class G1G2Export < Mustache
       { 'test_short_name' => 'RT 2a Provider Patient Exchange', 'link' => "#{test_deck_link}_Required_Test_2a_.html" },
       { 'test_short_name' => 'RT 2b Provider Patient Exchange', 'link' => "#{test_deck_link}_Required_Test_2b_.html" },
       { 'test_short_name' => 'RT 2c Provider Patient Exchange', 'link' => "#{test_deck_link}_Required_Test_2c_.html" },
-      { 'test_short_name' => 'RT 3 Patient Education', 'link' => "#{test_deck_link}_Required_Test_3.html" },
-      { 'test_short_name' => 'RT 4a VDT', 'link' => "#{test_deck_link}_Required_Test_4a_.html" },
-      { 'test_short_name' => 'RT 4b VDT', 'link' => "#{test_deck_link}_Required_Test_4b_.html" },
-      { 'test_short_name' => 'RT 4c VDT', 'link' => "#{test_deck_link}_Required_Test_4c_.html" },
-      { 'test_short_name' => 'RT 5 Secure Messaging', 'link' => "#{test_deck_link}_Required_Test_5.html" },
-      { 'test_short_name' => 'RT 6 PGHD', 'link' => "#{test_deck_link}_Required_Test_6.html" },
       { 'test_short_name' => 'RT 7 Electronic Referral Loops', 'link' => "#{test_deck_link}_Required_Test_7.html" },
-      { 'test_short_name' => 'RT 8 Receive Incorporate', 'link' => "#{test_deck_link}_Required_Test_8.html" },
-      { 'test_short_name' => 'RT 9 Med Reconciliation', 'link' => "#{test_deck_link}_Required_Test_9.html" },
-      { 'test_short_name' => 'RT 10 CPOE Meds', 'link' => "#{test_deck_link}_Required_Test_10.html" },
-      { 'test_short_name' => 'RT 11 CPOE Labs', 'link' => "#{test_deck_link}_Required_Test_11.html" },
-      { 'test_short_name' => 'RT 12 CPOE Rads', 'link' => "#{test_deck_link}_Required_Test_12.html" },
       { 'test_short_name' => 'RT 15 Receive & Reconcile', 'link' => "#{test_deck_link}_Required_Test_15.html" }
     ]
   end

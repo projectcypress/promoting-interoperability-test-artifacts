@@ -6,13 +6,6 @@
   "automated_steps_info": "More information can be found in Note 4",
   "program_info": [
     { 
-      "program_name": "Medicaid Eligible Hospital/Critical Access Hospital (EH/CAH)",
-      "measure_objective": "Patient Electronic Access to Health Information",
-      "objective_number": "Objective 5 of 8",
-      "measure_name": "Measure 1",
-      "measure_description": "For more than 80 percent of all unique patients discharged from the eligible hospital or CAH inpatient or emergency department (POS 21 or 23): (i) The patient (or the patient authorized representative) is provided timely access to view online, download, and transmit his or her health information; and (ii) The provider ensures the patient’s health information is available for the patient (or patient authorized representative) to access using any application of their choice that is configured to meet the technical specifications of the Application Programming Interface (API) in the provider’s certified electronic health record technology (CEHRT)."
-   },
-    { 
       "program_name": "Medicare Eligible Hospital/Critical Access Hospital (EH/CAH)",
       "measure_objective": "Provider to Patient Exchange",
       "measure_name": "Provide Patients Electronic Access to Their Health Information",
