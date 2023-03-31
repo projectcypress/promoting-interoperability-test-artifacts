@@ -352,16 +352,13 @@
             <div class="divTableCell noBorder">2: If a Health IT Module automatically transmits a prescription electronically when it is generated, it is at the discretion of the ONC-ATL not to test scenarios that assume this is not automatic.</div>
           </div>
           <div class="divTableNoteRow">
-            <div class="divTableCell noBorder">3: If a Health IT Module automatically queries for a drug formulary upon every prescription that is generated, it is at the discretion of the ONC-ATL not to test scenarios that assume this is not automatic. Additionally, the 2021 specification for MIPS has removed the requirement for formulary checking as part of the calculations (Select &#39;Hide - Automated Drug Queries&#39; to remove this step from the test data).</div>
+            <div class="divTableCell noBorder">3: If a Health IT Module can only send changes electronically, it is at the discretion of the ONC-ATL not to test scenarios that assume a change could be sent via non-electronic means.  </div>
           </div>
           <div class="divTableNoteRow">
-            <div class="divTableCell noBorder">4: If a Health IT Module can only send changes electronically, it is at the discretion of the ONC-ATL not to test scenarios that assume a change could be sent via non-electronic means.  </div>
+            <div class="divTableCell noBorder">4: The scenarios that test changed prescriptions assume that the original prescription was written electronically.</div>
           </div>
           <div class="divTableNoteRow">
-            <div class="divTableCell noBorder">5: The scenarios that test changed prescriptions assume that the original prescription was written electronically.</div>
-          </div>
-          <div class="divTableNoteRow">
-            <div class="divTableCell noBorder">6: Test data supply: ONC and Vendor-supplied. ONC provides the Test Data Scenarios and parameters; the Vendor will supply the Electronic Prescription entry and formulary details.</div>
+            <div class="divTableCell noBorder">5: Test data supply: ONC and Vendor-supplied. ONC provides the Test Data Scenarios and parameters; the Vendor will supply the Electronic Prescription entry and formulary details.</div>
           </div>
         </div>
       </div>
@@ -373,12 +370,8 @@
                 <legend>Show/Hide Discretionary Steps</legend>
                 <label for="">Show All Discretionary Steps</label>
                 <input type="radio" name="automatable_radio" value="show_automatable" onclick="w3.showAutomatable()" checked><br>
-                <label for="">Hide - Automated Drug Queries</label>
-                <input type="radio" name="automatable_radio" value="hide_automatable1" onclick="w3.hideAutomatable1()"><br>
                 <label for="">Hide - Automated Transmissions</label>
-                <input type="radio" name="automatable_radio" value="hide_automatable2" onclick="w3.hideAutomatable2()"><br>
-                <label for="">Hide All Discretionary Steps</label>
-                <input type="radio" name="automatable_radio" value="hide_all_automatable" onclick="w3.hideAllAutomatable()"><br>
+                <input type="radio" name="automatable_radio" value="hide_automatable1" onclick="w3.hideAutomatable1()"><br>
                 <span class="help-block">More information can be found in Notes 2-3</span>
               </fieldset>
             </form>
@@ -407,7 +400,7 @@
                         <th class="divTableBorderlessCell"/>
                         <th class="divTableBorderlessCell"/>
                         <th class='denom_color divTableBorderlessCell' colspan='2'>Denominator Criteria</th>
-                        <th class='numer_color divTableBorderlessCell numerAll' colspan='3'>Numerator Criteria</th><th class='numer_color divTableBorderlessCell numer1' colspan='1'>Numerator Criteria</th><th class='numer_color divTableBorderlessCell numer2' colspan='2'>Numerator Criteria</th>
+                        <th class='numer_color divTableBorderlessCell numerAll' colspan='2'>Numerator Criteria</th><th class='numer_color divTableBorderlessCell numer1' colspan='2'>Numerator Criteria</th>
                         <th class='result_color divTableBorderlessCell resultsAll' colspan='8'>Results</th><th class='result_color divTableBorderlessCell resultsMips' colspan='8'>Results</th>
                       </tr>
                       <tr class="divTableRow">
@@ -415,9 +408,8 @@
                         <th class="divTableCell blueItallic">Provider Information</th>
                           <th class="divTableCell blueItallic divSmall ">Number of Prescriptions Written During Reporting / Performance Period (not controlled)</th>
                           <th class="divTableCell blueItallic divSmall ">Number of Controlled Prescriptions Written During Reporting / Performance Period </th>
-                          <th class="divTableCell blueItallic divSmall automatable2">Number of Prescriptions (not controlled) Generated and Transmitted Electronically</th>
-                          <th class="divTableCell blueItallic divSmall automatable2">Number of Controlled Substances Generated and Transmitted Electronically</th>
-                          <th class="divTableCell blueItallic divSmall automatable1">Prescription(s) Queried for Drug Formulary</th>
+                          <th class="divTableCell blueItallic divSmall automatable1">Number of Prescriptions (not controlled) Generated and Transmitted Electronically</th>
+                          <th class="divTableCell blueItallic divSmall automatable1">Number of Controlled Substances Generated and Transmitted Electronically</th>
                           <th class="divTableCell blueItallic divSmall  mips_2020">Provider 1</th>
                           <th class="divTableCell blueItallic divSmall  mips_2020">Provider 2</th>
                           <th class="divTableCell blueItallic divSmall  mips_2020">TIN A / Provider 1</th>
@@ -457,7 +449,7 @@
                                 <li class="divLi noWrap ">1</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable2">
+                          <td class="divTableCell automatable1">
                             <ol>
                                 <li class="divLi noWrap ">1</li>
                                 <li class="divLi noWrap ">2</li>
@@ -465,7 +457,7 @@
                                 <li class="divLi noWrap ">2</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable2">
+                          <td class="divTableCell automatable1">
                             <ol>
                                 <li class="divLi noWrap ">1</li>
                                 <li class="divLi noWrap ">0</li>
@@ -473,45 +465,29 @@
                                 <li class="divLi noWrap ">1</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable1">
-                            <ol>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                            </ol>
-                          </td>
                               <td class="divTableCell noWrap provider_color_1  not_automated_result">4 / 7</td>
-                                  <td class="divTableCell noWrap provider_color_1  automated1_result">4 / 7</td>
-                                  <td class="divTableCell noWrap provider_color_1  automated2_result">7 / 7</td>
+                                  <td class="divTableCell noWrap provider_color_1  automated1_result">7 / 7</td>
                                   <td class="divTableCell noWrap provider_color_1  all_automated_result">7 / 7</td>
                               <td class="divTableCell noWrap provider_color_2  not_automated_result">6 / 6</td>
                                   <td class="divTableCell noWrap provider_color_2  automated1_result">6 / 6</td>
-                                  <td class="divTableCell noWrap provider_color_2  automated2_result">6 / 6</td>
                                   <td class="divTableCell noWrap provider_color_2  all_automated_result">6 / 6</td>
                               <td class="divTableCell noWrap provider_color_3  not_automated_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_3  automated1_result">2 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_3  automated2_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_3  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_4  not_automated_result">2 / 5</td>
-                                  <td class="divTableCell noWrap provider_color_4  automated1_result">2 / 5</td>
-                                  <td class="divTableCell noWrap provider_color_4  automated2_result">5 / 5</td>
+                                  <td class="divTableCell noWrap provider_color_4  automated1_result">5 / 5</td>
                                   <td class="divTableCell noWrap provider_color_4  all_automated_result">5 / 5</td>
                               <td class="divTableCell noWrap provider_color_5  not_automated_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_5  automated1_result">3 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_5  automated2_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_5  all_automated_result">3 / 3</td>
                               <td class="divTableCell noWrap provider_color_6  not_automated_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_6  automated1_result">3 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_6  automated2_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_6  all_automated_result">3 / 3</td>
                               <td class="divTableCell noWrap provider_color_7  not_automated_result">5 / 5</td>
                                   <td class="divTableCell noWrap provider_color_7  automated1_result">5 / 5</td>
-                                  <td class="divTableCell noWrap provider_color_7  automated2_result">5 / 5</td>
                                   <td class="divTableCell noWrap provider_color_7  all_automated_result">5 / 5</td>
                               <td class="divTableCell noWrap provider_color_8  not_automated_result">5 / 8</td>
-                                  <td class="divTableCell noWrap provider_color_8  automated1_result">5 / 8</td>
-                                  <td class="divTableCell noWrap provider_color_8  automated2_result">8 / 8</td>
+                                  <td class="divTableCell noWrap provider_color_8  automated1_result">8 / 8</td>
                                   <td class="divTableCell noWrap provider_color_8  all_automated_result">8 / 8</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
@@ -544,7 +520,7 @@
                                 <li class="divLi noWrap ">1</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable2">
+                          <td class="divTableCell automatable1">
                             <ol>
                                 <li class="divLi noWrap ">0</li>
                                 <li class="divLi noWrap ">1</li>
@@ -552,53 +528,37 @@
                                 <li class="divLi noWrap ">1</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable2">
-                            <ol>
-                                <li class="divLi noWrap ">1</li>
-                                <li class="divLi noWrap ">0</li>
-                                <li class="divLi noWrap ">0</li>
-                                <li class="divLi noWrap ">1</li>
-                            </ol>
-                          </td>
                           <td class="divTableCell automatable1">
                             <ol>
-                                <li class="divLi noWrap ">No</li>
-                                <li class="divLi noWrap ">No</li>
-                                <li class="divLi noWrap ">No</li>
-                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">1</li>
+                                <li class="divLi noWrap ">0</li>
+                                <li class="divLi noWrap ">0</li>
+                                <li class="divLi noWrap ">1</li>
                             </ol>
                           </td>
-                              <td class="divTableCell noWrap provider_color_1  not_automated_result">0 / 2</td>
+                              <td class="divTableCell noWrap provider_color_1  not_automated_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_1  automated1_result">2 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_1  automated2_result">0 / 2</td>
                                   <td class="divTableCell noWrap provider_color_1  all_automated_result">2 / 2</td>
-                              <td class="divTableCell noWrap provider_color_2  not_automated_result">0 / 5</td>
-                                  <td class="divTableCell noWrap provider_color_2  automated1_result">4 / 5</td>
-                                  <td class="divTableCell noWrap provider_color_2  automated2_result">0 / 5</td>
+                              <td class="divTableCell noWrap provider_color_2  not_automated_result">4 / 5</td>
+                                  <td class="divTableCell noWrap provider_color_2  automated1_result">5 / 5</td>
                                   <td class="divTableCell noWrap provider_color_2  all_automated_result">5 / 5</td>
-                              <td class="divTableCell noWrap provider_color_3  not_automated_result">0 / 1</td>
+                              <td class="divTableCell noWrap provider_color_3  not_automated_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_3  automated1_result">1 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_3  automated2_result">0 / 1</td>
                                   <td class="divTableCell noWrap provider_color_3  all_automated_result">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_4  not_automated_result">0 / 1</td>
+                              <td class="divTableCell noWrap provider_color_4  not_automated_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_4  automated1_result">1 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_4  automated2_result">0 / 1</td>
                                   <td class="divTableCell noWrap provider_color_4  all_automated_result">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_5  not_automated_result">0 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_5  automated1_result">2 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_5  automated2_result">0 / 3</td>
+                              <td class="divTableCell noWrap provider_color_5  not_automated_result">2 / 3</td>
+                                  <td class="divTableCell noWrap provider_color_5  automated1_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_5  all_automated_result">3 / 3</td>
-                              <td class="divTableCell noWrap provider_color_6  not_automated_result">0 / 2</td>
+                              <td class="divTableCell noWrap provider_color_6  not_automated_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_6  automated1_result">2 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_6  automated2_result">0 / 2</td>
                                   <td class="divTableCell noWrap provider_color_6  all_automated_result">2 / 2</td>
-                              <td class="divTableCell noWrap provider_color_7  not_automated_result">0 / 4</td>
-                                  <td class="divTableCell noWrap provider_color_7  automated1_result">3 / 4</td>
-                                  <td class="divTableCell noWrap provider_color_7  automated2_result">0 / 4</td>
+                              <td class="divTableCell noWrap provider_color_7  not_automated_result">3 / 4</td>
+                                  <td class="divTableCell noWrap provider_color_7  automated1_result">4 / 4</td>
                                   <td class="divTableCell noWrap provider_color_7  all_automated_result">4 / 4</td>
-                              <td class="divTableCell noWrap provider_color_8  not_automated_result">0 / 3</td>
+                              <td class="divTableCell noWrap provider_color_8  not_automated_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_8  automated1_result">3 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_8  automated2_result">0 / 3</td>
                                   <td class="divTableCell noWrap provider_color_8  all_automated_result">3 / 3</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
@@ -631,7 +591,7 @@
                                 <li class="divLi noWrap ">2</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable2">
+                          <td class="divTableCell automatable1">
                             <ol>
                                 <li class="divLi noWrap ">1</li>
                                 <li class="divLi noWrap ">0</li>
@@ -639,7 +599,7 @@
                                 <li class="divLi noWrap ">0</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable2">
+                          <td class="divTableCell automatable1">
                             <ol>
                                 <li class="divLi noWrap ">0</li>
                                 <li class="divLi noWrap ">1</li>
@@ -647,45 +607,29 @@
                                 <li class="divLi noWrap ">2</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable1">
-                            <ol>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                            </ol>
-                          </td>
                               <td class="divTableCell noWrap provider_color_1  not_automated_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_1  automated1_result">2 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_1  automated2_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_1  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_2  not_automated_result">3 / 5</td>
-                                  <td class="divTableCell noWrap provider_color_2  automated1_result">3 / 5</td>
-                                  <td class="divTableCell noWrap provider_color_2  automated2_result">5 / 5</td>
-                                  <td class="divTableCell noWrap provider_color_2  all_automated_result">3 / 5</td>
+                                  <td class="divTableCell noWrap provider_color_2  automated1_result">5 / 5</td>
+                                  <td class="divTableCell noWrap provider_color_2  all_automated_result">5 / 5</td>
                               <td class="divTableCell noWrap provider_color_3  not_automated_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_3  automated1_result">1 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_3  automated2_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_3  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_4  not_automated_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_4  automated1_result">1 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_4  automated2_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_4  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_5  not_automated_result">1 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_5  automated1_result">1 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_5  automated2_result">2 / 2</td>
+                                  <td class="divTableCell noWrap provider_color_5  automated1_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_5  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_6  not_automated_result">2 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_6  automated1_result">2 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_6  automated2_result">3 / 3</td>
+                                  <td class="divTableCell noWrap provider_color_6  automated1_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_6  all_automated_result">3 / 3</td>
                               <td class="divTableCell noWrap provider_color_7  not_automated_result">2 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_7  automated1_result">2 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_7  automated2_result">3 / 3</td>
+                                  <td class="divTableCell noWrap provider_color_7  automated1_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_7  all_automated_result">3 / 3</td>
                               <td class="divTableCell noWrap provider_color_8  not_automated_result">3 / 4</td>
-                                  <td class="divTableCell noWrap provider_color_8  automated1_result">3 / 4</td>
-                                  <td class="divTableCell noWrap provider_color_8  automated2_result">4 / 4</td>
+                                  <td class="divTableCell noWrap provider_color_8  automated1_result">4 / 4</td>
                                   <td class="divTableCell noWrap provider_color_8  all_automated_result">4 / 4</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
@@ -718,61 +662,45 @@
                                 <li class="divLi noWrap ">1</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable2">
+                          <td class="divTableCell automatable1">
                             <ol>
                                 <li class="divLi noWrap ">2</li>
                                 <li class="divLi noWrap ">1</li>
                                 <li class="divLi noWrap ">0</li>
                                 <li class="divLi noWrap ">2</li>
-                            </ol>
-                          </td>
-                          <td class="divTableCell automatable2">
-                            <ol>
-                                <li class="divLi noWrap ">1</li>
-                                <li class="divLi noWrap ">0</li>
-                                <li class="divLi noWrap ">1</li>
-                                <li class="divLi noWrap ">1</li>
                             </ol>
                           </td>
                           <td class="divTableCell automatable1">
                             <ol>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">1</li>
+                                <li class="divLi noWrap ">0</li>
+                                <li class="divLi noWrap ">1</li>
+                                <li class="divLi noWrap ">1</li>
                             </ol>
                           </td>
                               <td class="divTableCell noWrap provider_color_1  not_automated_result">4 / 5</td>
-                                  <td class="divTableCell noWrap provider_color_1  automated1_result">4 / 5</td>
-                                  <td class="divTableCell noWrap provider_color_1  automated2_result">5 / 5</td>
+                                  <td class="divTableCell noWrap provider_color_1  automated1_result">5 / 5</td>
                                   <td class="divTableCell noWrap provider_color_1  all_automated_result">5 / 5</td>
                               <td class="divTableCell noWrap provider_color_2  not_automated_result">4 / 4</td>
                                   <td class="divTableCell noWrap provider_color_2  automated1_result">4 / 4</td>
-                                  <td class="divTableCell noWrap provider_color_2  automated2_result">4 / 4</td>
                                   <td class="divTableCell noWrap provider_color_2  all_automated_result">4 / 4</td>
                               <td class="divTableCell noWrap provider_color_3  not_automated_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_3  automated1_result">3 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_3  automated2_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_3  all_automated_result">3 / 3</td>
                               <td class="divTableCell noWrap provider_color_4  not_automated_result">1 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_4  automated1_result">1 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_4  automated2_result">2 / 2</td>
+                                  <td class="divTableCell noWrap provider_color_4  automated1_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_4  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_5  not_automated_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_5  automated1_result">1 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_5  automated2_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_5  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_6  not_automated_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_6  automated1_result">3 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_6  automated2_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_6  all_automated_result">3 / 3</td>
                               <td class="divTableCell noWrap provider_color_7  not_automated_result">4 / 4</td>
                                   <td class="divTableCell noWrap provider_color_7  automated1_result">4 / 4</td>
-                                  <td class="divTableCell noWrap provider_color_7  automated2_result">4 / 4</td>
                                   <td class="divTableCell noWrap provider_color_7  all_automated_result">4 / 4</td>
                               <td class="divTableCell noWrap provider_color_8  not_automated_result">4 / 5</td>
-                                  <td class="divTableCell noWrap provider_color_8  automated1_result">4 / 5</td>
-                                  <td class="divTableCell noWrap provider_color_8  automated2_result">5 / 5</td>
+                                  <td class="divTableCell noWrap provider_color_8  automated1_result">5 / 5</td>
                                   <td class="divTableCell noWrap provider_color_8  all_automated_result">5 / 5</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
@@ -805,7 +733,7 @@
                                 <li class="divLi noWrap ">1</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable2">
+                          <td class="divTableCell automatable1">
                             <ol>
                                 <li class="divLi noWrap ">1</li>
                                 <li class="divLi noWrap ">1</li>
@@ -813,7 +741,7 @@
                                 <li class="divLi noWrap ">1</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable2">
+                          <td class="divTableCell automatable1">
                             <ol>
                                 <li class="divLi noWrap ">1</li>
                                 <li class="divLi noWrap ">0</li>
@@ -821,86 +749,61 @@
                                 <li class="divLi noWrap ">1</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable1">
-                            <ol>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                            </ol>
-                          </td>
                               <td class="divTableCell noWrap provider_color_1  not_automated_result">3 / 4</td>
-                                  <td class="divTableCell noWrap provider_color_1  automated1_result">3 / 4</td>
-                                  <td class="divTableCell noWrap provider_color_1  automated2_result">4 / 4</td>
+                                  <td class="divTableCell noWrap provider_color_1  automated1_result">4 / 4</td>
                                   <td class="divTableCell noWrap provider_color_1  all_automated_result">4 / 4</td>
                               <td class="divTableCell noWrap provider_color_2  not_automated_result">5 / 5</td>
                                   <td class="divTableCell noWrap provider_color_2  automated1_result">5 / 5</td>
-                                  <td class="divTableCell noWrap provider_color_2  automated2_result">5 / 5</td>
                                   <td class="divTableCell noWrap provider_color_2  all_automated_result">5 / 5</td>
                               <td class="divTableCell noWrap provider_color_3  not_automated_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_3  automated1_result">2 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_3  automated2_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_3  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_4  not_automated_result">1 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_4  automated1_result">1 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_4  automated2_result">2 / 2</td>
+                                  <td class="divTableCell noWrap provider_color_4  automated1_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_4  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_5  not_automated_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_5  automated1_result">3 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_5  automated2_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_5  all_automated_result">3 / 3</td>
                               <td class="divTableCell noWrap provider_color_6  not_automated_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_6  automated1_result">2 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_6  automated2_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_6  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_7  not_automated_result">5 / 5</td>
                                   <td class="divTableCell noWrap provider_color_7  automated1_result">5 / 5</td>
-                                  <td class="divTableCell noWrap provider_color_7  automated2_result">5 / 5</td>
                                   <td class="divTableCell noWrap provider_color_7  all_automated_result">5 / 5</td>
                               <td class="divTableCell noWrap provider_color_8  not_automated_result">3 / 4</td>
-                                  <td class="divTableCell noWrap provider_color_8  automated1_result">3 / 4</td>
-                                  <td class="divTableCell noWrap provider_color_8  automated2_result">4 / 4</td>
+                                  <td class="divTableCell noWrap provider_color_8  automated1_result">4 / 4</td>
                                   <td class="divTableCell noWrap provider_color_8  all_automated_result">4 / 4</td>
                         </tr>
                       <tr class="divTableAlternatingRow">
                       <td class="divTableCell"></td>
                         <td class="divTableCell "></td>
                         <td class="divTableCell "></td>
-                        <td class="divTableCell automatable2"></td>
-                        <td class="divTableCell automatable2"></td>
+                        <td class="divTableCell automatable1"></td>
                         <td class="divTableCell automatable1"></td>
                       <td class="divTableCell divBold">Cumulative Total</td>
-                            <td class="divTableCell divBold noWrap provider_color_1 mips_2020 not_automated_result">13 / 20</td>
-                                <td class="divTableCell divBold noWrap provider_color_1 mips_2020 automated1_result">15 / 20</td>
-                                <td class="divTableCell divBold noWrap provider_color_1 mips_2020 automated2_result">18 / 20</td>
+                            <td class="divTableCell divBold noWrap provider_color_1 mips_2020 not_automated_result">15 / 20</td>
+                                <td class="divTableCell divBold noWrap provider_color_1 mips_2020 automated1_result">20 / 20</td>
                                 <td class="divTableCell divBold noWrap provider_color_1  all_automated_result">20 / 20</td>
-                            <td class="divTableCell divBold noWrap provider_color_2 mips_2020 not_automated_result">18 / 25</td>
-                                <td class="divTableCell divBold noWrap provider_color_2 mips_2020 automated1_result">22 / 25</td>
-                                <td class="divTableCell divBold noWrap provider_color_2 mips_2020 automated2_result">20 / 25</td>
+                            <td class="divTableCell divBold noWrap provider_color_2 mips_2020 not_automated_result">22 / 25</td>
+                                <td class="divTableCell divBold noWrap provider_color_2 mips_2020 automated1_result">25 / 25</td>
                                 <td class="divTableCell divBold noWrap provider_color_2  all_automated_result">25 / 25</td>
-                            <td class="divTableCell divBold noWrap provider_color_3 mips_2020 not_automated_result">8 / 9</td>
+                            <td class="divTableCell divBold noWrap provider_color_3 mips_2020 not_automated_result">9 / 9</td>
                                 <td class="divTableCell divBold noWrap provider_color_3 mips_2020 automated1_result">9 / 9</td>
-                                <td class="divTableCell divBold noWrap provider_color_3 mips_2020 automated2_result">8 / 9</td>
                                 <td class="divTableCell divBold noWrap provider_color_3  all_automated_result">9 / 9</td>
-                            <td class="divTableCell divBold noWrap provider_color_4 mips_2020 not_automated_result">5 / 11</td>
-                                <td class="divTableCell divBold noWrap provider_color_4 mips_2020 automated1_result">6 / 11</td>
-                                <td class="divTableCell divBold noWrap provider_color_4 mips_2020 automated2_result">10 / 11</td>
+                            <td class="divTableCell divBold noWrap provider_color_4 mips_2020 not_automated_result">6 / 11</td>
+                                <td class="divTableCell divBold noWrap provider_color_4 mips_2020 automated1_result">11 / 11</td>
                                 <td class="divTableCell divBold noWrap provider_color_4  all_automated_result">11 / 11</td>
-                            <td class="divTableCell divBold noWrap provider_color_5 mips_2020 not_automated_result">8 / 12</td>
-                                <td class="divTableCell divBold noWrap provider_color_5 mips_2020 automated1_result">10 / 12</td>
-                                <td class="divTableCell divBold noWrap provider_color_5 mips_2020 automated2_result">9 / 12</td>
+                            <td class="divTableCell divBold noWrap provider_color_5 mips_2020 not_automated_result">10 / 12</td>
+                                <td class="divTableCell divBold noWrap provider_color_5 mips_2020 automated1_result">12 / 12</td>
                                 <td class="divTableCell divBold noWrap provider_color_5  all_automated_result">12 / 12</td>
-                            <td class="divTableCell divBold noWrap provider_color_6 mips_2020 not_automated_result">10 / 13</td>
-                                <td class="divTableCell divBold noWrap provider_color_6 mips_2020 automated1_result">12 / 13</td>
-                                <td class="divTableCell divBold noWrap provider_color_6 mips_2020 automated2_result">10 / 13</td>
+                            <td class="divTableCell divBold noWrap provider_color_6 mips_2020 not_automated_result">12 / 13</td>
+                                <td class="divTableCell divBold noWrap provider_color_6 mips_2020 automated1_result">13 / 13</td>
                                 <td class="divTableCell divBold noWrap provider_color_6  all_automated_result">13 / 13</td>
-                            <td class="divTableCell divBold noWrap provider_color_7 mips_2020 not_automated_result">16 / 21</td>
-                                <td class="divTableCell divBold noWrap provider_color_7 mips_2020 automated1_result">19 / 21</td>
-                                <td class="divTableCell divBold noWrap provider_color_7 mips_2020 automated2_result">17 / 21</td>
+                            <td class="divTableCell divBold noWrap provider_color_7 mips_2020 not_automated_result">19 / 21</td>
+                                <td class="divTableCell divBold noWrap provider_color_7 mips_2020 automated1_result">21 / 21</td>
                                 <td class="divTableCell divBold noWrap provider_color_7  all_automated_result">21 / 21</td>
-                            <td class="divTableCell divBold noWrap provider_color_8 mips_2020 not_automated_result">15 / 24</td>
-                                <td class="divTableCell divBold noWrap provider_color_8 mips_2020 automated1_result">18 / 24</td>
-                                <td class="divTableCell divBold noWrap provider_color_8 mips_2020 automated2_result">21 / 24</td>
+                            <td class="divTableCell divBold noWrap provider_color_8 mips_2020 not_automated_result">18 / 24</td>
+                                <td class="divTableCell divBold noWrap provider_color_8 mips_2020 automated1_result">24 / 24</td>
                                 <td class="divTableCell divBold noWrap provider_color_8  all_automated_result">24 / 24</td>
                       </tr>
                     </div>
@@ -914,15 +817,14 @@
                         <th class="divTableBorderlessCell"/>
                         <th class="divTableBorderlessCell"/>
                         <th class='denom_color divTableBorderlessCell' colspan='1'>Denominator Criteria</th>
-                        <th class='numer_color divTableBorderlessCell numerAll' colspan='2'>Numerator Criteria</th><th class='numer_color divTableBorderlessCell numer1' colspan='1'>Numerator Criteria</th><th class='numer_color divTableBorderlessCell numer2' colspan='1'>Numerator Criteria</th>
+                        <th class='numer_color divTableBorderlessCell numerAll' colspan='1'>Numerator Criteria</th><th class='numer_color divTableBorderlessCell numer1' colspan='1'>Numerator Criteria</th>
                         <th class='result_color divTableBorderlessCell resultsAll' colspan='8'>Results</th><th class='result_color divTableBorderlessCell resultsMips' colspan='8'>Results</th>
                       </tr>
                       <tr class="divTableRow">
                         <th class="divTableCell blueItallic">Patient</th>
                         <th class="divTableCell blueItallic">Provider Information</th>
                           <th class="divTableCell blueItallic divSmall ">Number of Prescriptions Written During Reporting / Performance Period (not controlled)</th>
-                          <th class="divTableCell blueItallic divSmall automatable2">Number of Prescriptions (not controlled) Generated and Transmitted Electronically</th>
-                          <th class="divTableCell blueItallic divSmall automatable1">Prescription(s) Queried for Drug Formulary</th>
+                          <th class="divTableCell blueItallic divSmall automatable1">Number of Prescriptions (not controlled) Generated and Transmitted Electronically</th>
                           <th class="divTableCell blueItallic divSmall  mips_2020">Provider 1</th>
                           <th class="divTableCell blueItallic divSmall  mips_2020">Provider 2</th>
                           <th class="divTableCell blueItallic divSmall  mips_2020">TIN A / Provider 1</th>
@@ -954,53 +856,37 @@
                                 <li class="divLi noWrap ">2</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable2">
-                            <ol>
-                                <li class="divLi noWrap ">1</li>
-                                <li class="divLi noWrap ">2</li>
-                                <li class="divLi noWrap ">1</li>
-                                <li class="divLi noWrap ">2</li>
-                            </ol>
-                          </td>
                           <td class="divTableCell automatable1">
                             <ol>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">1</li>
+                                <li class="divLi noWrap ">2</li>
+                                <li class="divLi noWrap ">1</li>
+                                <li class="divLi noWrap ">2</li>
                             </ol>
                           </td>
                               <td class="divTableCell noWrap provider_color_1  not_automated_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_1  automated1_result">3 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_1  automated2_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_1  all_automated_result">3 / 3</td>
                               <td class="divTableCell noWrap provider_color_2  not_automated_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_2  automated1_result">3 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_2  automated2_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_2  all_automated_result">3 / 3</td>
                               <td class="divTableCell noWrap provider_color_3  not_automated_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_3  automated1_result">1 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_3  automated2_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_3  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_4  not_automated_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_4  automated1_result">2 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_4  automated2_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_4  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_5  not_automated_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_5  automated1_result">1 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_5  automated2_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_5  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_6  not_automated_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_6  automated1_result">2 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_6  automated2_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_6  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_7  not_automated_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_7  automated1_result">2 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_7  automated2_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_7  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_8  not_automated_result">4 / 4</td>
                                   <td class="divTableCell noWrap provider_color_8  automated1_result">4 / 4</td>
-                                  <td class="divTableCell noWrap provider_color_8  automated2_result">4 / 4</td>
                                   <td class="divTableCell noWrap provider_color_8  all_automated_result">4 / 4</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
@@ -1025,7 +911,7 @@
                                 <li class="divLi noWrap ">1</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable2">
+                          <td class="divTableCell automatable1">
                             <ol>
                                 <li class="divLi noWrap ">0</li>
                                 <li class="divLi noWrap ">1</li>
@@ -1033,45 +919,29 @@
                                 <li class="divLi noWrap ">1</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable1">
-                            <ol>
-                                <li class="divLi noWrap ">No</li>
-                                <li class="divLi noWrap ">No</li>
-                                <li class="divLi noWrap ">No</li>
-                                <li class="divLi noWrap ">No</li>
-                            </ol>
-                          </td>
-                              <td class="divTableCell noWrap provider_color_1  not_automated_result">0 / 1</td>
+                              <td class="divTableCell noWrap provider_color_1  not_automated_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_1  automated1_result">1 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_1  automated2_result">0 / 1</td>
                                   <td class="divTableCell noWrap provider_color_1  all_automated_result">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_2  not_automated_result">0 / 3</td>
+                              <td class="divTableCell noWrap provider_color_2  not_automated_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_2  automated1_result">3 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_2  automated2_result">0 / 3</td>
                                   <td class="divTableCell noWrap provider_color_2  all_automated_result">3 / 3</td>
                               <td class="divTableCell noWrap provider_color_3  not_automated_result">0 / 0</td>
                                   <td class="divTableCell noWrap provider_color_3  automated1_result">0 / 0</td>
-                                  <td class="divTableCell noWrap provider_color_3  automated2_result">0 / 0</td>
                                   <td class="divTableCell noWrap provider_color_3  all_automated_result">0 / 0</td>
-                              <td class="divTableCell noWrap provider_color_4  not_automated_result">0 / 1</td>
+                              <td class="divTableCell noWrap provider_color_4  not_automated_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_4  automated1_result">1 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_4  automated2_result">0 / 1</td>
                                   <td class="divTableCell noWrap provider_color_4  all_automated_result">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_5  not_automated_result">0 / 2</td>
+                              <td class="divTableCell noWrap provider_color_5  not_automated_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_5  automated1_result">2 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_5  automated2_result">0 / 2</td>
                                   <td class="divTableCell noWrap provider_color_5  all_automated_result">2 / 2</td>
-                              <td class="divTableCell noWrap provider_color_6  not_automated_result">0 / 1</td>
+                              <td class="divTableCell noWrap provider_color_6  not_automated_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_6  automated1_result">1 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_6  automated2_result">0 / 1</td>
                                   <td class="divTableCell noWrap provider_color_6  all_automated_result">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_7  not_automated_result">0 / 2</td>
+                              <td class="divTableCell noWrap provider_color_7  not_automated_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_7  automated1_result">2 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_7  automated2_result">0 / 2</td>
                                   <td class="divTableCell noWrap provider_color_7  all_automated_result">2 / 2</td>
-                              <td class="divTableCell noWrap provider_color_8  not_automated_result">0 / 2</td>
+                              <td class="divTableCell noWrap provider_color_8  not_automated_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_8  automated1_result">2 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_8  automated2_result">0 / 2</td>
                                   <td class="divTableCell noWrap provider_color_8  all_automated_result">2 / 2</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
@@ -1096,53 +966,37 @@
                                 <li class="divLi noWrap ">1</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable2">
-                            <ol>
-                                <li class="divLi noWrap ">1</li>
-                                <li class="divLi noWrap ">0</li>
-                                <li class="divLi noWrap ">1</li>
-                                <li class="divLi noWrap ">0</li>
-                            </ol>
-                          </td>
                           <td class="divTableCell automatable1">
                             <ol>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">1</li>
+                                <li class="divLi noWrap ">0</li>
+                                <li class="divLi noWrap ">1</li>
+                                <li class="divLi noWrap ">0</li>
                             </ol>
                           </td>
                               <td class="divTableCell noWrap provider_color_1  not_automated_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_1  automated1_result">1 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_1  automated2_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_1  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_2  not_automated_result">1 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_2  automated1_result">1 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_2  automated2_result">2 / 2</td>
+                                  <td class="divTableCell noWrap provider_color_2  automated1_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_2  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_3  not_automated_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_3  automated1_result">1 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_3  automated2_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_3  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_4  not_automated_result">0 / 0</td>
                                   <td class="divTableCell noWrap provider_color_4  automated1_result">0 / 0</td>
-                                  <td class="divTableCell noWrap provider_color_4  automated2_result">0 / 0</td>
                                   <td class="divTableCell noWrap provider_color_4  all_automated_result">0 / 0</td>
                               <td class="divTableCell noWrap provider_color_5  not_automated_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_5  automated1_result">1 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_5  automated2_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_5  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_6  not_automated_result">0 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_6  automated1_result">0 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_6  automated2_result">1 / 1</td>
+                                  <td class="divTableCell noWrap provider_color_6  automated1_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_6  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_7  not_automated_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_7  automated1_result">2 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_7  automated2_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_7  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_8  not_automated_result">0 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_8  automated1_result">0 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_8  automated2_result">1 / 1</td>
+                                  <td class="divTableCell noWrap provider_color_8  automated1_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_8  all_automated_result">1 / 1</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
@@ -1167,7 +1021,7 @@
                                 <li class="divLi noWrap ">2</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable2">
+                          <td class="divTableCell automatable1">
                             <ol>
                                 <li class="divLi noWrap ">2</li>
                                 <li class="divLi noWrap ">1</li>
@@ -1175,45 +1029,29 @@
                                 <li class="divLi noWrap ">2</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable1">
-                            <ol>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                            </ol>
-                          </td>
                               <td class="divTableCell noWrap provider_color_1  not_automated_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_1  automated1_result">3 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_1  automated2_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_1  all_automated_result">3 / 3</td>
                               <td class="divTableCell noWrap provider_color_2  not_automated_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_2  automated1_result">2 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_2  automated2_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_2  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_3  not_automated_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_3  automated1_result">2 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_3  automated2_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_3  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_4  not_automated_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_4  automated1_result">1 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_4  automated2_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_4  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_5  not_automated_result">0 / 0</td>
                                   <td class="divTableCell noWrap provider_color_5  automated1_result">0 / 0</td>
-                                  <td class="divTableCell noWrap provider_color_5  automated2_result">0 / 0</td>
                                   <td class="divTableCell noWrap provider_color_5  all_automated_result">0 / 0</td>
                               <td class="divTableCell noWrap provider_color_6  not_automated_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_6  automated1_result">2 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_6  automated2_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_6  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_7  not_automated_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_7  automated1_result">2 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_7  automated2_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_7  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_8  not_automated_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_8  automated1_result">3 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_8  automated2_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_8  all_automated_result">3 / 3</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
@@ -1238,7 +1076,7 @@
                                 <li class="divLi noWrap ">1</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable2">
+                          <td class="divTableCell automatable1">
                             <ol>
                                 <li class="divLi noWrap ">1</li>
                                 <li class="divLi noWrap ">1</li>
@@ -1246,84 +1084,59 @@
                                 <li class="divLi noWrap ">1</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable1">
-                            <ol>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                            </ol>
-                          </td>
                               <td class="divTableCell noWrap provider_color_1  not_automated_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_1  automated1_result">2 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_1  automated2_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_1  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_2  not_automated_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_2  automated1_result">3 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_2  automated2_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_2  all_automated_result">3 / 3</td>
                               <td class="divTableCell noWrap provider_color_3  not_automated_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_3  automated1_result">1 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_3  automated2_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_3  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_4  not_automated_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_4  automated1_result">1 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_4  automated2_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_4  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_5  not_automated_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_5  automated1_result">2 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_5  automated2_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_5  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_6  not_automated_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_6  automated1_result">1 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_6  automated2_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_6  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_7  not_automated_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_7  automated1_result">3 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_7  automated2_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_7  all_automated_result">3 / 3</td>
                               <td class="divTableCell noWrap provider_color_8  not_automated_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_8  automated1_result">2 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_8  automated2_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_8  all_automated_result">2 / 2</td>
                         </tr>
                       <tr class="divTableAlternatingRow">
                       <td class="divTableCell"></td>
                         <td class="divTableCell "></td>
-                        <td class="divTableCell automatable2"></td>
                         <td class="divTableCell automatable1"></td>
                       <td class="divTableCell divBold">Cumulative Total</td>
-                            <td class="divTableCell divBold noWrap provider_color_1 mips_2020 not_automated_result">9 / 10</td>
+                            <td class="divTableCell divBold noWrap provider_color_1 mips_2020 not_automated_result">10 / 10</td>
                                 <td class="divTableCell divBold noWrap provider_color_1 mips_2020 automated1_result">10 / 10</td>
-                                <td class="divTableCell divBold noWrap provider_color_1 mips_2020 automated2_result">9 / 10</td>
                                 <td class="divTableCell divBold noWrap provider_color_1  all_automated_result">10 / 10</td>
-                            <td class="divTableCell divBold noWrap provider_color_2 mips_2020 not_automated_result">9 / 13</td>
-                                <td class="divTableCell divBold noWrap provider_color_2 mips_2020 automated1_result">12 / 13</td>
-                                <td class="divTableCell divBold noWrap provider_color_2 mips_2020 automated2_result">10 / 13</td>
+                            <td class="divTableCell divBold noWrap provider_color_2 mips_2020 not_automated_result">12 / 13</td>
+                                <td class="divTableCell divBold noWrap provider_color_2 mips_2020 automated1_result">13 / 13</td>
                                 <td class="divTableCell divBold noWrap provider_color_2  all_automated_result">13 / 13</td>
                             <td class="divTableCell divBold noWrap provider_color_3 mips_2020 not_automated_result">5 / 5</td>
                                 <td class="divTableCell divBold noWrap provider_color_3 mips_2020 automated1_result">5 / 5</td>
-                                <td class="divTableCell divBold noWrap provider_color_3 mips_2020 automated2_result">5 / 5</td>
                                 <td class="divTableCell divBold noWrap provider_color_3  all_automated_result">5 / 5</td>
-                            <td class="divTableCell divBold noWrap provider_color_4 mips_2020 not_automated_result">4 / 5</td>
+                            <td class="divTableCell divBold noWrap provider_color_4 mips_2020 not_automated_result">5 / 5</td>
                                 <td class="divTableCell divBold noWrap provider_color_4 mips_2020 automated1_result">5 / 5</td>
-                                <td class="divTableCell divBold noWrap provider_color_4 mips_2020 automated2_result">4 / 5</td>
                                 <td class="divTableCell divBold noWrap provider_color_4  all_automated_result">5 / 5</td>
-                            <td class="divTableCell divBold noWrap provider_color_5 mips_2020 not_automated_result">4 / 6</td>
+                            <td class="divTableCell divBold noWrap provider_color_5 mips_2020 not_automated_result">6 / 6</td>
                                 <td class="divTableCell divBold noWrap provider_color_5 mips_2020 automated1_result">6 / 6</td>
-                                <td class="divTableCell divBold noWrap provider_color_5 mips_2020 automated2_result">4 / 6</td>
                                 <td class="divTableCell divBold noWrap provider_color_5  all_automated_result">6 / 6</td>
-                            <td class="divTableCell divBold noWrap provider_color_6 mips_2020 not_automated_result">5 / 7</td>
-                                <td class="divTableCell divBold noWrap provider_color_6 mips_2020 automated1_result">6 / 7</td>
-                                <td class="divTableCell divBold noWrap provider_color_6 mips_2020 automated2_result">6 / 7</td>
+                            <td class="divTableCell divBold noWrap provider_color_6 mips_2020 not_automated_result">6 / 7</td>
+                                <td class="divTableCell divBold noWrap provider_color_6 mips_2020 automated1_result">7 / 7</td>
                                 <td class="divTableCell divBold noWrap provider_color_6  all_automated_result">7 / 7</td>
-                            <td class="divTableCell divBold noWrap provider_color_7 mips_2020 not_automated_result">9 / 11</td>
+                            <td class="divTableCell divBold noWrap provider_color_7 mips_2020 not_automated_result">11 / 11</td>
                                 <td class="divTableCell divBold noWrap provider_color_7 mips_2020 automated1_result">11 / 11</td>
-                                <td class="divTableCell divBold noWrap provider_color_7 mips_2020 automated2_result">9 / 11</td>
                                 <td class="divTableCell divBold noWrap provider_color_7  all_automated_result">11 / 11</td>
-                            <td class="divTableCell divBold noWrap provider_color_8 mips_2020 not_automated_result">9 / 12</td>
-                                <td class="divTableCell divBold noWrap provider_color_8 mips_2020 automated1_result">11 / 12</td>
-                                <td class="divTableCell divBold noWrap provider_color_8 mips_2020 automated2_result">10 / 12</td>
+                            <td class="divTableCell divBold noWrap provider_color_8 mips_2020 not_automated_result">11 / 12</td>
+                                <td class="divTableCell divBold noWrap provider_color_8 mips_2020 automated1_result">12 / 12</td>
                                 <td class="divTableCell divBold noWrap provider_color_8  all_automated_result">12 / 12</td>
                       </tr>
                     </div>
@@ -1343,7 +1156,7 @@
                         <th class="divTableBorderlessCell"/>
                         <th class="divTableBorderlessCell"/>
                         <th class='denom_color divTableBorderlessCell' colspan='2'>Denominator Criteria</th>
-                        <th class='numer_color divTableBorderlessCell numerAll' colspan='3'>Numerator Criteria</th><th class='numer_color divTableBorderlessCell numer1' colspan='1'>Numerator Criteria</th><th class='numer_color divTableBorderlessCell numer2' colspan='2'>Numerator Criteria</th>
+                        <th class='numer_color divTableBorderlessCell numerAll' colspan='2'>Numerator Criteria</th><th class='numer_color divTableBorderlessCell numer1' colspan='2'>Numerator Criteria</th>
                         <th class='result_color divTableBorderlessCell resultsAll' colspan='8'>Results</th><th class='result_color divTableBorderlessCell resultsMips' colspan='8'>Results</th>
                       </tr>
                       <tr class="divTableRow">
@@ -1351,9 +1164,8 @@
                         <th class="divTableCell blueItallic">Provider Information</th>
                           <th class="divTableCell blueItallic divSmall ">Number of Prescriptions Written During Reporting / Performance Period (not controlled)</th>
                           <th class="divTableCell blueItallic divSmall ">Number of Controlled Prescriptions Written During Reporting / Performance Period </th>
-                          <th class="divTableCell blueItallic divSmall automatable2">Number of Prescriptions (not controlled) Generated and Transmitted Electronically</th>
-                          <th class="divTableCell blueItallic divSmall automatable2">Number of Controlled Substances Generated and Transmitted Electronically</th>
-                          <th class="divTableCell blueItallic divSmall automatable1">Prescription(s) Queried for Drug Formulary</th>
+                          <th class="divTableCell blueItallic divSmall automatable1">Number of Prescriptions (not controlled) Generated and Transmitted Electronically</th>
+                          <th class="divTableCell blueItallic divSmall automatable1">Number of Controlled Substances Generated and Transmitted Electronically</th>
                           <th class="divTableCell blueItallic divSmall  mips_2020">Provider 1</th>
                           <th class="divTableCell blueItallic divSmall  mips_2020">Provider 2</th>
                           <th class="divTableCell blueItallic divSmall  mips_2020">TIN A / Provider 1</th>
@@ -1393,61 +1205,45 @@
                                 <li class="divLi noWrap ">0</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable2">
+                          <td class="divTableCell automatable1">
                             <ol>
                                 <li class="divLi noWrap ">1</li>
                                 <li class="divLi noWrap ">1</li>
                                 <li class="divLi noWrap ">0</li>
                                 <li class="divLi noWrap ">1</li>
-                            </ol>
-                          </td>
-                          <td class="divTableCell automatable2">
-                            <ol>
-                                <li class="divLi noWrap ">0</li>
-                                <li class="divLi noWrap ">0</li>
-                                <li class="divLi noWrap ">1</li>
-                                <li class="divLi noWrap ">0</li>
                             </ol>
                           </td>
                           <td class="divTableCell automatable1">
                             <ol>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">0</li>
+                                <li class="divLi noWrap ">0</li>
+                                <li class="divLi noWrap ">1</li>
+                                <li class="divLi noWrap ">0</li>
                             </ol>
                           </td>
                               <td class="divTableCell noWrap provider_color_1  not_automated_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_1  automated1_result">2 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_1  automated2_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_1  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_2  not_automated_result">2 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_2  automated1_result">2 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_2  automated2_result">3 / 3</td>
+                                  <td class="divTableCell noWrap provider_color_2  automated1_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_2  all_automated_result">3 / 3</td>
                               <td class="divTableCell noWrap provider_color_3  not_automated_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_3  automated1_result">1 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_3  automated2_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_3  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_4  not_automated_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_4  automated1_result">1 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_4  automated2_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_4  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_5  not_automated_result">1 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_5  automated1_result">1 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_5  automated2_result">2 / 2</td>
+                                  <td class="divTableCell noWrap provider_color_5  automated1_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_5  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_6  not_automated_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_6  automated1_result">1 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_6  automated2_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_6  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_7  not_automated_result">2 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_7  automated1_result">2 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_7  automated2_result">3 / 3</td>
+                                  <td class="divTableCell noWrap provider_color_7  automated1_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_7  all_automated_result">3 / 3</td>
                               <td class="divTableCell noWrap provider_color_8  not_automated_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_8  automated1_result">2 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_8  automated2_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_8  all_automated_result">2 / 2</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
@@ -1480,7 +1276,7 @@
                                 <li class="divLi noWrap ">0</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable2">
+                          <td class="divTableCell automatable1">
                             <ol>
                                 <li class="divLi noWrap ">0</li>
                                 <li class="divLi noWrap ">1</li>
@@ -1488,7 +1284,7 @@
                                 <li class="divLi noWrap ">2</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable2">
+                          <td class="divTableCell automatable1">
                             <ol>
                                 <li class="divLi noWrap ">1</li>
                                 <li class="divLi noWrap ">0</li>
@@ -1496,45 +1292,29 @@
                                 <li class="divLi noWrap ">0</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable1">
-                            <ol>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                            </ol>
-                          </td>
                               <td class="divTableCell noWrap provider_color_1  not_automated_result">2 / 4</td>
-                                  <td class="divTableCell noWrap provider_color_1  automated1_result">2 / 4</td>
-                                  <td class="divTableCell noWrap provider_color_1  automated2_result">4 / 4</td>
+                                  <td class="divTableCell noWrap provider_color_1  automated1_result">4 / 4</td>
                                   <td class="divTableCell noWrap provider_color_1  all_automated_result">4 / 4</td>
                               <td class="divTableCell noWrap provider_color_2  not_automated_result">3 / 4</td>
-                                  <td class="divTableCell noWrap provider_color_2  automated1_result">3 / 4</td>
-                                  <td class="divTableCell noWrap provider_color_2  automated2_result">4 / 4</td>
+                                  <td class="divTableCell noWrap provider_color_2  automated1_result">4 / 4</td>
                                   <td class="divTableCell noWrap provider_color_2  all_automated_result">4 / 4</td>
                               <td class="divTableCell noWrap provider_color_3  not_automated_result">1 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_3  automated1_result">1 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_3  automated2_result">3 / 3</td>
+                                  <td class="divTableCell noWrap provider_color_3  automated1_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_3  all_automated_result">3 / 3</td>
                               <td class="divTableCell noWrap provider_color_4  not_automated_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_4  automated1_result">1 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_4  automated2_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_4  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_5  not_automated_result">1 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_5  automated1_result">1 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_5  automated2_result">2 / 2</td>
+                                  <td class="divTableCell noWrap provider_color_5  automated1_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_5  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_6  not_automated_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_6  automated1_result">2 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_6  automated2_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_6  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_7  not_automated_result">2 / 5</td>
-                                  <td class="divTableCell noWrap provider_color_7  automated1_result">2 / 5</td>
-                                  <td class="divTableCell noWrap provider_color_7  automated2_result">5 / 5</td>
+                                  <td class="divTableCell noWrap provider_color_7  automated1_result">5 / 5</td>
                                   <td class="divTableCell noWrap provider_color_7  all_automated_result">5 / 5</td>
                               <td class="divTableCell noWrap provider_color_8  not_automated_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_8  automated1_result">3 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_8  automated2_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_8  all_automated_result">3 / 3</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
@@ -1567,61 +1347,45 @@
                                 <li class="divLi noWrap ">0</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable2">
+                          <td class="divTableCell automatable1">
                             <ol>
                                 <li class="divLi noWrap ">1</li>
                                 <li class="divLi noWrap ">0</li>
                                 <li class="divLi noWrap ">1</li>
                                 <li class="divLi noWrap ">1</li>
-                            </ol>
-                          </td>
-                          <td class="divTableCell automatable2">
-                            <ol>
-                                <li class="divLi noWrap ">1</li>
-                                <li class="divLi noWrap ">1</li>
-                                <li class="divLi noWrap ">1</li>
-                                <li class="divLi noWrap ">0</li>
                             </ol>
                           </td>
                           <td class="divTableCell automatable1">
                             <ol>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">1</li>
+                                <li class="divLi noWrap ">1</li>
+                                <li class="divLi noWrap ">1</li>
+                                <li class="divLi noWrap ">0</li>
                             </ol>
                           </td>
                               <td class="divTableCell noWrap provider_color_1  not_automated_result">3 / 4</td>
-                                  <td class="divTableCell noWrap provider_color_1  automated1_result">3 / 4</td>
-                                  <td class="divTableCell noWrap provider_color_1  automated2_result">4 / 4</td>
+                                  <td class="divTableCell noWrap provider_color_1  automated1_result">4 / 4</td>
                                   <td class="divTableCell noWrap provider_color_1  all_automated_result">4 / 4</td>
                               <td class="divTableCell noWrap provider_color_2  not_automated_result">3 / 4</td>
-                                  <td class="divTableCell noWrap provider_color_2  automated1_result">3 / 4</td>
-                                  <td class="divTableCell noWrap provider_color_2  automated2_result">4 / 4</td>
+                                  <td class="divTableCell noWrap provider_color_2  automated1_result">4 / 4</td>
                                   <td class="divTableCell noWrap provider_color_2  all_automated_result">4 / 4</td>
                               <td class="divTableCell noWrap provider_color_3  not_automated_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_3  automated1_result">2 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_3  automated2_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_3  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_4  not_automated_result">1 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_4  automated1_result">1 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_4  automated2_result">2 / 2</td>
+                                  <td class="divTableCell noWrap provider_color_4  automated1_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_4  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_5  not_automated_result">2 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_5  automated1_result">2 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_5  automated2_result">3 / 3</td>
+                                  <td class="divTableCell noWrap provider_color_5  automated1_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_5  all_automated_result">3 / 3</td>
                               <td class="divTableCell noWrap provider_color_6  not_automated_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_6  automated1_result">1 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_6  automated2_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_6  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_7  not_automated_result">4 / 5</td>
-                                  <td class="divTableCell noWrap provider_color_7  automated1_result">4 / 5</td>
-                                  <td class="divTableCell noWrap provider_color_7  automated2_result">5 / 5</td>
+                                  <td class="divTableCell noWrap provider_color_7  automated1_result">5 / 5</td>
                                   <td class="divTableCell noWrap provider_color_7  all_automated_result">5 / 5</td>
                               <td class="divTableCell noWrap provider_color_8  not_automated_result">2 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_8  automated1_result">2 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_8  automated2_result">3 / 3</td>
+                                  <td class="divTableCell noWrap provider_color_8  automated1_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_8  all_automated_result">3 / 3</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
@@ -1654,102 +1418,77 @@
                                 <li class="divLi noWrap ">1</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable2">
+                          <td class="divTableCell automatable1">
                             <ol>
                                 <li class="divLi noWrap ">2</li>
                                 <li class="divLi noWrap ">1</li>
                                 <li class="divLi noWrap ">0</li>
                                 <li class="divLi noWrap ">2</li>
-                            </ol>
-                          </td>
-                          <td class="divTableCell automatable2">
-                            <ol>
-                                <li class="divLi noWrap ">1</li>
-                                <li class="divLi noWrap ">0</li>
-                                <li class="divLi noWrap ">1</li>
-                                <li class="divLi noWrap ">1</li>
                             </ol>
                           </td>
                           <td class="divTableCell automatable1">
                             <ol>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">1</li>
+                                <li class="divLi noWrap ">0</li>
+                                <li class="divLi noWrap ">1</li>
+                                <li class="divLi noWrap ">1</li>
                             </ol>
                           </td>
                               <td class="divTableCell noWrap provider_color_1  not_automated_result">4 / 5</td>
-                                  <td class="divTableCell noWrap provider_color_1  automated1_result">4 / 5</td>
-                                  <td class="divTableCell noWrap provider_color_1  automated2_result">5 / 5</td>
+                                  <td class="divTableCell noWrap provider_color_1  automated1_result">5 / 5</td>
                                   <td class="divTableCell noWrap provider_color_1  all_automated_result">5 / 5</td>
                               <td class="divTableCell noWrap provider_color_2  not_automated_result">4 / 5</td>
-                                  <td class="divTableCell noWrap provider_color_2  automated1_result">4 / 5</td>
-                                  <td class="divTableCell noWrap provider_color_2  automated2_result">5 / 5</td>
+                                  <td class="divTableCell noWrap provider_color_2  automated1_result">5 / 5</td>
                                   <td class="divTableCell noWrap provider_color_2  all_automated_result">5 / 5</td>
                               <td class="divTableCell noWrap provider_color_3  not_automated_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_3  automated1_result">3 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_3  automated2_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_3  all_automated_result">3 / 3</td>
                               <td class="divTableCell noWrap provider_color_4  not_automated_result">1 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_4  automated1_result">1 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_4  automated2_result">2 / 2</td>
+                                  <td class="divTableCell noWrap provider_color_4  automated1_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_4  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_5  not_automated_result">1 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_5  automated1_result">1 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_5  automated2_result">2 / 2</td>
+                                  <td class="divTableCell noWrap provider_color_5  automated1_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_5  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_6  not_automated_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_6  automated1_result">3 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_6  automated2_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_6  all_automated_result">3 / 3</td>
                               <td class="divTableCell noWrap provider_color_7  not_automated_result">4 / 5</td>
-                                  <td class="divTableCell noWrap provider_color_7  automated1_result">4 / 5</td>
-                                  <td class="divTableCell noWrap provider_color_7  automated2_result">5 / 5</td>
+                                  <td class="divTableCell noWrap provider_color_7  automated1_result">5 / 5</td>
                                   <td class="divTableCell noWrap provider_color_7  all_automated_result">5 / 5</td>
                               <td class="divTableCell noWrap provider_color_8  not_automated_result">4 / 5</td>
-                                  <td class="divTableCell noWrap provider_color_8  automated1_result">4 / 5</td>
-                                  <td class="divTableCell noWrap provider_color_8  automated2_result">5 / 5</td>
+                                  <td class="divTableCell noWrap provider_color_8  automated1_result">5 / 5</td>
                                   <td class="divTableCell noWrap provider_color_8  all_automated_result">5 / 5</td>
                         </tr>
                       <tr class="divTableAlternatingRow">
                       <td class="divTableCell"></td>
                         <td class="divTableCell "></td>
                         <td class="divTableCell "></td>
-                        <td class="divTableCell automatable2"></td>
-                        <td class="divTableCell automatable2"></td>
+                        <td class="divTableCell automatable1"></td>
                         <td class="divTableCell automatable1"></td>
                       <td class="divTableCell divBold">Cumulative Total</td>
-                            <td class="divTableCell divBold noWrap provider_color_1 mips_2020 not_automated_result">24 / 35</td>
-                                <td class="divTableCell divBold noWrap provider_color_1 mips_2020 automated1_result">26 / 35</td>
-                                <td class="divTableCell divBold noWrap provider_color_1 mips_2020 automated2_result">33 / 35</td>
+                            <td class="divTableCell divBold noWrap provider_color_1 mips_2020 not_automated_result">26 / 35</td>
+                                <td class="divTableCell divBold noWrap provider_color_1 mips_2020 automated1_result">35 / 35</td>
                                 <td class="divTableCell divBold noWrap provider_color_1  all_automated_result">35 / 35</td>
-                            <td class="divTableCell divBold noWrap provider_color_2 mips_2020 not_automated_result">30 / 41</td>
-                                <td class="divTableCell divBold noWrap provider_color_2 mips_2020 automated1_result">34 / 41</td>
-                                <td class="divTableCell divBold noWrap provider_color_2 mips_2020 automated2_result">36 / 41</td>
+                            <td class="divTableCell divBold noWrap provider_color_2 mips_2020 not_automated_result">34 / 41</td>
+                                <td class="divTableCell divBold noWrap provider_color_2 mips_2020 automated1_result">41 / 41</td>
                                 <td class="divTableCell divBold noWrap provider_color_2  all_automated_result">41 / 41</td>
-                            <td class="divTableCell divBold noWrap provider_color_3 mips_2020 not_automated_result">15 / 18</td>
-                                <td class="divTableCell divBold noWrap provider_color_3 mips_2020 automated1_result">16 / 18</td>
-                                <td class="divTableCell divBold noWrap provider_color_3 mips_2020 automated2_result">17 / 18</td>
+                            <td class="divTableCell divBold noWrap provider_color_3 mips_2020 not_automated_result">16 / 18</td>
+                                <td class="divTableCell divBold noWrap provider_color_3 mips_2020 automated1_result">18 / 18</td>
                                 <td class="divTableCell divBold noWrap provider_color_3  all_automated_result">18 / 18</td>
-                            <td class="divTableCell divBold noWrap provider_color_4 mips_2020 not_automated_result">9 / 17</td>
-                                <td class="divTableCell divBold noWrap provider_color_4 mips_2020 automated1_result">10 / 17</td>
-                                <td class="divTableCell divBold noWrap provider_color_4 mips_2020 automated2_result">16 / 17</td>
+                            <td class="divTableCell divBold noWrap provider_color_4 mips_2020 not_automated_result">10 / 17</td>
+                                <td class="divTableCell divBold noWrap provider_color_4 mips_2020 automated1_result">17 / 17</td>
                                 <td class="divTableCell divBold noWrap provider_color_4  all_automated_result">17 / 17</td>
-                            <td class="divTableCell divBold noWrap provider_color_5 mips_2020 not_automated_result">13 / 21</td>
-                                <td class="divTableCell divBold noWrap provider_color_5 mips_2020 automated1_result">15 / 21</td>
-                                <td class="divTableCell divBold noWrap provider_color_5 mips_2020 automated2_result">18 / 21</td>
+                            <td class="divTableCell divBold noWrap provider_color_5 mips_2020 not_automated_result">15 / 21</td>
+                                <td class="divTableCell divBold noWrap provider_color_5 mips_2020 automated1_result">21 / 21</td>
                                 <td class="divTableCell divBold noWrap provider_color_5  all_automated_result">21 / 21</td>
-                            <td class="divTableCell divBold noWrap provider_color_6 mips_2020 not_automated_result">17 / 20</td>
-                                <td class="divTableCell divBold noWrap provider_color_6 mips_2020 automated1_result">19 / 20</td>
-                                <td class="divTableCell divBold noWrap provider_color_6 mips_2020 automated2_result">17 / 20</td>
+                            <td class="divTableCell divBold noWrap provider_color_6 mips_2020 not_automated_result">19 / 20</td>
+                                <td class="divTableCell divBold noWrap provider_color_6 mips_2020 automated1_result">20 / 20</td>
                                 <td class="divTableCell divBold noWrap provider_color_6  all_automated_result">20 / 20</td>
-                            <td class="divTableCell divBold noWrap provider_color_7 mips_2020 not_automated_result">28 / 39</td>
-                                <td class="divTableCell divBold noWrap provider_color_7 mips_2020 automated1_result">31 / 39</td>
-                                <td class="divTableCell divBold noWrap provider_color_7 mips_2020 automated2_result">35 / 39</td>
+                            <td class="divTableCell divBold noWrap provider_color_7 mips_2020 not_automated_result">31 / 39</td>
+                                <td class="divTableCell divBold noWrap provider_color_7 mips_2020 automated1_result">39 / 39</td>
                                 <td class="divTableCell divBold noWrap provider_color_7  all_automated_result">39 / 39</td>
-                            <td class="divTableCell divBold noWrap provider_color_8 mips_2020 not_automated_result">26 / 37</td>
-                                <td class="divTableCell divBold noWrap provider_color_8 mips_2020 automated1_result">29 / 37</td>
-                                <td class="divTableCell divBold noWrap provider_color_8 mips_2020 automated2_result">34 / 37</td>
+                            <td class="divTableCell divBold noWrap provider_color_8 mips_2020 not_automated_result">29 / 37</td>
+                                <td class="divTableCell divBold noWrap provider_color_8 mips_2020 automated1_result">37 / 37</td>
                                 <td class="divTableCell divBold noWrap provider_color_8  all_automated_result">37 / 37</td>
                       </tr>
                     </div>
@@ -1763,15 +1502,14 @@
                         <th class="divTableBorderlessCell"/>
                         <th class="divTableBorderlessCell"/>
                         <th class='denom_color divTableBorderlessCell' colspan='1'>Denominator Criteria</th>
-                        <th class='numer_color divTableBorderlessCell numerAll' colspan='2'>Numerator Criteria</th><th class='numer_color divTableBorderlessCell numer1' colspan='1'>Numerator Criteria</th><th class='numer_color divTableBorderlessCell numer2' colspan='1'>Numerator Criteria</th>
+                        <th class='numer_color divTableBorderlessCell numerAll' colspan='1'>Numerator Criteria</th><th class='numer_color divTableBorderlessCell numer1' colspan='1'>Numerator Criteria</th>
                         <th class='result_color divTableBorderlessCell resultsAll' colspan='8'>Results</th><th class='result_color divTableBorderlessCell resultsMips' colspan='8'>Results</th>
                       </tr>
                       <tr class="divTableRow">
                         <th class="divTableCell blueItallic">Patient</th>
                         <th class="divTableCell blueItallic">Provider Information</th>
                           <th class="divTableCell blueItallic divSmall ">Number of Prescriptions Written During Reporting / Performance Period (not controlled)</th>
-                          <th class="divTableCell blueItallic divSmall automatable2">Number of Prescriptions (not controlled) Generated and Transmitted Electronically</th>
-                          <th class="divTableCell blueItallic divSmall automatable1">Prescription(s) Queried for Drug Formulary</th>
+                          <th class="divTableCell blueItallic divSmall automatable1">Number of Prescriptions (not controlled) Generated and Transmitted Electronically</th>
                           <th class="divTableCell blueItallic divSmall  mips_2020">Provider 1</th>
                           <th class="divTableCell blueItallic divSmall  mips_2020">Provider 2</th>
                           <th class="divTableCell blueItallic divSmall  mips_2020">TIN A / Provider 1</th>
@@ -1803,7 +1541,7 @@
                                 <li class="divLi noWrap ">1</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable2">
+                          <td class="divTableCell automatable1">
                             <ol>
                                 <li class="divLi noWrap ">1</li>
                                 <li class="divLi noWrap ">1</li>
@@ -1811,45 +1549,29 @@
                                 <li class="divLi noWrap ">1</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable1">
-                            <ol>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                            </ol>
-                          </td>
                               <td class="divTableCell noWrap provider_color_1  not_automated_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_1  automated1_result">2 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_1  automated2_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_1  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_2  not_automated_result">1 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_2  automated1_result">1 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_2  automated2_result">2 / 2</td>
+                                  <td class="divTableCell noWrap provider_color_2  automated1_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_2  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_3  not_automated_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_3  automated1_result">1 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_3  automated2_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_3  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_4  not_automated_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_4  automated1_result">1 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_4  automated2_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_4  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_5  not_automated_result">0 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_5  automated1_result">0 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_5  automated2_result">1 / 1</td>
+                                  <td class="divTableCell noWrap provider_color_5  automated1_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_5  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_6  not_automated_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_6  automated1_result">1 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_6  automated2_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_6  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_7  not_automated_result">1 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_7  automated1_result">1 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_7  automated2_result">2 / 2</td>
+                                  <td class="divTableCell noWrap provider_color_7  automated1_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_7  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_8  not_automated_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_8  automated1_result">2 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_8  automated2_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_8  all_automated_result">2 / 2</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
@@ -1874,7 +1596,7 @@
                                 <li class="divLi noWrap ">2</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable2">
+                          <td class="divTableCell automatable1">
                             <ol>
                                 <li class="divLi noWrap ">0</li>
                                 <li class="divLi noWrap ">1</li>
@@ -1882,45 +1604,29 @@
                                 <li class="divLi noWrap ">2</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable1">
-                            <ol>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                            </ol>
-                          </td>
                               <td class="divTableCell noWrap provider_color_1  not_automated_result">1 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_1  automated1_result">1 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_1  automated2_result">2 / 2</td>
+                                  <td class="divTableCell noWrap provider_color_1  automated1_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_1  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_2  not_automated_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_2  automated1_result">3 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_2  automated2_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_2  all_automated_result">3 / 3</td>
                               <td class="divTableCell noWrap provider_color_3  not_automated_result">0 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_3  automated1_result">0 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_3  automated2_result">1 / 1</td>
+                                  <td class="divTableCell noWrap provider_color_3  automated1_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_3  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_4  not_automated_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_4  automated1_result">1 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_4  automated2_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_4  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_5  not_automated_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_5  automated1_result">1 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_5  automated2_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_5  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_6  not_automated_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_6  automated1_result">2 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_6  automated2_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_6  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_7  not_automated_result">1 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_7  automated1_result">1 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_7  automated2_result">2 / 2</td>
+                                  <td class="divTableCell noWrap provider_color_7  automated1_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_7  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_8  not_automated_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_8  automated1_result">3 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_8  automated2_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_8  all_automated_result">3 / 3</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
@@ -1945,7 +1651,7 @@
                                 <li class="divLi noWrap ">1</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable2">
+                          <td class="divTableCell automatable1">
                             <ol>
                                 <li class="divLi noWrap ">1</li>
                                 <li class="divLi noWrap ">0</li>
@@ -1953,45 +1659,29 @@
                                 <li class="divLi noWrap ">1</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable1">
-                            <ol>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                            </ol>
-                          </td>
                               <td class="divTableCell noWrap provider_color_1  not_automated_result">1 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_1  automated1_result">1 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_1  automated2_result">2 / 2</td>
+                                  <td class="divTableCell noWrap provider_color_1  automated1_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_1  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_2  not_automated_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_2  automated1_result">2 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_2  automated2_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_2  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_3  not_automated_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_3  automated1_result">1 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_3  automated2_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_3  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_4  not_automated_result">0 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_4  automated1_result">0 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_4  automated2_result">1 / 1</td>
+                                  <td class="divTableCell noWrap provider_color_4  automated1_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_4  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_5  not_automated_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_5  automated1_result">1 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_5  automated2_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_5  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_6  not_automated_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_6  automated1_result">1 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_6  automated2_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_6  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_7  not_automated_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_7  automated1_result">2 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_7  automated2_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_7  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_8  not_automated_result">1 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_8  automated1_result">1 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_8  automated2_result">2 / 2</td>
+                                  <td class="divTableCell noWrap provider_color_8  automated1_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_8  all_automated_result">2 / 2</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
@@ -2016,7 +1706,7 @@
                                 <li class="divLi noWrap ">2</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable2">
+                          <td class="divTableCell automatable1">
                             <ol>
                                 <li class="divLi noWrap ">2</li>
                                 <li class="divLi noWrap ">1</li>
@@ -2024,84 +1714,59 @@
                                 <li class="divLi noWrap ">2</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable1">
-                            <ol>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                            </ol>
-                          </td>
                               <td class="divTableCell noWrap provider_color_1  not_automated_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_1  automated1_result">3 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_1  automated2_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_1  all_automated_result">3 / 3</td>
                               <td class="divTableCell noWrap provider_color_2  not_automated_result">2 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_2  automated1_result">2 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_2  automated2_result">3 / 3</td>
+                                  <td class="divTableCell noWrap provider_color_2  automated1_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_2  all_automated_result">3 / 3</td>
                               <td class="divTableCell noWrap provider_color_3  not_automated_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_3  automated1_result">2 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_3  automated2_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_3  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_4  not_automated_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_4  automated1_result">1 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_4  automated2_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_4  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_5  not_automated_result">0 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_5  automated1_result">0 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_5  automated2_result">1 / 1</td>
+                                  <td class="divTableCell noWrap provider_color_5  automated1_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_5  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_6  not_automated_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_6  automated1_result">2 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_6  automated2_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_6  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_7  not_automated_result">2 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_7  automated1_result">2 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_7  automated2_result">3 / 3</td>
+                                  <td class="divTableCell noWrap provider_color_7  automated1_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_7  all_automated_result">3 / 3</td>
                               <td class="divTableCell noWrap provider_color_8  not_automated_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_8  automated1_result">3 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_8  automated2_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_8  all_automated_result">3 / 3</td>
                         </tr>
                       <tr class="divTableAlternatingRow">
                       <td class="divTableCell"></td>
                         <td class="divTableCell "></td>
-                        <td class="divTableCell automatable2"></td>
                         <td class="divTableCell automatable1"></td>
                       <td class="divTableCell divBold">Cumulative Total</td>
-                            <td class="divTableCell divBold noWrap provider_color_1 mips_2020 not_automated_result">16 / 19</td>
-                                <td class="divTableCell divBold noWrap provider_color_1 mips_2020 automated1_result">17 / 19</td>
-                                <td class="divTableCell divBold noWrap provider_color_1 mips_2020 automated2_result">18 / 19</td>
+                            <td class="divTableCell divBold noWrap provider_color_1 mips_2020 not_automated_result">17 / 19</td>
+                                <td class="divTableCell divBold noWrap provider_color_1 mips_2020 automated1_result">19 / 19</td>
                                 <td class="divTableCell divBold noWrap provider_color_1  all_automated_result">19 / 19</td>
-                            <td class="divTableCell divBold noWrap provider_color_2 mips_2020 not_automated_result">17 / 23</td>
-                                <td class="divTableCell divBold noWrap provider_color_2 mips_2020 automated1_result">20 / 23</td>
-                                <td class="divTableCell divBold noWrap provider_color_2 mips_2020 automated2_result">20 / 23</td>
+                            <td class="divTableCell divBold noWrap provider_color_2 mips_2020 not_automated_result">20 / 23</td>
+                                <td class="divTableCell divBold noWrap provider_color_2 mips_2020 automated1_result">23 / 23</td>
                                 <td class="divTableCell divBold noWrap provider_color_2  all_automated_result">23 / 23</td>
                             <td class="divTableCell divBold noWrap provider_color_3 mips_2020 not_automated_result">9 / 10</td>
-                                <td class="divTableCell divBold noWrap provider_color_3 mips_2020 automated1_result">9 / 10</td>
-                                <td class="divTableCell divBold noWrap provider_color_3 mips_2020 automated2_result">5 / 10</td>
+                                <td class="divTableCell divBold noWrap provider_color_3 mips_2020 automated1_result">10 / 10</td>
                                 <td class="divTableCell divBold noWrap provider_color_3  all_automated_result">10 / 10</td>
-                            <td class="divTableCell divBold noWrap provider_color_4 mips_2020 not_automated_result">7 / 9</td>
-                                <td class="divTableCell divBold noWrap provider_color_4 mips_2020 automated1_result">8 / 9</td>
-                                <td class="divTableCell divBold noWrap provider_color_4 mips_2020 automated2_result">8 / 9</td>
+                            <td class="divTableCell divBold noWrap provider_color_4 mips_2020 not_automated_result">8 / 9</td>
+                                <td class="divTableCell divBold noWrap provider_color_4 mips_2020 automated1_result">9 / 9</td>
                                 <td class="divTableCell divBold noWrap provider_color_4  all_automated_result">9 / 9</td>
-                            <td class="divTableCell divBold noWrap provider_color_5 mips_2020 not_automated_result">6 / 10</td>
-                                <td class="divTableCell divBold noWrap provider_color_5 mips_2020 automated1_result">8 / 10</td>
-                                <td class="divTableCell divBold noWrap provider_color_5 mips_2020 automated2_result">8 / 10</td>
+                            <td class="divTableCell divBold noWrap provider_color_5 mips_2020 not_automated_result">8 / 10</td>
+                                <td class="divTableCell divBold noWrap provider_color_5 mips_2020 automated1_result">10 / 10</td>
                                 <td class="divTableCell divBold noWrap provider_color_5  all_automated_result">10 / 10</td>
-                            <td class="divTableCell divBold noWrap provider_color_6 mips_2020 not_automated_result">11 / 13</td>
-                                <td class="divTableCell divBold noWrap provider_color_6 mips_2020 automated1_result">12 / 13</td>
-                                <td class="divTableCell divBold noWrap provider_color_6 mips_2020 automated2_result">12 / 13</td>
+                            <td class="divTableCell divBold noWrap provider_color_6 mips_2020 not_automated_result">12 / 13</td>
+                                <td class="divTableCell divBold noWrap provider_color_6 mips_2020 automated1_result">13 / 13</td>
                                 <td class="divTableCell divBold noWrap provider_color_6  all_automated_result">13 / 13</td>
-                            <td class="divTableCell divBold noWrap provider_color_7 mips_2020 not_automated_result">15 / 20</td>
-                                <td class="divTableCell divBold noWrap provider_color_7 mips_2020 automated1_result">17 / 20</td>
-                                <td class="divTableCell divBold noWrap provider_color_7 mips_2020 automated2_result">18 / 20</td>
+                            <td class="divTableCell divBold noWrap provider_color_7 mips_2020 not_automated_result">17 / 20</td>
+                                <td class="divTableCell divBold noWrap provider_color_7 mips_2020 automated1_result">20 / 20</td>
                                 <td class="divTableCell divBold noWrap provider_color_7  all_automated_result">20 / 20</td>
-                            <td class="divTableCell divBold noWrap provider_color_8 mips_2020 not_automated_result">18 / 22</td>
-                                <td class="divTableCell divBold noWrap provider_color_8 mips_2020 automated1_result">20 / 22</td>
-                                <td class="divTableCell divBold noWrap provider_color_8 mips_2020 automated2_result">20 / 22</td>
+                            <td class="divTableCell divBold noWrap provider_color_8 mips_2020 not_automated_result">20 / 22</td>
+                                <td class="divTableCell divBold noWrap provider_color_8 mips_2020 automated1_result">22 / 22</td>
                                 <td class="divTableCell divBold noWrap provider_color_8  all_automated_result">22 / 22</td>
                       </tr>
                     </div>
@@ -2118,7 +1783,7 @@
                         <th class="divTableBorderlessCell"/>
                         <th class="divTableBorderlessCell"/>
                         <th class='denom_color divTableBorderlessCell' colspan='2'>Denominator Criteria</th>
-                        <th class='numer_color divTableBorderlessCell numerAll' colspan='3'>Numerator Criteria</th><th class='numer_color divTableBorderlessCell numer1' colspan='1'>Numerator Criteria</th><th class='numer_color divTableBorderlessCell numer2' colspan='2'>Numerator Criteria</th>
+                        <th class='numer_color divTableBorderlessCell numerAll' colspan='2'>Numerator Criteria</th><th class='numer_color divTableBorderlessCell numer1' colspan='2'>Numerator Criteria</th>
                         <th class='result_color divTableBorderlessCell resultsAll' colspan='8'>Results</th><th class='result_color divTableBorderlessCell resultsMips' colspan='8'>Results</th>
                       </tr>
                       <tr class="divTableRow">
@@ -2126,9 +1791,8 @@
                         <th class="divTableCell blueItallic">Provider Information</th>
                           <th class="divTableCell blueItallic divSmall ">Number of Prescriptions Written During Reporting / Performance Period (not controlled)</th>
                           <th class="divTableCell blueItallic divSmall ">Number of Controlled Prescriptions Written During Reporting / Performance Period </th>
-                          <th class="divTableCell blueItallic divSmall automatable2">Number of Prescriptions (not controlled) Generated and Transmitted Electronically</th>
-                          <th class="divTableCell blueItallic divSmall automatable2">Number of Controlled Substances Generated and Transmitted Electronically</th>
-                          <th class="divTableCell blueItallic divSmall automatable1">Prescription(s) Queried for Drug Formulary</th>
+                          <th class="divTableCell blueItallic divSmall automatable1">Number of Prescriptions (not controlled) Generated and Transmitted Electronically</th>
+                          <th class="divTableCell blueItallic divSmall automatable1">Number of Controlled Substances Generated and Transmitted Electronically</th>
                           <th class="divTableCell blueItallic divSmall  mips_2020">Provider 1</th>
                           <th class="divTableCell blueItallic divSmall  mips_2020">Provider 2</th>
                           <th class="divTableCell blueItallic divSmall  mips_2020">TIN A / Provider 1</th>
@@ -2168,15 +1832,7 @@
                                 <li class="divLi noWrap ">1</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable2">
-                            <ol>
-                                <li class="divLi noWrap ">0</li>
-                                <li class="divLi noWrap ">0</li>
-                                <li class="divLi noWrap ">0</li>
-                                <li class="divLi noWrap ">0</li>
-                            </ol>
-                          </td>
-                          <td class="divTableCell automatable2">
+                          <td class="divTableCell automatable1">
                             <ol>
                                 <li class="divLi noWrap ">0</li>
                                 <li class="divLi noWrap ">0</li>
@@ -2186,43 +1842,35 @@
                           </td>
                           <td class="divTableCell automatable1">
                             <ol>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">0</li>
+                                <li class="divLi noWrap ">0</li>
+                                <li class="divLi noWrap ">0</li>
+                                <li class="divLi noWrap ">0</li>
                             </ol>
                           </td>
                               <td class="divTableCell noWrap provider_color_1  not_automated_result">0 / 4</td>
-                                  <td class="divTableCell noWrap provider_color_1  automated1_result">0 / 4</td>
-                                  <td class="divTableCell noWrap provider_color_1  automated2_result">4 / 4</td>
+                                  <td class="divTableCell noWrap provider_color_1  automated1_result">4 / 4</td>
                                   <td class="divTableCell noWrap provider_color_1  all_automated_result">4 / 4</td>
                               <td class="divTableCell noWrap provider_color_2  not_automated_result">0 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_2  automated1_result">0 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_2  automated2_result">3 / 3</td>
+                                  <td class="divTableCell noWrap provider_color_2  automated1_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_2  all_automated_result">3 / 3</td>
                               <td class="divTableCell noWrap provider_color_3  not_automated_result">0 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_3  automated1_result">0 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_3  automated2_result">2 / 2</td>
+                                  <td class="divTableCell noWrap provider_color_3  automated1_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_3  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_4  not_automated_result">0 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_4  automated1_result">0 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_4  automated2_result">2 / 2</td>
+                                  <td class="divTableCell noWrap provider_color_4  automated1_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_4  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_5  not_automated_result">0 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_5  automated1_result">0 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_5  automated2_result">1 / 1</td>
+                                  <td class="divTableCell noWrap provider_color_5  automated1_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_5  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_6  not_automated_result">0 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_6  automated1_result">0 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_6  automated2_result">2 / 2</td>
+                                  <td class="divTableCell noWrap provider_color_6  automated1_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_6  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_7  not_automated_result">0 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_7  automated1_result">0 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_7  automated2_result">3 / 3</td>
+                                  <td class="divTableCell noWrap provider_color_7  automated1_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_7  all_automated_result">3 / 3</td>
                               <td class="divTableCell noWrap provider_color_8  not_automated_result">0 / 4</td>
-                                  <td class="divTableCell noWrap provider_color_8  automated1_result">0 / 4</td>
-                                  <td class="divTableCell noWrap provider_color_8  automated2_result">4 / 4</td>
+                                  <td class="divTableCell noWrap provider_color_8  automated1_result">4 / 4</td>
                                   <td class="divTableCell noWrap provider_color_8  all_automated_result">4 / 4</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
@@ -2255,61 +1903,45 @@
                                 <li class="divLi noWrap ">1</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable2">
+                          <td class="divTableCell automatable1">
                             <ol>
                                 <li class="divLi noWrap ">1</li>
                                 <li class="divLi noWrap ">1</li>
                                 <li class="divLi noWrap ">1</li>
-                                <li class="divLi noWrap ">1</li>
-                            </ol>
-                          </td>
-                          <td class="divTableCell automatable2">
-                            <ol>
-                                <li class="divLi noWrap ">0</li>
-                                <li class="divLi noWrap ">0</li>
-                                <li class="divLi noWrap ">0</li>
                                 <li class="divLi noWrap ">1</li>
                             </ol>
                           </td>
                           <td class="divTableCell automatable1">
                             <ol>
-                                <li class="divLi noWrap ">No</li>
-                                <li class="divLi noWrap ">No</li>
-                                <li class="divLi noWrap ">No</li>
-                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">0</li>
+                                <li class="divLi noWrap ">0</li>
+                                <li class="divLi noWrap ">0</li>
+                                <li class="divLi noWrap ">1</li>
                             </ol>
                           </td>
-                              <td class="divTableCell noWrap provider_color_1  not_automated_result">0 / 2</td>
+                              <td class="divTableCell noWrap provider_color_1  not_automated_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_1  automated1_result">2 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_1  automated2_result">0 / 2</td>
                                   <td class="divTableCell noWrap provider_color_1  all_automated_result">2 / 2</td>
-                              <td class="divTableCell noWrap provider_color_2  not_automated_result">0 / 4</td>
-                                  <td class="divTableCell noWrap provider_color_2  automated1_result">3 / 4</td>
-                                  <td class="divTableCell noWrap provider_color_2  automated2_result">0 / 4</td>
+                              <td class="divTableCell noWrap provider_color_2  not_automated_result">3 / 4</td>
+                                  <td class="divTableCell noWrap provider_color_2  automated1_result">4 / 4</td>
                                   <td class="divTableCell noWrap provider_color_2  all_automated_result">4 / 4</td>
-                              <td class="divTableCell noWrap provider_color_3  not_automated_result">0 / 1</td>
+                              <td class="divTableCell noWrap provider_color_3  not_automated_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_3  automated1_result">1 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_3  automated2_result">0 / 1</td>
                                   <td class="divTableCell noWrap provider_color_3  all_automated_result">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_4  not_automated_result">0 / 1</td>
+                              <td class="divTableCell noWrap provider_color_4  not_automated_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_4  automated1_result">1 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_4  automated2_result">0 / 1</td>
                                   <td class="divTableCell noWrap provider_color_4  all_automated_result">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_5  not_automated_result">0 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_5  automated1_result">1 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_5  automated2_result">0 / 2</td>
+                              <td class="divTableCell noWrap provider_color_5  not_automated_result">1 / 2</td>
+                                  <td class="divTableCell noWrap provider_color_5  automated1_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_5  all_automated_result">2 / 2</td>
-                              <td class="divTableCell noWrap provider_color_6  not_automated_result">0 / 2</td>
+                              <td class="divTableCell noWrap provider_color_6  not_automated_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_6  automated1_result">2 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_6  automated2_result">0 / 2</td>
                                   <td class="divTableCell noWrap provider_color_6  all_automated_result">2 / 2</td>
-                              <td class="divTableCell noWrap provider_color_7  not_automated_result">0 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_7  automated1_result">2 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_7  automated2_result">0 / 3</td>
+                              <td class="divTableCell noWrap provider_color_7  not_automated_result">2 / 3</td>
+                                  <td class="divTableCell noWrap provider_color_7  automated1_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_7  all_automated_result">3 / 3</td>
-                              <td class="divTableCell noWrap provider_color_8  not_automated_result">0 / 3</td>
+                              <td class="divTableCell noWrap provider_color_8  not_automated_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_8  automated1_result">3 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_8  automated2_result">0 / 3</td>
                                   <td class="divTableCell noWrap provider_color_8  all_automated_result">3 / 3</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
@@ -2342,15 +1974,7 @@
                                 <li class="divLi noWrap ">0</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable2">
-                            <ol>
-                                <li class="divLi noWrap ">0</li>
-                                <li class="divLi noWrap ">0</li>
-                                <li class="divLi noWrap ">0</li>
-                                <li class="divLi noWrap ">0</li>
-                            </ol>
-                          </td>
-                          <td class="divTableCell automatable2">
+                          <td class="divTableCell automatable1">
                             <ol>
                                 <li class="divLi noWrap ">0</li>
                                 <li class="divLi noWrap ">0</li>
@@ -2360,84 +1984,67 @@
                           </td>
                           <td class="divTableCell automatable1">
                             <ol>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">0</li>
+                                <li class="divLi noWrap ">0</li>
+                                <li class="divLi noWrap ">0</li>
+                                <li class="divLi noWrap ">0</li>
                             </ol>
                           </td>
                               <td class="divTableCell noWrap provider_color_1  not_automated_result">0 / 4</td>
-                                  <td class="divTableCell noWrap provider_color_1  automated1_result">0 / 4</td>
-                                  <td class="divTableCell noWrap provider_color_1  automated2_result">4 / 4</td>
+                                  <td class="divTableCell noWrap provider_color_1  automated1_result">4 / 4</td>
                                   <td class="divTableCell noWrap provider_color_1  all_automated_result">4 / 4</td>
                               <td class="divTableCell noWrap provider_color_2  not_automated_result">0 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_2  automated1_result">0 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_2  automated2_result">3 / 3</td>
+                                  <td class="divTableCell noWrap provider_color_2  automated1_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_2  all_automated_result">3 / 3</td>
                               <td class="divTableCell noWrap provider_color_3  not_automated_result">0 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_3  automated1_result">0 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_3  automated2_result">2 / 2</td>
+                                  <td class="divTableCell noWrap provider_color_3  automated1_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_3  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_4  not_automated_result">0 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_4  automated1_result">0 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_4  automated2_result">2 / 2</td>
+                                  <td class="divTableCell noWrap provider_color_4  automated1_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_4  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_5  not_automated_result">0 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_5  automated1_result">0 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_5  automated2_result">2 / 2</td>
+                                  <td class="divTableCell noWrap provider_color_5  automated1_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_5  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_6  not_automated_result">0 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_6  automated1_result">0 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_6  automated2_result">1 / 1</td>
+                                  <td class="divTableCell noWrap provider_color_6  automated1_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_6  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_7  not_automated_result">0 / 4</td>
-                                  <td class="divTableCell noWrap provider_color_7  automated1_result">0 / 4</td>
-                                  <td class="divTableCell noWrap provider_color_7  automated2_result">4 / 4</td>
+                                  <td class="divTableCell noWrap provider_color_7  automated1_result">4 / 4</td>
                                   <td class="divTableCell noWrap provider_color_7  all_automated_result">4 / 4</td>
                               <td class="divTableCell noWrap provider_color_8  not_automated_result">0 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_8  automated1_result">0 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_8  automated2_result">3 / 3</td>
+                                  <td class="divTableCell noWrap provider_color_8  automated1_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_8  all_automated_result">3 / 3</td>
                         </tr>
                       <tr class="divTableAlternatingRow">
                       <td class="divTableCell"></td>
                         <td class="divTableCell "></td>
                         <td class="divTableCell "></td>
-                        <td class="divTableCell automatable2"></td>
-                        <td class="divTableCell automatable2"></td>
+                        <td class="divTableCell automatable1"></td>
                         <td class="divTableCell automatable1"></td>
                       <td class="divTableCell divBold">Cumulative Total</td>
-                            <td class="divTableCell divBold noWrap provider_color_1 mips_2020 not_automated_result">24 / 45</td>
-                                <td class="divTableCell divBold noWrap provider_color_1 mips_2020 automated1_result">28 / 45</td>
-                                <td class="divTableCell divBold noWrap provider_color_1 mips_2020 automated2_result">41 / 45</td>
+                            <td class="divTableCell divBold noWrap provider_color_1 mips_2020 not_automated_result">28 / 45</td>
+                                <td class="divTableCell divBold noWrap provider_color_1 mips_2020 automated1_result">45 / 45</td>
                                 <td class="divTableCell divBold noWrap provider_color_1  all_automated_result">45 / 45</td>
-                            <td class="divTableCell divBold noWrap provider_color_2 mips_2020 not_automated_result">30 / 51</td>
-                                <td class="divTableCell divBold noWrap provider_color_2 mips_2020 automated1_result">37 / 51</td>
-                                <td class="divTableCell divBold noWrap provider_color_2 mips_2020 automated2_result">42 / 51</td>
+                            <td class="divTableCell divBold noWrap provider_color_2 mips_2020 not_automated_result">37 / 51</td>
+                                <td class="divTableCell divBold noWrap provider_color_2 mips_2020 automated1_result">51 / 51</td>
                                 <td class="divTableCell divBold noWrap provider_color_2  all_automated_result">51 / 51</td>
-                            <td class="divTableCell divBold noWrap provider_color_3 mips_2020 not_automated_result">15 / 23</td>
-                                <td class="divTableCell divBold noWrap provider_color_3 mips_2020 automated1_result">17 / 23</td>
-                                <td class="divTableCell divBold noWrap provider_color_3 mips_2020 automated2_result">21 / 23</td>
+                            <td class="divTableCell divBold noWrap provider_color_3 mips_2020 not_automated_result">17 / 23</td>
+                                <td class="divTableCell divBold noWrap provider_color_3 mips_2020 automated1_result">23 / 23</td>
                                 <td class="divTableCell divBold noWrap provider_color_3  all_automated_result">23 / 23</td>
-                            <td class="divTableCell divBold noWrap provider_color_4 mips_2020 not_automated_result">9 / 22</td>
-                                <td class="divTableCell divBold noWrap provider_color_4 mips_2020 automated1_result">11 / 22</td>
-                                <td class="divTableCell divBold noWrap provider_color_4 mips_2020 automated2_result">20 / 22</td>
+                            <td class="divTableCell divBold noWrap provider_color_4 mips_2020 not_automated_result">11 / 22</td>
+                                <td class="divTableCell divBold noWrap provider_color_4 mips_2020 automated1_result">22 / 22</td>
                                 <td class="divTableCell divBold noWrap provider_color_4  all_automated_result">22 / 22</td>
-                            <td class="divTableCell divBold noWrap provider_color_5 mips_2020 not_automated_result">13 / 26</td>
-                                <td class="divTableCell divBold noWrap provider_color_5 mips_2020 automated1_result">16 / 26</td>
-                                <td class="divTableCell divBold noWrap provider_color_5 mips_2020 automated2_result">21 / 26</td>
+                            <td class="divTableCell divBold noWrap provider_color_5 mips_2020 not_automated_result">16 / 26</td>
+                                <td class="divTableCell divBold noWrap provider_color_5 mips_2020 automated1_result">26 / 26</td>
                                 <td class="divTableCell divBold noWrap provider_color_5  all_automated_result">26 / 26</td>
-                            <td class="divTableCell divBold noWrap provider_color_6 mips_2020 not_automated_result">17 / 25</td>
-                                <td class="divTableCell divBold noWrap provider_color_6 mips_2020 automated1_result">21 / 25</td>
-                                <td class="divTableCell divBold noWrap provider_color_6 mips_2020 automated2_result">20 / 25</td>
+                            <td class="divTableCell divBold noWrap provider_color_6 mips_2020 not_automated_result">21 / 25</td>
+                                <td class="divTableCell divBold noWrap provider_color_6 mips_2020 automated1_result">25 / 25</td>
                                 <td class="divTableCell divBold noWrap provider_color_6  all_automated_result">25 / 25</td>
-                            <td class="divTableCell divBold noWrap provider_color_7 mips_2020 not_automated_result">28 / 49</td>
-                                <td class="divTableCell divBold noWrap provider_color_7 mips_2020 automated1_result">33 / 49</td>
-                                <td class="divTableCell divBold noWrap provider_color_7 mips_2020 automated2_result">42 / 49</td>
+                            <td class="divTableCell divBold noWrap provider_color_7 mips_2020 not_automated_result">33 / 49</td>
+                                <td class="divTableCell divBold noWrap provider_color_7 mips_2020 automated1_result">49 / 49</td>
                                 <td class="divTableCell divBold noWrap provider_color_7  all_automated_result">49 / 49</td>
-                            <td class="divTableCell divBold noWrap provider_color_8 mips_2020 not_automated_result">26 / 47</td>
-                                <td class="divTableCell divBold noWrap provider_color_8 mips_2020 automated1_result">32 / 47</td>
-                                <td class="divTableCell divBold noWrap provider_color_8 mips_2020 automated2_result">41 / 47</td>
+                            <td class="divTableCell divBold noWrap provider_color_8 mips_2020 not_automated_result">32 / 47</td>
+                                <td class="divTableCell divBold noWrap provider_color_8 mips_2020 automated1_result">47 / 47</td>
                                 <td class="divTableCell divBold noWrap provider_color_8  all_automated_result">47 / 47</td>
                       </tr>
                     </div>
@@ -2451,15 +2058,14 @@
                         <th class="divTableBorderlessCell"/>
                         <th class="divTableBorderlessCell"/>
                         <th class='denom_color divTableBorderlessCell' colspan='1'>Denominator Criteria</th>
-                        <th class='numer_color divTableBorderlessCell numerAll' colspan='2'>Numerator Criteria</th><th class='numer_color divTableBorderlessCell numer1' colspan='1'>Numerator Criteria</th><th class='numer_color divTableBorderlessCell numer2' colspan='1'>Numerator Criteria</th>
+                        <th class='numer_color divTableBorderlessCell numerAll' colspan='1'>Numerator Criteria</th><th class='numer_color divTableBorderlessCell numer1' colspan='1'>Numerator Criteria</th>
                         <th class='result_color divTableBorderlessCell resultsAll' colspan='8'>Results</th><th class='result_color divTableBorderlessCell resultsMips' colspan='8'>Results</th>
                       </tr>
                       <tr class="divTableRow">
                         <th class="divTableCell blueItallic">Patient</th>
                         <th class="divTableCell blueItallic">Provider Information</th>
                           <th class="divTableCell blueItallic divSmall ">Number of Prescriptions Written During Reporting / Performance Period (not controlled)</th>
-                          <th class="divTableCell blueItallic divSmall automatable2">Number of Prescriptions (not controlled) Generated and Transmitted Electronically</th>
-                          <th class="divTableCell blueItallic divSmall automatable1">Prescription(s) Queried for Drug Formulary</th>
+                          <th class="divTableCell blueItallic divSmall automatable1">Number of Prescriptions (not controlled) Generated and Transmitted Electronically</th>
                           <th class="divTableCell blueItallic divSmall  mips_2020">Provider 1</th>
                           <th class="divTableCell blueItallic divSmall  mips_2020">Provider 2</th>
                           <th class="divTableCell blueItallic divSmall  mips_2020">TIN A / Provider 1</th>
@@ -2491,53 +2097,37 @@
                                 <li class="divLi noWrap ">1</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable2">
-                            <ol>
-                                <li class="divLi noWrap ">0</li>
-                                <li class="divLi noWrap ">0</li>
-                                <li class="divLi noWrap ">0</li>
-                                <li class="divLi noWrap ">0</li>
-                            </ol>
-                          </td>
                           <td class="divTableCell automatable1">
                             <ol>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">0</li>
+                                <li class="divLi noWrap ">0</li>
+                                <li class="divLi noWrap ">0</li>
+                                <li class="divLi noWrap ">0</li>
                             </ol>
                           </td>
                               <td class="divTableCell noWrap provider_color_1  not_automated_result">0 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_1  automated1_result">0 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_1  automated2_result">2 / 2</td>
+                                  <td class="divTableCell noWrap provider_color_1  automated1_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_1  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_2  not_automated_result">0 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_2  automated1_result">0 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_2  automated2_result">2 / 2</td>
+                                  <td class="divTableCell noWrap provider_color_2  automated1_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_2  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_3  not_automated_result">0 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_3  automated1_result">0 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_3  automated2_result">1 / 1</td>
+                                  <td class="divTableCell noWrap provider_color_3  automated1_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_3  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_4  not_automated_result">0 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_4  automated1_result">0 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_4  automated2_result">1 / 1</td>
+                                  <td class="divTableCell noWrap provider_color_4  automated1_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_4  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_5  not_automated_result">0 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_5  automated1_result">0 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_5  automated2_result">1 / 1</td>
+                                  <td class="divTableCell noWrap provider_color_5  automated1_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_5  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_6  not_automated_result">0 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_6  automated1_result">0 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_6  automated2_result">1 / 1</td>
+                                  <td class="divTableCell noWrap provider_color_6  automated1_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_6  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_7  not_automated_result">0 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_7  automated1_result">0 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_7  automated2_result">2 / 2</td>
+                                  <td class="divTableCell noWrap provider_color_7  automated1_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_7  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_8  not_automated_result">0 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_8  automated1_result">0 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_8  automated2_result">2 / 2</td>
+                                  <td class="divTableCell noWrap provider_color_8  automated1_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_8  all_automated_result">2 / 2</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
@@ -2562,53 +2152,37 @@
                                 <li class="divLi noWrap ">1</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable2">
-                            <ol>
-                                <li class="divLi noWrap ">1</li>
-                                <li class="divLi noWrap ">1</li>
-                                <li class="divLi noWrap ">1</li>
-                                <li class="divLi noWrap ">1</li>
-                            </ol>
-                          </td>
                           <td class="divTableCell automatable1">
                             <ol>
-                                <li class="divLi noWrap ">No</li>
-                                <li class="divLi noWrap ">No</li>
-                                <li class="divLi noWrap ">No</li>
-                                <li class="divLi noWrap ">No</li>
+                                <li class="divLi noWrap ">1</li>
+                                <li class="divLi noWrap ">1</li>
+                                <li class="divLi noWrap ">1</li>
+                                <li class="divLi noWrap ">1</li>
                             </ol>
                           </td>
-                              <td class="divTableCell noWrap provider_color_1  not_automated_result">0 / 2</td>
+                              <td class="divTableCell noWrap provider_color_1  not_automated_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_1  automated1_result">2 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_1  automated2_result">0 / 2</td>
                                   <td class="divTableCell noWrap provider_color_1  all_automated_result">2 / 2</td>
-                              <td class="divTableCell noWrap provider_color_2  not_automated_result">0 / 2</td>
+                              <td class="divTableCell noWrap provider_color_2  not_automated_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_2  automated1_result">2 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_2  automated2_result">0 / 2</td>
                                   <td class="divTableCell noWrap provider_color_2  all_automated_result">2 / 2</td>
-                              <td class="divTableCell noWrap provider_color_3  not_automated_result">0 / 1</td>
+                              <td class="divTableCell noWrap provider_color_3  not_automated_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_3  automated1_result">1 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_3  automated2_result">0 / 1</td>
                                   <td class="divTableCell noWrap provider_color_3  all_automated_result">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_4  not_automated_result">0 / 1</td>
+                              <td class="divTableCell noWrap provider_color_4  not_automated_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_4  automated1_result">1 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_4  automated2_result">0 / 1</td>
                                   <td class="divTableCell noWrap provider_color_4  all_automated_result">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_5  not_automated_result">0 / 1</td>
+                              <td class="divTableCell noWrap provider_color_5  not_automated_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_5  automated1_result">1 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_5  automated2_result">0 / 1</td>
                                   <td class="divTableCell noWrap provider_color_5  all_automated_result">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_6  not_automated_result">0 / 1</td>
+                              <td class="divTableCell noWrap provider_color_6  not_automated_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_6  automated1_result">1 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_6  automated2_result">0 / 1</td>
                                   <td class="divTableCell noWrap provider_color_6  all_automated_result">1 / 1</td>
-                              <td class="divTableCell noWrap provider_color_7  not_automated_result">0 / 2</td>
+                              <td class="divTableCell noWrap provider_color_7  not_automated_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_7  automated1_result">2 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_7  automated2_result">0 / 2</td>
                                   <td class="divTableCell noWrap provider_color_7  all_automated_result">2 / 2</td>
-                              <td class="divTableCell noWrap provider_color_8  not_automated_result">0 / 2</td>
+                              <td class="divTableCell noWrap provider_color_8  not_automated_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_8  automated1_result">2 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_8  automated2_result">0 / 2</td>
                                   <td class="divTableCell noWrap provider_color_8  all_automated_result">2 / 2</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
@@ -2633,92 +2207,67 @@
                                 <li class="divLi noWrap ">1</li>
                             </ol>
                           </td>
-                          <td class="divTableCell automatable2">
-                            <ol>
-                                <li class="divLi noWrap ">0</li>
-                                <li class="divLi noWrap ">0</li>
-                                <li class="divLi noWrap ">0</li>
-                                <li class="divLi noWrap ">0</li>
-                            </ol>
-                          </td>
                           <td class="divTableCell automatable1">
                             <ol>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
-                                <li class="divLi noWrap ">Yes</li>
+                                <li class="divLi noWrap ">0</li>
+                                <li class="divLi noWrap ">0</li>
+                                <li class="divLi noWrap ">0</li>
+                                <li class="divLi noWrap ">0</li>
                             </ol>
                           </td>
                               <td class="divTableCell noWrap provider_color_1  not_automated_result">0 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_1  automated1_result">0 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_1  automated2_result">3 / 3</td>
+                                  <td class="divTableCell noWrap provider_color_1  automated1_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_1  all_automated_result">3 / 3</td>
                               <td class="divTableCell noWrap provider_color_2  not_automated_result">0 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_2  automated1_result">0 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_2  automated2_result">2 / 2</td>
+                                  <td class="divTableCell noWrap provider_color_2  automated1_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_2  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_3  not_automated_result">0 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_3  automated1_result">0 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_3  automated2_result">2 / 2</td>
+                                  <td class="divTableCell noWrap provider_color_3  automated1_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_3  all_automated_result">2 / 2</td>
                               <td class="divTableCell noWrap provider_color_4  not_automated_result">0 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_4  automated1_result">0 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_4  automated2_result">1 / 1</td>
+                                  <td class="divTableCell noWrap provider_color_4  automated1_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_4  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_5  not_automated_result">0 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_5  automated1_result">0 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_5  automated2_result">1 / 1</td>
+                                  <td class="divTableCell noWrap provider_color_5  automated1_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_5  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_6  not_automated_result">0 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_6  automated1_result">0 / 1</td>
-                                  <td class="divTableCell noWrap provider_color_6  automated2_result">1 / 1</td>
+                                  <td class="divTableCell noWrap provider_color_6  automated1_result">1 / 1</td>
                                   <td class="divTableCell noWrap provider_color_6  all_automated_result">1 / 1</td>
                               <td class="divTableCell noWrap provider_color_7  not_automated_result">0 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_7  automated1_result">0 / 3</td>
-                                  <td class="divTableCell noWrap provider_color_7  automated2_result">3 / 3</td>
+                                  <td class="divTableCell noWrap provider_color_7  automated1_result">3 / 3</td>
                                   <td class="divTableCell noWrap provider_color_7  all_automated_result">3 / 3</td>
                               <td class="divTableCell noWrap provider_color_8  not_automated_result">0 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_8  automated1_result">0 / 2</td>
-                                  <td class="divTableCell noWrap provider_color_8  automated2_result">2 / 2</td>
+                                  <td class="divTableCell noWrap provider_color_8  automated1_result">2 / 2</td>
                                   <td class="divTableCell noWrap provider_color_8  all_automated_result">2 / 2</td>
                         </tr>
                       <tr class="divTableAlternatingRow">
                       <td class="divTableCell"></td>
                         <td class="divTableCell "></td>
-                        <td class="divTableCell automatable2"></td>
                         <td class="divTableCell automatable1"></td>
                       <td class="divTableCell divBold">Cumulative Total</td>
-                            <td class="divTableCell divBold noWrap provider_color_1 mips_2020 not_automated_result">16 / 26</td>
-                                <td class="divTableCell divBold noWrap provider_color_1 mips_2020 automated1_result">19 / 26</td>
-                                <td class="divTableCell divBold noWrap provider_color_1 mips_2020 automated2_result">23 / 26</td>
+                            <td class="divTableCell divBold noWrap provider_color_1 mips_2020 not_automated_result">19 / 26</td>
+                                <td class="divTableCell divBold noWrap provider_color_1 mips_2020 automated1_result">26 / 26</td>
                                 <td class="divTableCell divBold noWrap provider_color_1  all_automated_result">26 / 26</td>
-                            <td class="divTableCell divBold noWrap provider_color_2 mips_2020 not_automated_result">17 / 29</td>
-                                <td class="divTableCell divBold noWrap provider_color_2 mips_2020 automated1_result">22 / 29</td>
-                                <td class="divTableCell divBold noWrap provider_color_2 mips_2020 automated2_result">24 / 29</td>
+                            <td class="divTableCell divBold noWrap provider_color_2 mips_2020 not_automated_result">22 / 29</td>
+                                <td class="divTableCell divBold noWrap provider_color_2 mips_2020 automated1_result">29 / 29</td>
                                 <td class="divTableCell divBold noWrap provider_color_2  all_automated_result">29 / 29</td>
-                            <td class="divTableCell divBold noWrap provider_color_3 mips_2020 not_automated_result">9 / 14</td>
-                                <td class="divTableCell divBold noWrap provider_color_3 mips_2020 automated1_result">10 / 14</td>
-                                <td class="divTableCell divBold noWrap provider_color_3 mips_2020 automated2_result">8 / 14</td>
+                            <td class="divTableCell divBold noWrap provider_color_3 mips_2020 not_automated_result">10 / 14</td>
+                                <td class="divTableCell divBold noWrap provider_color_3 mips_2020 automated1_result">14 / 14</td>
                                 <td class="divTableCell divBold noWrap provider_color_3  all_automated_result">14 / 14</td>
-                            <td class="divTableCell divBold noWrap provider_color_4 mips_2020 not_automated_result">7 / 12</td>
-                                <td class="divTableCell divBold noWrap provider_color_4 mips_2020 automated1_result">9 / 12</td>
-                                <td class="divTableCell divBold noWrap provider_color_4 mips_2020 automated2_result">10 / 12</td>
+                            <td class="divTableCell divBold noWrap provider_color_4 mips_2020 not_automated_result">9 / 12</td>
+                                <td class="divTableCell divBold noWrap provider_color_4 mips_2020 automated1_result">12 / 12</td>
                                 <td class="divTableCell divBold noWrap provider_color_4  all_automated_result">12 / 12</td>
-                            <td class="divTableCell divBold noWrap provider_color_5 mips_2020 not_automated_result">6 / 13</td>
-                                <td class="divTableCell divBold noWrap provider_color_5 mips_2020 automated1_result">9 / 13</td>
-                                <td class="divTableCell divBold noWrap provider_color_5 mips_2020 automated2_result">10 / 13</td>
+                            <td class="divTableCell divBold noWrap provider_color_5 mips_2020 not_automated_result">9 / 13</td>
+                                <td class="divTableCell divBold noWrap provider_color_5 mips_2020 automated1_result">13 / 13</td>
                                 <td class="divTableCell divBold noWrap provider_color_5  all_automated_result">13 / 13</td>
-                            <td class="divTableCell divBold noWrap provider_color_6 mips_2020 not_automated_result">11 / 16</td>
-                                <td class="divTableCell divBold noWrap provider_color_6 mips_2020 automated1_result">13 / 16</td>
-                                <td class="divTableCell divBold noWrap provider_color_6 mips_2020 automated2_result">14 / 16</td>
+                            <td class="divTableCell divBold noWrap provider_color_6 mips_2020 not_automated_result">13 / 16</td>
+                                <td class="divTableCell divBold noWrap provider_color_6 mips_2020 automated1_result">16 / 16</td>
                                 <td class="divTableCell divBold noWrap provider_color_6  all_automated_result">16 / 16</td>
-                            <td class="divTableCell divBold noWrap provider_color_7 mips_2020 not_automated_result">15 / 27</td>
-                                <td class="divTableCell divBold noWrap provider_color_7 mips_2020 automated1_result">19 / 27</td>
-                                <td class="divTableCell divBold noWrap provider_color_7 mips_2020 automated2_result">23 / 27</td>
+                            <td class="divTableCell divBold noWrap provider_color_7 mips_2020 not_automated_result">19 / 27</td>
+                                <td class="divTableCell divBold noWrap provider_color_7 mips_2020 automated1_result">27 / 27</td>
                                 <td class="divTableCell divBold noWrap provider_color_7  all_automated_result">27 / 27</td>
-                            <td class="divTableCell divBold noWrap provider_color_8 mips_2020 not_automated_result">18 / 28</td>
-                                <td class="divTableCell divBold noWrap provider_color_8 mips_2020 automated1_result">22 / 28</td>
-                                <td class="divTableCell divBold noWrap provider_color_8 mips_2020 automated2_result">24 / 28</td>
+                            <td class="divTableCell divBold noWrap provider_color_8 mips_2020 not_automated_result">22 / 28</td>
+                                <td class="divTableCell divBold noWrap provider_color_8 mips_2020 automated1_result">28 / 28</td>
                                 <td class="divTableCell divBold noWrap provider_color_8  all_automated_result">28 / 28</td>
                       </tr>
                     </div>

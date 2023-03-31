@@ -352,16 +352,13 @@
             <div class="divTableCell noBorder">2: If a Health IT Module automatically transmits a prescription electronically when it is generated, it is at the discretion of the ATL not to test scenarios that assume this is not automatic.</div>
           </div>
           <div class="divTableNoteRow">
-            <div class="divTableCell noBorder">3: If a Health IT Module automatically queries for a drug formulary upon every prescription that is generated, it is at the discretion of the ATL not to test scenarios that assume this is not automatic. Additionally, the 2021 specification for Medicare has removed the requirement for formulary checking as part of the calculations (Select &#39;Hide - Automated Drug Queries&#39; to remove this step from the test data).</div>
+            <div class="divTableCell noBorder">3: If a Health IT Module can only send changes electronically, it is at the discretion of the ATL not to test scenarios that assume a change could be sent via non-electronic means.</div>
           </div>
           <div class="divTableNoteRow">
-            <div class="divTableCell noBorder">4: If a Health IT Module can only send changes electronically, it is at the discretion of the ATL not to test scenarios that assume a change could be sent via non-electronic means.</div>
+            <div class="divTableCell noBorder">4: The scenarios that test changed prescriptions assume that the original prescription was written electronically.</div>
           </div>
           <div class="divTableNoteRow">
-            <div class="divTableCell noBorder">5: The scenarios that test changed prescriptions assume that the original prescription was written electronically.</div>
-          </div>
-          <div class="divTableNoteRow">
-            <div class="divTableCell noBorder">6: Test data supply: ONC and Vendor-supplied. ONC provides the Test Data Scenarios and parameters; the Vendor will supply the Electronic Prescription entry and formulary details.</div>
+            <div class="divTableCell noBorder">5: Test data supply: ONC and Vendor-supplied. ONC provides the Test Data Scenarios and parameters; the Vendor will supply the Electronic Prescription entry and formulary details.</div>
           </div>
         </div>
       </div>
@@ -373,12 +370,8 @@
                 <legend>Show/Hide Discretionary Steps</legend>
                 <label for="">Show All Discretionary Steps</label>
                 <input type="radio" name="automatable_radio" value="show_automatable" onclick="w3.showAutomatable()" checked><br>
-                <label for="">Hide - Automated Drug Queries</label>
-                <input type="radio" name="automatable_radio" value="hide_automatable1" onclick="w3.hideAutomatable1()"><br>
                 <label for="">Hide - Automated Transmissions</label>
-                <input type="radio" name="automatable_radio" value="hide_automatable2" onclick="w3.hideAutomatable2()"><br>
-                <label for="">Hide All Discretionary Steps</label>
-                <input type="radio" name="automatable_radio" value="hide_all_automatable" onclick="w3.hideAllAutomatable()"><br>
+                <input type="radio" name="automatable_radio" value="hide_automatable1" onclick="w3.hideAutomatable1()"><br>
                 <span class="help-block">More information can be found in Notes 2-3</span>
               </fieldset>
             </form>
@@ -406,7 +399,7 @@
                       <tr class="divTableRow">
                         <th class="divTableBorderlessCell"/>
                         <th class='denom_color divTableBorderlessCell' colspan='3'>Denominator Criteria</th>
-                        <th class='numer_color divTableBorderlessCell numerAll' colspan='3'>Numerator Criteria</th><th class='numer_color divTableBorderlessCell numer1' colspan='1'>Numerator Criteria</th><th class='numer_color divTableBorderlessCell numer2' colspan='2'>Numerator Criteria</th>
+                        <th class='numer_color divTableBorderlessCell numerAll' colspan='2'>Numerator Criteria</th><th class='numer_color divTableBorderlessCell numer1' colspan='2'>Numerator Criteria</th>
                         <th class="divTableCell result_color" colspan="1">Results</th>
                       </tr>
                       <tr class="divTableRow">
@@ -414,9 +407,8 @@
                           <th class="divTableCell blueItallic ">Prescriptions  (New, Changed) Written Within the Reporting Period</th>
                           <th class="divTableCell blueItallic ">Number of Prescriptions Written (not controlled)</th>
                           <th class="divTableCell blueItallic ">Number of Controlled Prescriptions Written</th>
-                          <th class="divTableCell blueItallic automatable2">Number of Prescriptions (not controlled) Generated and Transmitted Electronically</th>
-                          <th class="divTableCell blueItallic automatable2">Number of Controlled Substances Generated and Transmitted Electronically</th>
-                          <th class="divTableCell blueItallic automatable1">Prescription(s) Queried for Drug Formulary</th>
+                          <th class="divTableCell blueItallic automatable1">Number of Prescriptions (not controlled) Generated and Transmitted Electronically</th>
+                          <th class="divTableCell blueItallic automatable1">Number of Controlled Substances Generated and Transmitted Electronically</th>
                         <th class="divTableCell blueItallic">Records Total</th>
                       </tr>
                         <tr class="divTableAlternatingRow">
@@ -428,12 +420,10 @@
                           <td class="divTableCell ">New</li></td>
                           <td class="divTableCell ">2</li></td>
                           <td class="divTableCell ">1</li></td>
-                          <td class="divTableCell automatable2">2</li></td>
-                          <td class="divTableCell automatable2">1</li></td>
-                          <td class="divTableCell automatable1">Yes</li></td>
+                          <td class="divTableCell automatable1">2</li></td>
+                          <td class="divTableCell automatable1">1</li></td>
                                 <td class="divTableCell noWrap not_automated_result">3 / 3</td>
                                     <td class="divTableCell noWrap automated1_result">3 / 3</td>
-                                    <td class="divTableCell noWrap automated2_result">3 / 3</td>
                                     <td class="divTableCell noWrap all_automated_result">3 / 3</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
@@ -445,12 +435,10 @@
                           <td class="divTableCell ">New</li></td>
                           <td class="divTableCell ">1</li></td>
                           <td class="divTableCell ">0</li></td>
-                          <td class="divTableCell automatable2">1</li></td>
-                          <td class="divTableCell automatable2">0</li></td>
-                          <td class="divTableCell automatable1">Yes</li></td>
+                          <td class="divTableCell automatable1">1</li></td>
+                          <td class="divTableCell automatable1">0</li></td>
                                 <td class="divTableCell noWrap not_automated_result">1 / 1</td>
                                     <td class="divTableCell noWrap automated1_result">1 / 1</td>
-                                    <td class="divTableCell noWrap automated2_result">1 / 1</td>
                                     <td class="divTableCell noWrap all_automated_result">1 / 1</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
@@ -462,12 +450,10 @@
                           <td class="divTableCell ">Changed</li></td>
                           <td class="divTableCell ">1</li></td>
                           <td class="divTableCell ">1</li></td>
-                          <td class="divTableCell automatable2">1</li></td>
-                          <td class="divTableCell automatable2">1</li></td>
-                          <td class="divTableCell automatable1">Yes</li></td>
+                          <td class="divTableCell automatable1">1</li></td>
+                          <td class="divTableCell automatable1">1</li></td>
                                 <td class="divTableCell noWrap not_automated_result">2 / 2</td>
                                     <td class="divTableCell noWrap automated1_result">2 / 2</td>
-                                    <td class="divTableCell noWrap automated2_result">2 / 2</td>
                                     <td class="divTableCell noWrap all_automated_result">2 / 2</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
@@ -479,12 +465,10 @@
                           <td class="divTableCell ">Changed</li></td>
                           <td class="divTableCell ">1</li></td>
                           <td class="divTableCell ">1</li></td>
-                          <td class="divTableCell automatable2">1</li></td>
-                          <td class="divTableCell automatable2">1</li></td>
-                          <td class="divTableCell automatable1">No</li></td>
-                                <td class="divTableCell noWrap not_automated_result">0 / 2</td>
+                          <td class="divTableCell automatable1">1</li></td>
+                          <td class="divTableCell automatable1">1</li></td>
+                                <td class="divTableCell noWrap not_automated_result">2 / 2</td>
                                     <td class="divTableCell noWrap automated1_result">2 / 2</td>
-                                    <td class="divTableCell noWrap automated2_result">0 / 2</td>
                                     <td class="divTableCell noWrap all_automated_result">2 / 2</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
@@ -496,25 +480,21 @@
                           <td class="divTableCell ">New</li></td>
                           <td class="divTableCell ">1</li></td>
                           <td class="divTableCell ">2</li></td>
-                          <td class="divTableCell automatable2">1</li></td>
-                          <td class="divTableCell automatable2">1</li></td>
-                          <td class="divTableCell automatable1">Yes</li></td>
+                          <td class="divTableCell automatable1">1</li></td>
+                          <td class="divTableCell automatable1">1</li></td>
                                 <td class="divTableCell noWrap not_automated_result">2 / 3</td>
-                                    <td class="divTableCell noWrap automated1_result">2 / 3</td>
-                                    <td class="divTableCell noWrap automated2_result">3 / 3</td>
+                                    <td class="divTableCell noWrap automated1_result">3 / 3</td>
                                     <td class="divTableCell noWrap all_automated_result">3 / 3</td>
                         </tr>
                       <tr class="divTableAlternatingRow">
                         <td class="divTableCell "></td>
                         <td class="divTableCell "></td>
                         <td class="divTableCell "></td>
-                        <td class="divTableCell automatable2"></td>
-                        <td class="divTableCell automatable2"></td>
+                        <td class="divTableCell automatable1"></td>
                         <td class="divTableCell automatable1"></td>
                       <td class="divTableCell divBold">Cumulative Total</td>
-                            <td class="divTableCell noWrap not_automated_result">8 / 11</td>
-                                <td class="divTableCell noWrap automated1_result">10 / 11</td>
-                                <td class="divTableCell noWrap automated2_result">9 / 11</td>
+                            <td class="divTableCell noWrap not_automated_result">10 / 11</td>
+                                <td class="divTableCell noWrap automated1_result">11 / 11</td>
                                 <td class="divTableCell noWrap all_automated_result">11 / 11</td>
                       </tr>
                     </div>
@@ -527,15 +507,14 @@
                       <tr class="divTableRow">
                         <th class="divTableBorderlessCell"/>
                         <th class='denom_color divTableBorderlessCell' colspan='2'>Denominator Criteria</th>
-                        <th class='numer_color divTableBorderlessCell numerAll' colspan='2'>Numerator Criteria</th><th class='numer_color divTableBorderlessCell numer1' colspan='1'>Numerator Criteria</th><th class='numer_color divTableBorderlessCell numer2' colspan='1'>Numerator Criteria</th>
+                        <th class='numer_color divTableBorderlessCell numerAll' colspan='1'>Numerator Criteria</th><th class='numer_color divTableBorderlessCell numer1' colspan='1'>Numerator Criteria</th>
                         <th class="divTableCell result_color" colspan="1">Results</th>
                       </tr>
                       <tr class="divTableRow">
                         <th class="divTableCell blueItallic">Patient</th>
                           <th class="divTableCell blueItallic ">Prescriptions  (New, Changed) Written Within the Reporting Period</th>
                           <th class="divTableCell blueItallic ">Number of Prescriptions Written</th>
-                          <th class="divTableCell blueItallic automatable2">Number of Prescriptions Generated and Transmitted Electronically</th>
-                          <th class="divTableCell blueItallic automatable1">Prescription(s) Queried for Drug Formulary</th>
+                          <th class="divTableCell blueItallic automatable1">Number of Prescriptions Generated and Transmitted Electronically</th>
                         <th class="divTableCell blueItallic">Records Total</th>
                       </tr>
                         <tr class="divTableAlternatingRow">
@@ -546,11 +525,9 @@
                           </td>
                           <td class="divTableCell ">New</li></td>
                           <td class="divTableCell ">2</li></td>
-                          <td class="divTableCell automatable2">2</li></td>
-                          <td class="divTableCell automatable1">Yes</li></td>
+                          <td class="divTableCell automatable1">2</li></td>
                                 <td class="divTableCell noWrap not_automated_result">2 / 2</td>
                                     <td class="divTableCell noWrap automated1_result">2 / 2</td>
-                                    <td class="divTableCell noWrap automated2_result">2 / 2</td>
                                     <td class="divTableCell noWrap all_automated_result">2 / 2</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
@@ -561,11 +538,9 @@
                           </td>
                           <td class="divTableCell ">New</li></td>
                           <td class="divTableCell ">1</li></td>
-                          <td class="divTableCell automatable2">1</li></td>
-                          <td class="divTableCell automatable1">Yes</li></td>
+                          <td class="divTableCell automatable1">1</li></td>
                                 <td class="divTableCell noWrap not_automated_result">1 / 1</td>
                                     <td class="divTableCell noWrap automated1_result">1 / 1</td>
-                                    <td class="divTableCell noWrap automated2_result">1 / 1</td>
                                     <td class="divTableCell noWrap all_automated_result">1 / 1</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
@@ -576,11 +551,9 @@
                           </td>
                           <td class="divTableCell ">Changed</li></td>
                           <td class="divTableCell ">1</li></td>
-                          <td class="divTableCell automatable2">1</li></td>
-                          <td class="divTableCell automatable1">Yes</li></td>
+                          <td class="divTableCell automatable1">1</li></td>
                                 <td class="divTableCell noWrap not_automated_result">1 / 1</td>
                                     <td class="divTableCell noWrap automated1_result">1 / 1</td>
-                                    <td class="divTableCell noWrap automated2_result">1 / 1</td>
                                     <td class="divTableCell noWrap all_automated_result">1 / 1</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
@@ -591,11 +564,9 @@
                           </td>
                           <td class="divTableCell ">Changed</li></td>
                           <td class="divTableCell ">1</li></td>
-                          <td class="divTableCell automatable2">1</li></td>
-                          <td class="divTableCell automatable1">No</li></td>
-                                <td class="divTableCell noWrap not_automated_result">0 / 1</td>
+                          <td class="divTableCell automatable1">1</li></td>
+                                <td class="divTableCell noWrap not_automated_result">1 / 1</td>
                                     <td class="divTableCell noWrap automated1_result">1 / 1</td>
-                                    <td class="divTableCell noWrap automated2_result">0 / 1</td>
                                     <td class="divTableCell noWrap all_automated_result">1 / 1</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
@@ -606,22 +577,18 @@
                           </td>
                           <td class="divTableCell ">New</li></td>
                           <td class="divTableCell ">1</li></td>
-                          <td class="divTableCell automatable2">1</li></td>
-                          <td class="divTableCell automatable1">Yes</li></td>
+                          <td class="divTableCell automatable1">1</li></td>
                                 <td class="divTableCell noWrap not_automated_result">1 / 1</td>
                                     <td class="divTableCell noWrap automated1_result">1 / 1</td>
-                                    <td class="divTableCell noWrap automated2_result">1 / 1</td>
                                     <td class="divTableCell noWrap all_automated_result">1 / 1</td>
                         </tr>
                       <tr class="divTableAlternatingRow">
                         <td class="divTableCell "></td>
                         <td class="divTableCell "></td>
-                        <td class="divTableCell automatable2"></td>
                         <td class="divTableCell automatable1"></td>
                       <td class="divTableCell divBold">Cumulative Total</td>
-                            <td class="divTableCell noWrap not_automated_result">5 / 6</td>
+                            <td class="divTableCell noWrap not_automated_result">6 / 6</td>
                                 <td class="divTableCell noWrap automated1_result">6 / 6</td>
-                                <td class="divTableCell noWrap automated2_result">5 / 6</td>
                                 <td class="divTableCell noWrap all_automated_result">6 / 6</td>
                       </tr>
                     </div>
@@ -642,7 +609,7 @@
                       <tr class="divTableRow">
                         <th class="divTableBorderlessCell"/>
                         <th class='denom_color divTableBorderlessCell' colspan='3'>Denominator Criteria</th>
-                        <th class='numer_color divTableBorderlessCell numerAll' colspan='3'>Numerator Criteria</th><th class='numer_color divTableBorderlessCell numer1' colspan='1'>Numerator Criteria</th><th class='numer_color divTableBorderlessCell numer2' colspan='2'>Numerator Criteria</th>
+                        <th class='numer_color divTableBorderlessCell numerAll' colspan='2'>Numerator Criteria</th><th class='numer_color divTableBorderlessCell numer1' colspan='2'>Numerator Criteria</th>
                         <th class="divTableCell result_color" colspan="1">Results</th>
                       </tr>
                       <tr class="divTableRow">
@@ -650,9 +617,8 @@
                           <th class="divTableCell blueItallic ">Prescriptions  (New, Changed) Written Within the Reporting Period</th>
                           <th class="divTableCell blueItallic ">Number of Prescriptions Written (not controlled)</th>
                           <th class="divTableCell blueItallic ">Number of Controlled Prescriptions Written</th>
-                          <th class="divTableCell blueItallic automatable2">Number of Prescriptions (not controlled) Generated and Transmitted Electronically</th>
-                          <th class="divTableCell blueItallic automatable2">Number of Controlled Substances Generated and Transmitted Electronically</th>
-                          <th class="divTableCell blueItallic automatable1">Prescription(s) Queried for Drug Formulary</th>
+                          <th class="divTableCell blueItallic automatable1">Number of Prescriptions (not controlled) Generated and Transmitted Electronically</th>
+                          <th class="divTableCell blueItallic automatable1">Number of Controlled Substances Generated and Transmitted Electronically</th>
                         <th class="divTableCell blueItallic">Records Total</th>
                       </tr>
                         <tr class="divTableAlternatingRow">
@@ -664,12 +630,10 @@
                           <td class="divTableCell ">New</li></td>
                           <td class="divTableCell ">1</li></td>
                           <td class="divTableCell ">0</li></td>
-                          <td class="divTableCell automatable2">1</li></td>
-                          <td class="divTableCell automatable2">0</li></td>
-                          <td class="divTableCell automatable1">Yes</li></td>
+                          <td class="divTableCell automatable1">1</li></td>
+                          <td class="divTableCell automatable1">0</li></td>
                                 <td class="divTableCell noWrap not_automated_result">1 / 1</td>
                                     <td class="divTableCell noWrap automated1_result">1 / 1</td>
-                                    <td class="divTableCell noWrap automated2_result">1 / 1</td>
                                     <td class="divTableCell noWrap all_automated_result">1 / 1</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
@@ -681,12 +645,10 @@
                           <td class="divTableCell ">New</li></td>
                           <td class="divTableCell ">1</li></td>
                           <td class="divTableCell ">1</li></td>
-                          <td class="divTableCell automatable2">1</li></td>
-                          <td class="divTableCell automatable2">1</li></td>
-                          <td class="divTableCell automatable1">Yes</li></td>
+                          <td class="divTableCell automatable1">1</li></td>
+                          <td class="divTableCell automatable1">1</li></td>
                                 <td class="divTableCell noWrap not_automated_result">2 / 2</td>
                                     <td class="divTableCell noWrap automated1_result">2 / 2</td>
-                                    <td class="divTableCell noWrap automated2_result">2 / 2</td>
                                     <td class="divTableCell noWrap all_automated_result">2 / 2</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
@@ -698,12 +660,10 @@
                           <td class="divTableCell ">Changed</li></td>
                           <td class="divTableCell ">2</li></td>
                           <td class="divTableCell ">1</li></td>
-                          <td class="divTableCell automatable2">2</li></td>
-                          <td class="divTableCell automatable2">1</li></td>
-                          <td class="divTableCell automatable1">Yes</li></td>
+                          <td class="divTableCell automatable1">2</li></td>
+                          <td class="divTableCell automatable1">1</li></td>
                                 <td class="divTableCell noWrap not_automated_result">3 / 3</td>
                                     <td class="divTableCell noWrap automated1_result">3 / 3</td>
-                                    <td class="divTableCell noWrap automated2_result">3 / 3</td>
                                     <td class="divTableCell noWrap all_automated_result">3 / 3</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
@@ -715,25 +675,21 @@
                           <td class="divTableCell ">Changed</li></td>
                           <td class="divTableCell ">1</li></td>
                           <td class="divTableCell ">2</li></td>
-                          <td class="divTableCell automatable2">1</li></td>
-                          <td class="divTableCell automatable2">1</li></td>
-                          <td class="divTableCell automatable1">Yes</li></td>
+                          <td class="divTableCell automatable1">1</li></td>
+                          <td class="divTableCell automatable1">1</li></td>
                                 <td class="divTableCell noWrap not_automated_result">2 / 3</td>
-                                    <td class="divTableCell noWrap automated1_result">2 / 3</td>
-                                    <td class="divTableCell noWrap automated2_result">3 / 3</td>
+                                    <td class="divTableCell noWrap automated1_result">3 / 3</td>
                                     <td class="divTableCell noWrap all_automated_result">3 / 3</td>
                         </tr>
                       <tr class="divTableAlternatingRow">
                         <td class="divTableCell "></td>
                         <td class="divTableCell "></td>
                         <td class="divTableCell "></td>
-                        <td class="divTableCell automatable2"></td>
-                        <td class="divTableCell automatable2"></td>
+                        <td class="divTableCell automatable1"></td>
                         <td class="divTableCell automatable1"></td>
                       <td class="divTableCell divBold">Cumulative Total</td>
-                            <td class="divTableCell noWrap not_automated_result">16 / 20</td>
-                                <td class="divTableCell noWrap automated1_result">18 / 20</td>
-                                <td class="divTableCell noWrap automated2_result">18 / 20</td>
+                            <td class="divTableCell noWrap not_automated_result">18 / 20</td>
+                                <td class="divTableCell noWrap automated1_result">20 / 20</td>
                                 <td class="divTableCell noWrap all_automated_result">20 / 20</td>
                       </tr>
                     </div>
@@ -746,15 +702,14 @@
                       <tr class="divTableRow">
                         <th class="divTableBorderlessCell"/>
                         <th class='denom_color divTableBorderlessCell' colspan='2'>Denominator Criteria</th>
-                        <th class='numer_color divTableBorderlessCell numerAll' colspan='2'>Numerator Criteria</th><th class='numer_color divTableBorderlessCell numer1' colspan='1'>Numerator Criteria</th><th class='numer_color divTableBorderlessCell numer2' colspan='1'>Numerator Criteria</th>
+                        <th class='numer_color divTableBorderlessCell numerAll' colspan='1'>Numerator Criteria</th><th class='numer_color divTableBorderlessCell numer1' colspan='1'>Numerator Criteria</th>
                         <th class="divTableCell result_color" colspan="1">Results</th>
                       </tr>
                       <tr class="divTableRow">
                         <th class="divTableCell blueItallic">Patient</th>
                           <th class="divTableCell blueItallic ">Prescriptions  (New, Changed) Written Within the Reporting Period</th>
                           <th class="divTableCell blueItallic ">Number of Prescriptions Written</th>
-                          <th class="divTableCell blueItallic automatable2">Number of Prescriptions Generated and Transmitted Electronically</th>
-                          <th class="divTableCell blueItallic automatable1">Prescription(s) Queried for Drug Formulary</th>
+                          <th class="divTableCell blueItallic automatable1">Number of Prescriptions Generated and Transmitted Electronically</th>
                         <th class="divTableCell blueItallic">Records Total</th>
                       </tr>
                         <tr class="divTableAlternatingRow">
@@ -765,11 +720,9 @@
                           </td>
                           <td class="divTableCell ">New</li></td>
                           <td class="divTableCell ">1</li></td>
-                          <td class="divTableCell automatable2">1</li></td>
-                          <td class="divTableCell automatable1">Yes</li></td>
+                          <td class="divTableCell automatable1">1</li></td>
                                 <td class="divTableCell noWrap not_automated_result">1 / 1</td>
                                     <td class="divTableCell noWrap automated1_result">1 / 1</td>
-                                    <td class="divTableCell noWrap automated2_result">1 / 1</td>
                                     <td class="divTableCell noWrap all_automated_result">1 / 1</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
@@ -780,11 +733,9 @@
                           </td>
                           <td class="divTableCell ">New</li></td>
                           <td class="divTableCell ">1</li></td>
-                          <td class="divTableCell automatable2">1</li></td>
-                          <td class="divTableCell automatable1">Yes</li></td>
+                          <td class="divTableCell automatable1">1</li></td>
                                 <td class="divTableCell noWrap not_automated_result">1 / 1</td>
                                     <td class="divTableCell noWrap automated1_result">1 / 1</td>
-                                    <td class="divTableCell noWrap automated2_result">1 / 1</td>
                                     <td class="divTableCell noWrap all_automated_result">1 / 1</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
@@ -795,11 +746,9 @@
                           </td>
                           <td class="divTableCell ">Changed</li></td>
                           <td class="divTableCell ">2</li></td>
-                          <td class="divTableCell automatable2">2</li></td>
-                          <td class="divTableCell automatable1">Yes</li></td>
+                          <td class="divTableCell automatable1">2</li></td>
                                 <td class="divTableCell noWrap not_automated_result">2 / 2</td>
                                     <td class="divTableCell noWrap automated1_result">2 / 2</td>
-                                    <td class="divTableCell noWrap automated2_result">2 / 2</td>
                                     <td class="divTableCell noWrap all_automated_result">2 / 2</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
@@ -810,22 +759,18 @@
                           </td>
                           <td class="divTableCell ">Changed</li></td>
                           <td class="divTableCell ">1</li></td>
-                          <td class="divTableCell automatable2">1</li></td>
-                          <td class="divTableCell automatable1">Yes</li></td>
+                          <td class="divTableCell automatable1">1</li></td>
                                 <td class="divTableCell noWrap not_automated_result">1 / 1</td>
                                     <td class="divTableCell noWrap automated1_result">1 / 1</td>
-                                    <td class="divTableCell noWrap automated2_result">1 / 1</td>
                                     <td class="divTableCell noWrap all_automated_result">1 / 1</td>
                         </tr>
                       <tr class="divTableAlternatingRow">
                         <td class="divTableCell "></td>
                         <td class="divTableCell "></td>
-                        <td class="divTableCell automatable2"></td>
                         <td class="divTableCell automatable1"></td>
                       <td class="divTableCell divBold">Cumulative Total</td>
-                            <td class="divTableCell noWrap not_automated_result">10 / 11</td>
+                            <td class="divTableCell noWrap not_automated_result">11 / 11</td>
                                 <td class="divTableCell noWrap automated1_result">11 / 11</td>
-                                <td class="divTableCell noWrap automated2_result">10 / 11</td>
                                 <td class="divTableCell noWrap all_automated_result">11 / 11</td>
                       </tr>
                     </div>
@@ -842,7 +787,7 @@
                       <tr class="divTableRow">
                         <th class="divTableBorderlessCell"/>
                         <th class='denom_color divTableBorderlessCell' colspan='3'>Denominator Criteria</th>
-                        <th class='numer_color divTableBorderlessCell numerAll' colspan='3'>Numerator Criteria</th><th class='numer_color divTableBorderlessCell numer1' colspan='1'>Numerator Criteria</th><th class='numer_color divTableBorderlessCell numer2' colspan='2'>Numerator Criteria</th>
+                        <th class='numer_color divTableBorderlessCell numerAll' colspan='2'>Numerator Criteria</th><th class='numer_color divTableBorderlessCell numer1' colspan='2'>Numerator Criteria</th>
                         <th class="divTableCell result_color" colspan="1">Results</th>
                       </tr>
                       <tr class="divTableRow">
@@ -850,9 +795,8 @@
                           <th class="divTableCell blueItallic ">Prescriptions  (New, Changed) Written Within the Reporting Period</th>
                           <th class="divTableCell blueItallic ">Number of Prescriptions Written (not controlled)</th>
                           <th class="divTableCell blueItallic ">Number of Controlled Prescriptions Written</th>
-                          <th class="divTableCell blueItallic automatable2">Number of Prescriptions (not controlled) Generated and Transmitted Electronically</th>
-                          <th class="divTableCell blueItallic automatable2">Number of Controlled Substances Generated and Transmitted Electronically</th>
-                          <th class="divTableCell blueItallic automatable1">Prescription(s) Queried for Drug Formulary</th>
+                          <th class="divTableCell blueItallic automatable1">Number of Prescriptions (not controlled) Generated and Transmitted Electronically</th>
+                          <th class="divTableCell blueItallic automatable1">Number of Controlled Substances Generated and Transmitted Electronically</th>
                         <th class="divTableCell blueItallic">Records Total</th>
                       </tr>
                         <tr class="divTableAlternatingRow">
@@ -864,12 +808,10 @@
                           <td class="divTableCell ">New</li></td>
                           <td class="divTableCell ">1</li></td>
                           <td class="divTableCell ">0</li></td>
-                          <td class="divTableCell automatable2">1</li></td>
-                          <td class="divTableCell automatable2">0</li></td>
-                          <td class="divTableCell automatable1">No</li></td>
-                                <td class="divTableCell noWrap not_automated_result">0 / 1</td>
+                          <td class="divTableCell automatable1">1</li></td>
+                          <td class="divTableCell automatable1">0</li></td>
+                                <td class="divTableCell noWrap not_automated_result">1 / 1</td>
                                     <td class="divTableCell noWrap automated1_result">1 / 1</td>
-                                    <td class="divTableCell noWrap automated2_result">0 / 1</td>
                                     <td class="divTableCell noWrap all_automated_result">1 / 1</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
@@ -881,12 +823,10 @@
                           <td class="divTableCell ">New</li></td>
                           <td class="divTableCell ">1</li></td>
                           <td class="divTableCell ">0</li></td>
-                          <td class="divTableCell automatable2">0</li></td>
-                          <td class="divTableCell automatable2">0</li></td>
-                          <td class="divTableCell automatable1">Yes</li></td>
+                          <td class="divTableCell automatable1">0</li></td>
+                          <td class="divTableCell automatable1">0</li></td>
                                 <td class="divTableCell noWrap not_automated_result">0 / 1</td>
-                                    <td class="divTableCell noWrap automated1_result">0 / 1</td>
-                                    <td class="divTableCell noWrap automated2_result">1 / 1</td>
+                                    <td class="divTableCell noWrap automated1_result">1 / 1</td>
                                     <td class="divTableCell noWrap all_automated_result">1 / 1</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
@@ -898,12 +838,10 @@
                           <td class="divTableCell ">Changed</li></td>
                           <td class="divTableCell ">1</li></td>
                           <td class="divTableCell ">1</li></td>
-                          <td class="divTableCell automatable2">1</li></td>
-                          <td class="divTableCell automatable2">0</li></td>
-                          <td class="divTableCell automatable1">No</li></td>
-                                <td class="divTableCell noWrap not_automated_result">0 / 2</td>
-                                    <td class="divTableCell noWrap automated1_result">1 / 2</td>
-                                    <td class="divTableCell noWrap automated2_result">0 / 2</td>
+                          <td class="divTableCell automatable1">1</li></td>
+                          <td class="divTableCell automatable1">0</li></td>
+                                <td class="divTableCell noWrap not_automated_result">1 / 2</td>
+                                    <td class="divTableCell noWrap automated1_result">2 / 2</td>
                                     <td class="divTableCell noWrap all_automated_result">2 / 2</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
@@ -915,25 +853,21 @@
                           <td class="divTableCell ">Changed</li></td>
                           <td class="divTableCell ">2</li></td>
                           <td class="divTableCell ">1</li></td>
-                          <td class="divTableCell automatable2">0</li></td>
-                          <td class="divTableCell automatable2">0</li></td>
-                          <td class="divTableCell automatable1">Yes</li></td>
+                          <td class="divTableCell automatable1">0</li></td>
+                          <td class="divTableCell automatable1">0</li></td>
                                 <td class="divTableCell noWrap not_automated_result">0 / 3</td>
-                                    <td class="divTableCell noWrap automated1_result">0 / 3</td>
-                                    <td class="divTableCell noWrap automated2_result">3 / 3</td>
+                                    <td class="divTableCell noWrap automated1_result">3 / 3</td>
                                     <td class="divTableCell noWrap all_automated_result">3 / 3</td>
                         </tr>
                       <tr class="divTableAlternatingRow">
                         <td class="divTableCell "></td>
                         <td class="divTableCell "></td>
                         <td class="divTableCell "></td>
-                        <td class="divTableCell automatable2"></td>
-                        <td class="divTableCell automatable2"></td>
+                        <td class="divTableCell automatable1"></td>
                         <td class="divTableCell automatable1"></td>
                       <td class="divTableCell divBold">Cumulative Total</td>
-                            <td class="divTableCell noWrap not_automated_result">16 / 27</td>
-                                <td class="divTableCell noWrap automated1_result">20 / 27</td>
-                                <td class="divTableCell noWrap automated2_result">22 / 27</td>
+                            <td class="divTableCell noWrap not_automated_result">20 / 27</td>
+                                <td class="divTableCell noWrap automated1_result">27 / 27</td>
                                 <td class="divTableCell noWrap all_automated_result">27 / 27</td>
                       </tr>
                     </div>
@@ -946,15 +880,14 @@
                       <tr class="divTableRow">
                         <th class="divTableBorderlessCell"/>
                         <th class='denom_color divTableBorderlessCell' colspan='2'>Denominator Criteria</th>
-                        <th class='numer_color divTableBorderlessCell numerAll' colspan='2'>Numerator Criteria</th><th class='numer_color divTableBorderlessCell numer1' colspan='1'>Numerator Criteria</th><th class='numer_color divTableBorderlessCell numer2' colspan='1'>Numerator Criteria</th>
+                        <th class='numer_color divTableBorderlessCell numerAll' colspan='1'>Numerator Criteria</th><th class='numer_color divTableBorderlessCell numer1' colspan='1'>Numerator Criteria</th>
                         <th class="divTableCell result_color" colspan="1">Results</th>
                       </tr>
                       <tr class="divTableRow">
                         <th class="divTableCell blueItallic">Patient</th>
                           <th class="divTableCell blueItallic ">Prescriptions  (New, Changed) Written Within the Reporting Period</th>
                           <th class="divTableCell blueItallic ">Number of Prescriptions Written</th>
-                          <th class="divTableCell blueItallic automatable2">Number of Prescriptions Generated and Transmitted Electronically</th>
-                          <th class="divTableCell blueItallic automatable1">Prescription(s) Queried for Drug Formulary</th>
+                          <th class="divTableCell blueItallic automatable1">Number of Prescriptions Generated and Transmitted Electronically</th>
                         <th class="divTableCell blueItallic">Records Total</th>
                       </tr>
                         <tr class="divTableAlternatingRow">
@@ -965,11 +898,9 @@
                           </td>
                           <td class="divTableCell ">New</li></td>
                           <td class="divTableCell ">1</li></td>
-                          <td class="divTableCell automatable2">1</li></td>
-                          <td class="divTableCell automatable1">No</li></td>
-                                <td class="divTableCell noWrap not_automated_result">0 / 1</td>
+                          <td class="divTableCell automatable1">1</li></td>
+                                <td class="divTableCell noWrap not_automated_result">1 / 1</td>
                                     <td class="divTableCell noWrap automated1_result">1 / 1</td>
-                                    <td class="divTableCell noWrap automated2_result">0 / 1</td>
                                     <td class="divTableCell noWrap all_automated_result">1 / 1</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
@@ -980,11 +911,9 @@
                           </td>
                           <td class="divTableCell ">New</li></td>
                           <td class="divTableCell ">1</li></td>
-                          <td class="divTableCell automatable2">0</li></td>
-                          <td class="divTableCell automatable1">Yes</li></td>
+                          <td class="divTableCell automatable1">0</li></td>
                                 <td class="divTableCell noWrap not_automated_result">0 / 1</td>
-                                    <td class="divTableCell noWrap automated1_result">0 / 1</td>
-                                    <td class="divTableCell noWrap automated2_result">1 / 1</td>
+                                    <td class="divTableCell noWrap automated1_result">1 / 1</td>
                                     <td class="divTableCell noWrap all_automated_result">1 / 1</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
@@ -995,11 +924,9 @@
                           </td>
                           <td class="divTableCell ">Changed</li></td>
                           <td class="divTableCell ">1</li></td>
-                          <td class="divTableCell automatable2">1</li></td>
-                          <td class="divTableCell automatable1">No</li></td>
-                                <td class="divTableCell noWrap not_automated_result">0 / 1</td>
+                          <td class="divTableCell automatable1">1</li></td>
+                                <td class="divTableCell noWrap not_automated_result">1 / 1</td>
                                     <td class="divTableCell noWrap automated1_result">1 / 1</td>
-                                    <td class="divTableCell noWrap automated2_result">0 / 1</td>
                                     <td class="divTableCell noWrap all_automated_result">1 / 1</td>
                         </tr>
                         <tr class="divTableAlternatingRow">
@@ -1010,22 +937,18 @@
                           </td>
                           <td class="divTableCell ">Changed</li></td>
                           <td class="divTableCell ">2</li></td>
-                          <td class="divTableCell automatable2">0</li></td>
-                          <td class="divTableCell automatable1">Yes</li></td>
+                          <td class="divTableCell automatable1">0</li></td>
                                 <td class="divTableCell noWrap not_automated_result">0 / 2</td>
-                                    <td class="divTableCell noWrap automated1_result">0 / 2</td>
-                                    <td class="divTableCell noWrap automated2_result">2 / 2</td>
+                                    <td class="divTableCell noWrap automated1_result">2 / 2</td>
                                     <td class="divTableCell noWrap all_automated_result">2 / 2</td>
                         </tr>
                       <tr class="divTableAlternatingRow">
                         <td class="divTableCell "></td>
                         <td class="divTableCell "></td>
-                        <td class="divTableCell automatable2"></td>
                         <td class="divTableCell automatable1"></td>
                       <td class="divTableCell divBold">Cumulative Total</td>
-                            <td class="divTableCell noWrap not_automated_result">10 / 16</td>
-                                <td class="divTableCell noWrap automated1_result">13 / 16</td>
-                                <td class="divTableCell noWrap automated2_result">13 / 16</td>
+                            <td class="divTableCell noWrap not_automated_result">13 / 16</td>
+                                <td class="divTableCell noWrap automated1_result">16 / 16</td>
                                 <td class="divTableCell noWrap all_automated_result">16 / 16</td>
                       </tr>
                     </div>

@@ -139,7 +139,7 @@
     },
     {
       "version_number": "2.9",
-      "version_description": "Removed the required tests (RT3, RT4, RT5, RT6, RT8, RT9, RT10, RT11, RT12) only used by the 2021 Medicaid program.",
+      "version_description": "Removed the required tests (RT3, RT4, RT5, RT6, RT8, RT9, RT10, RT11, RT12) only used by the 2021 Medicaid program. Removed formulary checking as part of the calculations for RT1.",
       "version_date": "3/31/2023"
     }
   ]
