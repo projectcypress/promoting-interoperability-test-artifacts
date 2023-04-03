@@ -218,8 +218,6 @@ class G1G2Export < Mustache
     medicaid_count = self['provider_combinations'].select{ |pc| pc['programs'] && pc['programs'].include?('medicaid_2020') }.size
     mips_count = self['provider_combinations'].select{ |pc| pc['programs'] && pc['programs'].include?('mips_2020') }.size
     results_strings = "<th class='result_color divTableBorderlessCell resultsAll' colspan='#{result_count}'>Results</th>"
-    results_strings += "<th class='result_color divTableBorderlessCell resultsMedicaid' colspan='#{medicaid_count}'>Results</th>" if medicaid_count > 0
-    results_strings += "<th class='result_color divTableBorderlessCell resultsMips' colspan='#{mips_count}'>Results</th>" if mips_count > 0
     results_strings
   end
 

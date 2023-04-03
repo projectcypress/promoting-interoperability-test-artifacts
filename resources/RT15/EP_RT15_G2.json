@@ -1998,16 +1998,6 @@
             {
               "providers": [
                 {
-                  "provider": "Provider 1",
-                  "denominator_value": 11,
-                  "numerator_value": 3
-                },
-                {
-                  "provider": "Provider 2",
-                  "denominator_value": 11,
-                  "numerator_value": 4
-                },
-                {
                   "provider": "TIN A/Provider 1",
                   "denominator_value": 11,
                   "numerator_value": 4

@@ -36,20 +36,6 @@
             {
               "providers": [
                 {
-                  "provider": "Provider 1",
-                  "denominator_value": 5,
-                  "numerator_value": 5,
-                  "programs": ["mips_2020"],
-                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 5} ]
-                },
-                {
-                  "provider": "Provider 2",
-                  "denominator_value": 5,
-                  "numerator_value": 5,
-                  "programs": ["mips_2020"],
-                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 5} ]
-                },
-                {
                   "provider": "TIN A/Provider 1",
                   "denominator_value": 5,
                   "numerator_value": 5,
@@ -326,18 +312,6 @@
                   "patient_id": "Lavon Earle",
                   "providers": [
                     {
-                      "provider": "Provider 1",
-                      "denominator_value": 1,
-                      "numerator_value": 1,
-                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
-                    },
-                    {
-                      "provider": "Provider 2",
-                      "denominator_value": 1,
-                      "numerator_value": 1,
-                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
-                    },
-                    {
                       "provider": "TIN A/Provider 1",
                       "denominator_value": 1,
                       "numerator_value": 1,
@@ -378,18 +352,6 @@
                 {
                   "patient_id": "Trula Covey",
                   "providers": [
-                    {
-                      "provider": "Provider 1",
-                      "denominator_value": 1,
-                      "numerator_value": 1,
-                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
-                    },
-                    {
-                      "provider": "Provider 2",
-                      "denominator_value": 1,
-                      "numerator_value": 1,
-                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
-                    },
                     {
                       "provider": "TIN A/Provider 1",
                       "denominator_value": 1,
@@ -432,18 +394,6 @@
                   "patient_id": "Mai Nguyen",
                   "providers": [
                     {
-                      "provider": "Provider 1",
-                      "denominator_value": 1,
-                      "numerator_value": 1,
-                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
-                    },
-                    {
-                      "provider": "Provider 2",
-                      "denominator_value": 1,
-                      "numerator_value": 1,
-                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
-                    },
-                    {
                       "provider": "TIN A/Provider 1",
                       "denominator_value": 1,
                       "numerator_value": 1,
@@ -485,18 +435,6 @@
                   "patient_id": "Tom Warner",
                   "providers": [
                     {
-                      "provider": "Provider 1",
-                      "denominator_value": 1,
-                      "numerator_value": 1,
-                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
-                    },
-                    {
-                      "provider": "Provider 2",
-                      "denominator_value": 1,
-                      "numerator_value": 1,
-                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
-                    },
-                    {
                       "provider": "TIN A/Provider 1",
                       "denominator_value": 1,
                       "numerator_value": 1,
@@ -537,18 +475,6 @@
                 {
                   "patient_id": "Elsa Wu",
                   "providers": [
-                    {
-                      "provider": "Provider 1",
-                      "denominator_value": 1,
-                      "numerator_value": 1,
-                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
-                    },
-                    {
-                      "provider": "Provider 2",
-                      "denominator_value": 1,
-                      "numerator_value": 1,
-                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
-                    },
                     {
                       "provider": "TIN A/Provider 1",
                       "denominator_value": 1,
@@ -602,20 +528,6 @@
             {
               "providers": [
                 {
-                  "provider": "Provider 1",
-                  "denominator_value": 5,
-                  "numerator_value": 2,
-                  "programs": ["mips_2020"],
-                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 5} ]
-                },
-                {
-                  "provider": "Provider 2",
-                  "denominator_value": 5,
-                  "numerator_value": 2,
-                  "programs": ["mips_2020"],
-                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 5} ]
-                },
-                {
                   "provider": "TIN A/Provider 1",
                   "denominator_value": 5,
                   "numerator_value": 2,
@@ -808,18 +720,6 @@
                   "patient_id": "Trula Covey",
                   "providers": [
                     {
-                      "provider": "Provider 1",
-                      "denominator_value": 0,
-                      "numerator_value": -1,
-                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
-                    },
-                    {
-                      "provider": "Provider 2",
-                      "denominator_value": 0,
-                      "numerator_value": -1,
-                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
-                    },
-                    {
                       "provider": "TIN A/Provider 1",
                       "denominator_value": 0,
                       "numerator_value": -1,
@@ -861,18 +761,6 @@
                   "patient_id": "Lavon Earle",
                   "providers": [
                     {
-                      "provider": "Provider 1",
-                      "denominator_value": 0,
-                      "numerator_value": -1,
-                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
-                    },
-                    {
-                      "provider": "Provider 2",
-                      "denominator_value": 0,
-                      "numerator_value": -1,
-                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
-                    },
-                    {
                       "provider": "TIN A/Provider 1",
                       "denominator_value": 0,
                       "numerator_value": -1,
@@ -913,18 +801,6 @@
                 {
                   "patient_id": "Mai Nguyen",
                   "providers": [
-                    {
-                      "provider": "Provider 1",
-                      "denominator_value": 0,
-                      "numerator_value": -1,
-                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
-                    },
-                    {
-                      "provider": "Provider 2",
-                      "denominator_value": 0,
-                      "numerator_value": -1,
-                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
-                    },
                     {
                       "provider": "TIN A/Provider 1",
                       "denominator_value": 0,
@@ -978,20 +854,6 @@
             {
               "providers": [
                 {
-                  "provider": "Provider 1",
-                  "denominator_value": 8,
-                  "numerator_value": 5,
-                  "programs": ["mips_2020"],
-                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 8} ]
-                },
-                {
-                  "provider": "Provider 2",
-                  "denominator_value": 8,
-                  "numerator_value": 5,
-                  "programs": ["mips_2020"],
-                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 8} ]
-                },
-                {
                   "provider": "TIN A/Provider 1",
                   "denominator_value": 8,
                   "numerator_value": 5,
@@ -1184,18 +1046,6 @@
                   "patient_id": "Alan Bench",
                   "providers": [
                     {
-                      "provider": "Provider 1",
-                      "denominator_value": 1,
-                      "numerator_value": 1,
-                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
-                    },
-                    {
-                      "provider": "Provider 2",
-                      "denominator_value": 1,
-                      "numerator_value": 1,
-                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
-                    },
-                    {
                       "provider": "TIN A/Provider 1",
                       "denominator_value": 1,
                       "numerator_value": 1,
@@ -1237,18 +1087,6 @@
                   "patient_id": "Rashida Champagne",
                   "providers": [
                     {
-                      "provider": "Provider 1",
-                      "denominator_value": 1,
-                      "numerator_value": 1,
-                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
-                    },
-                    {
-                      "provider": "Provider 2",
-                      "denominator_value": 1,
-                      "numerator_value": 1,
-                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
-                    },
-                    {
                       "provider": "TIN A/Provider 1",
                       "denominator_value": 1,
                       "numerator_value": 1,
@@ -1289,18 +1127,6 @@
                 {
                   "patient_id": "David Brown",
                   "providers": [
-                    {
-                      "provider": "Provider 1",
-                      "denominator_value": 1,
-                      "numerator_value": 1,
-                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
-                    },
-                    {
-                      "provider": "Provider 2",
-                      "denominator_value": 1,
-                      "numerator_value": 1,
-                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
-                    },
                     {
                       "provider": "TIN A/Provider 1",
                       "denominator_value": 1,
@@ -1354,20 +1180,6 @@
             {
               "providers": [
                 {
-                  "provider": "Provider 1",
-                  "denominator_value": 11,
-                  "numerator_value": 5,
-                  "programs": ["mips_2020"],
-                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 11} ]
-                },
-                {
-                  "provider": "Provider 2",
-                  "denominator_value": 11,
-                  "numerator_value": 5,
-                  "programs": ["mips_2020"],
-                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 11} ]
-                },
-                {
                   "provider": "TIN A/Provider 1",
                   "denominator_value": 11,
                   "numerator_value": 5,
@@ -1560,18 +1372,6 @@
                   "patient_id": "Margaret Wise",
                   "providers": [
                     {
-                      "provider": "Provider 1",
-                      "denominator_value": 1,
-                      "numerator_value": 0,
-                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
-                    },
-                    {
-                      "provider": "Provider 2",
-                      "denominator_value": 1,
-                      "numerator_value": 0,
-                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
-                    },
-                    {
                       "provider": "TIN A/Provider 1",
                       "denominator_value": 1,
                       "numerator_value": 0,
@@ -1613,18 +1413,6 @@
                   "patient_id": "Frank Patterson",
                   "providers": [
                     {
-                      "provider": "Provider 1",
-                      "denominator_value": 1,
-                      "numerator_value": 0,
-                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
-                    },
-                    {
-                      "provider": "Provider 2",
-                      "denominator_value": 1,
-                      "numerator_value": 0,
-                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
-                    },
-                    {
                       "provider": "TIN A/Provider 1",
                       "denominator_value": 1,
                       "numerator_value": 0,
@@ -1665,18 +1453,6 @@
                 {
                   "patient_id": "Na Dangelo",
                   "providers": [
-                    {
-                      "provider": "Provider 1",
-                      "denominator_value": 1,
-                      "numerator_value": 0,
-                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
-                    },
-                    {
-                      "provider": "Provider 2",
-                      "denominator_value": 1,
-                      "numerator_value": 0,
-                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
-                    },
                     {
                       "provider": "TIN A/Provider 1",
                       "denominator_value": 1,
@@ -1730,20 +1506,6 @@
             {
               "providers": [
                 {
-                  "provider": "Provider 1",
-                  "denominator_value": 11,
-                  "numerator_value": 5,
-                  "programs": ["mips_2020"],
-                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 11} ]
-                },
-                {
-                  "provider": "Provider 2",
-                  "denominator_value": 11,
-                  "numerator_value": 5,
-                  "programs": ["mips_2020"],
-                  "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 11} ]
-                },
-                {
                   "provider": "TIN A/Provider 1",
                   "denominator_value": 11,
                   "numerator_value": 5,
@@ -1851,18 +1613,6 @@
                 {
                   "patient_id": "Elsa Wu",
                   "providers": [
-                    {
-                      "provider": "Provider 1",
-                      "denominator_value": 0,
-                      "numerator_value": 0,
-                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
-                    },
-                    {
-                      "provider": "Provider 2",
-                      "denominator_value": 0,
-                      "numerator_value": 0,
-                      "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
-                    },
                     {
                       "provider": "TIN A/Provider 1",
                       "denominator_value": 0,
