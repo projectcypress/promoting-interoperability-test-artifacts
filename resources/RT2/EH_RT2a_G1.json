@@ -1,6 +1,6 @@
 {
   "test_deck": "G1 EH",
-  "test_number": "Required Test 2a - Health IT Modules Certified to (e) (1) and (g)(8), (g)(9) or (g)(10)",
+  "test_number": "Required Test 2a - Health IT Modules Certified to (e)(1) and, (g)(9) or (g)(10)",
   "test_short_name": "RT 2a Provider Patient Exchange",
   "automated_steps": [ { "title": "Steps that assume data availablity is not automatic", "index": 1 } ],
   "automated_steps_info": "More information can be found in Note 4",
