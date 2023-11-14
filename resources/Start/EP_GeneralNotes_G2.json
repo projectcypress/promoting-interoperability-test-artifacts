@@ -20,7 +20,7 @@
     },
     {
       "ref": "G2_EP_Required_Test_2a_.html",
-      "summary": "Required Test 2a - Patient Electronic Access (certified to (e)(1) and (g)(8) or (g)(9))"
+      "summary": "Required Test 2a - Patient Electronic Access (certified to (e)(1) and (g)(9) or (g)(10))"
     },
     {
       "ref": "G2_EP_Required_Test_2b_.html",    
@@ -28,7 +28,7 @@
     },
     {
       "ref": "G2_EP_Required_Test_2c_.html",
-      "summary": "Required Test 2c - Patient Electronic Access (certified to (g)(8) or (g)(9))"
+      "summary": "Required Test 2c - Patient Electronic Access (certified to (g)(9) or (g)(10))"
     },
     {
       "ref": "G2_EP_Required_Test_7.html",
@@ -164,6 +164,11 @@
       "version_number": "2.9.1",
       "version_description": "Removed result columns (Provider 1 and Provider 2) specific to Medicaid program.",
       "version_date": "4/3/2023"
+    },
+    {
+      "version_number": "2.10",
+      "version_description": "Updated references to (g)(8) and (g)(10) for RT2.",
+      "version_date": "11/9/2023"
     }
   ]
 }

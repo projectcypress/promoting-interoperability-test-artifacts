@@ -17,7 +17,7 @@
     },
     {
       "ref": "G2_EH_Required_Test_2a_.html",
-      "summary": "Required Test 2a - Patient Electronic Access (certified to (e)(1) and (g)(8) or (g)(9))"
+      "summary": "Required Test 2a - Patient Electronic Access (certified to (e)(1) and, (g)(9) or (g)(10))"
     },
     {
       "ref": "G2_EH_Required_Test_2b_.html",    
@@ -25,7 +25,7 @@
     },
     {
       "ref": "G2_EH_Required_Test_2c_.html",
-      "summary": "Required Test 2c - Patient Electronic Access (certified to (g)(8) or (g)(9))"
+      "summary": "Required Test 2c - Patient Electronic Access (certified to (g)(9) or (g)(10))"
     },
     {
       "ref": "G2_EH_Required_Test_7.html",
@@ -141,6 +141,11 @@
       "version_number": "2.9",
       "version_description": "Removed the required tests (RT3, RT4, RT5, RT6, RT8, RT9, RT10, RT11, RT12) only used by the 2021 Medicaid program. Removed formulary checking as part of the calculations for RT1.",
       "version_date": "3/31/2023"
+    },
+    {
+      "version_number": "2.10",
+      "version_description": "Updated references to (g)(8) and (g)(10) for RT2.",
+      "version_date": "11/9/2023"
     }
   ]
 }
