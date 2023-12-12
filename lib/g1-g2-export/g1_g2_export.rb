@@ -1,9 +1,12 @@
 require 'mustache'
+require 'yaml'
 class G1G2Export < Mustache
 
   self.template_path = __dir__
 
   def initialize(raw_test_data)
+    @names = YAML.safe_load(File.read(File.expand_path('names.yml', __dir__)), aliases: true)
+    @dob_map = {}
     @raw_test_data = JSON.parse(raw_test_data.to_json)
     @test_data_hash = {}
     @automated_steps = @raw_test_data['automated_steps']
@@ -126,61 +129,17 @@ class G1G2Export < Mustache
   end
 
   def dob_for_patient(patient_name)
-    dob_map = { 
-                "Tracy Daniels" => "5/2/2000",
-                "Dianne Potter" => "4/13/1963",
-                "Katrina Owens" => "10/18/1994",
-                "Allan Summers" => "4/16/1982",
-                "Ada Mack" => "5/18/1968",
-                "Anthony Edwards" => "4/23/1967",
-                "Bruce Hall" => "9/25/1972",
-                "Debra Steele" => "7/27/1983",
-                "Lavon Earle" => "4/13/1963",
-                "Trula Covey" => "5/2/2000",
-                "Mai Nguyen" => "10/18/1994",
-                "Tom Warner" => "4/16/1982",
-                "Elsa Wu" => "5/18/1968",
-                "Alan Bench" => "4/23/1967",
-                "Rashida Champagne" => "7/27/1983",
-                "David Brown" => "9/6/1983",
-                "Debra Price" => "6/24/2001",
-                "Mark Gordon" => "9/15/1999",
-                "Gabriel Brady" => "2/19/1980",
-                "Kirk Patterson" => "11/14/2005",
-                "Margaret Wise" => "6/24/2001",
-                "Frank Patterson" => "9/15/1999",
-                "Na Dangelo" => "2/19/1980"
-              }
-    dob_map[patient_name]
+    if (!@dob_map.key?(patient_name))
+      month = rand(1..12)
+      day = rand(1..28)
+      year = rand(1963..2001)
+      @dob_map[patient_name] = "#{month}/#{day}/#{year}"
+    end
+    @dob_map[patient_name]
   end
 
   def sex_for_patient(patient_name)
-    sex_map = { 
-            "Tracy Daniels" => "F",
-            "Dianne Potter" => "F",
-            "Katrina Owens" => "F",
-            "Allan Summers" => "M",
-            "Ada Mack" => "F",
-            "Anthony Edwards" => "M",
-            "Bruce Hall" => "M",
-            "Debra Steele" => "F",
-            "Lavon Earle" => "F",
-            "Trula Covey" => "F",
-            "Mai Nguyen" => "F",
-            "Tom Warner" => "M",
-            "Elsa Wu" => "F",
-            "Alan Bench" => "M",
-            "Rashida Champagne" => "F",
-            "David Brown" => "M",
-            "Debra Price" => "F",
-            "Mark Gordon" => "M",
-            "Gabriel Brady" => "M",
-            "Kirk Patterson" => "M",
-            "Margaret Wise" => "F",
-            "Frank Patterson" => "M",
-            "Na Dangelo" => "M"
-          }
-    sex_map[patient_name]
+    @names['first']['M'].include?(patient_name.split(' ')[0]) ? "M" : "F"
   end
 
   def first_denom_step
