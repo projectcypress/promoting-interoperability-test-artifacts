@@ -39,23 +39,23 @@
               "denom": true,
               "entry_values": [
                 {
-                  "patient_id": "Tracy Daniels",
+                  "patient_id": "Judy Bailey",
                   "entry_value": "First discharge"
                 },
                 {
-                  "patient_id": "Dianne Potter",
+                  "patient_id": "Crystal Hansen",
                   "entry_value": "First discharge"
                 },
                 {
-                  "patient_id": "Katrina Owens",
+                  "patient_id": "Ruth Cunningham",
                   "entry_value": "First discharge"
                 },
                 {
-                  "patient_id": "Allan Summers",
+                  "patient_id": "Jim Mann",
                   "entry_value": "First discharge"
                 },
                 {
-                  "patient_id": "Ada Mack",
+                  "patient_id": "Janice Foster",
                   "entry_value": "First discharge"
                 }
               ]
@@ -66,23 +66,23 @@
               "automatable_step": { "title": "Steps that assume data availablity is not automatic" },
               "entry_values": [
                 {
-                  "patient_id": "Tracy Daniels",
+                  "patient_id": "Judy Bailey",
                   "entry_value": "Yes"
                 },
                 {
-                  "patient_id": "Dianne Potter",
+                  "patient_id": "Crystal Hansen",
                   "entry_value": "Yes"
                 },
                 {
-                  "patient_id": "Katrina Owens",
+                  "patient_id": "Ruth Cunningham",
                   "entry_value": "Yes"
                 },
                 {
-                  "patient_id": "Allan Summers",
+                  "patient_id": "Jim Mann",
                   "entry_value": "No"
                 },
                 {
-                  "patient_id": "Ada Mack",
+                  "patient_id": "Janice Foster",
                   "entry_value": "Yes"
                 }
               ]
@@ -93,23 +93,23 @@
               "automatable_step": { "title": "Steps that assume data availablity is not automatic" },
               "entry_values": [
                 {
-                  "patient_id": "Tracy Daniels",
+                  "patient_id": "Judy Bailey",
                   "entry_value": "Yes"
                 },
                 {
-                  "patient_id": "Dianne Potter",
+                  "patient_id": "Crystal Hansen",
                   "entry_value": "Yes"
                 },
                 {
-                  "patient_id": "Katrina Owens",
+                  "patient_id": "Ruth Cunningham",
                   "entry_value": "Yes"
                 },
                 {
-                  "patient_id": "Allan Summers",
+                  "patient_id": "Jim Mann",
                   "entry_value": "No"
                 },
                 {
-                  "patient_id": "Ada Mack",
+                  "patient_id": "Janice Foster",
                   "entry_value": "No"
                 }
               ]
@@ -120,27 +120,27 @@
               "total_heading": "Cumulative Total",
               "total_values": [
                 {
-                  "patient_id": "Tracy Daniels",
+                  "patient_id": "Judy Bailey",
                   "numerator_value": 1,
                   "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
                 },
                 {
-                  "patient_id": "Dianne Potter",
+                  "patient_id": "Crystal Hansen",
                   "numerator_value": 1,
                   "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
                 },
                 {
-                  "patient_id": "Katrina Owens",
+                  "patient_id": "Ruth Cunningham",
                   "numerator_value": 1,
                   "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
                 },
                 {
-                  "patient_id": "Allan Summers",
+                  "patient_id": "Jim Mann",
                   "numerator_value": 0,
                   "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
                 },
                 {
-                  "patient_id": "Ada Mack",
+                  "patient_id": "Janice Foster",
                   "numerator_value": 0,
                   "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
                 }
@@ -166,15 +166,15 @@
               "denom": true,
               "entry_values": [
                 {
-                  "patient_id": "Tracy Daniels",
+                  "patient_id": "Judy Bailey",
                   "entry_value": "Second discharge"
                 },
                 {
-                  "patient_id": "Dianne Potter",
+                  "patient_id": "Crystal Hansen",
                   "entry_value": "Second discharge"
                 },
                 {
-                  "patient_id": "Katrina Owens",
+                  "patient_id": "Ruth Cunningham",
                   "entry_value": "Second discharge"
                 }
               ]
@@ -185,15 +185,15 @@
               "automatable_step": { "title": "Steps that assume data availablity is not automatic" },
               "entry_values": [
                 {
-                  "patient_id": "Tracy Daniels",
+                  "patient_id": "Judy Bailey",
                   "entry_value": "No"
                 },
                 {
-                  "patient_id": "Dianne Potter",
+                  "patient_id": "Crystal Hansen",
                   "entry_value": "No"
                 },
                 {
-                  "patient_id": "Katrina Owens",
+                  "patient_id": "Ruth Cunningham",
                   "entry_value": "No"
                 }
               ]
@@ -204,15 +204,15 @@
               "automatable_step": { "title": "Steps that assume data availablity is not automatic" },
               "entry_values": [
                 {
-                  "patient_id": "Tracy Daniels",
+                  "patient_id": "Judy Bailey",
                   "entry_value": "No"
                 },
                 {
-                  "patient_id": "Dianne Potter",
+                  "patient_id": "Crystal Hansen",
                   "entry_value": "No"
                 },
                 {
-                  "patient_id": "Katrina Owens",
+                  "patient_id": "Ruth Cunningham",
                   "entry_value": "Yes"
                 }
               ]
@@ -223,17 +223,17 @@
               "total_heading": "Cumulative Total",
               "total_values": [
                 {
-                  "patient_id": "Tracy Daniels",
+                  "patient_id": "Judy Bailey",
                   "numerator_value": -1,
                   "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
                 },
                 {
-                  "patient_id": "Dianne Potter",
+                  "patient_id": "Crystal Hansen",
                   "numerator_value": -1,
                   "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
                 },
                 {
-                  "patient_id": "Katrina Owens",
+                  "patient_id": "Ruth Cunningham",
                   "numerator_value": -1,
                   "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
                 }
@@ -259,15 +259,15 @@
               "denom": true,
               "entry_values": [
                 {
-                  "patient_id": "Anthony Edwards",
+                  "patient_id": "Ivan Alexander",
                   "entry_value": "First discharge"
                 },
                 {
-                  "patient_id": "Bruce Hall",
+                  "patient_id": "Peter Evans",
                   "entry_value": "First discharge"
                 },
                 {
-                  "patient_id": "Debra Steele",
+                  "patient_id": "Debbie Beck",
                   "entry_value": "First discharge"
                 }
               ]
@@ -278,15 +278,15 @@
               "automatable_step": { "title": "Steps that assume data availablity is not automatic" },
               "entry_values": [
                 {
-                  "patient_id": "Anthony Edwards",
+                  "patient_id": "Ivan Alexander",
                   "entry_value": "Yes"
                 },
                 {
-                  "patient_id": "Bruce Hall",
+                  "patient_id": "Peter Evans",
                   "entry_value": "Yes"
                 },
                 {
-                  "patient_id": "Debra Steele",
+                  "patient_id": "Debbie Beck",
                   "entry_value": "Yes"
                 }
               ]
@@ -297,15 +297,15 @@
               "automatable_step": { "title": "Steps that assume data availablity is not automatic" },
               "entry_values": [
                 {
-                  "patient_id": "Anthony Edwards",
+                  "patient_id": "Ivan Alexander",
                   "entry_value": "Yes"
                 },
                 {
-                  "patient_id": "Bruce Hall",
+                  "patient_id": "Peter Evans",
                   "entry_value": "Yes"
                 },
                 {
-                  "patient_id": "Debra Steele",
+                  "patient_id": "Debbie Beck",
                   "entry_value": "Yes"
                 }
               ]
@@ -316,17 +316,17 @@
               "total_heading": "Cumulative Total",
               "total_values": [
                 {
-                  "patient_id": "Anthony Edwards",
+                  "patient_id": "Ivan Alexander",
                   "numerator_value": 1,
                   "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
                 },
                 {
-                  "patient_id": "Bruce Hall",
+                  "patient_id": "Peter Evans",
                   "numerator_value": 1,
                   "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
                 },
                 {
-                  "patient_id": "Debra Steele",
+                  "patient_id": "Debbie Beck",
                   "numerator_value": 1,
                   "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 1} ]
                 }
@@ -352,7 +352,7 @@
               "denom": true,
               "entry_values": [
                 {
-                  "patient_id": "Ada Mack",
+                  "patient_id": "Janice Foster",
                   "entry_value": "Second discharge"
                 }
               ]
@@ -363,7 +363,7 @@
               "automatable_step": { "title": "Steps that assume data availablity is not automatic" },
               "entry_values": [
                 {
-                  "patient_id": "Ada Mack",
+                  "patient_id": "Janice Foster",
                   "entry_value": "Yes"
                 }
               ]
@@ -374,7 +374,7 @@
               "automatable_step": { "title": "Steps that assume data availablity is not automatic" },
               "entry_values": [
                 {
-                  "patient_id": "Ada Mack",
+                  "patient_id": "Janice Foster",
                   "entry_value": "Yes"
                 }
               ]
@@ -385,7 +385,7 @@
               "total_heading": "Cumulative Total",
               "total_values": [
                 {
-                  "patient_id": "Ada Mack",
+                  "patient_id": "Janice Foster",
                   "numerator_value": 0,
                   "automated_numerator_values": [ { "title": "Steps that assume data availablity is not automatic", "value": 0} ]
                 }
