@@ -13,7 +13,7 @@
       "program_name": "Merit-based Incentive Payment System (MIPS) Promoting Interoperability Performance Category Measure",
       "measure_objective": "Electronic Prescribing",
       "measure_name": "e-Prescribing",
-      "measure_description": "At least one permissible prescription written by the MIPS eligible clinician is transmitted electronically using CEHRT."
+      "measure_description": "At least one permissible prescription written by the MIPS eligible clinician is transmitted electronically using certified electronic health record technology (CEHRT)."
     }
   ],
   "test_data_notes": [
