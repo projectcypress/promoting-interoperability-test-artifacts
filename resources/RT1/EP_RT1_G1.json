@@ -11,7 +11,7 @@
       "program_name": "Merit-based Incentive Payment System (MIPS) Promoting Interoperability Performance Category Measure",
       "measure_objective": "Electronic Prescribing",
       "measure_name": "e-Prescribing",
-      "measure_description": "At least one permissible prescription written by the MIPS eligible clinician is queried for a drug formulary and transmitted electronically using CEHRT."
+      "measure_description": "At least one permissible prescription written by the MIPS eligible clinician is transmitted electronically using certified electronic health record technology (CEHRT)."
     }
   ],
   "test_data_notes": [
@@ -39,23 +39,23 @@
               "denom": true,
               "entry_values": [
                 {
-                  "patient_id": "Lavon Earle",
+                  "patient_id": "Kim Santos",
                   "entry_value": 1
                 },
                 {
-                  "patient_id": "Trula Covey",
+                  "patient_id": "Lynn Bryan",
                   "entry_value": 0
                 },
                 {
-                  "patient_id": "Mai Nguyen",
+                  "patient_id": "Wanda Mccoy",
                   "entry_value": 1
                 },
                 {
-                  "patient_id": "Tom Warner",
+                  "patient_id": "Floyd Lindsey",
                   "entry_value": 2
                 },
                 {
-                  "patient_id": "Elsa Wu",
+                  "patient_id": "Tamara Roberson",
                   "entry_value": 1
                 }
               ]
@@ -65,23 +65,23 @@
               "denom": true,
               "entry_values": [
                 {
-                  "patient_id": "Lavon Earle",
+                  "patient_id": "Kim Santos",
                   "entry_value": 1
                 },
                 {
-                  "patient_id": "Trula Covey",
+                  "patient_id": "Lynn Bryan",
                   "entry_value": 1
                 },
                 {
-                  "patient_id": "Mai Nguyen",
+                  "patient_id": "Wanda Mccoy",
                   "entry_value": 0
                 },
                 {
-                  "patient_id": "Tom Warner",
+                  "patient_id": "Floyd Lindsey",
                   "entry_value": 1
                 },
                 {
-                  "patient_id": "Elsa Wu",
+                  "patient_id": "Tamara Roberson",
                   "entry_value": 1
                 }
               ]
@@ -92,23 +92,23 @@
               "automatable_step": { "title": "Automated Transmissions" },
               "entry_values": [
                 {
-                  "patient_id": "Lavon Earle",
+                  "patient_id": "Kim Santos",
                   "entry_value": 1
                 },
                 {
-                  "patient_id": "Trula Covey",
+                  "patient_id": "Lynn Bryan",
                   "entry_value": 0
                 },
                 {
-                  "patient_id": "Mai Nguyen",
+                  "patient_id": "Wanda Mccoy",
                   "entry_value": 1
                 },
                 {
-                  "patient_id": "Tom Warner",
+                  "patient_id": "Floyd Lindsey",
                   "entry_value": 2
                 },
                 {
-                  "patient_id": "Elsa Wu",
+                  "patient_id": "Tamara Roberson",
                   "entry_value": 1
                 }
               ]
@@ -119,23 +119,23 @@
               "automatable_step": { "title": "Automated Transmissions" },
               "entry_values": [
                 {
-                  "patient_id": "Lavon Earle",
+                  "patient_id": "Kim Santos",
                   "entry_value": 1
                 },
                 {
-                  "patient_id": "Trula Covey",
+                  "patient_id": "Lynn Bryan",
                   "entry_value": 1
                 },
                 {
-                  "patient_id": "Mai Nguyen",
+                  "patient_id": "Wanda Mccoy",
                   "entry_value": 0
                 },
                 {
-                  "patient_id": "Tom Warner",
+                  "patient_id": "Floyd Lindsey",
                   "entry_value": 1
                 },
                 {
-                  "patient_id": "Elsa Wu",
+                  "patient_id": "Tamara Roberson",
                   "entry_value": 1
                 }
               ]
@@ -146,27 +146,27 @@
               "total_heading": "Cumulative Total",
               "total_values": [
                 {
-                  "patient_id": "Lavon Earle",
+                  "patient_id": "Kim Santos",
                   "numerator_value": 2,
                   "automated_numerator_values": [ { "title": "Automated Transmissions", "value":2}, { "title": "All", "value": 2} ]
                 },
                 {
-                  "patient_id": "Trula Covey",
+                  "patient_id": "Lynn Bryan",
                   "numerator_value": 1,
                   "automated_numerator_values": [ { "title": "Automated Transmissions", "value":1}, { "title": "All", "value": 1} ]
                 },
                 {
-                  "patient_id": "Mai Nguyen",
+                  "patient_id": "Wanda Mccoy",
                   "numerator_value": 1,
                   "automated_numerator_values": [ { "title": "Automated Transmissions", "value":1}, { "title": "All", "value": 1} ]
                 },
                 {
-                  "patient_id": "Tom Warner",
+                  "patient_id": "Floyd Lindsey",
                   "numerator_value": 3,
                   "automated_numerator_values": [ { "title": "Automated Transmissions", "value":3}, { "title": "All", "value": 3} ]
                 },
                 {
-                  "patient_id": "Elsa Wu",
+                  "patient_id": "Tamara Roberson",
                   "numerator_value": 2,
                   "automated_numerator_values": [ { "title": "Automated Transmissions", "value":2}, { "title": "All", "value": 2} ]
                 }
@@ -187,23 +187,23 @@
               "denom": true,
               "entry_values": [
                 {
-                  "patient_id": "Lavon Earle",
+                  "patient_id": "Kim Santos",
                   "entry_value": 1
                 },
                 {
-                  "patient_id": "Trula Covey",
+                  "patient_id": "Lynn Bryan",
                   "entry_value": 0
                 },
                 {
-                  "patient_id": "Mai Nguyen",
+                  "patient_id": "Wanda Mccoy",
                   "entry_value": 1
                 },
                 {
-                  "patient_id": "Tom Warner",
+                  "patient_id": "Floyd Lindsey",
                   "entry_value": 2
                 },
                 {
-                  "patient_id": "Elsa Wu",
+                  "patient_id": "Tamara Roberson",
                   "entry_value": 1
                 }
               ]
@@ -214,23 +214,23 @@
               "automatable_step": { "title": "Automated Transmissions" },
               "entry_values": [
                 {
-                  "patient_id": "Lavon Earle",
+                  "patient_id": "Kim Santos",
                   "entry_value": 1
                 },
                 {
-                  "patient_id": "Trula Covey",
+                  "patient_id": "Lynn Bryan",
                   "entry_value": 0
                 },
                 {
-                  "patient_id": "Mai Nguyen",
+                  "patient_id": "Wanda Mccoy",
                   "entry_value": 1
                 },
                 {
-                  "patient_id": "Tom Warner",
+                  "patient_id": "Floyd Lindsey",
                   "entry_value": 2
                 },
                 {
-                  "patient_id": "Elsa Wu",
+                  "patient_id": "Tamara Roberson",
                   "entry_value": 1
                 }
               ]
@@ -241,27 +241,27 @@
               "total_heading": "Cumulative Total",
               "total_values": [
                 {
-                  "patient_id": "Lavon Earle",
+                  "patient_id": "Kim Santos",
                   "numerator_value": 1,
                   "automated_numerator_values": [ { "title": "Automated Transmissions", "value":1}, { "title": "All", "value": 1} ]
                 },
                 {
-                  "patient_id": "Trula Covey",
+                  "patient_id": "Lynn Bryan",
                   "numerator_value": 0,
                   "automated_numerator_values": [ { "title": "Automated Transmissions", "value":0}, { "title": "All", "value": 0} ]
                 },
                 {
-                  "patient_id": "Mai Nguyen",
+                  "patient_id": "Wanda Mccoy",
                   "numerator_value": 1,
                   "automated_numerator_values": [ { "title": "Automated Transmissions", "value":1}, { "title": "All", "value": 1} ]
                 },
                 {
-                  "patient_id": "Tom Warner",
+                  "patient_id": "Floyd Lindsey",
                   "numerator_value": 2,
                   "automated_numerator_values": [ { "title": "Automated Transmissions", "value":2}, { "title": "All", "value": 2} ]
                 },
                 {
-                  "patient_id": "Elsa Wu",
+                  "patient_id": "Tamara Roberson",
                   "numerator_value": 1,
                   "automated_numerator_values": [ { "title": "Automated Transmissions", "value":1}, { "title": "All", "value": 1} ]
                 }
@@ -306,19 +306,19 @@
               "denom": true,
               "entry_values": [
                 {
-                  "patient_id": "Alan Bench",
+                  "patient_id": "Alvin Knight",
                   "entry_value": 1
                 },
                 {
-                  "patient_id": "Rashida Champagne",
+                  "patient_id": "Joanne Wagner",
                   "entry_value": 1
                 },
                 {
-                  "patient_id": "David Brown",
+                  "patient_id": "Roger Hayes",
                   "entry_value": 1
                 },
                 {
-                  "patient_id": "Tom Warner",
+                  "patient_id": "Floyd Lindsey",
                   "entry_value": 2
                 }
               ]
@@ -328,19 +328,19 @@
               "denom": true,
               "entry_values": [
                 {
-                  "patient_id": "Alan Bench",
+                  "patient_id": "Alvin Knight",
                   "entry_value": 0
                 },
                 {
-                  "patient_id": "Rashida Champagne",
+                  "patient_id": "Joanne Wagner",
                   "entry_value": 2
                 },
                 {
-                  "patient_id": "David Brown",
+                  "patient_id": "Roger Hayes",
                   "entry_value": 1
                 },
                 {
-                  "patient_id": "Tom Warner",
+                  "patient_id": "Floyd Lindsey",
                   "entry_value": 1
                 }
               ]
@@ -351,19 +351,19 @@
               "automatable_step": { "title": "Automated Transmissions" },
               "entry_values": [
                 {
-                  "patient_id": "Alan Bench",
+                  "patient_id": "Alvin Knight",
                   "entry_value": 1
                 },
                 {
-                  "patient_id": "Rashida Champagne",
+                  "patient_id": "Joanne Wagner",
                   "entry_value": 0
                 },
                 {
-                  "patient_id": "David Brown",
+                  "patient_id": "Roger Hayes",
                   "entry_value": 1
                 },
                 {
-                  "patient_id": "Tom Warner",
+                  "patient_id": "Floyd Lindsey",
                   "entry_value": 2
                 }
               ]
@@ -374,19 +374,19 @@
               "automatable_step": { "title": "Automated Transmissions" },
               "entry_values": [
                 {
-                  "patient_id": "Alan Bench",
+                  "patient_id": "Alvin Knight",
                   "entry_value": 0
                 },
                 {
-                  "patient_id": "Rashida Champagne",
+                  "patient_id": "Joanne Wagner",
                   "entry_value": 1
                 },
                 {
-                  "patient_id": "David Brown",
+                  "patient_id": "Roger Hayes",
                   "entry_value": 1
                 },
                 {
-                  "patient_id": "Tom Warner",
+                  "patient_id": "Floyd Lindsey",
                   "entry_value": 1
                 }
               ]
@@ -397,22 +397,22 @@
               "total_heading": "Cumulative Total",
               "total_values": [
                 {
-                  "patient_id": "Alan Bench",
+                  "patient_id": "Alvin Knight",
                   "numerator_value": 1,
                   "automated_numerator_values": [ { "title": "Automated Transmissions", "value":1}, { "title": "All", "value": 1} ]
                 },
                 {
-                  "patient_id": "Rashida Champagne",
+                  "patient_id": "Joanne Wagner",
                   "numerator_value": 1,
                   "automated_numerator_values": [ { "title": "Automated Transmissions", "value":3}, { "title": "All", "value": 3} ]
                 },
                 {
-                  "patient_id": "David Brown",
+                  "patient_id": "Roger Hayes",
                   "numerator_value": 2,
                   "automated_numerator_values": [ { "title": "Automated Transmissions", "value":2}, { "title": "All", "value": 2} ]
                 },
                 {
-                  "patient_id": "Tom Warner",
+                  "patient_id": "Floyd Lindsey",
                   "numerator_value": 3,
                   "automated_numerator_values": [ { "title": "Automated Transmissions", "value":3}, { "title": "All", "value": 3} ]
                 }
@@ -433,19 +433,19 @@
               "denom": true,
               "entry_values": [
                 {
-                  "patient_id": "Alan Bench",
+                  "patient_id": "Alvin Knight",
                   "entry_value": 1
                 },
                 {
-                  "patient_id": "Rashida Champagne",
+                  "patient_id": "Joanne Wagner",
                   "entry_value": 1
                 },
                 {
-                  "patient_id": "David Brown",
+                  "patient_id": "Roger Hayes",
                   "entry_value": 1
                 },
                 {
-                  "patient_id": "Tom Warner",
+                  "patient_id": "Floyd Lindsey",
                   "entry_value": 2
                 }
               ]
@@ -456,19 +456,19 @@
               "automatable_step": { "title": "Automated Transmissions" },
               "entry_values": [
                 {
-                  "patient_id": "Alan Bench",
+                  "patient_id": "Alvin Knight",
                   "entry_value": 1
                 },
                 {
-                  "patient_id": "Rashida Champagne",
+                  "patient_id": "Joanne Wagner",
                   "entry_value": 0
                 },
                 {
-                  "patient_id": "David Brown",
+                  "patient_id": "Roger Hayes",
                   "entry_value": 1
                 },
                 {
-                  "patient_id": "Tom Warner",
+                  "patient_id": "Floyd Lindsey",
                   "entry_value": 2
                 }
               ]
@@ -479,22 +479,22 @@
               "total_heading": "Cumulative Total",
               "total_values": [
                 {
-                  "patient_id": "Alan Bench",
+                  "patient_id": "Alvin Knight",
                   "numerator_value": 1,
                   "automated_numerator_values": [ { "title": "Automated Transmissions", "value":1}, { "title": "All", "value": 1} ]
                 },
                 {
-                  "patient_id": "Rashida Champagne",
+                  "patient_id": "Joanne Wagner",
                   "numerator_value": 0,
                   "automated_numerator_values": [ { "title": "Automated Transmissions", "value":1}, { "title": "All", "value": 1} ]
                 },
                 {
-                  "patient_id": "David Brown",
+                  "patient_id": "Roger Hayes",
                   "numerator_value": 1,
                   "automated_numerator_values": [ { "title": "Automated Transmissions", "value":1}, { "title": "All", "value": 1} ]
                 },
                 {
-                  "patient_id": "Tom Warner",
+                  "patient_id": "Floyd Lindsey",
                   "numerator_value": 2,
                   "automated_numerator_values": [ { "title": "Automated Transmissions", "value":2}, { "title": "All", "value": 2} ]
                 }

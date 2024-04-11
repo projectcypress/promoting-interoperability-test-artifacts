@@ -141,6 +141,11 @@
       "version_number": "2.10",
       "version_description": "Updated references to (g)(8) and (g)(10) for RT2.",
       "version_date": "11/9/2023"
+    },
+    {
+      "version_number": "2.11",
+      "version_description": "Added references to 2024 Promoting Interoperability. Unique patient names given for each required test.",
+      "version_date": "4/4/2024"
     }
   ]
 }
