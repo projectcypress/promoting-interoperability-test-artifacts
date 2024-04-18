@@ -12,7 +12,7 @@
   ],
   "test_data_notes": [
     "The Promoting Interoperability measure requires reconciliation of medications, medication allergies, and the current problem list in order to populate and record the numerator.",
-    "For 2023, the scenarios require the provider to receive an electronic a summary of care document and perform reconcillation during the reporting period for a 90-day reporting period and during the calendar year for a full calendar year reporting period.",
+    "For 2023, the scenarios require the provider to receive an electronic a summary of care document and perform reconcillation during the reporting period for a for any continuous 180-day period within the calendar year.",
     "For 2024, the scenarios require the provider to receive an electronic a summary of care document and perform reconcillation during the reporting period for a 180-day reporting period and during the calendar year for a full calendar year reporting period.",
     "Test data supply: ONC and Vendor-supplied. ONC provides the Test Data Scenarios and parameters; the Vendor supplies the summary of care records, within the parameters.",
     "The Promoting Interoperability measure only requires the reconciliation of current information, not historic.",
