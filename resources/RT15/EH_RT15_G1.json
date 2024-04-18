@@ -12,7 +12,8 @@
   ],
   "test_data_notes": [
     "The Promoting Interoperability measure requires reconciliation of medications, medication allergies, and the current problem list in order to populate and record the numerator.",
-    "The scenarios require the provider to receive an electronic a summary of care document and perform reconcillation during the reporting period for a 90-day reporting period and during the calendar year for a full calendar year reporting period.",
+    "For 2023, the scenarios require the provider to receive an electronic a summary of care document and perform reconcillation during the reporting period and submit data for any continuous 90-day period within the calendar year.",
+    "For 2024, the scenarios require the provider to receive an electronic a summary of care document and perform reconcillation during the reporting period and submit data for any continuous 180-day period within the calendar year",
     "Test data supply: ONC and Vendor-supplied. ONC provides the Test Data Scenarios and parameters; the Vendor supplies the summary of care records, within the parameters.",
     "The Promoting Interoperability measure only requires the reconciliation of current information, not historic.",
     "If the health IT module supports the reconciling of all current information from multiple electronic summary of care records in a single instance this combined information may be considered a single instance in the denominator. If the health IT module supports the reconciliation of each individual electronic summary of care record received separately, then each current record received may be considered a separate instance in the denominator. For either workflow, the completion of the reconciliation in either workflow would increment the numerator.   ATLs may use different test data for health IT modules that supports the reconciling of all current information from multiple electronic summary of care records in a single instance. "

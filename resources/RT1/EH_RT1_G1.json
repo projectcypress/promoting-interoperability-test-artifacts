@@ -11,7 +11,7 @@
       "program_name": "Medicare Eligible Hospital/Critical Access Hospital (EH/CAH)",
       "measure_objective": "Electronic Prescribing",
       "measure_name": "e-Prescribing",
-      "measure_description": "For at least one hospital discharge, medication orders for permissible prescriptions (for new and changed prescriptions) are queried for a drug formulary and transmitted electronically using certified electronic health record technology (CEHRT)."
+      "measure_description": "For at least one hospital discharge, medication orders for permissible prescriptions (for new and changed prescriptions) are transmitted electronically using certified electronic health record technology (CEHRT)."
     }
   ],
   "test_data_notes": [
