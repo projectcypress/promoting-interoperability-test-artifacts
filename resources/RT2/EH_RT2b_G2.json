@@ -20,7 +20,7 @@
     "Patients seen multiple times during the reporting period will not increment the denominator after the initial visit.",    
     "Scenario 2 tests appropriate increments and decrements to the numerator. The numerator may not increment or record for the provided test cases, however, each case tests proper numerator behavior.",
     "Test data supply: ONC and Vendor-supplied. ONC provides the Test Data Scenarios and parameters; the Vendor supplies the patient visit, clinical information, and Ambulatory and Inpatient summaries (or Inpatient Summary of Care). ",
-    "The Promoting Interoperability Measure requires that a patient have access to both view online, download, and transmit to a third party AND have the data available via an API in an EH's CEHRT.  Please see the Certification Companion Guide for more information on the requirement for testing and attestation requirements.Download Cypress v5.4.0",
+    "The Promoting Interoperability Measure requires that a patient have access to both view online, download, and transmit to a third party AND have the data available via an API in an EH's CEHRT.  Please see the Certification Companion Guide for more information on the requirement for testing and attestation requirements.",
     "The name of this measure changed from Patient Electronic Access to Health Information to Provide Patients Electronic Access to Their Health Information.  No other changes were made to the test data.  "
   ],
   "scenarios": [

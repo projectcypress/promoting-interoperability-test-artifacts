@@ -179,6 +179,11 @@
       "version_number": "2.12",
       "version_description": "RT7 and RT15 - Added note highlighting the increase to a continuous 180-day period for 2024 reporting.",
       "version_date": "4/18/2024"
+    },
+    {
+      "version_number": "2.13",
+      "version_description": "Added references to 2025 Promoting Interoperability.",
+      "version_date": "8/13/2025"
     }
   ]
 }
