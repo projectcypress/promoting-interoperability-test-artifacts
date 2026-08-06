@@ -13,8 +13,7 @@
     }
   ],
   "test_data_notes": [
-    "For 2023, the scenarios for the Promoting Interoperability measure require the provider to create and transmit/exchange a summary of care record and to confirm receipt of the transmitted/exchanged summary of care record and submit data for a minimum of 90 consecutive days within the calendar year.",
-    "For 2024, the scenarios for the Promoting Interoperability measure require the provider to create and transmit/exchange a summary of care record and to confirm receipt of the transmitted/exchanged summary of care record and submit data for a minimum of 180 consecutive days within the calendar year.",
+    "The scenarios for the Promoting Interoperability measure require the provider to create and transmit/exchange a summary of care record and to confirm receipt of the transmitted/exchanged summary of care record and submit data for a minimum of 180 consecutive days within the calendar year.",
     "Test data supply: ONC and Vendor-supplied. ONC provides the Test Data Scenarios and parameters; the Vendor supplies the summary of care records within the parameters.  ",
     "The name of this measure changed from Transitions of Care to Support Electronic Referral Loops by Sending Health Information.  No other changes were made to the test data. ",
     "Starting in 2019, for the Promoting Interoperability measure an EP may use any document template within the C-CDA standard for the purposes of the measure.   "
